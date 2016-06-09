@@ -9,6 +9,7 @@ namespace Someline\Api\Middleware;
 use Closure;
 use Dingo\Api\Exception\ResourceException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Http\Exception\HttpResponseException;
 use League\OAuth2\Server\Exception\InvalidCredentialsException;
 use League\OAuth2\Server\Exception\InvalidRequestException;
 use League\OAuth2\Server\Exception\OAuthException;
@@ -43,6 +44,9 @@ class ApiAccessMiddleware
         } catch (OAuthException $e) {
             $message = env('API_DEBUG') ? $e->getMessage() : null;
             throw new HttpException($e->httpStatusCode, $message, $e, $e->getHttpHeaders());
+        } catch (HttpResponseException $e) {
+            $message = env('API_DEBUG') ? $e->getMessage() : null;
+            throw new HttpException($e->getResponse()->getStatusCode(), $message, $e);
         } catch (ValidatorException $e) {
             $messageBag = $e->getMessageBag();
             throw new ResourceException($messageBag->first(), $messageBag->all());
