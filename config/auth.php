@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Someline\User::class,
+            'model' => \Someline\Models\Foundation\User::class,
         ],
 
         // 'users' => [
