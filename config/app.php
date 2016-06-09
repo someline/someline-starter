@@ -152,10 +152,10 @@ return [
          * Application Service Providers...
          */
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Someline\Providers\AppServiceProvider::class,
+        Someline\Providers\AuthServiceProvider::class,
+        Someline\Providers\EventServiceProvider::class,
+        Someline\Providers\RouteServiceProvider::class,
 
         /*
          * Vendor Service Providers...
