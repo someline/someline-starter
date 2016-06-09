@@ -46,7 +46,7 @@ class User extends BaseModel implements BaseModelEventsInterface,
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'slid',
+        'name', 'email', 'password',
         'gender', 'birthday', 'country', 'timezone', 'locale', 'username', 'phone_number', 'status',
     ];
 

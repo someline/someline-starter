@@ -34,7 +34,7 @@ class UserTest extends BaseApiTestCase
 
     public function testCreateUser()
     {
-        $this->withOAuthTokenTypeUser();
+        $this->withOAuthTokenTypeClient();
         $this->post('users', [
             'name' => 'Abc',
             'email' => rand(100000, 999999) . 'abc@example.com',
@@ -42,6 +42,24 @@ class UserTest extends BaseApiTestCase
         ]);
         $this->printResponseData();
         $this->assertResponseOk();
+    }
+
+    public function testUpdateUser()
+    {
+        $this->withOAuthTokenTypeUser();
+        $this->put('users/2', [
+            'name' => 'Harry Potter',
+        ]);
+        $this->printResponseData();
+        $this->assertResponseNoContent();
+    }
+
+    public function testDeleteUser()
+    {
+        $this->withOAuthTokenTypeUser();
+        $this->delete('users/3');
+        $this->printResponseData();
+        $this->assertResponseNoContent();
     }
 
 }
