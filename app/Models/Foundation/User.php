@@ -1,4 +1,8 @@
 <?php
+/**
+ * Created for someline-server.
+ * User: Libern
+ */
 
 namespace Someline\Models\Foundation;
 

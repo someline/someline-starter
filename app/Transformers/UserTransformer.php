@@ -2,14 +2,13 @@
 
 namespace Someline\Transformers;
 
-use League\Fractal\TransformerAbstract;
 use Someline\Models\Foundation\User;
 
 /**
  * Class UserTransformer
  * @package namespace Someline\Transformers;
  */
-class UserTransformer extends TransformerAbstract
+class UserTransformer extends BaseTransformer
 {
 
     /**
@@ -21,12 +20,13 @@ class UserTransformer extends TransformerAbstract
     public function transform(User $model)
     {
         return [
-            'id'         => (int) $model->id,
+            'user_id'         => (int) $model->user_id,
 
             /* place your other model properties here */
+            'name'         => (int) $model->name,
 
-            'created_at' => $model->created_at,
-            'updated_at' => $model->updated_at
+            'created_at' => (string)$model->created_at,
+            'updated_at' => (string)$model->updated_at
         ];
     }
 }
