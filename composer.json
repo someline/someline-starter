@@ -6,7 +6,22 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*"
+        "ext-pdo_sqlite": "*",
+        "laravel/framework": "5.2.*",
+        "predis/predis": "~1.0",
+        "doctrine/dbal": "~2.3",
+        "itsgoingd/clockwork": "~1.10",
+        "dingo/api": "1.0.x@dev",
+        "lucadegasperi/oauth2-server-laravel": "5.1.*",
+        "guzzlehttp/guzzle": "~6.0",
+        "lukasoppermann/http-status": "^2.0",
+        "prettus/l5-repository": "^2.1",
+        "prettus/laravel-validation": "1.1.*",
+        "intervention/image": "^2.3",
+        "intervention/imagecache": "~2.1",
+        "cviebrock/image-validator": "2.0.*@beta",
+        "barryvdh/laravel-ide-helper": "^2.1",
+        "tymon/jwt-auth": "0.5.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
