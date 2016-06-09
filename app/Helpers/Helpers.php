@@ -18,6 +18,15 @@ if (!function_exists('auth_user')) {
 
 }
 
+if (!function_exists('smart_get_client_ip')) {
+
+    function smart_get_client_ip()
+    {
+        $ip = \Request::getClientIp(true);
+        return $ip;
+    }
+
+}
 
 if (!function_exists('jwt_token')) {
 
