@@ -29,6 +29,37 @@ return [
 
     'grant_types' => [
 
+        /**
+         * @type: password
+         * @way: username and password authentication
+         * @for: Trust Clients ONLY
+         */
+        'password' => [
+            'class' => '\League\OAuth2\Server\Grant\PasswordGrant',
+            'callback' => \Someline\OAuth\PasswordGrantVerifier::class . '@verify',
+            'access_token_ttl' => 3600
+        ],
+
+        /**
+         * @type: client_credentials
+         * @way: machine-to-machine authentication
+         * @for: Trust Clients ONLY
+         */
+        'client_credentials' => [
+            'class' => '\League\OAuth2\Server\Grant\ClientCredentialsGrant',
+            'access_token_ttl' => 3600
+        ],
+
+        /**
+         * @type: refresh_token
+         * @way:  “refresh” (i.e. renew) an access token which has expired
+         */
+        'refresh_token' => [
+            'class' => '\League\OAuth2\Server\Grant\RefreshTokenGrant',
+            'access_token_ttl' => 3600,
+            'refresh_token_ttl' => 36000
+        ],
+
     ],
 
     /*
