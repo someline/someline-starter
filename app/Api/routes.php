@@ -29,7 +29,7 @@ $api->version('v1', [
         // Rate: 100 requests per 5 minutes
         $api->group(['middleware' => ['api.throttle'], 'limit' => 100, 'expires' => 5], function (\Dingo\Api\Routing\Router $api) {
 
-            $api->get('users', 'UserController@index');
+            $api->get('users', 'UsersController@index');
 
         });
     });
@@ -42,9 +42,9 @@ $api->version('v1', [
         // Rate: 100 requests per 5 minutes
         $api->group(['middleware' => ['api.throttle'], 'limit' => 100, 'expires' => 5], function (\Dingo\Api\Routing\Router $api) {
 
-            $api->get('users/me', 'UserController@me');
+            $api->get('users/me', 'UsersController@me');
 
-            $api->get('users/{id}', 'UserController@show');
+            $api->get('users/{id}', 'UsersController@show');
 
         });
 
