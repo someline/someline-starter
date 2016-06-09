@@ -73,7 +73,7 @@ return [
     |
     */
 
-    'user' => 'App\User',
+    'user' => \Someline\Models\Foundation\User::class,
 
     /*
     |--------------------------------------------------------------------------
