@@ -31,6 +31,8 @@ $api->version('v1', [
 
             $api->get('users', 'UsersController@index');
 
+            $api->post('users', 'UsersController@store');
+
         });
     });
 
@@ -45,6 +47,10 @@ $api->version('v1', [
             $api->get('users/me', 'UsersController@me');
 
             $api->get('users/{id}', 'UsersController@show');
+
+            $api->put('users/{id}', 'UsersController@update');
+
+            $api->delete('users/{id}', 'UsersController@destroy');
 
         });
 

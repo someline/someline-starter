@@ -47,19 +47,6 @@ class UsersController extends BaseController
         return $this->repository->all();
     }
 
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-
-        return view('users.create');
-    }
-
-
     /**
      * Store a newly created resource in storage.
      *
@@ -95,22 +82,16 @@ class UsersController extends BaseController
         return $this->repository->find($id);
     }
 
-
     /**
-     * Show the form for editing the specified resource.
+     * Display current logged in User info
      *
-     * @param  int $id
-     *
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
-    public function edit($id)
+    public function me()
     {
-
-        $user = $this->repository->find($id);
-
-        return view('users.edit', compact('user'));
+        $user_id = auth_user()->getUserId();
+        return $this->repository->find($user_id);
     }
-
 
     /**
      * Update the specified resource in storage.
