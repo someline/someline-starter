@@ -38,8 +38,8 @@ class RouteServiceProvider extends ServiceProvider
     public function map(Router $router)
     {
         $this->mapWebRoutes($router);
-
-        //
+        
+        $this->mapApiRoutes();
     }
 
     /**
@@ -57,5 +57,18 @@ class RouteServiceProvider extends ServiceProvider
         ], function ($router) {
             require app_path('Http/routes.php');
         });
+    }
+
+    /**
+     * Define the "Api" routes for the application.
+     *
+     * @return void
+     */
+    protected function mapApiRoutes()
+    {
+        $api = app('Dingo\Api\Routing\Router');
+
+        require app_path('Api/routes.php');
+
     }
 }
