@@ -156,6 +156,10 @@ return [
         Someline\Providers\AuthServiceProvider::class,
         Someline\Providers\EventServiceProvider::class,
         Someline\Providers\RouteServiceProvider::class,
+        Someline\Providers\ApiServiceProvider::class,
+        Someline\Providers\OAuthServiceProvider::class,
+        Someline\Providers\RepositoryServiceProvider::class,
+        Someline\Providers\PolymorphicRelationServiceProvider::class,
 
         /*
          * Vendor Service Providers...
