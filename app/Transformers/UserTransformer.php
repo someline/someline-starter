@@ -20,10 +20,10 @@ class UserTransformer extends BaseTransformer
     public function transform(User $model)
     {
         return [
-            'user_id'         => (int) $model->user_id,
+            'user_id' => (int)$model->user_id,
 
             /* place your other model properties here */
-            'name'         => (int) $model->name,
+            'name' => $model->name,
 
             'created_at' => (string)$model->created_at,
             'updated_at' => (string)$model->updated_at

@@ -4,6 +4,7 @@ namespace Someline\Repositories\Eloquent;
 
 use Prettus\Repository\Criteria\RequestCriteria;
 use Someline\Models\Foundation\User;
+use Someline\Presenters\UserPresenter;
 use Someline\Repositories\Interfaces\UserRepository;
 use Someline\Validators\UserValidator;
 
