@@ -2,13 +2,17 @@
 
 namespace Someline\Repositories\Interfaces;
 
-use Prettus\Repository\Contracts\RepositoryInterface;
+use Looptime\Repositories\Interfaces\BaseRepositoryInterface;
 
 /**
  * Interface UserRepository
  * @package namespace Someline\Repositories\Interfaces;
  */
-interface UserRepository extends RepositoryInterface
+interface UserRepository extends BaseRepositoryInterface
 {
-    //
+    /**
+     * @param array|Collection $userIds
+     * @return $this
+     */
+    public function byUserIds($userIds);
 }

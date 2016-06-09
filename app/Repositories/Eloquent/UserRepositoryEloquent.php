@@ -2,7 +2,6 @@
 
 namespace Someline\Repositories\Eloquent;
 
-use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Someline\Models\Foundation\User;
 use Someline\Repositories\Interfaces\UserRepository;
@@ -35,6 +34,15 @@ class UserRepositoryEloquent extends BaseRepository implements UserRepository
         return UserValidator::class;
     }
 
+    /**
+     * Specify Presenter class name
+     *
+     * @return string
+     */
+    public function presenter()
+    {
+        return UserPresenter::class;
+    }
 
     /**
      * Boot up the repository, pushing criteria
@@ -42,5 +50,15 @@ class UserRepositoryEloquent extends BaseRepository implements UserRepository
     public function boot()
     {
         $this->pushCriteria(app(RequestCriteria::class));
+    }
+
+    /**
+     * @param array|Collection $userIds
+     * @return $this
+     */
+    public function byUserIds($userIds)
+    {
+        $this->model = $this->model->whereIn('user_id', $userIds);
+        return $this;
     }
 }
