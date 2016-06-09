@@ -4,7 +4,7 @@
  * User: Libern
  */
 
-namespace Looptime\Repositories\Interfaces;
+namespace Someline\Repositories\Interfaces;
 
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\RepositoryInterface;

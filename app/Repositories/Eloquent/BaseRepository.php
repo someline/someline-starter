@@ -1,9 +1,7 @@
 <?php
 /**
- * Created for looptime.
+ * Created for someline-starter.
  * User: Libern
- * Date: 17/4/16
- * Time: 1:29 AM
  */
 
 namespace Someline\Repositories\Eloquent;

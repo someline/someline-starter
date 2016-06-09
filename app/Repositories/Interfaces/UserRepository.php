@@ -2,7 +2,7 @@
 
 namespace Someline\Repositories\Interfaces;
 
-use Looptime\Repositories\Interfaces\BaseRepositoryInterface;
+use Someline\Repositories\Interfaces\BaseRepositoryInterface;
 
 /**
  * Interface UserRepository
