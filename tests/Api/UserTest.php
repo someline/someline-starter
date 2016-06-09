@@ -32,4 +32,16 @@ class UserTest extends BaseApiTestCase
         $this->assertResponseOk();
     }
 
+    public function testCreateUser()
+    {
+        $this->withOAuthTokenTypeUser();
+        $this->post('users', [
+            'name' => 'Abc',
+            'email' => rand(100000, 999999) . 'abc@example.com',
+            'password' => '12345678',
+        ]);
+        $this->printResponseData();
+        $this->assertResponseOk();
+    }
+
 }

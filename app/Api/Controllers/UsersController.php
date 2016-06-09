@@ -57,15 +57,20 @@ class UsersController extends BaseController
     public function store(UserCreateRequest $request)
     {
 
-        $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
+        $data = $request->all();
 
-        $user = $this->repository->create($request->all());
+        $this->validator->with($data)->passesOrFail(ValidatorInterface::RULE_CREATE);
+
+        // encrypt password
+        $data['password'] = bcrypt($data['password']);
+
+        $user = $this->repository->create($data);
 
         // A. return 201 created
 //            return $this->response->created(null);
 
         // B. return data
-        return $this->repository->skipPresenter(false)->present($user);
+        return $user;
 
     }
 

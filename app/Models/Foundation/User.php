@@ -56,7 +56,7 @@ class User extends BaseModel implements BaseModelEventsInterface,
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'remember_token',
     ];
 
     /**
