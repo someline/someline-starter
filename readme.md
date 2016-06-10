@@ -28,6 +28,22 @@ It is fully utilised Repository Design pattern.
 
 ## Get Started
 
+You can get started from either A or B option:
+
+### A. Fork Repository
+
+Fork this repository and clone to your working folder. 
+
+Note: Change `https://github.com/username/someline-starter` to your own cloned git repository address.
+
+```
+git clone https://github.com/username/someline-starter
+
+cd someline-starter
+```
+
+### B. Manually add to another reposiotry
+
 Clone this project to your working folder and open the directory:
 
 ```
@@ -36,7 +52,7 @@ git clone https://github.com/libern/someline-starter
 cd someline-starter
 ```
 
-## Add to another Git Repository
+#### B.1. Add to another Git Repository
 
 Change `https://github.com/username/repository-name.git` to your own git repository address.
 
@@ -44,6 +60,43 @@ Change `https://github.com/username/repository-name.git` to your own git reposit
 git remote remove origin
 git remote add origin https://github.com/username/repository-name.git
 git push -u origin master
+```
+
+## Installation
+
+### Development Requirements
+
+- Laravel 5: https://laravel.com/docs/5.2/installation
+- NodeJS: https://nodejs.org/en/
+- Bower: https://bower.io/
+- SQLite extention
+
+### Install Essentials
+
+*All these commands should be executed under the root of someline-starter project*
+
+Install composer dependencies
+```
+composer install
+```
+
+Install npm dependencies
+```
+npm install
+```
+
+Install bower dependencies
+```
+bower install
+```
+
+Set-up Laravel, after these commands, please change `.env` file for your own environment settings
+```
+sudo cp .env.example .env
+sudo chmod -r 777 storage
+sudo chmod -r 777 bootstrap/cache
+php artisan key:generate
+php artisan jwt:generate
 ```
 
 ## License
