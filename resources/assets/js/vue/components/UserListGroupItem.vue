@@ -1,5 +1,5 @@
 <template>
-    <a href="user/{{ item.user_id }}" class="list-group-item clearfix">
+    <a href="#" class="list-group-item clearfix">
         <span class="pull-left thumb-sm avatar m-r">
             <img src="https://www.someline.com/en/user/profilephoto/origin/f4ccc4de78c03fe2c321490cf6f8157f825e4c4f.jpg"
                  alt="...">
