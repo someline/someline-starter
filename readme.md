@@ -260,6 +260,10 @@ Unit Tests: `tests/`
 
 API Unit Tests: `tests/Api/`
 
+#### Debug and Clockwork
+
+View all requests and request information from file `storage/clockwork.sqlite`
+
 #### Database
 
 ##### We recommend to use migrations for database structure and seeding. 
