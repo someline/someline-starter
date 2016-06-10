@@ -1,27 +1,29 @@
-# Laravel PHP Framework
+# Someline Starter PHP Framework
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Someline Starter is a framework for quick building Web Apps or APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Someline Starter is built for two reasons:
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+1. Quick application or api starter without the need to build from scratch using Laravel.
 
-## Official Documentation
+2. Introduce modern design pattern, which have a better foundation when starting, for PHP projects.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## Framework Overview
 
-## Contributing
+Someline Starter is suitable for API oriented projects.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+The Restful API routes are played as a backend layer which provide simple unified interfaces for frontend: Web and Mobile apps.
 
-## Security Vulnerabilities
+It utilized both OAuth2 and JWT for authentication purpose and protecting resources.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+For Web frontend: JWT is used.
+
+For Mobile frontend or third-party: OAuth2 is used.
+
+It also provides Unit Tests for API testing and framework testing.
+
+It shipped with Angulr Theme and features in every part that you can easily reference.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The Someline Starter framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
