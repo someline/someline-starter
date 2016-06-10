@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "libern/someline-starter",
+    "description": "Someline Starter is a framework for quick building Web Apps or APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, isolated front-end and back-end layer.",
+    "keywords": ["framework", "laravel", "vuejs", "restful", "api", "oauth", "jwt"],
     "license": "MIT",
     "type": "project",
     "require": {
