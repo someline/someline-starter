@@ -105,7 +105,7 @@ php artisan jwt:generate
 
 ### Database & Seeding
 
-You need to create a database e.g `someline_starter` with Encoding `utf8mb4` and Collation `utf8mb4_unicode_ci`.
+You need to create a Database e.g. `someline_starter` with Encoding `utf8mb4` and Collation `utf8mb4_unicode_ci`.
 
 Change database config in `.env` file to the match the database that your just created.
 
@@ -115,14 +115,6 @@ After having database configuration setup, you can now do migrations and seeding
 php artisan migrate
 
 php artisan db:seed
-```
-
-##### Refresh Migrations and Seeding
-
-When you added or changed to migration files or seedings, or you just simply want to refresh everything in database:
-
-```
-php artisan db:refresh --seed
 ```
 
 ### Ready to go
@@ -174,7 +166,14 @@ Explore and start to build on top of it.
 
 ## Development Process and Flow
 
-To be added.
+##### Refresh Database Migrations and Seeding
+
+When you added or changed to migration files or seedings, or you just simply want to refresh everything in database:
+
+```
+php artisan db:refresh --seed
+```
+
 
 ## License
 
