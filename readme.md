@@ -26,6 +26,38 @@ It is shipped with Angulr Theme and features in every part that you can easily r
 
 It is fully utilised Repository Design pattern.
 
+## Out-of-box Components
+
+##### If you are not familiar with any of these packages, you are recommended to get to know them as they are really helpful when you needed. 
+
+*Framework*
+- Laravel 5.2 [laravel/framework](https://github.com/laravel/framework)
+- Laravel IDE Helper [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
+- Clockwork [itsgoingd/clockwork](https://github.com/itsgoingd/clockwork)
+
+*Foundation*
+- Redis [predis/predis](https://github.com/nrk/predis)
+- GuzzleHTTP [guzzlehttp/guzzle](https://github.com/guzzle/guzzle)
+- HTTP Status [lukasoppermann/http-status](https://github.com/lukasoppermann/http-status)
+
+*Core*
+- Restful API [dingo/api](https://github.com/dingo/api)
+- L5 Repostory [prettus/l5-repository](https://github.com/andersao/l5-repository)
+- Laravel Validation [prettus/laravel-validation](https://github.com/andersao/laravel-validator)
+- Intervention Image [intervention/image](http://image.intervention.io/)
+- Intervention Image Cache [intervention/imagecache](https://github.com/Intervention/imagecache)
+- Image Validator [cviebrock/image-validator](https://github.com/cviebrock/image-validator)
+
+*Authentication*
+- OAuth2 Server [lucadegasperi/oauth2-server-laravel](https://github.com/lucadegasperi/oauth2-server-laravel)
+- JWT Auth [tymon/jwt-auth](https://github.com/tymondesigns/jwt-auth)
+
+*Theme*
+- Angulr theme with Bootstrap and jQuery support. Please [buy a license](http://themeforest.net/item/angulr-bootstrap-admin-web-app-with-angularjs/8437259?ref=Flatfull) if you use this in your project. For Demo: [Angular version](http://flatfull.com/themes/angulr/angular/#/app/dashboard-v1) and [HTML version](http://flatfull.com/themes/angulr/html/)
+
+*Frontend*
+- [Vue.js](https://vuejs.org/) Reactive Components for Modern Web Interfaces
+
 ## Get Started
 
 You can get started from either A or B option:
@@ -137,32 +169,6 @@ You are free to change the seeding account information from the file: `database/
 You are done. Yeah!
 
 Explore and start to build on top of it.
-
-## Out-of-box Components
-
-##### If you are not familiar with any of these packages, you are recommended to get to know them as they are really helpful when you needed. 
-
-*Framework*
-- Laravel 5.2 [laravel/framework](https://github.com/laravel/framework)
-- Laravel IDE Helper [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
-- Clockwork [itsgoingd/clockwork](https://github.com/itsgoingd/clockwork)
-
-*Foundation*
-- Redis [predis/predis](https://github.com/nrk/predis)
-- GuzzleHTTP [guzzlehttp/guzzle](https://github.com/guzzle/guzzle)
-- HTTP Status [lukasoppermann/http-status](https://github.com/lukasoppermann/http-status)
-
-*Core*
-- Restful API [dingo/api](https://github.com/dingo/api)
-- L5 Repostory [prettus/l5-repository](https://github.com/andersao/l5-repository)
-- Laravel Validation [prettus/laravel-validation](https://github.com/andersao/laravel-validator)
-- Intervention Image [intervention/image](http://image.intervention.io/)
-- Intervention Image Cache [intervention/imagecache](https://github.com/Intervention/imagecache)
-- Image Validator [cviebrock/image-validator](https://github.com/cviebrock/image-validator)
-
-*Authentication*
-- OAuth2 Server [lucadegasperi/oauth2-server-laravel](https://github.com/lucadegasperi/oauth2-server-laravel)
-- JWT Auth [tymon/jwt-auth](https://github.com/tymondesigns/jwt-auth)
 
 ## Development Process and Flow
 
