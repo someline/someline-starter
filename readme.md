@@ -43,6 +43,7 @@ It is fully utilised Repository Design pattern.
 *Core*
 - Restful API [dingo/api](https://github.com/dingo/api)
 - L5 Repostory [prettus/l5-repository](https://github.com/andersao/l5-repository)
+- Fractal [thephpleague/fractal](https://github.com/thephpleague/fractal)
 - Laravel Validation [prettus/laravel-validation](https://github.com/andersao/laravel-validator)
 - Intervention Image [intervention/image](http://image.intervention.io/)
 - Intervention Image Cache [intervention/imagecache](https://github.com/Intervention/imagecache)
@@ -178,12 +179,84 @@ Explore and start to build on top of it.
 
 You will need to know, read and understand fowllowing before you can start build on top of these.
 
-- [Laravel Docs](https://laravel.com/docs/5.2/)
-- [Restful API Best Practise](http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
-- [dingo/api Guide](https://github.com/dingo/api/wiki)
-- [Repository Pattern](https://bosnadev.com/2015/03/07/using-repository-pattern-in-laravel-5/?utm_source=prettus-l5-repository&utm_medium=readme&utm_campaign=prettus-l5-repository)
-- [Repository Usage](https://github.com/andersao/l5-repository#usage)
-- [Vue.js Guide](https://vuejs.org/guide/)
+- [ ] [Laravel Docs](https://laravel.com/docs/5.2/)
+- [ ] [Restful API Best Practise](http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
+- [ ] [dingo/api Guide](https://github.com/dingo/api/wiki)
+- [ ] [Repository Pattern](https://bosnadev.com/2015/03/07/using-repository-pattern-in-laravel-5/?utm_source=prettus-l5-repository&utm_medium=readme&utm_campaign=prettus-l5-repository)
+- [ ] [Repository Usage](https://github.com/andersao/l5-repository#usage)
+- [ ] [Vue.js Guide](https://vuejs.org/guide/)
+
+#### Namespace
+
+The dafault namespace for `app/` folder is `Someline`.
+
+#### BaseClass
+
+In order to ultise all features provided by Someline Starter, you should extended the Class from BaseClass (if there has one), e.g. `BasePresenter`, `BaseController`, etc. 
+
+#### Models
+
+All models are located under `app/Models/` folder.
+
+`User` Model under folder `app/Models/Foundation/` is created by default with primary key `user_id`, you should not change this class heavily because it is used almost everywhere within whole project. You can use global function `auth_user()` to access currently logged in user.
+
+Every model should extend `Someline/Models/BaseModel` which has a observer `Someline/Observers/BaseModelObserver` that you can ultilise all model events within the Model, e.g. `onCreating`, `onCreated`, `onUpdating`, `onDeleting`, etc.
+
+When creating new model, you should do it using command to auto generate realted Repository classes.
+
+```
+php artisan make:entity Post
+```
+
+#### Web Http
+
+All Web related files are located under `app/Http/` folder.
+
+Web Routes are defined in file `app/Http/routes.php`
+
+Web Controllers are defined in folder `app/Http/Controllers/`
+
+#### Restful API
+
+All API related files are located under `app/Api/` folder.
+
+API Routes are defined in file `app/Api/routes.php`
+
+API Controllers are defined in folder `app/Api/Controllers/`
+
+#### Repository Pattern
+
+All repository related files are located under `app/` with specific types as parent folders.
+
+Repositories: `app/Repositories/`
+
+Repositories Eloquent: `app/Repositories/Eloquent/`
+
+Repositories Interface: `app/Repositories/Interfaces/`
+
+Repositories Criteria: `app/Repositories/Criteria/`
+
+Presenters: `app/Presenters/`
+
+Transformers: `app/Transformers/`
+
+Validators: `app/Validators/`
+
+#### Resouces
+
+Angulr Styles and Scripts: `resources/assets/angulr/`
+
+Angulr with Blade views: `resources/views/angulr/`
+
+Vuejs: `resources/assets/js/vue/`
+
+Less styles: `resources/assets/less/app.less`
+
+#### API and Unit Tests
+
+Unit Tests: `tests/`
+
+API Unit Tests: `tests/Api/`
 
 ##### Refresh Database Migrations and Seeding
 
