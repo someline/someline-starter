@@ -53,7 +53,9 @@ It is fully utilised Repository Design pattern.
 - JWT Auth [tymon/jwt-auth](https://github.com/tymondesigns/jwt-auth)
 
 *Theme*
-- Angulr theme with Bootstrap and jQuery support. Please [buy a license](http://themeforest.net/item/angulr-bootstrap-admin-web-app-with-angularjs/8437259?ref=Flatfull) if you use this in your project. For Demo: [Angular version](http://flatfull.com/themes/angulr/angular/#/app/dashboard-v1) and [HTML version](http://flatfull.com/themes/angulr/html/)
+- Angulr theme with Bootstrap and jQuery support. For Demo: [Angular version](http://flatfull.com/themes/angulr/angular/#/app/dashboard-v1) and [HTML version](http://flatfull.com/themes/angulr/html/).
+  
+  *Please [buy a license](http://themeforest.net/item/angulr-bootstrap-admin-web-app-with-angularjs/8437259?ref=Flatfull) if you use this in your project.*
 
 *Frontend*
 - [Vue.js](https://vuejs.org/) Reactive Components for Modern Web Interfaces
@@ -97,7 +99,7 @@ git push -u origin master
 ### Development Requirements
 
 - Laravel 5: https://laravel.com/docs/5.2/installation
-- NodeJS: https://nodejs.org/en/
+- NodeJS: https://nodejs.org/
 - Bower: https://bower.io/
 - SQLite extention
 
@@ -171,6 +173,17 @@ You are done. Yeah!
 Explore and start to build on top of it.
 
 ## Development Process and Flow
+
+### Essential Knowledge
+
+You will need to know, read and understand fowllowing before you can start build on top of these.
+
+- [Laravel Docs](https://laravel.com/docs/5.2/)
+- [Restful API Best Practise](http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
+- [dingo/api Guide](https://github.com/dingo/api/wiki)
+- [Repository Pattern](https://bosnadev.com/2015/03/07/using-repository-pattern-in-laravel-5/?utm_source=prettus-l5-repository&utm_medium=readme&utm_campaign=prettus-l5-repository)
+- [Repository Usage](https://github.com/andersao/l5-repository#usage)
+- [Vue.js Guide](https://vuejs.org/guide/)
 
 ##### Refresh Database Migrations and Seeding
 
