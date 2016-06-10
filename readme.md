@@ -263,6 +263,35 @@ Vuejs: `resources/assets/js/vue/`
 
 Less styles: `resources/assets/less/app.less`
 
+When made changes in scripts, styles, you will need to run the command.
+
+In development, run:
+```
+gulp watch
+
+OR
+
+npm run-script dev
+```
+
+In production, run:
+```
+gulp --production
+
+OR
+
+npm run-script prod
+```
+
+When you changed theme files, run:
+```
+gulp --gulpfile gulpfile_theme.js
+
+OR
+
+npm run-script theme
+```
+
 #### API and Unit Tests
 
 Unit Tests: `tests/`
