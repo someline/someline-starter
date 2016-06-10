@@ -1137,7 +1137,6 @@ html {
     overflow-x: hidden;
   }
   .app-content {
-    transition: -webkit-transform 0.2s ease;
     transition: transform 0.2s ease;
   }
   .off-screen {
@@ -1154,11 +1153,8 @@ html {
   }
   .off-screen + * {
     background-color: #f0f3f4;
-    transition: -webkit-transform 0.2s ease;
     transition: transform 0.2s ease;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transform: translate3d(75%, 0px, 0px);
     transform: translate3d(75%, 0px, 0px);
     overflow: hidden;
     position: absolute;
@@ -1183,7 +1179,6 @@ html {
     right: 0;
   }
   .off-screen.pull-right + * {
-    -webkit-transform: translate3d(-75%, 0px, 0px);
     transform: translate3d(-75%, 0px, 0px);
   }
 }
@@ -1276,7 +1271,6 @@ html {
     font-size: 12px;
   }
   .app-aside-dock .app-aside .navi > ul > li > a > span.pull-right i.text {
-    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     line-height: 14px;
   }
@@ -2407,75 +2401,57 @@ fieldset[disabled] .i-checks input + i:before {
   overflow: hidden;
 }
 .fade-in-right-big.ng-enter {
-  -webkit-animation: fadeInRightBig 0.5s;
   animation: fadeInRightBig 0.5s;
 }
 .fade-in-right-big.ng-leave {
-  -webkit-animation: fadeOutLeftBig 0.5s;
   animation: fadeOutLeftBig 0.5s;
 }
 .fade-in-left-big.ng-enter {
-  -webkit-animation: fadeInLeftBig 0.5s;
   animation: fadeInLeftBig 0.5s;
 }
 .fade-in-left-big.ng-leave {
-  -webkit-animation: fadeOutRightBig 0.5s;
   animation: fadeOutRightBig 0.5s;
 }
 .fade-in-up-big.ng-enter {
-  -webkit-animation: fadeInUpBig 0.5s;
   animation: fadeInUpBig 0.5s;
 }
 .fade-in-up-big.ng-leave {
-  -webkit-animation: fadeOutUpBig 0.5s;
   animation: fadeOutUpBig 0.5s;
 }
 .fade-in-down-big.ng-enter {
-  -webkit-animation: fadeInDownBig 0.5s;
   animation: fadeInDownBig 0.5s;
 }
 .fade-in-down-big.ng-leave {
-  -webkit-animation: fadeOutDownBig 0.5s;
   animation: fadeOutDownBig 0.5s;
 }
 .fade-in.ng-enter {
-  -webkit-animation: fadeIn 0.5s;
   animation: fadeIn 0.5s;
 }
 .fade-in.ng-leave {
-  -webkit-animation: fadeOut 0.5s;
   animation: fadeOut 0.5s;
 }
 .fade-in-right.ng-enter {
-  -webkit-animation: fadeInRight 0.5s;
   animation: fadeInRight 0.5s;
 }
 .fade-in-right.ng-leave {
-  -webkit-animation: fadeOutLeft 0.5s;
   animation: fadeOutLeft 0.5s;
 }
 .fade-in-left.ng-enter {
-  -webkit-animation: fadeInLeft 0.5s;
   animation: fadeInLeft 0.5s;
 }
 .fade-in-left.ng-leave {
-  -webkit-animation: fadeOutRight 0.5s;
   animation: fadeOutRight 0.5s;
 }
 .fade-in-up.ng-enter {
-  -webkit-animation: fadeInUp 0.5s;
   animation: fadeInUp 0.5s;
 }
 .fade-in-up.ng-leave {
-  -webkit-animation: fadeOutUp 0.5s;
   animation: fadeOutUp 0.5s;
 }
 .fade-in-down.ng-enter {
-  -webkit-animation: fadeInDown 0.5s;
   animation: fadeInDown 0.5s;
 }
 .fade-in-down.ng-leave {
-  -webkit-animation: fadeOutDown 0.5s;
   animation: fadeOutDown 0.5s;
 }
 .bg-gd {
@@ -4041,7 +4017,6 @@ a.text-black:hover {
 .hover-anchor:hover > .hover-rotate,
 .hover-anchor:focus > .hover-rotate,
 .hover-anchor:active > .hover-rotate {
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .backdrop {
@@ -4159,32 +4134,15 @@ a.text-black:hover {
   background-color: inherit;
 }
 .butterbar.active {
-  -webkit-animation: changebar 2.25s infinite 0.75s;
   animation: changebar 2.25s infinite 0.75s;
 }
 .butterbar.active .bar {
-  -webkit-animation: changebar 2.25s infinite;
   animation: changebar 2.25s infinite;
 }
 .butterbar.active .bar:before {
-  -webkit-animation: movingbar 0.75s infinite;
   animation: movingbar 0.75s infinite;
 }
 /* Moving bar */
-@-webkit-keyframes movingbar {
-  0% {
-    left: 50%;
-    right: 50%;
-  }
-  99.9% {
-    left: 0%;
-    right: 0%;
-  }
-  100% {
-    left: 50%;
-    right: 50%;
-  }
-}
 @keyframes movingbar {
   0% {
     left: 50%;
@@ -4200,26 +4158,6 @@ a.text-black:hover {
   }
 }
 /* change bar */
-@-webkit-keyframes changebar {
-  0% {
-    background-color: #fad733;
-  }
-  33.3% {
-    background-color: #fad733;
-  }
-  33.33% {
-    background-color: #23B7E5;
-  }
-  66.6% {
-    background-color: #23B7E5;
-  }
-  66.66% {
-    background-color: #27c24c;
-  }
-  99.9% {
-    background-color: #27c24c;
-  }
-}
 @keyframes changebar {
   0% {
     background-color: #fad733;
