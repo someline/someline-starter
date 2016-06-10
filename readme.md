@@ -292,6 +292,11 @@ $table->timestamp('updated_at')->nullable();
 $table->ipAddress('updated_ip')->nullable();
 ```
 
+And remove timestamps():
+```
+// $table->timestamps();
+```
+
 3. Add factory support, under file `database/factories/ModelFactory.php`
 
 4. Create seeding support, under folder `database/seeds/`
