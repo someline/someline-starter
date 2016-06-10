@@ -1,4 +1,6 @@
 var elixir = require('laravel-elixir');
+var gulp = require("gulp");
+require('laravel-elixir-vueify');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,30 +13,35 @@ var elixir = require('laravel-elixir');
  |
  */
 
-elixir(function(mix) {
-    mix.less('../angulr/css/less/app.less', 'resources/assets/angulr/css/');
-    mix.styles([
-        'public/bower_components/toastr/toastr.css',
+elixir(function (mix) {
 
-        'public/vendors/bower_components/bootstrap/dist/css/bootstrap.css',
-        'public/vendors/bower_components/animate.css/animate.css',
-        'public/vendors/bower_components/font-awesome/css/font-awesome.css',
-        'public/vendors/bower_components/simple-line-icons/css/simple-line-icons.css',
-        'resources/assets/angulr/css/*.css'
-    ], 'public/css/app.src.css', './');
+    // less
+    mix.less('app.less', 'resources/assets/less/css/');
 
-    // scripts
     // vue js
     mix.browserify('main.js');
 
+    // styles
+    mix.styles([
+        // theme styles
+        "public/css/theme.src.css",
+
+        // dependencies
+        'public/bower_components/toastr/toastr.css',
+
+        // main styles
+        'resources/assets/less/css/*.css',
+    ], 'public/css/app.src.css', './');
+
+    // scripts
     mix.scripts([
-        'public/vendors/bower_components/jquery/dist/jquery.min.js',
-        'public/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js',
-        'resources/assets/angulr/js/support/ui-*.js',
+        // theme script
+        'public/js/theme.src.js',
 
         // dependencies
         'public/bower_components/toastr/toastr.js',
 
+        // main vue js
         'public/js/main.js',
     ], 'public/js/app.src.js', './');
 
@@ -43,4 +50,5 @@ elixir(function(mix) {
         "public/css/app.src.css",
         "public/js/app.src.js",
     ]);
+
 });
