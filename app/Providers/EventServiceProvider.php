@@ -4,6 +4,7 @@ namespace Someline\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use Someline\Listeners\User\UserEventListener;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -16,6 +17,15 @@ class EventServiceProvider extends ServiceProvider
         'Someline\Events\SomeEvent' => [
             'Someline\Listeners\EventListener',
         ],
+    ];
+
+    /**
+     * The subscriber classes to register.
+     *
+     * @var array
+     */
+    protected $subscribe = [
+        UserEventListener::class,
     ];
 
     /**

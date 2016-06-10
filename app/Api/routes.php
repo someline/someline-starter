@@ -25,7 +25,7 @@ $api->version('v1', [
     /**
      * @oauth_type client_credentials
      */
-    $api->group(['middleware' => ['api-auth:client'], 'providers' => ['oauth', 'jwt']], function (\Dingo\Api\Routing\Router $api) {
+    $api->group(['middleware' => ['api-auth:client'], 'providers' => ['jwt', 'oauth']], function (\Dingo\Api\Routing\Router $api) {
         // Rate: 100 requests per 5 minutes
         $api->group(['middleware' => ['api.throttle'], 'limit' => 100, 'expires' => 5], function (\Dingo\Api\Routing\Router $api) {
 

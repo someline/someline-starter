@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('/', function () {
+        return redirect('users');
+    });
+
+    Route::get('users', function () {
+        return view('users.user_list');
+    });
+
 });

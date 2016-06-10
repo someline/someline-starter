@@ -9,11 +9,11 @@ namespace Someline\Api\Middleware;
 
 use Closure;
 use League\OAuth2\Server\Exception\AccessDeniedException;
-use Looptime\Api\Auth\Provider\OAuth2;
+use Someline\Api\Auth\Provider\OAuth2;
 use Dingo\Api\Routing\Router;
 use Dingo\Api\Auth\Auth as Authentication;
-use Looptime\Events\User\UserLoggedInEvent;
-use Looptime\Models\Foundation\User;
+use Someline\Events\User\UserLoggedInEvent;
+use Someline\Models\Foundation\User;
 
 class ApiAuthMiddleware
 {
