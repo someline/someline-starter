@@ -1,0 +1,15 @@
+{
+  "name": "jquery_appear",
+  "homepage": "https://github.com/morr/jquery.appear",
+  "version": "0.3.3",
+  "_release": "0.3.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.3.3",
+    "commit": "f5905c7ae8dd5015ac94bcf3e0a4e8b359a29c67"
+  },
+  "_source": "git://github.com/morr/jquery.appear.git",
+  "_target": "~0.3.3",
+  "_originalSource": "jquery_appear",
+  "_direct": true
+}

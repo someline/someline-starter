@@ -1,0 +1,37 @@
+{
+  "name": "ng-img-crop",
+  "version": "0.2.0",
+  "authors": [
+    "Alex Kaul <alexkaul@googlemail.com>"
+  ],
+  "description": "Image crop directive for AngularJS",
+  "main": [
+    "compile/minified/ng-img-crop.js",
+    "compile/minified/ng-img-crop.css"
+  ],
+  "keywords": [
+    "angular",
+    "image",
+    "crop",
+    "cropper"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/alexk111/ngImgCrop",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.19"
+  },
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "89f7c1844bbaba77324a15cbb6b829c01eec783c"
+  },
+  "_source": "git://github.com/alexk111/ngImgCrop.git",
+  "_target": "~0.2.0",
+  "_originalSource": "ngImgCrop"
+}
