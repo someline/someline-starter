@@ -105,7 +105,7 @@ php artisan jwt:generate
 
 ### Database & Seeding
 
-You need to create a database with Encoding: `utf8mb4` and Collation `utf8mb4_unicode_ci` and config in `.env` file
+You need to create a database e.g `someline_starter` with Encoding: `utf8mb4` and Collation `utf8mb4_unicode_ci` and config in `.env` file
 
 After having database configuration setup, you can now do migrations and seeding.
 
