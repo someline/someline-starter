@@ -224,6 +224,8 @@ API Routes are defined in file `app/Api/routes.php`
 
 API Controllers are defined in folder `app/Api/Controllers/`
 
+When you create APIs, you need to test them before you can use it. You should test all APIs using Unit Tests provided or create new Unit Tests. Not recommended to test using Browser or Postman, etc. 
+
 #### Repository Pattern
 
 All repository related files are located under `app/` with specific types as parent folders.
