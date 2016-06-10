@@ -99,6 +99,47 @@ php artisan key:generate
 php artisan jwt:generate
 ```
 
+### Database & Seeding
+
+You need to create a database with Encoding: `utf8mb4` and Collation `utf8mb4_unicode_ci` and config in `.env` file
+
+After having database configuration setup, you can now do migrations and seeding.
+
+```
+php artisan migrate
+
+php artisan db:seed
+```
+
+##### Refresh Migrations and Seeding
+
+When you added or changed to migration files or seedings, or you just simply want to refresh everything in database:
+
+```
+php artisan db:refresh --seed
+```
+
+### Ready to go
+
+Until this point, you should be able to visit the home page. 
+
+For example, if you have set the domain: `http://someline-starter.app/`.
+
+Just visit: http://someline-starter.app/
+
+It should prompt you for login, use:
+
+```
+libern@someline.com
+Abc12345
+```
+
+You are free to change the seeding account information from the file: `database/seeds/UsersTableSeeder.php`
+
+You are done. Yeah!
+
+Explore and start to build on top of it.
+
 ## License
 
 The Someline Starter framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
