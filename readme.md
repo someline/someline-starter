@@ -99,6 +99,8 @@ git push -u origin master
 
 ### Development Requirements
 
+- PHP: >=7.0
+- MySQL: >=5.7
 - Laravel 5: https://laravel.com/docs/5.2/installation
 - NodeJS: https://nodejs.org/
 - Bower: https://bower.io/
