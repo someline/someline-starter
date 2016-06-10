@@ -2,6 +2,12 @@
 
 Someline Starter is a framework for quick building Web Apps and Restful APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer.
 
+----
+
+##### [Demo](http://starter.someline.com/) 
+Email: libern@someline.com 
+Password: Abc12345
+
 ## Someline Starter is born for two reasons:
 
 1. Quick application or Restful API starter without the need to build from scratch using Laravel.
