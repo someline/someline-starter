@@ -1,2 +1,2 @@
 {{--Build with &hearts; by Libern. <br>--}}
-Copyright © {{date('Y')}} Looptime.  All rights reserved.
+Copyright © {{date('Y')}} Someline.  All rights reserved.

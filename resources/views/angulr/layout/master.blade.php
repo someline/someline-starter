@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Looptime</title>
-    {{--<meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components" />--}}
+    <title>Someline Starter</title>
+    <meta name="keywords" content="laravel,restful,api,vue.js,vuejs"/>
+    <meta name="description"
+          content="Modern PHP design pattern build on top of popular Laravel 5 framework and Vue.js with separated front-end and back-end layer."/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <link rel="stylesheet" href="{{url(elixir("css/app.src.css"))}}" type="text/css"/>
     @stack('stylesheets')
@@ -19,7 +21,7 @@
                 } else {
                     $user = new ArrayObject();
                 }
-                echo 'window.Looptime = ' . json_encode([
+                echo 'window.Someline = ' . json_encode([
                                 'csrfToken' => csrf_token(),
                                 'jwtToken' => jwt_token(),
                                 'state' => [

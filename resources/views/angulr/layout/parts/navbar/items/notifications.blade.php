@@ -6,9 +6,4 @@
         &nbsp;
         <span>Notifications</span>
     </a>
-    <!-- dropdown -->
-    <div id="notification-dropdown" class="dropdown-menu w-xxl animated fadeInUp">
-        <lt-notification-panel></lt-notification-panel>
-    </div>
-    <!-- / dropdown -->
 </li>
