@@ -32,24 +32,22 @@ You can get started from either A or B option:
 
 ### A. Fork Repository
 
-Fork this repository and clone to your working folder. 
+`Fork this repository` and `clone` to your working folder. 
 
-Note: Change `https://github.com/username/someline-starter` to your own cloned git repository address.
+After forked:
 
 ```
 git clone https://github.com/username/someline-starter
-
-cd someline-starter
 ```
 
-### B. Manually add to another reposiotry
+Note: Change `https://github.com/username/someline-starter` to your own cloned git repository address.
+
+### B. Manually add to another repository
 
 Clone this project to your working folder and open the directory:
 
 ```
 git clone https://github.com/libern/someline-starter
-
-cd someline-starter
 ```
 
 #### B.1. Add to another Git Repository
@@ -73,6 +71,12 @@ git push -u origin master
 
 ### Install Essentials
 
+Open `someline-starter` folder
+
+```
+cd someline-starter
+```
+
 *All these commands should be executed under the root of someline-starter project*
 
 Install composer dependencies
@@ -93,11 +97,82 @@ bower install
 Set-up Laravel, after these commands, please change `.env` file for your own environment settings
 ```
 sudo cp .env.example .env
-sudo chmod -r 777 storage
-sudo chmod -r 777 bootstrap/cache
+sudo chmod -R 777 storage
+sudo chmod -R 777 bootstrap/cache
 php artisan key:generate
 php artisan jwt:generate
 ```
+
+### Database & Seeding
+
+You need to create a database e.g `someline_starter` with Encoding: `utf8mb4` and Collation `utf8mb4_unicode_ci` and config in `.env` file
+
+After having database configuration setup, you can now do migrations and seeding.
+
+```
+php artisan migrate
+
+php artisan db:seed
+```
+
+##### Refresh Migrations and Seeding
+
+When you added or changed to migration files or seedings, or you just simply want to refresh everything in database:
+
+```
+php artisan db:refresh --seed
+```
+
+### Ready to go
+
+Until this point, you should be able to visit the home page. 
+
+For example, if you have set the domain: `http://someline-starter.app/`.
+
+Just visit: http://someline-starter.app/
+
+It should prompt you for login, use:
+
+```
+libern@someline.com
+Abc12345
+```
+
+You are free to change the seeding account information from the file: `database/seeds/UsersTableSeeder.php`
+
+You are done. Yeah!
+
+Explore and start to build on top of it.
+
+## Out-of-box Components
+
+##### If you are not familiar with any of these packages, you are recommended to get to know them as they are really helpful when you needed. 
+
+*Framework*
+- Laravel 5.2 [laravel/framework](https://github.com/laravel/framework)
+- Laravel IDE Helper [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
+- Clockwork [itsgoingd/clockwork](https://github.com/itsgoingd/clockwork)
+
+*Foundation*
+- Redis [predis/predis](https://github.com/nrk/predis)
+- GuzzleHTTP [guzzlehttp/guzzle](https://github.com/guzzle/guzzle)
+- HTTP Status [lukasoppermann/http-status](https://github.com/lukasoppermann/http-status)
+
+*Core*
+- Restful API [dingo/api](https://github.com/dingo/api)
+- L5 Repostory [prettus/l5-repository](https://github.com/andersao/l5-repository)
+- Laravel Validation [prettus/laravel-validation](https://github.com/andersao/laravel-validator)
+- Intervention Image [intervention/image](http://image.intervention.io/)
+- Intervention Image Cache [intervention/imagecache](https://github.com/Intervention/imagecache)
+- Image Validator [cviebrock/image-validator](https://github.com/cviebrock/image-validator)
+
+*Authentication*
+- OAuth2 Server [lucadegasperi/oauth2-server-laravel](https://github.com/lucadegasperi/oauth2-server-laravel)
+- JWT Auth [tymon/jwt-auth](https://github.com/tymondesigns/jwt-auth)
+
+## Development Process and Flow
+
+To be added.
 
 ## License
 
