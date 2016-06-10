@@ -12,7 +12,7 @@ Someline Starter is a framework for quick building Web Apps and Restful APIs, wi
 
 ##### [Someline Starter Demo](http://starter.someline.com/) 
 
-Frontend with vuejs and display data from Restful API
+Frontend with Vuejs and display data from Restful API
 
 Email: libern@someline.com 
 
