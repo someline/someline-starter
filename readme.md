@@ -186,6 +186,8 @@ You will need to know, read and understand fowllowing before you can start build
 - [ ] [Repository Usage](https://github.com/andersao/l5-repository#usage)
 - [ ] [Vue.js Guide](https://vuejs.org/guide/)
 
+We recommend use [PHPStorm IDE](https://www.jetbrains.com/phpstorm/) to build and develop your projects.
+
 #### Namespace
 
 The dafault namespace for `app/` folder is `Someline`.
@@ -267,28 +269,16 @@ When made changes in scripts, styles, you will need to run the command.
 
 In development, run:
 ```
-gulp watch
-
-// OR use npm
-
 npm run-script dev
 ```
 
 In production, run:
 ```
-gulp --production
-
-// OR use npm
-
 npm run-script prod
 ```
 
 When you changed theme files, run:
 ```
-gulp --gulpfile gulpfile_theme.js
-
-// OR use npm
-
 npm run-script theme
 ```
 
