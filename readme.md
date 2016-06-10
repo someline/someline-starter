@@ -269,7 +269,7 @@ In development, run:
 ```
 gulp watch
 
-OR
+// OR use npm
 
 npm run-script dev
 ```
@@ -278,7 +278,7 @@ In production, run:
 ```
 gulp --production
 
-OR
+// OR use npm
 
 npm run-script prod
 ```
@@ -287,7 +287,7 @@ When you changed theme files, run:
 ```
 gulp --gulpfile gulpfile_theme.js
 
-OR
+// OR use npm
 
 npm run-script theme
 ```
