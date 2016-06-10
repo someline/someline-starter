@@ -260,6 +260,38 @@ Unit Tests: `tests/`
 
 API Unit Tests: `tests/Api/`
 
+#### Database
+
+##### We recommend to use migrations for database structure and seeding. 
+
+Directly changing from database or not follow migrations is strongly NOT recommended.
+
+##### Flow of creating database migrations:
+
+1. Create a migration file (Auto generated when use `php artisan make:entity`), under folder `database/migrations/`
+
+2. Add essential columns to migration file:
+
+You are recommended to use `tablename_id` format as primary incremental key, for example, for table `posts`, you need to use `post_id`, and when this become a foreign key, you should keep the same name in other table `post_id`.
+```
+$table->increments('post_id');
+```
+
+The following columns are always required by `BaseModel`:
+```
+$table->unsignedInteger('user_id')->index();
+$table->unsignedInteger('created_by')->nullable();
+$table->timestamp('created_at')->nullable();
+$table->ipAddress('created_ip')->nullable();
+$table->unsignedInteger('updated_by')->nullable();
+$table->timestamp('updated_at')->nullable();
+$table->ipAddress('updated_ip')->nullable();
+```
+
+3. Add factory support, under file `database/factories/ModelFactory.php`
+
+4. Create seeding support, under folder `database/seeds/`
+
 ##### Refresh Database Migrations and Seeding
 
 When you added or changed to migration files or seedings, or you just simply want to refresh everything in database:
