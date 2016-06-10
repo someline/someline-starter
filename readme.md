@@ -190,6 +190,15 @@ You will need to know, read and understand fowllowing before you can start build
 
 The dafault namespace for `app/` folder is `Someline`.
 
+It is NOT recommended to change the namespace, if you are not familiar with namepsace of Someline Starter as the `Someline` namespace is used heavily within whole project. 
+
+However, you can still change it if you know how what you are doing, because some namespaces required manually changing. 
+
+To change namespace to your preference:
+```
+php artisan app:namespace YourApp
+```
+
 #### BaseClass
 
 In order to ultise all features provided by Someline Starter, you should extended the Class from BaseClass (if there has one), e.g. `BasePresenter`, `BaseController`, etc. 
