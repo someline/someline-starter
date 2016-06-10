@@ -5,7 +5,7 @@
     <title>Someline Starter</title>
     <meta name="keywords" content="laravel,restful,api,vue.js,vuejs"/>
     <meta name="description"
-          content="Someline Starter is a framework for quick building Web Apps or APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, isolated front-end and back-end layer."/>
+          content="Someline Starter is a framework for quick building Web Apps or APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer."/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <link rel="stylesheet" href="{{url(elixir("css/app.src.css"))}}" type="text/css"/>
     @stack('stylesheets')
