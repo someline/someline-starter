@@ -53,7 +53,7 @@ It is fully utilised Repository Design pattern.
 
 *Core*
 - Restful API [dingo/api](https://github.com/dingo/api)
-- L5 Repostory [prettus/l5-repository](https://github.com/andersao/l5-repository)
+- L5 Repository [prettus/l5-repository](https://github.com/andersao/l5-repository)
 - Fractal [thephpleague/fractal](https://github.com/thephpleague/fractal)
 - Laravel Validation [prettus/laravel-validation](https://github.com/andersao/laravel-validator)
 - Intervention Image [intervention/image](http://image.intervention.io/)
