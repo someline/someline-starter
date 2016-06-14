@@ -74,7 +74,7 @@ It is fully utilised Repository Design pattern.
 
 ## Get Started
 
-You can get started from either A or B option:
+You can get started from following steps:
 
 ### A. Clone repository
 
