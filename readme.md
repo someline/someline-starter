@@ -1,6 +1,6 @@
 # Someline Starter PHP Framework
 
-Someline Starter is a framework for quick building Web Apps and Restful APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer.
+[Someline Starter](https://github.com/libern/someline-starter) is a framework for quick building Web Apps and Restful APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer.
 
 ## Someline Starter is born for two reasons:
 
@@ -74,21 +74,9 @@ It is fully utilised Repository Design pattern.
 
 ## Get Started
 
-You can get started from either A or B option:
+You can get started from following steps:
 
-### A. Fork Repository
-
-`Fork this repository` and `clone` to your working folder. 
-
-After forked:
-
-```
-git clone https://github.com/username/someline-starter
-```
-
-Note: Change `https://github.com/username/someline-starter` to your own cloned git repository address.
-
-### B. Manually add to another repository
+### A. Clone repository
 
 Clone this project to your working folder and open the directory:
 
@@ -96,11 +84,12 @@ Clone this project to your working folder and open the directory:
 git clone https://github.com/libern/someline-starter
 ```
 
-#### B.1. Add to another Git Repository
+#### A.1. Add to a git repository *(When Needed)*
 
 Change `https://github.com/username/repository-name.git` to your own git repository address.
 
 ```
+cd someline-starter
 rm -rf .git
 
 git init
@@ -124,7 +113,7 @@ git push -u origin master
 
 ### Install Essentials
 
-Open `someline-starter` folder
+Open `someline-starter` folder *(Optional, run only when you are not inside the project root folder)*
 
 ```
 cd someline-starter
