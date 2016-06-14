@@ -14,7 +14,14 @@ class UserTest extends BaseApiTestCase
         $this->withOAuthTokenTypeClient();
         $this->get('users');
         $this->printResponseData();
-        $this->assertResponseOk();
+        $this->seeJsonStructure([
+            'data' => [
+                '*' => [
+                    'user_id',
+                    'name',
+                ],
+            ]
+        ]);
     }
 
     public function testGetCurrentUser()
