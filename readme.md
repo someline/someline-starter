@@ -101,7 +101,12 @@ git clone https://github.com/libern/someline-starter
 Change `https://github.com/username/repository-name.git` to your own git repository address.
 
 ```
-git remote remove origin
+rm -R .git
+
+git init
+git add .
+git commit -m 'Initial commit'
+
 git remote add origin https://github.com/username/repository-name.git
 git push -u origin master
 ```
