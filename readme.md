@@ -342,7 +342,7 @@ And remove timestamps():
 When you added or changed to migration files or seedings, or you just simply want to refresh everything in database:
 
 ```
-php artisan db:refresh --seed
+php artisan migrate:refresh --seed
 ```
 
 
