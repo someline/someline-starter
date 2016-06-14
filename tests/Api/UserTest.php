@@ -11,7 +11,7 @@ class UserTest extends BaseApiTestCase
 
     public function testGetAllUsers()
     {
-        $this->withOAuthTokenTypeClient();
+        $this->withOAuthTokenTypeUser();
         $this->get('users');
         $this->printResponseData();
         $this->seeJsonStructure([
@@ -63,6 +63,13 @@ class UserTest extends BaseApiTestCase
 
     public function testDeleteUser()
     {
+        $user = \Someline\Models\Foundation\User::find(3);
+        if (!$user) {
+            $user = factory(\Someline\Models\Foundation\User::class, 1)->make();
+            $user->user_id = 3;
+            $user->save();
+        }
+
         $this->withOAuthTokenTypeUser();
         $this->delete('users/3');
         $this->printResponseData();

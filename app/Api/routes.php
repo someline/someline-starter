@@ -23,15 +23,6 @@ $api->version('v1', [
     });
 
     /**
-     * @oauth_type jwt
-     */
-    $api->group(['providers' => ['jwt']], function (\Dingo\Api\Routing\Router $api) {
-
-        $api->get('users', 'UsersController@index');
-
-    });
-
-    /**
      * @oauth_type client_credentials
      */
     $api->group(['middleware' => ['api-auth:client'], 'providers' => ['oauth']], function (\Dingo\Api\Routing\Router $api) {
@@ -50,6 +41,8 @@ $api->version('v1', [
 
         // Rate: 100 requests per 5 minutes
         $api->group(['middleware' => ['api.throttle'], 'limit' => 100, 'expires' => 5], function (\Dingo\Api\Routing\Router $api) {
+
+            $api->get('users', 'UsersController@index');
 
             $api->get('users/me', 'UsersController@me');
 

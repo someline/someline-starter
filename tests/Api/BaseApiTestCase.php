@@ -39,21 +39,6 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
         ]);
     }
 
-    public function getResponse()
-    {
-        return $this->response;
-    }
-
-    public function getResponseAsJson($assoc = true)
-    {
-        return json_decode($this->getResponse()->getContent(), $assoc);
-    }
-
-    public function getResponseData()
-    {
-        return $this->getResponseAsJson();
-    }
-
     protected function getClientData()
     {
         return [
@@ -75,6 +60,42 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
         return $this->post('oauth/access_token', array_merge($data, [
             'grant_type' => $grant_type,
         ]));
+    }
+
+    private function configureOptions($options)
+    {
+        $headers = [
+            'User-Agent' => 'someline-testing/1.0',
+            'Accept' => 'application/x.someline.v1+json',
+        ];
+
+        if ($this->use_oauth_token) {
+            $headers['Authorization'] = 'Bearer ' . $this->getOAuthToken($this->use_oauth_token);
+        }
+
+        if (isset($options['headers'])) {
+            $headers = array_merge($headers, $options['headers']);
+            unset($options['headers']);
+        }
+
+        return array_merge([
+            'headers' => $headers,
+        ], $options);
+    }
+
+    public function getResponse()
+    {
+        return $this->response;
+    }
+
+    public function getResponseAsJson($assoc = true)
+    {
+        return json_decode($this->getResponse()->getContent(), $assoc);
+    }
+
+    public function getResponseData()
+    {
+        return $this->getResponseAsJson();
     }
 
     private function getOAuthToken($type)
@@ -122,27 +143,6 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
     public function withoutOAuthToken()
     {
         $this->use_oauth_token = null;
-    }
-
-    private function configureOptions($options)
-    {
-        $headers = [
-            'User-Agent' => 'someline-testing/1.0',
-            'Accept' => 'application/x.someline.v1+json',
-        ];
-
-        if ($this->use_oauth_token) {
-            $headers['Authorization'] = 'Bearer ' . $this->getOAuthToken($this->use_oauth_token);
-        }
-
-        if (isset($options['headers'])) {
-            $headers = array_merge($headers, $options['headers']);
-            unset($options['headers']);
-        }
-
-        return array_merge([
-            'headers' => $headers,
-        ], $options);
     }
 
     /**
