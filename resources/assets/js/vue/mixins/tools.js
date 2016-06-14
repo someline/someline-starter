@@ -21,6 +21,14 @@ export default{
             }
 
             return form_data;
-        }
+        },
+        isEmptyObject(object){
+            return Object.keys(object).length === 0;
+        },
+        isMobile(){
+            var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+
+            return (isMobile.matches);
+        },
     }
 }
