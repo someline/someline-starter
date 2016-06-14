@@ -84,7 +84,7 @@ Clone this project to your working folder and open the directory:
 git clone https://github.com/libern/someline-starter
 ```
 
-#### A.1. Add to a Git Repository *(When Needed)*
+#### A.1. Add to a git repository *(When Needed)*
 
 Change `https://github.com/username/repository-name.git` to your own git repository address.
 
