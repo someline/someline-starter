@@ -8,6 +8,17 @@ Someline Starter is a framework for quick building Web Apps and Restful APIs, wi
 
 2. Introduce modern design pattern, which have a better foundation when starting, for PHP projects.
 
+## See In Action
+
+##### [Someline Starter Demo](http://starter.someline.com/) 
+
+Frontend with Vuejs and display data from Restful API
+
+Email: libern@someline.com 
+
+Password: Abc12345
+
+
 ## Framework Overview
 
 Someline Starter is suitable for Restful API oriented projects.
@@ -42,7 +53,7 @@ It is fully utilised Repository Design pattern.
 
 *Core*
 - Restful API [dingo/api](https://github.com/dingo/api)
-- L5 Repostory [prettus/l5-repository](https://github.com/andersao/l5-repository)
+- L5 Repository [prettus/l5-repository](https://github.com/andersao/l5-repository)
 - Fractal [thephpleague/fractal](https://github.com/thephpleague/fractal)
 - Laravel Validation [prettus/laravel-validation](https://github.com/andersao/laravel-validator)
 - Intervention Image [intervention/image](http://image.intervention.io/)
@@ -99,6 +110,8 @@ git push -u origin master
 
 ### Development Requirements
 
+- PHP: >=7.0
+- MySQL: >=5.7
 - Laravel 5: https://laravel.com/docs/5.2/installation
 - NodeJS: https://nodejs.org/
 - Bower: https://bower.io/
