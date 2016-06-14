@@ -1,6 +1,6 @@
 <?php
 /**
- * Created for someline-server.
+ * Created for someline-starter.
  * User: Libern
  */
 
