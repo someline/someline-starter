@@ -101,7 +101,7 @@ git clone https://github.com/libern/someline-starter
 Change `https://github.com/username/repository-name.git` to your own git repository address.
 
 ```
-rm -R .git
+rm -rf .git
 
 git init
 git add .
