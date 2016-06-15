@@ -74,9 +74,34 @@ It is fully utilised Repository Design pattern.
 
 ## Get Started
 
-You can get started from following steps:
+*Make sure you have already installed PHP 7.0 and [composer](https://getcomposer.org/doc/00-intro.md).*
 
-### A. Clone repository
+You can get started either option A or B:
+
+### A. Get started via composer
+
+Under working folder, run the command:
+
+```
+composer create-project --prefer-dist libern/someline-starter someline-starter
+```
+
+#### A.1. Add to a git repository *(When Needed)*
+
+Change `https://github.com/username/repository-name.git` to your own git repository address.
+
+```
+cd someline-starter
+
+git init
+git add .
+git commit -m 'Initial commit'
+
+git remote add origin https://github.com/username/repository-name.git
+git push -u origin master
+```
+
+### B. Get started via cloning repository
 
 Clone this project to your working folder and open the directory:
 
@@ -84,7 +109,7 @@ Clone this project to your working folder and open the directory:
 git clone https://github.com/libern/someline-starter
 ```
 
-#### A.1. Add to a git repository *(When Needed)*
+#### B.1. Add to a git repository *(When Needed)*
 
 Change `https://github.com/username/repository-name.git` to your own git repository address.
 
