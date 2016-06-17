@@ -1,6 +1,6 @@
 <?php
 /**
- * Created for someline-starter.
+ * Created for someline-server.
  * User: Libern
  */
 
@@ -33,6 +33,11 @@ interface BaseRepositoryInterface extends RepositoryInterface
      * @return void
      */
     public function validateUpdate(array $attributes);
+
+    /**
+     * @param $validator
+     */
+    public function setValidator($validator);
 
     /**
      * @param $results

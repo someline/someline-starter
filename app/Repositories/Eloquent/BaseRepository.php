@@ -55,6 +55,14 @@ abstract class BaseRepository extends \Prettus\Repository\Eloquent\BaseRepositor
         }
     }
 
+    /**
+     * @param $validator
+     */
+    public function setValidator($validator)
+    {
+        $this->validator = $validator;
+    }
+
     public function present($results)
     {
         return $this->parserResult($results);
