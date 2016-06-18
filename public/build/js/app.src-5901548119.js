@@ -17154,8 +17154,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
     computed: {
         currentUserId: function currentUserId() {
-            console.log(Looptime.state);
-            return Looptime.state.user.user_id;
+            console.log(Someline.state);
+            return Someline.state.user.user_id;
         }
     }
 };
