@@ -36,6 +36,7 @@ interface BaseRepositoryInterface extends RepositoryInterface
 
     /**
      * @param $validator
+     * @return $this
      */
     public function setValidator($validator);
 
