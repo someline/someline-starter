@@ -7,8 +7,8 @@
 namespace Someline\Presenters;
 
 
+use Illuminate\Support\Collection;
 use Prettus\Repository\Presenter\FractalPresenter;
-use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Pagination\AbstractPaginator;
 
 abstract class BasePresenter extends FractalPresenter
@@ -30,7 +30,7 @@ abstract class BasePresenter extends FractalPresenter
             throw new Exception(trans('repository::packages.league_fractal_required'));
         }
 
-        if ($data instanceof EloquentCollection) {
+        if ($data instanceof Collection) {
             $this->resource = $this->transformCollection($data);
         } elseif ($data instanceof AbstractPaginator) {
             $this->resource = $this->transformPaginator($data);
