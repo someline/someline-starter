@@ -1,12 +1,8 @@
 <?php
 
-namespace Looptime\Api\Middleware;
+namespace Someline\Api\Middleware;
 
-use Carbon\Carbon;
 use Closure;
-use Illuminate\Support\Facades\Auth;
-use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Exceptions\TokenExpiredException;
 use Tymon\JWTAuth\Middleware\BaseMiddleware;
 
 class AutoRenewJwtToken extends BaseMiddleware

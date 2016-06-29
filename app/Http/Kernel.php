@@ -54,7 +54,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
 
         'api-auth' => \Someline\Api\Middleware\ApiAuthMiddleware::class,
-        'jwt-renew' => \Looptime\Api\Middleware\AutoRenewJwtToken::class,
+        'jwt-renew' => \Someline\Api\Middleware\AutoRenewJwtToken::class,
         'oauth' => \LucaDegasperi\OAuth2Server\Middleware\OAuthMiddleware::class,
         'oauth-user' => \LucaDegasperi\OAuth2Server\Middleware\OAuthUserOwnerMiddleware::class,
         'oauth-client' => \LucaDegasperi\OAuth2Server\Middleware\OAuthClientOwnerMiddleware::class,
