@@ -83,8 +83,7 @@ if (!function_exists('is_jwt_token_expiring')) {
                 $validTime = \Carbon\Carbon::createFromTimestampUTC($nbf);
 
                 // if now time is after valid time
-                // if now time is before expire time
-                if ($nowTime->gt($validTime) && $nowTime->lt($expireTime)) {
+                if ($nowTime->gt($validTime)) {
                     $minutesAfterValid = $nowTime->diffInMinutes($validTime);
                     $minutesBeforeExpire = $nowTime->diffInMinutes($expireTime);
                     $totalValidLength = $validTime->diffInMinutes($expireTime);
