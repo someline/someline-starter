@@ -16264,6 +16264,17 @@ _vue2.default.http.headers.common['X-CSRF-TOKEN'] = window.Someline.csrfToken;
 _vue2.default.http.headers.common['Authorization'] = 'Bearer ' + window.Someline.jwtToken;
 // Vue.http.headers.common['Accept'] = 'application/x.someline.v1+json';
 
+_vue2.default.http.interceptors.push({
+    response: function response(_response) {
+        var headers = _response.headers();
+        if (headers.authorization) {
+            window.Looptime.jwtToken = headers.authorization;
+            _vue2.default.http.headers.common['Authorization'] = 'Bearer ' + window.Looptime.jwtToken;
+        }
+        return _response;
+    }
+});
+
 window.Vue = _vue2.default;
 window.moment = _moment2.default;
 
