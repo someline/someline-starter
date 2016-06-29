@@ -25,8 +25,8 @@ Vue.http.interceptors.push({
     response: function (response) {
         var headers = response.headers();
         if (headers.authorization) {
-            window.Looptime.jwtToken = headers.authorization;
-            Vue.http.headers.common['Authorization'] = 'Bearer ' + window.Looptime.jwtToken;
+            window.Someline.jwtToken = headers.authorization;
+            Vue.http.headers.common['Authorization'] = 'Bearer ' + window.Someline.jwtToken;
         }
         return response
     }

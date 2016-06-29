@@ -36,7 +36,9 @@ if (!function_exists('jwt_token')) {
     function jwt_token()
     {
         $jwt_token = \Session::get('jwt_token');
-        if (is_jwt_token_valid_for_refresh($jwt_token)) {
+        if (is_jwt_token_valid_for_refresh($jwt_token)
+            || (empty($jwt_token) && \Auth::check())
+        ) {
             $refreshed_token = refresh_jwt_token();
             if (!empty($refreshed_token)) {
                 $jwt_token = $refreshed_token;
