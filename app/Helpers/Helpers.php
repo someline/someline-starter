@@ -35,7 +35,68 @@ if (!function_exists('jwt_token')) {
      */
     function jwt_token()
     {
-        return \Session::get('jwt_token');
+        $jwt_token = \Session::get('jwt_token');
+        if (is_jwt_token_valid_for_refresh($jwt_token)) {
+            $refreshed_token = refresh_jwt_token();
+            if (!empty($refreshed_token)) {
+                $jwt_token = $refreshed_token;
+            }
+        }
+        return $jwt_token;
     }
-    
+
+}
+
+if (!function_exists('refresh_jwt_token')) {
+
+    /**
+     * @return string|null
+     */
+    function refresh_jwt_token()
+    {
+        $jwt_token = null;
+        if (\Auth::check()) {
+            $jwt_token = \JWTAuth::fromUser(auth_user());
+            \Session::put('jwt_token', $jwt_token);
+        }
+        return $jwt_token;
+    }
+
+}
+
+if (!function_exists('is_jwt_token_expiring')) {
+
+    /**
+     * @param $token
+     * @return null|string
+     */
+    function is_jwt_token_valid_for_refresh($token)
+    {
+        $is_jwt_token_valid_for_refresh = false;
+        try {
+            $payload = \JWTAuth::getPayload($token);
+            $exp = $payload->get('exp');
+            $nbf = $payload->get('nbf');
+            if ($exp > 0 && $nbf > 0) {
+                $nowTime = \Carbon\Carbon::now('UTC');
+                $expireTime = \Carbon\Carbon::createFromTimestampUTC($exp);
+                $validTime = \Carbon\Carbon::createFromTimestampUTC($nbf);
+
+                // if now time is after valid time
+                // if now time is before expire time
+                if ($nowTime->gt($validTime) && $nowTime->lt($expireTime)) {
+                    $minutesAfterValid = $nowTime->diffInMinutes($validTime);
+                    $minutesBeforeExpire = $nowTime->diffInMinutes($expireTime);
+                    $totalValidLength = $validTime->diffInMinutes($expireTime);
+                    $halfAmountOfMinutes = floor($totalValidLength / 2);
+                    if ($minutesAfterValid > $halfAmountOfMinutes) {
+                        $is_jwt_token_valid_for_refresh = true;
+                    }
+                }
+            }
+        } catch (\Tymon\JWTAuth\Exceptions\JWTException $e) {
+        }
+        return $is_jwt_token_valid_for_refresh;
+    }
+
 }

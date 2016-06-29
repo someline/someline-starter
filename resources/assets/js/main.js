@@ -21,6 +21,17 @@ Vue.http.headers.common['X-CSRF-TOKEN'] = window.Someline.csrfToken;
 Vue.http.headers.common['Authorization'] = 'Bearer ' + window.Someline.jwtToken;
 // Vue.http.headers.common['Accept'] = 'application/x.someline.v1+json';
 
+Vue.http.interceptors.push({
+    response: function (response) {
+        var headers = response.headers();
+        if (headers.authorization) {
+            window.Looptime.jwtToken = headers.authorization;
+            Vue.http.headers.common['Authorization'] = 'Bearer ' + window.Looptime.jwtToken;
+        }
+        return response
+    }
+});
+
 window.Vue = Vue;
 window.moment = moment;
 
