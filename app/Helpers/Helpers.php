@@ -36,7 +36,7 @@ if (!function_exists('jwt_token')) {
     function jwt_token()
     {
         $jwt_token = \Session::get('jwt_token');
-        if (is_jwt_token_valid_for_refresh($jwt_token)
+        if (is_jwt_token_valid_for_refresh($jwt_token, true)
             || (empty($jwt_token) && \Auth::check())
         ) {
             $refreshed_token = refresh_jwt_token();
@@ -70,9 +70,10 @@ if (!function_exists('is_jwt_token_expiring')) {
 
     /**
      * @param $token
+     * @param bool $allowExpireRefresh
      * @return null|string
      */
-    function is_jwt_token_valid_for_refresh($token)
+    function is_jwt_token_valid_for_refresh($token, $allowExpireRefresh = false)
     {
         $is_jwt_token_valid_for_refresh = false;
         try {
@@ -94,6 +95,10 @@ if (!function_exists('is_jwt_token_expiring')) {
                         $is_jwt_token_valid_for_refresh = true;
                     }
                 }
+            }
+        } catch (\Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
+            if ($allowExpireRefresh) {
+                $is_jwt_token_valid_for_refresh = true;
             }
         } catch (\Tymon\JWTAuth\Exceptions\JWTException $e) {
         }
