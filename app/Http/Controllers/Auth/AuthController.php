@@ -130,11 +130,13 @@ class AuthController extends Controller
      */
     private function clearJWTToken()
     {
-        $token = \Session::get('jwt_token');
+        $token = \Session::pull('jwt_token');
         if ($token) {
-            \JWTAuth::invalidate($token);
+            try {
+                \JWTAuth::invalidate($token);
+            } catch (\Exception $e) {
+            }
         }
-        \Session::forget('jwt_token');
     }
 
 }

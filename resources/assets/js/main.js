@@ -18,18 +18,27 @@ Vue.mixin(MixInTools);
 Vue.component('autosize-textarea', autosizeTextarea)
 
 Vue.http.headers.common['X-CSRF-TOKEN'] = window.Someline.csrfToken;
-Vue.http.headers.common['Authorization'] = 'Bearer ' + window.Someline.jwtToken;
+// Vue.http.headers.common['Authorization'] = 'Bearer ' + window.Someline.jwtToken;
 // Vue.http.headers.common['Accept'] = 'application/x.someline.v1+json';
 
-Vue.http.interceptors.push({
-    response: function (response) {
-        var headers = response.headers();
-        if (headers.authorization) {
-            window.Someline.jwtToken = headers.authorization;
-            Vue.http.headers.common['Authorization'] = 'Bearer ' + window.Someline.jwtToken;
+Vue.http.interceptors.push((request, next) => {
+
+    // modify request
+    request.headers.Authorization = 'Bearer ' + window.Someline.jwtToken;
+    request.url += "?" + new Date().getTime();
+
+    // continue to next interceptor
+    next((response) => {
+
+        var headers = response.headers;
+
+        // update JWT token
+        var jwtToken = headers['Authorization'];
+        if (jwtToken) {
+            window.Someline.jwtToken = jwtToken;
         }
-        return response
-    }
+
+    });
 });
 
 window.Vue = Vue;

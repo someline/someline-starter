@@ -71,7 +71,7 @@ if (!function_exists('is_jwt_token_expiring')) {
     /**
      * @param $token
      * @param bool $allowExpireRefresh
-     * @return null|string
+     * @return bool
      */
     function is_jwt_token_valid_for_refresh($token, $allowExpireRefresh = false)
     {
@@ -91,7 +91,7 @@ if (!function_exists('is_jwt_token_expiring')) {
                     $minutesBeforeExpire = $nowTime->diffInMinutes($expireTime);
                     $totalValidLength = $validTime->diffInMinutes($expireTime);
                     $halfAmountOfMinutes = floor($totalValidLength / 2);
-                    if ($minutesAfterValid > $halfAmountOfMinutes) {
+                    if ($minutesAfterValid >= $halfAmountOfMinutes) {
                         $is_jwt_token_valid_for_refresh = true;
                     }
                 }
