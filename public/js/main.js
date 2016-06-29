@@ -16265,12 +16265,12 @@ exports.default = {
     ready: function ready() {
         console.log('Ready');
 
-        var resource = this.$resource('users');
+        var resource = this.$resource('users', {
+            //                include: ''
+        });
 
         // get item
-        resource.get({}, {
-            //                include: ''
-        }).then(function (response) {
+        resource.get({}).then(function (response) {
             console.log(response);
             console.log(response.data.data);
             this.$set('items', response.data.data);
