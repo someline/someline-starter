@@ -16928,8 +16928,8 @@ _vue2.default.http.interceptors.push({
     response: function response(_response) {
         var headers = _response.headers();
         if (headers.authorization) {
-            window.Looptime.jwtToken = headers.authorization;
-            _vue2.default.http.headers.common['Authorization'] = 'Bearer ' + window.Looptime.jwtToken;
+            window.Someline.jwtToken = headers.authorization;
+            _vue2.default.http.headers.common['Authorization'] = 'Bearer ' + window.Someline.jwtToken;
         }
         return _response;
     }
