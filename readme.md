@@ -18,6 +18,11 @@ Email: libern@someline.com
 
 Password: Abc12345
 
+## See In Video
+
+Watch the video tutorial from below.
+
+YouTube: https://youtu.be/xv2wa1qABXE
 
 ## Framework Overview
 
