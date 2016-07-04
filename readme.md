@@ -22,7 +22,7 @@ Password: Abc12345
 
 Watch the video tutorial from below.
 
-YouTube: https://youtu.be/xv2wa1qABXE
+YouTube: https://youtu.be/6_lxJNX0Qe0
 
 ## Framework Overview
 
