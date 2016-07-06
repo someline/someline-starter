@@ -1,6 +1,6 @@
 # Someline Starter PHP Framework
 
-[Someline Starter](https://github.com/libern/someline-starter) is a framework for quick building Web Apps and Restful APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer.
+[Someline Starter](https://starter.someline.com/) is a framework for quick building Web Apps and Restful APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer.
 
 ## Someline Starter is born for two reasons:
 
@@ -18,6 +18,11 @@ Email: libern@someline.com
 
 Password: Abc12345
 
+## See In Video
+
+Watch the video tutorial from below.
+
+YouTube: https://youtu.be/6_lxJNX0Qe0
 
 ## Framework Overview
 
