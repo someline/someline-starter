@@ -22,8 +22,12 @@ if (!function_exists('smart_get_client_ip')) {
 
     function smart_get_client_ip()
     {
-        $ip = \Request::getClientIp(true);
-        return $ip;
+        $request = request();
+        $clientIp = $request->header('X-Client-Ip');
+        if (empty($clientIp)) {
+            $clientIp = $request->getClientIp(true);
+        }
+        return $clientIp;
     }
 
 }
