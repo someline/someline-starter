@@ -15,9 +15,16 @@ use Illuminate\Database\Eloquent\Relations\Relation;
 use Someline\Repositories\Criteria\AuthUserCriteria;
 use Prettus\Repository\Exceptions\RepositoryException;
 use Prettus\Validator\Contracts\ValidatorInterface;
+use Someline\Repositories\Interfaces\BaseRepositoryInterface;
 
-abstract class BaseRepository extends \Prettus\Repository\Eloquent\BaseRepository
+abstract class BaseRepository extends \Prettus\Repository\Eloquent\BaseRepository implements BaseRepositoryInterface
 {
+
+    /**
+     * @var bool
+     */
+    protected $isSearchableForceAndWhere = false;
+
     /**
      * @var Model
      */
@@ -181,6 +188,14 @@ abstract class BaseRepository extends \Prettus\Repository\Eloquent\BaseRepositor
         if ($this->presenter instanceof BasePresenter) {
             $this->presenter->setMeta($meta);
         }
+    }
+
+    /**
+     * @return bool
+     */
+    public function getIsSearchableForceAndWhere()
+    {
+        return $this->isSearchableForceAndWhere;
     }
 
 }

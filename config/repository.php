@@ -166,10 +166,13 @@ return [
         | $query->where('foo','=','bar')
         | $query->where('foo','like','bar')
         |
+        |
+        | 'like_raw': requires manually add '%' in the value
         */
         'acceptedConditions' => [
             '=',
-            'like'
+            'like',
+            'like_raw',     // use this with: \Someline\Repositories\Criteria\RequestCriteria class, will convert to 'like'
         ],
         /*
         |--------------------------------------------------------------------------

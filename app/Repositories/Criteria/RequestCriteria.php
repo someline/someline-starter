@@ -65,10 +65,20 @@ class RequestCriteria implements CriteriaInterface
                     $condition = trim(strtolower($condition));
 
                     if (isset($searchData[$field])) {
-                        $value = ($condition == "like" || $condition == "ilike") ? "%{$searchData[$field]}%" : $searchData[$field];
+                        if ($condition == "like_raw") {
+                            $condition = "like";
+                            $value = $searchData[$field];
+                        } else {
+                            $value = ($condition == "like" || $condition == "ilike") ? "%{$searchData[$field]}%" : $searchData[$field];
+                        }
                     } else {
                         if (!is_null($search)) {
-                            $value = ($condition == "like" || $condition == "ilike") ? "%{$search}%" : $search;
+                            if ($condition == "like_raw") {
+                                $condition = "like";
+                                $value = $searchData[$field];
+                            } else {
+                                $value = ($condition == "like" || $condition == "ilike") ? "%{$search}%" : $search;
+                            }
                         }
                     }
 
@@ -214,7 +224,8 @@ class RequestCriteria implements CriteriaInterface
         if (!is_null($searchFields) && count($searchFields)) {
             $acceptedConditions = config('repository.criteria.acceptedConditions', [
                 '=',
-                'like'
+                'like',
+                'like_raw',
             ]);
             $originalFields = $fields;
             $fields = [];

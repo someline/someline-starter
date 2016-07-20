@@ -43,7 +43,6 @@ class UsersController extends BaseController
      */
     public function index()
     {
-        $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
         return $this->repository->all();
     }
 

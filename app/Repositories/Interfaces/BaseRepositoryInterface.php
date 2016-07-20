@@ -62,4 +62,9 @@ interface BaseRepositoryInterface extends RepositoryInterface
      */
     public function setPresenterMeta(array $meta);
 
+    /**
+     * @return bool
+     */
+    public function getIsSearchableForceAndWhere();
+
 }
