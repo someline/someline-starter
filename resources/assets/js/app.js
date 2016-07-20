@@ -5,7 +5,7 @@ export default {
         msg: "hello",
     },
     components: {
-        'lt-user-list': UserList,
+        'sl-user-list': UserList,
     },
     methods: {
     },

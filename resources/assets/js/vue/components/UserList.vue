@@ -3,7 +3,7 @@
     <div class="list-group list-group-lg list-group-sp">
         <template v-for="item of items">
             <div class="col-md-4 m-b-sm">
-                <lt-user-list-item :item="item"></lt-user-list-item>
+                <sl-user-list-item :item="item"></sl-user-list-item>
             </div>
         </template>
     </div>
@@ -23,7 +23,7 @@
             }
         },
         components: {
-            'lt-user-list-item': UserListGroupItem,
+            'sl-user-list-item': UserListGroupItem,
         },
         http: {
             root: '/api',
