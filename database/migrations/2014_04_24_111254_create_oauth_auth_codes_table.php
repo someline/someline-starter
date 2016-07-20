@@ -30,7 +30,7 @@ class CreateOauthAuthCodesTable extends Migration
         Schema::create('oauth_auth_codes', function (Blueprint $table) {
             $table->string('id', 40)->primary();
             $table->integer('session_id')->unsigned();
-            $table->string('redirect_uri');
+            $table->string('redirect_uri', 190);
             $table->integer('expire_time');
 
             $table->timestamps();
