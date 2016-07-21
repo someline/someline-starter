@@ -16143,7 +16143,7 @@ exports.default = {
         msg: "hello"
     },
     components: {
-        'lt-user-list': _UserList2.default
+        'sl-user-list': _UserList2.default
     },
     methods: {},
     events: {},
@@ -16254,7 +16254,7 @@ exports.default = {
     },
 
     components: {
-        'lt-user-list-item': _UserListGroupItem2.default
+        'sl-user-list-item': _UserListGroupItem2.default
     },
     http: {
         root: '/api',
@@ -16278,7 +16278,7 @@ exports.default = {
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n\n<div class=\"list-group list-group-lg list-group-sp\">\n    <template v-for=\"item of items\">\n        <div class=\"col-md-4 m-b-sm\">\n            <lt-user-list-item :item=\"item\"></lt-user-list-item>\n        </div>\n    </template>\n</div>\n\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n\n<div class=\"list-group list-group-lg list-group-sp\">\n    <template v-for=\"item of items\">\n        <div class=\"col-md-4 m-b-sm\">\n            <sl-user-list-item :item=\"item\"></sl-user-list-item>\n        </div>\n    </template>\n</div>\n\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

@@ -12,7 +12,7 @@
 
                 <div class="row">
 
-                    <lt-user-list></lt-user-list>
+                    <sl-user-list></sl-user-list>
 
                 </div>
 
