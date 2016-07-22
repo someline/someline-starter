@@ -2,7 +2,9 @@
 
 namespace Someline\Events;
 
-abstract class Event
+use Someline\Base\Events\Event as BaseEvent;
+
+abstract class Event extends BaseEvent
 {
     //
 }

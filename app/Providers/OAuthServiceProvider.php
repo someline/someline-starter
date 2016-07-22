@@ -7,8 +7,8 @@
 namespace Someline\Providers;
 
 use Dingo\Api\Auth\Auth;
-use Someline\Api\Auth\Provider\OAuth2;
 use Illuminate\Support\ServiceProvider;
+use Someline\Api\Auth\Provider\OAuth2;
 use Someline\Models\Foundation\User;
 
 class OAuthServiceProvider extends ServiceProvider

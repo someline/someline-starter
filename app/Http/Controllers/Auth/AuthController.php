@@ -3,14 +3,14 @@
 namespace Someline\Http\Controllers\Auth;
 
 use Auth;
+use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\Request;
+use Someline\Http\Controllers\BaseController;
 use Someline\Models\Foundation\User;
 use Validator;
-use Someline\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
-use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
-class AuthController extends Controller
+class AuthController extends BaseController
 {
     /*
     |--------------------------------------------------------------------------

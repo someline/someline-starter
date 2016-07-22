@@ -3,12 +3,7 @@
 namespace Someline\Api\Controllers;
 
 use Dingo\Api\Exception\DeleteResourceFailedException;
-use Dingo\Api\Exception\UpdateResourceFailedException;
-use Illuminate\Http\Request;
-
-use Someline\Http\Requests;
 use Prettus\Validator\Contracts\ValidatorInterface;
-use Prettus\Validator\Exceptions\ValidatorException;
 use Someline\Http\Requests\UserCreateRequest;
 use Someline\Http\Requests\UserUpdateRequest;
 use Someline\Repositories\Interfaces\UserRepository;

@@ -1,11 +1,6 @@
 <?php
-/**
- * Created for someline-starter.
- * User: Libern
- */
 
-namespace Someline\Api\Controllers;
-
+namespace Someline\Http\Controllers;
 
 use Someline\Base\Http\Controllers\Controller;
 

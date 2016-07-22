@@ -19,8 +19,6 @@ Route::group(['middleware' => 'auth'], function () {
         return redirect('users');
     });
 
-    Route::get('users', function () {
-        return view('users.user_list');
-    });
+    Route::get('users', 'UserController@getUserList');
 
 });
