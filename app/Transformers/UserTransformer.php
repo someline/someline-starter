@@ -12,7 +12,7 @@ class UserTransformer extends BaseTransformer
 {
 
     /**
-     * Transform the \User entity
+     * Transform the User entity
      * @param User $model
      *
      * @return array
@@ -20,7 +20,7 @@ class UserTransformer extends BaseTransformer
     public function transform(User $model)
     {
         return [
-            'user_id' => (int)$model->user_id,
+            'user_id' => (int)$model->getUserId(),
 
             /* place your other model properties here */
             'name' => $model->name,

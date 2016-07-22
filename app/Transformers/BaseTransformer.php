@@ -7,12 +7,11 @@
 namespace Someline\Transformers;
 
 
-use League\Fractal\TransformerAbstract;
-use Someline\Models\BaseModel;
+use Someline\Base\Models\BaseModel;
+use Someline\Base\Transformers\Transformer;
 
-class BaseTransformer extends TransformerAbstract
+class BaseTransformer extends Transformer
 {
-
 
     /**
      * Include User
