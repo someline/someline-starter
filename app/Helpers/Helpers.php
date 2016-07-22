@@ -70,7 +70,7 @@ if (!function_exists('refresh_jwt_token')) {
 
 }
 
-if (!function_exists('is_jwt_token_expiring')) {
+if (!function_exists('is_jwt_token_valid_for_refresh')) {
 
     /**
      * @param $token
