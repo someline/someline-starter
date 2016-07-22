@@ -1,6 +1,6 @@
 # Someline Starter PHP Framework
 
-[Someline Starter](https://starter.someline.com/) is a framework for quick building Web Apps and Restful APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer.
+[Someline Starter](https://starter.someline.com/) is a PHP framework for quick building Web Apps and Restful APIs, with modern design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer.
 
 ## Someline Starter is born for two reasons:
 
@@ -12,7 +12,7 @@
 
 ##### [Someline Starter Demo](https://starter.someline.com/) 
 
-Frontend with Vuejs and display data from Restful API
+Frontend with Vue.js and display data from Restful API
 
 Email: libern@someline.com 
 
@@ -376,7 +376,7 @@ And remove timestamps():
 
 ##### Refresh Database Migrations and Seeding
 
-When you added or changed to migration files or seedings, or you just simply want to refresh everything in database:
+When you added or changed to migrations or seeds files, or you just simply want to refresh everything in database:
 
 ```
 php artisan migrate:refresh --seed
