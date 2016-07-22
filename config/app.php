@@ -160,6 +160,7 @@ return [
         Someline\Providers\OAuthServiceProvider::class,
         Someline\Providers\RepositoryServiceProvider::class,
         Someline\Providers\PolymorphicRelationServiceProvider::class,
+        Someline\Rest\RestClientServiceProvider::class,
 
         /*
          * Vendor Service Providers...

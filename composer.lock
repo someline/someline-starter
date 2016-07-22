@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "995063185bee385f8e646d2615587522",
-    "content-hash": "c7a44ef685827abba3d46b5447576321",
+    "hash": "badfd35aba7a5e08e5c930f7c1b35727",
+    "content-hash": "2f3fa0bbfb88edcfa00a1bba8c317ca2",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -2624,7 +2624,7 @@
         },
         {
             "name": "someline/rest-api-client",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/someline/rest-api-client.git",
@@ -2680,16 +2680,16 @@
         },
         {
             "name": "someline/starter-framework",
-            "version": "v1.0.6",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/someline/starter-framework.git",
-                "reference": "fd695b75ff4e4c664ad64010dc77d3ce1bb8300a"
+                "reference": "ddae84f0ad2be21705b7c8362e6361c0b0cd57f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/someline/starter-framework/zipball/fd695b75ff4e4c664ad64010dc77d3ce1bb8300a",
-                "reference": "fd695b75ff4e4c664ad64010dc77d3ce1bb8300a",
+                "url": "https://api.github.com/repos/someline/starter-framework/zipball/ddae84f0ad2be21705b7c8362e6361c0b0cd57f2",
+                "reference": "ddae84f0ad2be21705b7c8362e6361c0b0cd57f2",
                 "shasum": ""
             },
             "require": {
@@ -2709,6 +2709,7 @@
                 "predis/predis": "~1.0",
                 "prettus/l5-repository": "^2.1",
                 "prettus/laravel-validation": "1.1.*",
+                "someline/rest-api-client": "^1.0",
                 "tymon/jwt-auth": "0.5.*"
             },
             "require-dev": {
@@ -2748,7 +2749,7 @@
                 "someline",
                 "starter-framework"
             ],
-            "time": "2016-07-22 08:58:30"
+            "time": "2016-07-22 10:41:54"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4932,8 +4933,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "dingo/api": 20,
-        "someline/rest-api-client": 20
+        "dingo/api": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
