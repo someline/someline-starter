@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "badfd35aba7a5e08e5c930f7c1b35727",
-    "content-hash": "2f3fa0bbfb88edcfa00a1bba8c317ca2",
+    "hash": "995063185bee385f8e646d2615587522",
+    "content-hash": "c7a44ef685827abba3d46b5447576321",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -2623,6 +2623,62 @@
             "time": "2016-03-09 05:03:14"
         },
         {
+            "name": "someline/rest-api-client",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/someline/rest-api-client.git",
+                "reference": "2fe329a9cfea215f14711a8511776a3dbc0380ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/someline/rest-api-client/zipball/2fe329a9cfea215f14711a8511776a3dbc0380ee",
+                "reference": "2fe329a9cfea215f14711a8511776a3dbc0380ee",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "laravel/framework": "5.2.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Someline\\Rest\\": "src/Someline/Rest"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Libern Lin",
+                    "email": "libernlin@gmail.com",
+                    "homepage": "https://www.someline.com/"
+                }
+            ],
+            "description": "An elegant and smart Rest API Client with OAuth2 authentication support. Build for Laravel and Someline Starter.",
+            "homepage": "https://github.com/someline/rest-api-client",
+            "keywords": [
+                "api",
+                "client",
+                "laravel",
+                "oauth2",
+                "rest",
+                "someline-starter"
+            ],
+            "time": "2016-07-22 05:02:22"
+        },
+        {
             "name": "someline/starter-framework",
             "version": "v1.0.6",
             "source": {
@@ -4876,7 +4932,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "dingo/api": 20
+        "dingo/api": 20,
+        "someline/rest-api-client": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
