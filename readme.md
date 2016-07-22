@@ -10,7 +10,7 @@
 
 ## See In Action
 
-##### [Someline Starter Demo](http://starter.someline.com/) 
+##### [Someline Starter Demo](https://starter.someline.com/) 
 
 Frontend with Vuejs and display data from Restful API
 
@@ -64,6 +64,7 @@ It is fully utilised Repository Design pattern.
 - Intervention Image [intervention/image](http://image.intervention.io/)
 - Intervention Image Cache [intervention/imagecache](https://github.com/Intervention/imagecache)
 - Image Validator [cviebrock/image-validator](https://github.com/cviebrock/image-validator)
+- Rest API Client [someline/rest-api-client](https://github.com/someline/rest-api-client)
 
 *Authentication*
 - OAuth2 Server [lucadegasperi/oauth2-server-laravel](https://github.com/lucadegasperi/oauth2-server-laravel)
@@ -88,7 +89,7 @@ You can get started either option A or B:
 Under working folder, run the command:
 
 ```
-composer create-project --prefer-dist libern/someline-starter someline-starter
+composer create-project --prefer-dist someline/someline-starter someline-starter
 ```
 
 #### A.1. Add to a git repository *(When Needed)*
@@ -111,7 +112,7 @@ git push -u origin master
 Clone this project to your working folder and open the directory:
 
 ```
-git clone https://github.com/libern/someline-starter
+git clone https://github.com/someline/someline-starter
 ```
 
 #### B.1. Add to a git repository *(When Needed)*
