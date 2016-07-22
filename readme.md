@@ -390,3 +390,18 @@ php artisan migrate:refresh --seed
 ## License
 
 The Someline Starter framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+[ico-version]: https://img.shields.io/packagist/v/someline/someline-starter.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/someline/someline-starter/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/someline/someline-starter.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/someline/someline-starter.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/someline/someline-starter.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/someline/someline-starter
+[link-travis]: https://travis-ci.org/someline/someline-starter
+[link-scrutinizer]: https://scrutinizer-ci.com/g/someline/someline-starter/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/someline/someline-starter
+[link-downloads]: https://packagist.org/packages/someline/someline-starter
+[link-author]: https://github.com/libern
+[link-contributors]: ../../contributors
