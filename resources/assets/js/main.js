@@ -6,9 +6,12 @@ import MixInUser from './vue/mixins/user'
 import MixInJQuery from './vue/mixins/jquery'
 import MixInTools from './vue/mixins/tools'
 import focus from './vue/directives/focus'
+import nl2br from './vue/filters/nl2br'
 import autosizeTextarea from './vue/essentials/autosize-textarea.vue'
 
 Vue.directive(focus);
+
+Vue.filter('nl2br', nl2br);
 
 Vue.use(VueResource);
 Vue.mixin(MixInUser);
@@ -29,6 +32,12 @@ Vue.http.interceptors.push((request, next) => {
 
     // continue to next interceptor
     next((response) => {
+
+        // unauthorized
+        if (response.status == 401) {
+            // reload page
+            window.location = location;
+        }
 
         var headers = response.headers;
 
