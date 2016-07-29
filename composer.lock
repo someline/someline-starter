@@ -1849,6 +1849,54 @@
             "time": "2016-07-10 09:10:44"
         },
         {
+            "name": "mcamara/laravel-localization",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mcamara/laravel-localization.git",
+                "reference": "239d711d1f861e333e6de73d98dabdf94500512e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/239d711d1f861e333e6de73d98dabdf94500512e",
+                "reference": "239d711d1f861e333e6de73d98dabdf94500512e",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.2",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [],
+                "psr-0": {
+                    "Mcamara\\LaravelLocalization": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Cámara",
+                    "email": "mcamara88@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easy localization for Laravel",
+            "homepage": "https://github.com/mcamara/laravel-localization",
+            "keywords": [
+                "laravel",
+                "localization",
+                "php"
+            ],
+            "time": "2016-07-11 12:59:33"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.20.0",
             "source": {
@@ -2680,16 +2728,16 @@
         },
         {
             "name": "someline/starter-framework",
-            "version": "v1.1.4",
+            "version": "v1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/someline/starter-framework.git",
-                "reference": "22fc6a3cafda3762fef8a73488a936f484e63e29"
+                "reference": "68a9745c7d7f942aec84bbe138e6fdbc790c791a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/someline/starter-framework/zipball/22fc6a3cafda3762fef8a73488a936f484e63e29",
-                "reference": "22fc6a3cafda3762fef8a73488a936f484e63e29",
+                "url": "https://api.github.com/repos/someline/starter-framework/zipball/68a9745c7d7f942aec84bbe138e6fdbc790c791a",
+                "reference": "68a9745c7d7f942aec84bbe138e6fdbc790c791a",
                 "shasum": ""
             },
             "require": {
@@ -2705,6 +2753,7 @@
                 "laravel/framework": "5.2.*",
                 "lucadegasperi/oauth2-server-laravel": "5.1.*",
                 "lukasoppermann/http-status": "^2.0",
+                "mcamara/laravel-localization": "1.1.*",
                 "php": ">=5.5.9",
                 "predis/predis": "~1.0",
                 "prettus/l5-repository": "^2.1",
@@ -2749,7 +2798,7 @@
                 "someline",
                 "starter-framework"
             ],
-            "time": "2016-07-29 13:04:31"
+            "time": "2016-07-29 14:11:15"
         },
         {
             "name": "swiftmailer/swiftmailer",
