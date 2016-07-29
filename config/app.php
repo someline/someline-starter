@@ -173,6 +173,7 @@ return [
         Cviebrock\ImageValidator\ImageValidatorServiceProvider::class,
         Clockwork\Support\Laravel\ClockworkServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
 
     ],
 
@@ -223,6 +224,7 @@ return [
         'Authorizer' => LucaDegasperi\OAuth2Server\Facades\Authorizer::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
 
     ],
 
