@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "badfd35aba7a5e08e5c930f7c1b35727",
-    "content-hash": "2f3fa0bbfb88edcfa00a1bba8c317ca2",
+    "hash": "ae0c34c5ee4e33e6f660b49cb9ebd64c",
+    "content-hash": "b54e9147bad209d1e605bfe928cdfdce",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -2680,16 +2680,16 @@
         },
         {
             "name": "someline/starter-framework",
-            "version": "v1.0.8",
+            "version": "v1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/someline/starter-framework.git",
-                "reference": "ddae84f0ad2be21705b7c8362e6361c0b0cd57f2"
+                "reference": "22fc6a3cafda3762fef8a73488a936f484e63e29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/someline/starter-framework/zipball/ddae84f0ad2be21705b7c8362e6361c0b0cd57f2",
-                "reference": "ddae84f0ad2be21705b7c8362e6361c0b0cd57f2",
+                "url": "https://api.github.com/repos/someline/starter-framework/zipball/22fc6a3cafda3762fef8a73488a936f484e63e29",
+                "reference": "22fc6a3cafda3762fef8a73488a936f484e63e29",
                 "shasum": ""
             },
             "require": {
@@ -2749,7 +2749,7 @@
                 "someline",
                 "starter-framework"
             ],
-            "time": "2016-07-22 10:41:54"
+            "time": "2016-07-29 13:04:31"
         },
         {
             "name": "swiftmailer/swiftmailer",

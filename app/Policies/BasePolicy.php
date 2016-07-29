@@ -2,21 +2,9 @@
 
 namespace Someline\Policies;
 
-use Illuminate\Auth\Access\HandlesAuthorization;
-use Someline\Models\BaseModel;
-use Someline\Models\Foundation\User;
+use Someline\Base\Policies\Policy;
 
-trait BasePolicy
+class BasePolicy extends Policy
 {
-
-    /**
-     * @param User $user
-     * @param BaseModel $model
-     * @return bool
-     */
-    public function owner(User $user, BaseModel $model)
-    {
-        return $model->getUserId() == $user->getUserId();
-    }
-
+    //
 }
