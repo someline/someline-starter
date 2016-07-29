@@ -1,11 +1,22 @@
 <template>
 
-    <div class="list-group list-group-lg list-group-sp">
-        <template v-for="item of items">
-            <div class="col-md-4 m-b-sm">
-                <sl-user-list-item :item="item"></sl-user-list-item>
+    <div class="wrapper-md">
+
+        <h1>{{ $t('user.users') }}</h1>
+        <hr>
+
+        <div class="row">
+
+            <div class="list-group list-group-lg list-group-sp">
+                <template v-for="item of items">
+                    <div class="col-md-4 m-b-sm">
+                        <sl-user-list-item :item="item"></sl-user-list-item>
+                    </div>
+                </template>
             </div>
-        </template>
+
+        </div>
+
     </div>
 
 </template>
@@ -32,7 +43,7 @@
             }
         },
         ready() {
-            console.log('Ready');
+            console.log('User List Ready.');
 
             var resource = this.$resource('users', {
 //                include: ''

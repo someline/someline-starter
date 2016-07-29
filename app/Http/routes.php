@@ -13,6 +13,10 @@
 
 Route::auth();
 
+Route::get('locale/{locale}', function ($locale) {
+    return response()->json(trans('app'));
+});
+
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/', function () {

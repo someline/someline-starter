@@ -1,6 +1,7 @@
 import moment from 'moment';
 import Vue from 'vue';
 import VueResource from 'vue-resource';
+import VueI18n from 'vue-i18n';
 import app from './app';
 import MixInUser from './vue/mixins/user'
 import MixInJQuery from './vue/mixins/jquery'
@@ -14,6 +15,8 @@ Vue.directive(focus);
 Vue.filter('nl2br', nl2br);
 
 Vue.use(VueResource);
+Vue.use(VueI18n);
+
 Vue.mixin(MixInUser);
 Vue.mixin(MixInJQuery);
 Vue.mixin(MixInTools);

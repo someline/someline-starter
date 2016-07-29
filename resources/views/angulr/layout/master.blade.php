@@ -21,19 +21,24 @@
                 } else {
                     $user = new ArrayObject();
                 }
-                echo 'window.Someline = ' . json_encode([
-                                'csrfToken' => csrf_token(),
-                                'jwtToken' => jwt_token(),
-                                'state' => [
-                                        'user' => $user,
-                                ]
-                        ]); ?>;
+                $data = [
+                        'locale' => app_locale(),
+                        'baseUrl' => url('/'),
+                        'csrfToken' => csrf_token(),
+                        'jwtToken' => jwt_token(),
+                        'state' => [
+                                'user' => $user,
+                        ],
+                ];
+                echo 'window.Someline = ' . json_encode($data); ?>;
     </script>
 </head>
 <body>
 <div id="app" class="app app-header-fixed @yield('div.app.class')">
 
-    @yield('app')
+    <template v-if="isLocaleReady">
+        @yield('app')
+    </template>
 
 </div>
 
