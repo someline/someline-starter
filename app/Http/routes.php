@@ -13,26 +13,12 @@
 
 Route::auth();
 
-Route::get('locales/{locale}.js', function ($locale) {
-    $content = 'window.Someline.locales = ' . json_encode(trans('app', [], 'messages', $locale));
-    $response = response()->make($content);
-    $response->header('Content-Type', 'application/javascript');
-    $response->setPublic()
-        ->setMaxAge(604800)
-        ->setExpires(\Carbon\Carbon::now()->addDay(7));
-    return $response;
-});
+Route::group(['prefix' => 'locales'], function () {
 
-Route::get('locales/switch/{locale}', function ($locale) {
-    // check if supported
-    $supportedLanguagesKeys = \LaravelLocalization::getSupportedLanguagesKeys();
-    if (!in_array($locale, $supportedLanguagesKeys)) {
-        abort(404);
-    }
+    Route::get('/{locale}.js', '\Someline\Support\Controllers\LocaleController@getLocaleJs');
 
-    // store in session
-    session(['someline-locale' => $locale]);
-    return redirect('/');
+    Route::get('/switch/{locale}', '\Someline\Support\Controllers\LocaleController@getSwitchLocale');
+
 });
 
 Route::group(['middleware' => 'auth'], function () {
