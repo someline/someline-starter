@@ -13,8 +13,14 @@
 
 Route::auth();
 
-Route::get('locale/{locale}', function ($locale) {
-    return response()->json(trans('app'));
+Route::get('locales/{locale}.js', function ($locale) {
+    $content = 'window.Someline.locales = ' . json_encode(trans('app', [], 'messages', $locale));
+    $response = response()->make($content);
+    $response->header('Content-Type', 'application/javascript');
+    $response->setPublic()
+        ->setMaxAge(604800)
+        ->setExpires(\Carbon\Carbon::now()->addDay(7));
+    return $response;
 });
 
 Route::group(['middleware' => 'auth'], function () {

@@ -34,14 +34,13 @@
     </script>
 </head>
 <body>
-<div id="app" class="app app-header-fixed @yield('div.app.class')">
+<div id="app" class="app @yield('div.app.class')">
 
-    <template v-if="isLocaleReady">
-        @yield('app')
-    </template>
+    @yield('app')
 
 </div>
 
+<script src="{{url('locales/'.app_locale().'.js?'.substr(md5(json_encode(trans('app'))), -10))}}"></script>
 <script src="{{url(elixir("js/app.src.js"))}}"></script>
 @stack('scripts')
 </body>

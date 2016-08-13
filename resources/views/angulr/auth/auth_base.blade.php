@@ -1,5 +1,7 @@
 @extends('angulr.layout.master')
 
+@section('div.app.class', 'app-header-fixed')
+
 @section('app')
     <div class="container w-xxl w-auto-xs">
         <a href="https://www.someline.com" class="navbar-brand block m-t">
