@@ -16,7 +16,6 @@ class Kernel extends HttpKernel
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \Clockwork\Support\Laravel\ClockworkMiddleware::class,
-        \Someline\Support\Middleware\LocaleMiddleware::class,
     ];
 
     /**
@@ -31,12 +30,14 @@ class Kernel extends HttpKernel
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \Someline\Http\Middleware\VerifyCsrfToken::class,
+            \Someline\Support\Middleware\LocaleMiddleware::class,
         ],
 
         'api' => [
 //            'throttle:60,1',
 //            \LucaDegasperi\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware::class,
             \Someline\Api\Middleware\ApiAccessMiddleware::class,
+            \Someline\Support\Middleware\LocaleMiddleware::class,
         ],
     ];
 
