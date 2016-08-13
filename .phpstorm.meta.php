@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2016-07-29.
+    * Generated on 2016-08-13.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -91,6 +91,7 @@ namespace PHPSTORM_META {
             'clockwork.eloquent' instanceof \Clockwork\DataSource\EloquentDataSource,
             'clockwork' instanceof \Clockwork\Clockwork,
             'command.clockwork.clean' instanceof \Clockwork\Support\Laravel\ClockworkCleanCommand,
+            'laravellocalization' instanceof \Mcamara\LaravelLocalization\LaravelLocalization,
             'Tymon\JWTAuth\JWTAuth' instanceof \Tymon\JWTAuth\JWTAuth,
             'Tymon\JWTAuth\Providers\User\UserInterface' instanceof \Tymon\JWTAuth\Providers\User\EloquentUserAdapter,
             'Tymon\JWTAuth\Providers\JWT\JWTInterface' instanceof \Tymon\JWTAuth\Providers\JWT\NamshiAdapter,
@@ -266,6 +267,7 @@ namespace PHPSTORM_META {
             'clockwork.eloquent' instanceof \Clockwork\DataSource\EloquentDataSource,
             'clockwork' instanceof \Clockwork\Clockwork,
             'command.clockwork.clean' instanceof \Clockwork\Support\Laravel\ClockworkCleanCommand,
+            'laravellocalization' instanceof \Mcamara\LaravelLocalization\LaravelLocalization,
             'Tymon\JWTAuth\JWTAuth' instanceof \Tymon\JWTAuth\JWTAuth,
             'Tymon\JWTAuth\Providers\User\UserInterface' instanceof \Tymon\JWTAuth\Providers\User\EloquentUserAdapter,
             'Tymon\JWTAuth\Providers\JWT\JWTInterface' instanceof \Tymon\JWTAuth\Providers\JWT\NamshiAdapter,
@@ -441,6 +443,7 @@ namespace PHPSTORM_META {
             'clockwork.eloquent' instanceof \Clockwork\DataSource\EloquentDataSource,
             'clockwork' instanceof \Clockwork\Clockwork,
             'command.clockwork.clean' instanceof \Clockwork\Support\Laravel\ClockworkCleanCommand,
+            'laravellocalization' instanceof \Mcamara\LaravelLocalization\LaravelLocalization,
             'Tymon\JWTAuth\JWTAuth' instanceof \Tymon\JWTAuth\JWTAuth,
             'Tymon\JWTAuth\Providers\User\UserInterface' instanceof \Tymon\JWTAuth\Providers\User\EloquentUserAdapter,
             'Tymon\JWTAuth\Providers\JWT\JWTInterface' instanceof \Tymon\JWTAuth\Providers\JWT\NamshiAdapter,
@@ -616,6 +619,7 @@ namespace PHPSTORM_META {
             'clockwork.eloquent' instanceof \Clockwork\DataSource\EloquentDataSource,
             'clockwork' instanceof \Clockwork\Clockwork,
             'command.clockwork.clean' instanceof \Clockwork\Support\Laravel\ClockworkCleanCommand,
+            'laravellocalization' instanceof \Mcamara\LaravelLocalization\LaravelLocalization,
             'Tymon\JWTAuth\JWTAuth' instanceof \Tymon\JWTAuth\JWTAuth,
             'Tymon\JWTAuth\Providers\User\UserInterface' instanceof \Tymon\JWTAuth\Providers\User\EloquentUserAdapter,
             'Tymon\JWTAuth\Providers\JWT\JWTInterface' instanceof \Tymon\JWTAuth\Providers\JWT\NamshiAdapter,
