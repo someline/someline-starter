@@ -1,5 +1,17 @@
 <?php
 
+if (!function_exists('auth_user')) {
+
+    /**
+     * @return \Someline\Model\Foundation\User|\Someline\Models\Foundation\User
+     */
+    function auth_user()
+    {
+        return current_auth_user();
+    }
+
+}
+
 if (!function_exists('rest_client')) {
 
     /**
