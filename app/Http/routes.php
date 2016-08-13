@@ -23,6 +23,18 @@ Route::get('locales/{locale}.js', function ($locale) {
     return $response;
 });
 
+Route::get('locales/switch/{locale}', function ($locale) {
+    // check if supported
+    $supportedLanguagesKeys = \LaravelLocalization::getSupportedLanguagesKeys();
+    if (!in_array($locale, $supportedLanguagesKeys)) {
+        abort(404);
+    }
+
+    // store in session
+    session(['someline-locale' => $locale]);
+    return redirect('/');
+});
+
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/', function () {
