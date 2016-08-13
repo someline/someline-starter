@@ -17771,26 +17771,9 @@ exports.default = {
 
             var that = this;
             var lang = this.locale;
-            Vue.locale(lang, function () {
-                that.isLocaleReady = false;
-                // get locale data
-                return that.$http.get('/locale/' + lang).then(function (response) {
-                    // success callback
-                    var json = response.data;
-                    if (Object.keys(json).length === 0) {
-                        return Promise.reject(new Error('Locale is empty!'));
-                    } else {
-                        return Promise.resolve(json);
-                    }
-                }, function (response) {
-                    // error callback
-                    that.error = error.message;
-                    return Promise.reject();
-                });
-            }, function () {
-                that.isLocaleReady = true;
-                Vue.config.lang = lang;
-            });
+
+            Vue.config.lang = lang;
+            Vue.locale(lang, window.Someline.locales);
         }
     },
     watch: {},
