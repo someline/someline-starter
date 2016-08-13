@@ -10,5 +10,13 @@ use Someline\Base\Models\BaseModel as Model;
 
 class BaseModel extends Model
 {
-    //
+
+    /**
+     * @return \Someline\Models\Foundation\User
+     */
+    public function getAuthUser()
+    {
+        return auth_user();
+    }
+
 }
