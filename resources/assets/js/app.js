@@ -3,7 +3,6 @@ import UserList from './vue/components/UserList.vue'
 export default {
     data: {
         msg: "hello",
-        isLocaleReady: false,
     },
     components: {
         'sl-user-list': UserList,
