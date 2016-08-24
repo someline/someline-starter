@@ -1,31 +1,20 @@
-import UserList from './vue/components/UserList.vue'
 
-export default {
-    data: {
-        msg: "hello",
-    },
-    components: {
-        'sl-user-list': UserList,
-    },
-    methods: {
-        initLocale(){
-            console.log('Init Locale.');
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * include Vue and Vue Resource. This gives a great starting point for
+ * building robust, powerful web applications using Vue and Laravel.
+ */
 
-            var that = this;
-            var lang = this.locale;
+require('./bootstrap');
 
-            Vue.config.lang = lang;
-            Vue.locale(lang, window.Someline.locales);
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the body of the page. From here, you may begin adding components to
+ * the application, or feel free to tweak this setup for your needs.
+ */
 
-        },
-    },
-    watch: {},
-    events: {},
-    created(){
-        console.log('Bootstrap.');
-        this.initLocale();
-    },
-    ready(){
-        console.log('Ready.');
-    }
-}
+Vue.component('example', require('./components/Example.vue'));
+
+const app = new Vue({
+    el: 'body'
+});

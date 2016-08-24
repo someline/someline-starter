@@ -1,6 +1,6 @@
-var elixir = require('laravel-elixir');
-var gulp = require("gulp");
-require('laravel-elixir-vueify');
+const elixir = require('laravel-elixir');
+
+require('laravel-elixir-vue');
 
 /*
  |--------------------------------------------------------------------------
@@ -13,42 +13,7 @@ require('laravel-elixir-vueify');
  |
  */
 
-elixir(function (mix) {
-
-    // less
-    mix.less('app.less', 'resources/assets/less/css/');
-
-    // vue js
-    mix.browserify('main.js');
-
-    // styles
-    mix.styles([
-        // theme styles
-        "public/css/theme.src.css",
-
-        // dependencies
-        'public/bower_components/toastr/toastr.css',
-
-        // main styles
-        'resources/assets/less/css/*.css',
-    ], 'public/css/app.src.css', './');
-
-    // scripts
-    mix.scripts([
-        // theme script
-        'public/js/theme.src.js',
-
-        // dependencies
-        'public/bower_components/toastr/toastr.js',
-
-        // main vue js
-        'public/js/main.js',
-    ], 'public/js/app.src.js', './');
-
-    // versions
-    mix.version([
-        "public/css/app.src.css",
-        "public/js/app.src.js",
-    ]);
-
+elixir(mix => {
+    mix.sass('app.scss')
+       .webpack('app.js');
 });
