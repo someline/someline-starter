@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => Someline\User::class,
+        'model' => \Someline\Models\Foundation\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

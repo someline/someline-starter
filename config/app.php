@@ -184,6 +184,8 @@ return [
         Someline\Providers\AuthServiceProvider::class,
         Someline\Providers\EventServiceProvider::class,
         Someline\Providers\RouteServiceProvider::class,
+        Someline\Providers\RepositoryServiceProvider::class,
+        Someline\Providers\PolymorphicRelationServiceProvider::class,
 
     ],
 

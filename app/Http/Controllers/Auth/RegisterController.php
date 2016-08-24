@@ -2,7 +2,7 @@
 
 namespace Someline\Http\Controllers\Auth;
 
-use Someline\User;
+use Someline\Models\Foundation\User;
 use Validator;
 use Someline\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
