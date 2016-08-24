@@ -62,6 +62,16 @@ return array(
         // environment: dev
         'dev' => [
 
+            'local' => [
+
+                'base_uri' => 'http://someline-starter.app/api/',
+
+                'headers' => [
+                    'Accept' => 'application/x.someline.v1+json',
+                ],
+
+            ],
+
             'someline-starter' => [
 
                 'base_uri' => 'http://dev.someline-starter.app/api/',
