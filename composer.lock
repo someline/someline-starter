@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "595f512dee721020e878d4b2bac627d6",
+    "hash": "16f1bc88d2e7a128e5bd24209a490453",
     "content-hash": "642bdf1435377694c51f6615f9411b36",
     "packages": [
         {
@@ -1957,16 +1957,16 @@
         },
         {
             "name": "mcamara/laravel-localization",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mcamara/laravel-localization.git",
-                "reference": "72d5e8bf48d10e59a0c47a708e28da9b3da734fe"
+                "reference": "024b58de07b895956e641e808596d34c9a3178e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/72d5e8bf48d10e59a0c47a708e28da9b3da734fe",
-                "reference": "72d5e8bf48d10e59a0c47a708e28da9b3da734fe",
+                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/024b58de07b895956e641e808596d34c9a3178e3",
+                "reference": "024b58de07b895956e641e808596d34c9a3178e3",
                 "shasum": ""
             },
             "require": {
@@ -2001,7 +2001,7 @@
                 "localization",
                 "php"
             ],
-            "time": "2016-08-05 08:13:21"
+            "time": "2016-08-24 13:12:55"
         },
         {
             "name": "monolog/monolog",
@@ -2768,16 +2768,16 @@
         },
         {
             "name": "someline/starter-framework",
-            "version": "v1.3.3",
+            "version": "v1.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/someline/starter-framework.git",
-                "reference": "b81b2fb84972260419d47748674248dbcb963b7e"
+                "reference": "f5b11408fd2de11e182ead69fa0cf6a5be19932c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/someline/starter-framework/zipball/b81b2fb84972260419d47748674248dbcb963b7e",
-                "reference": "b81b2fb84972260419d47748674248dbcb963b7e",
+                "url": "https://api.github.com/repos/someline/starter-framework/zipball/f5b11408fd2de11e182ead69fa0cf6a5be19932c",
+                "reference": "f5b11408fd2de11e182ead69fa0cf6a5be19932c",
                 "shasum": ""
             },
             "require": {
@@ -2837,7 +2837,7 @@
                 "someline",
                 "starter-framework"
             ],
-            "time": "2016-08-24 13:06:25"
+            "time": "2016-08-24 13:43:08"
         },
         {
             "name": "swiftmailer/swiftmailer",
