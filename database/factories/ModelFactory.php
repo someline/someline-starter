@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(Someline\User::class, function (Faker\Generator $faker) {
+$factory->define(\Someline\Models\Foundation\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
