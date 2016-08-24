@@ -166,8 +166,14 @@ return [
         /*
          * Package Service Providers...
          */
-
-        //
+        Dingo\Api\Provider\LaravelServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+        Cviebrock\ImageValidator\ImageValidatorServiceProvider::class,
+        Clockwork\Support\Laravel\ClockworkServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        Someline\Rest\RestClientServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -224,6 +230,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'Image' => Intervention\Image\Facades\Image::class,
+        'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
 
     ],
 
