@@ -169,7 +169,7 @@ return [
 
     'auth' => [
 //        'oauth' => \Someline\Api\Auth\Provider\OAuth2::class,
-        'jwt' => Dingo\Api\Auth\Provider\JWT::class,
+//        'jwt' => Dingo\Api\Auth\Provider\JWT::class,
     ],
 
     /*

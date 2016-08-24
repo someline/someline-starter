@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
         DB::statement("SET foreign_key_checks=1");
 
         User::create([
-            'slid' => '1',
+//            'slid' => '1',
             'name' => "Libern Lin",
             'email' => 'libern@someline.com',
             'password' => bcrypt('Abc12345'),
