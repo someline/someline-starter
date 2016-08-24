@@ -2768,16 +2768,16 @@
         },
         {
             "name": "someline/starter-framework",
-            "version": "v1.3.4",
+            "version": "v1.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/someline/starter-framework.git",
-                "reference": "f5b11408fd2de11e182ead69fa0cf6a5be19932c"
+                "reference": "0224eecb6be49816d0219544173d57ce92a8c6a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/someline/starter-framework/zipball/f5b11408fd2de11e182ead69fa0cf6a5be19932c",
-                "reference": "f5b11408fd2de11e182ead69fa0cf6a5be19932c",
+                "url": "https://api.github.com/repos/someline/starter-framework/zipball/0224eecb6be49816d0219544173d57ce92a8c6a5",
+                "reference": "0224eecb6be49816d0219544173d57ce92a8c6a5",
                 "shasum": ""
             },
             "require": {
@@ -2837,7 +2837,7 @@
                 "someline",
                 "starter-framework"
             ],
-            "time": "2016-08-24 13:43:08"
+            "time": "2016-08-24 16:17:17"
         },
         {
             "name": "swiftmailer/swiftmailer",
