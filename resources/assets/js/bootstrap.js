@@ -27,6 +27,8 @@ require('vue-i18n');
  * included with Laravel will automatically verify the header's value.
  */
 
+// Vue.http.headers.common['Accept'] = 'application/x.someline.v1+json';
+
 Vue.http.interceptors.push((request, next) => {
     request.headers['X-CSRF-TOKEN'] = Laravel.csrfToken;
 
