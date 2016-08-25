@@ -43,6 +43,7 @@ Vue.component(
 
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-user-list', require('./components/user/UserList.vue'));
+Vue.component('sl-oauth', require('./components/console/OAuth.vue'));
 
 const app = new Vue({
     el: 'body',

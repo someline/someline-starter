@@ -11,10 +11,10 @@
 |
 */
 
+// Auth Routes
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
-
+// Locale Routes
 Route::group(['prefix' => 'locales'], function () {
 
     Route::get('/{locale}.js', '\Someline\Support\Controllers\LocaleController@getLocaleJs');
@@ -23,6 +23,10 @@ Route::group(['prefix' => 'locales'], function () {
 
 });
 
+// Basic Routes
+Route::get('/home', 'HomeController@index');
+
+// Protected Routes
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/', function () {
@@ -30,5 +34,14 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::get('users', 'UserController@getUserList');
+
+});
+
+// Console Routes
+Route::group(['prefix' => 'console'], function () {
+
+    Route::get('oauth', function () {
+        return view('console.oauth');
+    });
 
 });
