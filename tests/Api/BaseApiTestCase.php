@@ -1,6 +1,7 @@
 <?php
 
 use Lukasoppermann\Httpstatus\Httpstatuscodes;
+use Psr\Http\Message\ResponseInterface;
 use Someline\Rest\RestClient;
 
 class BaseApiTestCase extends TestCase implements Httpstatuscodes
@@ -19,6 +20,14 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
     }
 
     /**
+     * @return RestClient
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
      * @param string $uri
      * @param array $query
      * @param array $options
@@ -26,7 +35,7 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
      */
     public function getApi($uri, array $query = [], array $options = [])
     {
-        $response = $this->client->get($uri, $query, $options)->getResponse();
+        $response = $this->client->get($uri, $query, $options)->getGuzzleResponse();
         $this->setGuzzleResponse($response);
         return $this;
     }
@@ -39,7 +48,7 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
      */
     public function postApi($uri, array $data = [], array $options = [])
     {
-        $response = $this->client->post($uri, $data, $options)->getResponse();
+        $response = $this->client->post($uri, $data, $options)->getGuzzleResponse();
         $this->setGuzzleResponse($response);
         return $this;
     }
@@ -53,7 +62,7 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
      */
     public function postApiMultipart($uri, array $multipart = [], array $options = [])
     {
-        $response = $this->client->postMultipart($uri, $multipart, $options)->getResponse();
+        $response = $this->client->postMultipart($uri, $multipart, $options)->getGuzzleResponse();
         $this->setGuzzleResponse($response);
         return $this;
     }
@@ -66,7 +75,7 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
      */
     public function postApiMultipartSimple($uri, array $data = [], array $options = [])
     {
-        $response = $this->client->postMultipartSimple($uri, $data, $options)->getResponse();
+        $response = $this->client->postMultipartSimple($uri, $data, $options)->getGuzzleResponse();
         $this->setGuzzleResponse($response);
         return $this;
     }
@@ -79,7 +88,7 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
      */
     public function headApi($uri, array $data = [], array $options = [])
     {
-        $response = $this->client->head($uri, $data, $options)->getResponse();
+        $response = $this->client->head($uri, $data, $options)->getGuzzleResponse();
         $this->setGuzzleResponse($response);
         return $this;
     }
@@ -92,7 +101,7 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
      */
     public function putApi($uri, array $data = [], array $options = [])
     {
-        $response = $this->client->put($uri, $data, $options)->getResponse();
+        $response = $this->client->put($uri, $data, $options)->getGuzzleResponse();
         $this->setGuzzleResponse($response);
         return $this;
     }
@@ -105,7 +114,7 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
      */
     public function patchApi($uri, array $data = [], array $options = [])
     {
-        $response = $this->client->patch($uri, $data, $options)->getResponse();
+        $response = $this->client->patch($uri, $data, $options)->getGuzzleResponse();
         $this->setGuzzleResponse($response);
         return $this;
     }
@@ -118,7 +127,7 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
      */
     public function deleteApi($uri, array $data = [], array $options = [])
     {
-        $response = $this->client->delete($uri, $data, $options)->getResponse();
+        $response = $this->client->delete($uri, $data, $options)->getGuzzleResponse();
         $this->setGuzzleResponse($response);
         return $this;
     }

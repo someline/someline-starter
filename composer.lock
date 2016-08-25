@@ -2712,16 +2712,16 @@
         },
         {
             "name": "someline/rest-api-client",
-            "version": "v1.0.1",
+            "version": "v1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/someline/rest-api-client.git",
-                "reference": "321f4640590c7cc18164a632dc4cc68e5933f8c1"
+                "reference": "c9e26f75ac4025742e99ef48385773bf0ab38ae4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/someline/rest-api-client/zipball/321f4640590c7cc18164a632dc4cc68e5933f8c1",
-                "reference": "321f4640590c7cc18164a632dc4cc68e5933f8c1",
+                "url": "https://api.github.com/repos/someline/rest-api-client/zipball/c9e26f75ac4025742e99ef48385773bf0ab38ae4",
+                "reference": "c9e26f75ac4025742e99ef48385773bf0ab38ae4",
                 "shasum": ""
             },
             "require": {
@@ -2764,20 +2764,20 @@
                 "rest",
                 "someline-starter"
             ],
-            "time": "2016-08-24 12:06:36"
+            "time": "2016-08-24 18:04:37"
         },
         {
             "name": "someline/starter-framework",
-            "version": "v1.3.5",
+            "version": "v1.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/someline/starter-framework.git",
-                "reference": "0224eecb6be49816d0219544173d57ce92a8c6a5"
+                "reference": "5a04d5d5c48968b79c8bea0aca71190f9dc162dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/someline/starter-framework/zipball/0224eecb6be49816d0219544173d57ce92a8c6a5",
-                "reference": "0224eecb6be49816d0219544173d57ce92a8c6a5",
+                "url": "https://api.github.com/repos/someline/starter-framework/zipball/5a04d5d5c48968b79c8bea0aca71190f9dc162dd",
+                "reference": "5a04d5d5c48968b79c8bea0aca71190f9dc162dd",
                 "shasum": ""
             },
             "require": {
@@ -2798,7 +2798,7 @@
                 "predis/predis": "~1.0",
                 "prettus/l5-repository": "^2.1",
                 "prettus/laravel-validation": "1.1.*",
-                "someline/rest-api-client": "1.0.*"
+                "someline/rest-api-client": "1.1.*"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.0||~5.0",
@@ -2837,7 +2837,7 @@
                 "someline",
                 "starter-framework"
             ],
-            "time": "2016-08-24 16:17:17"
+            "time": "2016-08-24 17:06:09"
         },
         {
             "name": "swiftmailer/swiftmailer",
