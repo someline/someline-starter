@@ -44,4 +44,6 @@ Route::group(['prefix' => 'console'], function () {
         return view('console.oauth');
     });
 
+    Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+
 });

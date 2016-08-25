@@ -175,6 +175,7 @@ return [
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
         Someline\Rest\RestClientServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
 
         /*
          * Application Service Providers...
