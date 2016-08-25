@@ -5,7 +5,7 @@ namespace Someline\Http\Controllers\Auth;
 use Someline\Http\Controllers\BaseController;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
-class LoginBaseController extends BaseController
+class LoginController extends BaseController
 {
     /*
     |--------------------------------------------------------------------------
