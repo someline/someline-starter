@@ -17,7 +17,7 @@ return array(
      * Access Token cache time
      * Set 0 to disable cache of access tokens
      */
-    'oauth_tokens_cache_minutes' => 10,
+    'oauth_tokens_cache_minutes' => 0,
 
     /**
      *  Guzzle Client Config
@@ -35,15 +35,19 @@ return array(
             'User-Agent' => 'someline-testing/1.0',
         ],
 
+        'api_url' => '/api/',
+
         'oauth2_credentials' => [
-            'client_id' => 'SomelineFvGXRmBv',
-            'client_secret' => 'WFYBPbkOBv7hTby8vGL2SPOOq2GKYQdSIDGXcLsS',
+            'client_id' => '1',
+            'client_secret' => 'EpAeMzdkzzstElFqROrn61NVfpQiZEbuE8bWA48t',
         ],
 
-        'oauth2_access_token_url' => 'oauth/access_token',
+        'oauth2_access_token_url' => 'oauth/token',
 
         'oauth2_grant_types' => [
             'client_credentials' => 'client_credentials',
+            'authorization_code' => 'authorization_code',
+            'refresh_token' => 'refresh_token',
             'password' => 'password',
         ],
 
@@ -64,7 +68,7 @@ return array(
 
             'local' => [
 
-                'base_uri' => 'http://someline-starter.app/api/',
+                'base_uri' => 'http://someline-starter.app/',
 
                 'headers' => [
                     'Accept' => 'application/x.someline.v1+json',
@@ -74,7 +78,7 @@ return array(
 
             'someline-starter' => [
 
-                'base_uri' => 'http://dev.someline-starter.app/api/',
+                'base_uri' => 'http://dev.someline-starter.app/',
 
                 'headers' => [
                     'Accept' => 'application/x.someline.v1+json',
@@ -89,7 +93,7 @@ return array(
 
             'someline-starter' => [
 
-                'base_uri' => 'http://someline-starter.app/api/',
+                'base_uri' => 'http://someline-starter.app/',
 
                 'headers' => [
                     'Accept' => 'application/x.someline.v1+json',
