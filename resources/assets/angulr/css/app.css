@@ -998,6 +998,7 @@ html {
   height: 0;
   overflow: hidden;
   margin-left: -20px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
 }
 .active > .nav-sub,
@@ -1034,6 +1035,7 @@ html {
   display: block;
   padding: 10px 20px;
   position: relative;
+  -webkit-transition: background-color 0.2s ease-in-out 0s;
   transition: background-color 0.2s ease-in-out 0s;
 }
 .navi ul.nav li a .badge,
@@ -1137,7 +1139,10 @@ html {
     overflow-x: hidden;
   }
   .app-content {
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
     transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   }
   .off-screen {
     position: absolute;
@@ -1153,8 +1158,13 @@ html {
   }
   .off-screen + * {
     background-color: #f0f3f4;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
     transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-transform: translate3d(75%, 0px, 0px);
     transform: translate3d(75%, 0px, 0px);
     overflow: hidden;
     position: absolute;
@@ -1179,6 +1189,7 @@ html {
     right: 0;
   }
   .off-screen.pull-right + * {
+    -webkit-transform: translate3d(-75%, 0px, 0px);
     transform: translate3d(-75%, 0px, 0px);
   }
 }
@@ -1271,6 +1282,7 @@ html {
     font-size: 12px;
   }
   .app-aside-dock .app-aside .navi > ul > li > a > span.pull-right i.text {
+    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     line-height: 14px;
   }
@@ -1899,6 +1911,7 @@ fieldset[disabled] .btn-black.active {
   margin: 0;
   display: inline-block;
   text-align: center;
+  -webkit-transition: font-size 0.2s;
   transition: font-size 0.2s;
 }
 .list-icon div {
@@ -1914,6 +1927,7 @@ fieldset[disabled] .btn-black.active {
   top: 120px;
   right: -240px;
   width: 240px;
+  -webkit-transition: right 0.2s;
   transition: right 0.2s;
 }
 .settings.active {
@@ -2132,6 +2146,7 @@ fieldset[disabled] .btn-black.active {
   background-color: #fff;
   border: 1px solid #f0f0f0;
   border-radius: 30px;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 .i-switch i:after {
@@ -2143,6 +2158,7 @@ fieldset[disabled] .btn-black.active {
   bottom: 1px;
   border-radius: 50%;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  -webkit-transition: margin-left 0.3s;
   transition: margin-left 0.3s;
 }
 .i-switch-md {
@@ -2220,6 +2236,7 @@ fieldset[disabled] .i-checks input + i:before {
   width: 0px;
   height: 0px;
   background-color: transparent;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 .i-checks > span {
@@ -2401,60 +2418,81 @@ fieldset[disabled] .i-checks input + i:before {
   overflow: hidden;
 }
 .fade-in-right-big.ng-enter {
+  -webkit-animation: fadeInRightBig 0.5s;
   animation: fadeInRightBig 0.5s;
 }
 .fade-in-right-big.ng-leave {
+  -webkit-animation: fadeOutLeftBig 0.5s;
   animation: fadeOutLeftBig 0.5s;
 }
 .fade-in-left-big.ng-enter {
+  -webkit-animation: fadeInLeftBig 0.5s;
   animation: fadeInLeftBig 0.5s;
 }
 .fade-in-left-big.ng-leave {
+  -webkit-animation: fadeOutRightBig 0.5s;
   animation: fadeOutRightBig 0.5s;
 }
 .fade-in-up-big.ng-enter {
+  -webkit-animation: fadeInUpBig 0.5s;
   animation: fadeInUpBig 0.5s;
 }
 .fade-in-up-big.ng-leave {
+  -webkit-animation: fadeOutUpBig 0.5s;
   animation: fadeOutUpBig 0.5s;
 }
 .fade-in-down-big.ng-enter {
+  -webkit-animation: fadeInDownBig 0.5s;
   animation: fadeInDownBig 0.5s;
 }
 .fade-in-down-big.ng-leave {
+  -webkit-animation: fadeOutDownBig 0.5s;
   animation: fadeOutDownBig 0.5s;
 }
 .fade-in.ng-enter {
+  -webkit-animation: fadeIn 0.5s;
   animation: fadeIn 0.5s;
 }
 .fade-in.ng-leave {
+  -webkit-animation: fadeOut 0.5s;
   animation: fadeOut 0.5s;
 }
 .fade-in-right.ng-enter {
+  -webkit-animation: fadeInRight 0.5s;
   animation: fadeInRight 0.5s;
 }
 .fade-in-right.ng-leave {
+  -webkit-animation: fadeOutLeft 0.5s;
   animation: fadeOutLeft 0.5s;
 }
 .fade-in-left.ng-enter {
+  -webkit-animation: fadeInLeft 0.5s;
   animation: fadeInLeft 0.5s;
 }
 .fade-in-left.ng-leave {
+  -webkit-animation: fadeOutRight 0.5s;
   animation: fadeOutRight 0.5s;
 }
 .fade-in-up.ng-enter {
+  -webkit-animation: fadeInUp 0.5s;
   animation: fadeInUp 0.5s;
 }
 .fade-in-up.ng-leave {
+  -webkit-animation: fadeOutUp 0.5s;
   animation: fadeOutUp 0.5s;
 }
 .fade-in-down.ng-enter {
+  -webkit-animation: fadeInDown 0.5s;
   animation: fadeInDown 0.5s;
 }
 .fade-in-down.ng-leave {
+  -webkit-animation: fadeOutDown 0.5s;
   animation: fadeOutDown 0.5s;
 }
 .bg-gd {
+  background-image: -webkit-gradient(linear, left 0, left 100%, from(rgba(40, 50, 60, 0)), to(rgba(40, 50, 60, 0.075)));
+  background-image: -webkit-linear-gradient(top, rgba(40, 50, 60, 0), 0, rgba(40, 50, 60, 0.075), 100%);
+  background-image: -webkit-linear-gradient(top, rgba(40, 50, 60, 0) 0, rgba(40, 50, 60, 0.075) 100%);
   background-image: linear-gradient(to bottom, rgba(40, 50, 60, 0) 0, rgba(40, 50, 60, 0.075) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0028323c', endColorstr='#1328323c', GradientType=0);
@@ -2462,6 +2500,9 @@ fieldset[disabled] .i-checks input + i:before {
   filter: none;
 }
 .bg-gd-dk {
+  background-image: -webkit-gradient(linear, left 10%, left 100%, from(rgba(40, 50, 60, 0)), to(rgba(40, 50, 60, 0.5)));
+  background-image: -webkit-linear-gradient(top, rgba(40, 50, 60, 0), 10%, rgba(40, 50, 60, 0.5), 100%);
+  background-image: -webkit-linear-gradient(top, rgba(40, 50, 60, 0) 10%, rgba(40, 50, 60, 0.5) 100%);
   background-image: linear-gradient(to bottom, rgba(40, 50, 60, 0) 10%, rgba(40, 50, 60, 0.5) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0028323c', endColorstr='#8028323c', GradientType=0);
@@ -3341,7 +3382,6 @@ a.text-black:hover {
 .no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -4007,6 +4047,7 @@ a.text-black:hover {
   display: none;
 }
 .hover-rotate {
+  -webkit-transition: all 0.2s ease-in-out 0.1s;
   transition: all 0.2s ease-in-out 0.1s;
 }
 .hover-anchor:hover > .hover-action,
@@ -4017,6 +4058,7 @@ a.text-black:hover {
 .hover-anchor:hover > .hover-rotate,
 .hover-anchor:focus > .hover-rotate,
 .hover-anchor:active > .hover-rotate {
+  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .backdrop {
@@ -4134,15 +4176,32 @@ a.text-black:hover {
   background-color: inherit;
 }
 .butterbar.active {
+  -webkit-animation: changebar 2.25s infinite 0.75s;
   animation: changebar 2.25s infinite 0.75s;
 }
 .butterbar.active .bar {
+  -webkit-animation: changebar 2.25s infinite;
   animation: changebar 2.25s infinite;
 }
 .butterbar.active .bar:before {
+  -webkit-animation: movingbar 0.75s infinite;
   animation: movingbar 0.75s infinite;
 }
 /* Moving bar */
+@-webkit-keyframes movingbar {
+  0% {
+    left: 50%;
+    right: 50%;
+  }
+  99.9% {
+    left: 0%;
+    right: 0%;
+  }
+  100% {
+    left: 50%;
+    right: 50%;
+  }
+}
 @keyframes movingbar {
   0% {
     left: 50%;
@@ -4158,6 +4217,26 @@ a.text-black:hover {
   }
 }
 /* change bar */
+@-webkit-keyframes changebar {
+  0% {
+    background-color: #fad733;
+  }
+  33.3% {
+    background-color: #fad733;
+  }
+  33.33% {
+    background-color: #23B7E5;
+  }
+  66.6% {
+    background-color: #23B7E5;
+  }
+  66.66% {
+    background-color: #27c24c;
+  }
+  99.9% {
+    background-color: #27c24c;
+  }
+}
 @keyframes changebar {
   0% {
     background-color: #fad733;
