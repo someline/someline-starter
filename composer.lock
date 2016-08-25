@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "16f1bc88d2e7a128e5bd24209a490453",
-    "content-hash": "642bdf1435377694c51f6615f9411b36",
+    "hash": "bcd6cfd818d8256f4034a2d813d23164",
+    "content-hash": "5e60a19541ef2c1be4197fb142178136",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -2709,6 +2709,52 @@
                 "uuid"
             ],
             "time": "2016-08-02 18:39:32"
+        },
+        {
+            "name": "rap2hpoutre/laravel-log-viewer",
+            "version": "v0.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rap2hpoutre/laravel-log-viewer.git",
+                "reference": "3ff06fb16e9cf8bfb581d29bd7da3cd3c0baa5d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/3ff06fb16e9cf8bfb581d29bd7da3cd3c0baa5d7",
+                "reference": "3ff06fb16e9cf8bfb581d29bd7da3cd3c0baa5d7",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.2.*|5.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/controllers"
+                ],
+                "psr-0": {
+                    "Rap2hpoutre\\LaravelLogViewer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "rap2hpoutre",
+                    "email": "raphaelht@gmail.com"
+                }
+            ],
+            "description": "A Laravel log reader",
+            "keywords": [
+                "log",
+                "log-reader",
+                "log-viewer",
+                "logging"
+            ],
+            "time": "2016-06-23 14:07:52"
         },
         {
             "name": "someline/rest-api-client",
