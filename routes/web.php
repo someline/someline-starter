@@ -11,10 +11,24 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::group(['prefix' => 'locales'], function () {
+
+    Route::get('/{locale}.js', '\Someline\Support\Controllers\LocaleController@getLocaleJs');
+
+    Route::get('/switch/{locale}', '\Someline\Support\Controllers\LocaleController@getSwitchLocale');
+
+});
+
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('/', function () {
+        return redirect('users');
+    });
+
+    Route::get('users', 'UserController@getUserList');
+
+});
