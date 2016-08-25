@@ -11,7 +11,7 @@ class UserTest extends BaseApiTestCase
 
     public function testGetAllUsers()
     {
-//        $this->withOAuthTokenTypeUser();
+        $this->withOAuthTokenTypePassword();
         $this->getApi('users');
         $this->printResponseData();
         $this->seeJsonStructure([
@@ -26,7 +26,7 @@ class UserTest extends BaseApiTestCase
 
     public function testGetCurrentUser()
     {
-//        $this->withOAuthTokenTypeUser();
+        $this->withOAuthTokenTypePassword();
         $this->getApi('users/me');
         $this->printResponseData();
         $this->assertResponseOk();
@@ -34,14 +34,14 @@ class UserTest extends BaseApiTestCase
 
     public function testGetSingleUser()
     {
-//        $this->withOAuthTokenTypeUser();
+        $this->withOAuthTokenTypePassword();
         $this->getApi('users/1');
         $this->assertResponseOk();
     }
 
     public function testCreateUser()
     {
-//        $this->withOAuthTokenTypeClient();
+        $this->withOAuthTokenTypePassword();
         $this->postApi('users', [
             'name' => 'Abc',
             'email' => rand(100000, 999999) . 'abc@example.com',
@@ -53,7 +53,7 @@ class UserTest extends BaseApiTestCase
 
     public function testUpdateUser()
     {
-//        $this->withOAuthTokenTypeUser();
+        $this->withOAuthTokenTypePassword();
         $this->putApi('users/2', [
             'name' => 'Harry Potter',
         ]);
@@ -70,7 +70,7 @@ class UserTest extends BaseApiTestCase
             $user->save();
         }
 
-//        $this->withOAuthTokenTypeUser();
+        $this->withOAuthTokenTypePassword();
         $this->deleteApi('users/3');
         $this->printResponseData();
         $this->assertResponseNoContent();

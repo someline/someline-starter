@@ -17,8 +17,8 @@ class CreateUsersTable extends Migration
             $table->increments('user_id');
 //            $table->unsignedInteger('slid')->nullable();
             $table->string('name', 50);
-            $table->char('gender', 1);
-            $table->date('birthday');
+            $table->char('gender', 1)->nullable();
+            $table->date('birthday')->nullable();
             $table->char('country', 2)->default('US');
             $table->string('timezone', 30)->default('UTC');
             $table->string('locale', 15)->default('en');
