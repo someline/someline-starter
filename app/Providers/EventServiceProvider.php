@@ -2,9 +2,8 @@
 
 namespace Someline\Providers;
 
-use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Someline\Listeners\User\UserEventListener;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -20,23 +19,13 @@ class EventServiceProvider extends ServiceProvider
     ];
 
     /**
-     * The subscriber classes to register.
+     * Register any events for your application.
      *
-     * @var array
-     */
-    protected $subscribe = [
-        UserEventListener::class,
-    ];
-
-    /**
-     * Register any other events for your application.
-     *
-     * @param  \Illuminate\Contracts\Events\Dispatcher  $events
      * @return void
      */
-    public function boot(DispatcherContract $events)
+    public function boot()
     {
-        parent::boot($events);
+        parent::boot();
 
         //
     }

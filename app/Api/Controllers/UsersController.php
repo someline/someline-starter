@@ -9,7 +9,6 @@ use Someline\Http\Requests\UserUpdateRequest;
 use Someline\Repositories\Interfaces\UserRepository;
 use Someline\Validators\UserValidator;
 
-
 class UsersController extends BaseController
 {
 

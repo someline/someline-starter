@@ -4,6 +4,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Name
+    |--------------------------------------------------------------------------
+    |
+    | This value is the name of your application. This value is used when the
+    | framework needs to place the application's name in a notification or
+    | any other location as required by the application or its packages.
+    */
+
+    'name' => 'My Application',
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
     |
@@ -110,6 +122,8 @@ return [
 
     'log' => env('APP_LOG', 'single'),
 
+    'log_level' => env('APP_LOG_LEVEL', 'debug'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
@@ -138,6 +152,7 @@ return [
         Illuminate\Foundation\Providers\FoundationServiceProvider::class,
         Illuminate\Hashing\HashServiceProvider::class,
         Illuminate\Mail\MailServiceProvider::class,
+        Illuminate\Notifications\NotificationServiceProvider::class,
         Illuminate\Pagination\PaginationServiceProvider::class,
         Illuminate\Pipeline\PipelineServiceProvider::class,
         Illuminate\Queue\QueueServiceProvider::class,
@@ -149,31 +164,29 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
-         * Application Service Providers...
-         */
-        Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
-        Someline\Providers\AppServiceProvider::class,
-        Someline\Providers\AuthServiceProvider::class,
-        Someline\Providers\EventServiceProvider::class,
-        Someline\Providers\RouteServiceProvider::class,
-        Someline\Providers\ApiServiceProvider::class,
-        Someline\Providers\OAuthServiceProvider::class,
-        Someline\Providers\RepositoryServiceProvider::class,
-        Someline\Providers\PolymorphicRelationServiceProvider::class,
-        Someline\Rest\RestClientServiceProvider::class,
-
-        /*
-         * Vendor Service Providers...
+         * Package Service Providers...
          */
         Dingo\Api\Provider\LaravelServiceProvider::class,
-        LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class,
-        LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Cviebrock\ImageValidator\ImageValidatorServiceProvider::class,
         Clockwork\Support\Laravel\ClockworkServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        Someline\Rest\RestClientServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
+
+        /*
+         * Application Service Providers...
+         */
+        Someline\Providers\AppServiceProvider::class,
+        // Someline\Providers\BroadcastServiceProvider::class,
+        Someline\Providers\AuthServiceProvider::class,
+        Someline\Providers\EventServiceProvider::class,
+        Someline\Providers\RouteServiceProvider::class,
+        Someline\Providers\ApiServiceProvider::class,
+        Someline\Providers\RepositoryServiceProvider::class,
+        Someline\Providers\PolymorphicRelationServiceProvider::class,
 
     ],
 
@@ -207,6 +220,7 @@ return [
         'Lang' => Illuminate\Support\Facades\Lang::class,
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
+        'Notification' => Illuminate\Support\Facades\Notification::class,
         'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
         'Redirect' => Illuminate\Support\Facades\Redirect::class,
@@ -221,9 +235,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        'Authorizer' => LucaDegasperi\OAuth2Server\Facades\Authorizer::class,
         'Image' => Intervention\Image\Facades\Image::class,
-        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
         'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
 
     ],

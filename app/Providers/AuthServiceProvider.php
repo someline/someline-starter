@@ -2,8 +2,9 @@
 
 namespace Someline\Providers;
 
-use Illuminate\Contracts\Auth\Access\Gate as GateContract;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Laravel\Passport\Passport;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -17,15 +18,30 @@ class AuthServiceProvider extends ServiceProvider
     ];
 
     /**
-     * Register any application authentication / authorization services.
+     * Register any authentication / authorization services.
      *
-     * @param  \Illuminate\Contracts\Auth\Access\Gate  $gate
      * @return void
      */
-    public function boot(GateContract $gate)
+    public function boot()
     {
-        $this->registerPolicies($gate);
+        $this->registerPolicies();
 
-        //
+        Passport::routes();
+
+        // Token Lifetimes
+//        Passport::tokensExpireIn(Carbon::now()->addDays(15));
+
+        // Refresh Token Lifetimes
+//        Passport::refreshTokensExpireIn(Carbon::now()->addDays(30));
+
+        // Pruning Revoked Tokens
+//        Passport::pruneRevokedTokens();
+
+        // Token Scopes
+//        Passport::tokensCan([
+//            'place-orders' => 'Place orders',
+//            'check-status' => 'Check order status',
+//        ]);
+
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -14,7 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('user_id');
-            $table->unsignedInteger('slid');
+//            $table->unsignedInteger('slid')->nullable();
             $table->string('name', 50);
             $table->char('gender', 1);
             $table->date('birthday');
