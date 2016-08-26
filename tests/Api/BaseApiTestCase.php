@@ -26,8 +26,8 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
     private function setOAuthRequestData()
     {
         return $this->withOAuthTokenTypePassword([
-            'username' => 'libern@someline.com',
-            'password' => 'Abc12345',
+            'username' => env('API_TEST_USERNAME'),
+            'password' => env('API_TEST_PASSWORD'),
             'scope' => '*',
         ]);
     }
