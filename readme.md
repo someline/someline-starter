@@ -138,10 +138,10 @@ git push -u origin master
 
 - PHP: >=7.0
 - MySQL: >=5.7
-- Laravel 5: https://laravel.com/docs/5.2/installation
+- SQLite extension
+- Laravel 5: https://laravel.com/docs/5.3/installation
 - NodeJS: https://nodejs.org/
 - Bower: https://bower.io/
-- SQLite extention
 
 ### Install Essentials
 
@@ -229,7 +229,7 @@ Explore and start to build on top of it.
 
 You will need to know, read and understand fowllowing before you can start build on top of these.
 
-- [ ] [Laravel Docs](https://laravel.com/docs/5.2/)
+- [ ] [Laravel Docs](https://laravel.com/docs/5.3/)
 - [ ] [Restful API Best Practise](http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
 - [ ] [dingo/api Guide](https://github.com/dingo/api/wiki)
 - [ ] [Repository Pattern](https://bosnadev.com/2015/03/07/using-repository-pattern-in-laravel-5/?utm_source=prettus-l5-repository&utm_medium=readme&utm_campaign=prettus-l5-repository)
