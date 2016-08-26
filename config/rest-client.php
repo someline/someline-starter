@@ -38,8 +38,8 @@ return array(
         'api_url' => '/api/',
 
         'oauth2_credentials' => [
-            'client_id' => '1',
-            'client_secret' => 'EpAeMzdkzzstElFqROrn61NVfpQiZEbuE8bWA48t',
+            'client_id' => '2',
+            'client_secret' => 'Cv75PEDx08Mi5lqSfCmucWKQOOZWXyQJqMwd1ewO',
         ],
 
         'oauth2_access_token_url' => 'oauth/token',

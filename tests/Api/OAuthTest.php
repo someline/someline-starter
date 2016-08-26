@@ -9,45 +9,20 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class OAuthTest extends BaseApiTestCase
 {
 
-    public function testGetAccessTokenWithoutEssentialParams()
+    public function testGetAccessTokenForTypePassword()
     {
-        $this->postRequestAccessToken('client_credentials', [])
-            ->assertResponseStatus(self::HTTP_BAD_REQUEST);
-    }
 
-    public function testGetAccessTokenByClientCredentials()
-    {
-        $this->postRequestAccessToken('client_credentials',
-            array_merge($this->getClientData(), [
-            ]))
-            ->seeJsonStructure([
-                'access_token',
-                'token_type',
-                'expires_in',
-            ]);
-    }
+        $this->post('oauth/token', [
+            'client_id' => '3',
+            'client_secret' => 'GHhWZFvak0iEJ5yh43hP8VVquuZJTp3fPgVIm6mF',
+            'grant_type' => 'password',
+            'username' => 'libern@someline.com',
+            'password' => 'Abc12345',
+            'scope' => '*',
+        ]);
+        $this->printResponseData();
+        $this->assertResponseOk();
 
-    public function testGetAccessTokenByPasswordWithInvalidCredentials()
-    {
-        $this->postRequestAccessToken('password',
-            array_merge($this->getClientData(), [
-                'username' => 'demouser',
-                'password' => 'randompassword',
-            ]))
-            ->assertResponseStatus(self::HTTP_UNAUTHORIZED);
-    }
-
-    public function testGetAccessTokenByPassword()
-    {
-        $this->postRequestAccessToken('password',
-            array_merge($this->getClientData(), $this->getOAuthUserCredentialsData()))
-            ->printResponseOriginContent()
-            ->seeJsonStructure([
-                'access_token',
-                'token_type',
-                'expires_in',
-                'refresh_token',
-            ]);
     }
 
 }

@@ -17,6 +17,69 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
         parent::setUp();
 
         $this->client = new RestClient('local', true);
+        $this->setOAuthRequestData();
+    }
+
+    /**
+     *  Set OAuth Request Data
+     */
+    private function setOAuthRequestData()
+    {
+        return $this->withOAuthTokenTypePassword([
+            'username' => 'libern@someline.com',
+            'password' => 'Abc12345',
+            'scope' => '*',
+        ]);
+    }
+
+    /**
+     * @param $grant_type
+     * @param array|null $requestData
+     * @return $this
+     */
+    public function withOAuthToken($grant_type, $requestData = null)
+    {
+        $this->withOAuthToken($grant_type, $requestData);
+        return $this;
+    }
+
+    /**
+     * @param array|null $requestData
+     * @return RestClient
+     */
+    public function withOAuthTokenTypePassword($requestData = null)
+    {
+        $this->client->withOAuthTokenTypePassword($requestData);
+        return $this;
+    }
+
+    /**
+     * @param array|null $requestData
+     * @return RestClient
+     */
+    public function withOAuthTokenTypeClientCredentials($requestData = null)
+    {
+        $this->client->withOAuthTokenTypeClientCredentials($requestData);
+        return $this;
+    }
+
+    /**
+     * @param array|null $requestData
+     * @return RestClient
+     */
+    public function withOAuthTokenTypeAuthorizationCode($requestData = null)
+    {
+        $this->client->withOAuthTokenTypeAuthorizationCode($requestData);
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function withoutOAuthToken()
+    {
+        $this->client->withoutOAuthToken();
+        return $this;
     }
 
     /**

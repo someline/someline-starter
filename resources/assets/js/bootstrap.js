@@ -1,5 +1,6 @@
 
 window._ = require('lodash');
+window.moment = require('moment');
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -18,12 +19,15 @@ require('bootstrap-sass');
 
 window.Vue = require('vue');
 require('vue-resource');
+require('vue-i18n');
 
 /**
  * We'll register a HTTP interceptor to attach the "CSRF" header to each of
  * the outgoing requests issued by this application. The CSRF middleware
  * included with Laravel will automatically verify the header's value.
  */
+
+// Vue.http.headers.common['Accept'] = 'application/x.someline.v1+json';
 
 Vue.http.interceptors.push((request, next) => {
     request.headers['X-CSRF-TOKEN'] = Laravel.csrfToken;

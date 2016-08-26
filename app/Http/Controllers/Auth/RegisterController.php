@@ -7,7 +7,7 @@ use Validator;
 use Someline\Http\Controllers\BaseController;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
-class RegisterBaseController extends BaseController
+class RegisterController extends BaseController
 {
     /*
     |--------------------------------------------------------------------------

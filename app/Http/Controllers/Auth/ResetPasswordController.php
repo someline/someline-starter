@@ -5,7 +5,7 @@ namespace Someline\Http\Controllers\Auth;
 use Someline\Http\Controllers\BaseController;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
-class ResetPasswordBaseController extends BaseController
+class ResetPasswordController extends BaseController
 {
     /*
     |--------------------------------------------------------------------------
