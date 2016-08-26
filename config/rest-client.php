@@ -74,6 +74,11 @@ return array(
                     'Accept' => 'application/x.someline.v1+json',
                 ],
 
+                'oauth2_credentials' => [
+                    'client_id' => '2',
+                    'client_secret' => env('API_TEST_CLIENT_SECRET'),
+                ],
+
             ],
 
             'someline-starter' => [
