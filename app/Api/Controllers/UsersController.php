@@ -3,6 +3,8 @@
 namespace Someline\Api\Controllers;
 
 use Dingo\Api\Exception\DeleteResourceFailedException;
+use Dingo\Api\Exception\StoreResourceFailedException;
+use Dingo\Api\Exception\UpdateResourceFailedException;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Someline\Http\Requests\UserCreateRequest;
 use Someline\Http\Requests\UserUpdateRequest;
@@ -59,6 +61,9 @@ class UsersController extends BaseController
 
         $user = $this->repository->create($data);
 
+        // throw exception if store failed
+//        throw new StoreResourceFailedException('Failed to store.');
+
         // A. return 201 created
 //            return $this->response->created(null);
 
@@ -107,7 +112,7 @@ class UsersController extends BaseController
         $user = $this->repository->update($request->all(), $id);
 
         // throw exception if update failed
-//        throw new UpdateResourceFailedException();
+//        throw new UpdateResourceFailedException('Failed to update.');
 
         // Updated, return 204 No Content
         return $this->response->noContent();
