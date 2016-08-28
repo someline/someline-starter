@@ -336,6 +336,8 @@ npm run-script theme
 
 #### API and Unit Tests
 
+__Note:__ You may need to change the `local` service configs under `dev` environment from `config/rest-client.php` to fit your local development configurations.
+
 Unit Tests: `tests/`
 
 API Unit Tests: `tests/Api/`
@@ -343,6 +345,14 @@ API Unit Tests: `tests/Api/`
 #### Debug and Clockwork
 
 View all requests and request information from file `storage/clockwork.sqlite`
+
+#### OAuth Web Support
+
+OAuth HTTP URL: `http://someline-starter.app/console/oauth`
+
+#### Web Log Viewer
+
+Log Viewer HTTP URL: `http://someline-starter.app/console/logs`
 
 #### Database
 
@@ -357,9 +367,12 @@ Directly changing from database or not follow migrations is strongly NOT recomme
 2. Add essential columns to migration file:
 
 You are recommended to use `tablename_id` format as primary incremental key, for example, for table `posts`, you need to use `post_id`, and when this become a foreign key, you should keep the same name in other table `post_id`.
+
 ```
 $table->increments('post_id');
 ```
+
+You are also recommended to use the `user_id` field in all tables, for example, use `user_id` as staff id instead of `staff_id` in `company_staffs` table. If there are no meaning for `user_id` in certain tables, you should still put `user_id` field in case for future usage. So, you need to use it smartly to fit your table scenarios accordingly. And, similarly, you may optionally want to add a `related_user_id` field to indicate certain record is related to a user depends on your own needs.
 
 The following columns are always required by `BaseModel`:
 ```
@@ -376,6 +389,21 @@ $table->ipAddress('updated_ip')->nullable();
 And remove timestamps():
 ```
 // $table->timestamps();
+```
+
+Finally, the table blue print should be looks like, e.g. in `posts` table:
+```
+$table->increments('post_id');
+$table->unsignedInteger('user_id')->index();
+
+// Adding more table related fields here...
+
+$table->unsignedInteger('created_by')->nullable();
+$table->timestamp('created_at')->nullable();
+$table->ipAddress('created_ip')->nullable();
+$table->unsignedInteger('updated_by')->nullable();
+$table->timestamp('updated_at')->nullable();
+$table->ipAddress('updated_ip')->nullable();
 ```
 
 3. Add factory support, under file `database/factories/ModelFactory.php`
