@@ -336,7 +336,11 @@ npm run-script theme
 
 #### API and Unit Tests
 
-__Note:__ You may need to change the `local` service configs under `dev` environment from `config/rest-client.php` to fit your local development configurations.
+__Note:__ 
+
+You may need to change the `local` service configs under `dev` environment from `config/rest-client.php` to fit your local development configurations.
+
+Also change the value of `API_TEST_CLIENT_SECRET` in `.env` file to the `secret` value of `Password Grant Client` record  in `oauth_clients` table.
 
 Unit Tests: `tests/`
 
