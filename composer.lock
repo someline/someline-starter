@@ -1382,16 +1382,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.3.2",
+            "version": "v5.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "2213ca11f6fa849ca7c96308934cc6881ab434e8"
+                "reference": "7159ffbadc79558a42ece2cdd1ec2e7e13105b5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2213ca11f6fa849ca7c96308934cc6881ab434e8",
-                "reference": "2213ca11f6fa849ca7c96308934cc6881ab434e8",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/7159ffbadc79558a42ece2cdd1ec2e7e13105b5d",
+                "reference": "7159ffbadc79558a42ece2cdd1ec2e7e13105b5d",
                 "shasum": ""
             },
             "require": {
@@ -1505,7 +1505,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-08-24 23:23:29"
+            "time": "2016-08-26 21:40:26"
         },
         {
             "name": "laravel/passport",
@@ -1953,20 +1953,20 @@
                 "httpstatus",
                 "status codes"
             ],
-            "time": "2016-07-10 09:10:44"
+            "time": "2015-12-28 16:09:41"
         },
         {
             "name": "mcamara/laravel-localization",
-            "version": "1.1.6",
+            "version": "1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mcamara/laravel-localization.git",
-                "reference": "024b58de07b895956e641e808596d34c9a3178e3"
+                "reference": "ff6d398d8437d0169f1d3b97e4244552a5abcced"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/024b58de07b895956e641e808596d34c9a3178e3",
-                "reference": "024b58de07b895956e641e808596d34c9a3178e3",
+                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/ff6d398d8437d0169f1d3b97e4244552a5abcced",
+                "reference": "ff6d398d8437d0169f1d3b97e4244552a5abcced",
                 "shasum": ""
             },
             "require": {
@@ -2001,7 +2001,7 @@
                 "localization",
                 "php"
             ],
-            "time": "2016-08-24 13:12:55"
+            "time": "2016-08-25 18:28:07"
         },
         {
             "name": "monolog/monolog",
@@ -2814,16 +2814,16 @@
         },
         {
             "name": "someline/starter-framework",
-            "version": "v1.3.7",
+            "version": "v1.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/someline/starter-framework.git",
-                "reference": "6c3d8c55103bb080a67da67f25487c8958b7a2b2"
+                "reference": "2e34b2bd26ff2764222e280d9355b0a5e2dc28c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/someline/starter-framework/zipball/6c3d8c55103bb080a67da67f25487c8958b7a2b2",
-                "reference": "6c3d8c55103bb080a67da67f25487c8958b7a2b2",
+                "url": "https://api.github.com/repos/someline/starter-framework/zipball/2e34b2bd26ff2764222e280d9355b0a5e2dc28c6",
+                "reference": "2e34b2bd26ff2764222e280d9355b0a5e2dc28c6",
                 "shasum": ""
             },
             "require": {
@@ -2883,7 +2883,7 @@
                 "someline",
                 "starter-framework"
             ],
-            "time": "2016-08-25 06:29:33"
+            "time": "2016-08-29 16:09:32"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4491,16 +4491,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.5.3",
+            "version": "5.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "08745ede58cb02b4043adadc09a01c09e698e3f7"
+                "reference": "3e6e88e56c912133de6e99b87728cca7ed70c5f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/08745ede58cb02b4043adadc09a01c09e698e3f7",
-                "reference": "08745ede58cb02b4043adadc09a01c09e698e3f7",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3e6e88e56c912133de6e99b87728cca7ed70c5f5",
+                "reference": "3e6e88e56c912133de6e99b87728cca7ed70c5f5",
                 "shasum": ""
             },
             "require": {
@@ -4565,20 +4565,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-08-25 04:45:28"
+            "time": "2016-08-26 07:11:44"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.2.5",
+            "version": "3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "8f444748e174e49d5bd2bd7a9bebbf44edbb55fb"
+                "reference": "46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/8f444748e174e49d5bd2bd7a9bebbf44edbb55fb",
-                "reference": "8f444748e174e49d5bd2bd7a9bebbf44edbb55fb",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49",
+                "reference": "46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49",
                 "shasum": ""
             },
             "require": {
@@ -4624,7 +4624,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2016-08-24 16:58:26"
+            "time": "2016-08-26 05:51:59"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
