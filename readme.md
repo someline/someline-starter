@@ -240,9 +240,9 @@ We recommend use [PHPStorm IDE](https://www.jetbrains.com/phpstorm/) to build an
 
 #### Namespace
 
-The dafault namespace for `app/` folder is `Someline`.
+The default namespace for `app/` folder is `Someline`.
 
-It is NOT recommended to change the namespace, if you are not familiar with namepsace of Someline Starter as the `Someline` namespace is used heavily within whole project. 
+It is NOT recommended to change the namespace, if you are not familiar with namespace of Someline Starter as the `Someline` namespace is used heavily within whole project. 
 
 However, you can still change it if you know how what you are doing, because some namespaces required manually changing. 
 
@@ -261,12 +261,12 @@ All models are located under `app/Models/` folder.
 
 `User` Model under folder `app/Models/Foundation/` is created by default with primary key `user_id`, you should not change this class heavily because it is used almost everywhere within whole project. You can use global function `auth_user()` to access currently logged in user.
 
-Every model should extend `Someline/Models/BaseModel` which has a observer `Someline/Observers/BaseModelObserver` that you can ultilise all model events within the Model, e.g. `onCreating`, `onCreated`, `onUpdating`, `onDeleting`, etc.
+Every model should extend `Someline/Models/BaseModel` which has a observer `Someline/Observers/BaseModelObserver` that you can utilize all model events within the Model, e.g. `onCreating`, `onCreated`, `onUpdating`, `onDeleting`, etc.
 
-When creating new model, you should do it using command to auto generate realted Repository classes.
+When creating new model, you should do it using command to auto generate related Repository classes.
 
 ```
-php artisan make:entity Post
+php artisan starter:entity Post
 ```
 
 #### Web Http
@@ -315,7 +315,7 @@ Vuejs: `resources/assets/js/`
 
 Less styles: `resources/assets/less/app.less`
 
-Sass styles: `resources/assets/sass/app.less`
+Sass styles: `resources/assets/sass/app.scss`
 
 When made changes in scripts, styles, you will need to run the command.
 
@@ -366,9 +366,9 @@ Directly changing from database or not follow migrations is strongly NOT recomme
 
 ##### Flow of creating database migrations:
 
-1. Create a migration file (Auto generated when use `php artisan make:entity`), under folder `database/migrations/`
+1. Create a migration file (Auto generated when use `php artisan starter:entity`), under folder `database/migrations/`
 
-2. Add essential columns to migration file:
+2. Add essential columns to migration file (Auto generated when use `php artisan starter:entity`):
 
 You are recommended to use `tablename_id` format as primary incremental key, for example, for table `posts`, you need to use `post_id`, and when this become a foreign key, you should keep the same name in other table `post_id`.
 
