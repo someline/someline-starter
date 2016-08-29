@@ -176,6 +176,7 @@ return [
         Someline\Rest\RestClientServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        Someline\Repository\Providers\RepositoryServiceProvider::class,
 
         /*
          * Application Service Providers...
