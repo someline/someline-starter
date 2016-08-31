@@ -7,10 +7,10 @@
 require('./bootstrap');
 
 // Vue Directives
-Vue.directive(require('./directives/focus'));
+Vue.directive('focus', require('./directives/focus'));
 
 // Vue Filters
-Vue.filter(require('./filters/nl2br'));
+Vue.filter('nl2br', require('./filters/nl2br'));
 
 // Vue Mixins
 Vue.mixin(require('./mixins/user'));
