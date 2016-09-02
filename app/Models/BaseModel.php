@@ -7,16 +7,17 @@
 namespace Someline\Models;
 
 use Someline\Base\Models\BaseModel as Model;
+use Someline\Models\Foundation\User;
 
 class BaseModel extends Model
 {
 
     /**
-     * @return \Someline\Models\Foundation\User
+     * @return User
      */
     public function getAuthUser()
     {
-        return auth_user();
+        return parent::getAuthUser();
     }
 
 }
