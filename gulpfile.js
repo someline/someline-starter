@@ -17,6 +17,9 @@ elixir(mix => {
     mix.sass('app.scss')
        .webpack('app.js');
 
+    // less
+    mix.less('app.less', 'resources/assets/less/css/');
+
     // styles
     mix.styles([
         // theme style
