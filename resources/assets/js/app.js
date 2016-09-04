@@ -13,9 +13,12 @@ Vue.directive('focus', require('./directives/focus'));
 Vue.filter('nl2br', require('./filters/nl2br'));
 
 // Vue Mixins
-Vue.mixin(require('./mixins/user'));
-Vue.mixin(require('./mixins/jquery'));
-Vue.mixin(require('./mixins/tools'));
+import MixInUser from './mixins/user'
+import MixInJQuery from './mixins/jquery'
+import MixInTools from './mixins/tools'
+Vue.mixin(MixInUser);
+Vue.mixin(MixInJQuery);
+Vue.mixin(MixInTools);
 
 // Vue Components
 Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue'));
