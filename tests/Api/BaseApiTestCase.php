@@ -25,7 +25,7 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
      */
     private function setOAuthRequestData()
     {
-        return $this->withOAuthTokenTypePassword([
+        return $this->client->setOAuthGrantRequestData(RestClient::GRANT_TYPE_CLIENT_CREDENTIALS, [
             'username' => env('API_TEST_USERNAME'),
             'password' => env('API_TEST_PASSWORD'),
             'scope' => '*',
