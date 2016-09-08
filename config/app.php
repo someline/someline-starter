@@ -177,6 +177,8 @@ return [
         Laravel\Passport\PassportServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
         Someline\Repository\Providers\RepositoryServiceProvider::class,
+        Monarobase\CountryList\CountryListServiceProvider::class,
+        Torann\GeoIP\GeoIPServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -239,6 +241,8 @@ return [
 
         'Image' => Intervention\Image\Facades\Image::class,
         'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+        'Countries' => Monarobase\CountryList\CountryListFacade::class,
+        'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
 
     ],
 
