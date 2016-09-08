@@ -21,4 +21,19 @@ class BasicTest extends BaseApiTestCase
         $this->assertTrue($phoneNumberModel->isMobileNumber());
     }
 
+    public function testCountry()
+    {
+
+        // country list
+        $localizedCountryList = \Someline\Model\Basic\CountryModel::getLocalizedCountryList();
+        print_r($localizedCountryList);
+
+        // country list
+        $countryInfoIndexedList = \Someline\Model\Basic\CountryModel::getCountryInfoIndexedList();
+        print_r($countryInfoIndexedList);
+
+    }
+
+
+
 }
