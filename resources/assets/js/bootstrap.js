@@ -32,6 +32,7 @@ require('vue-i18n');
 
 Vue.http.interceptors.push((request, next) => {
     request.headers['X-CSRF-TOKEN'] = Laravel.csrfToken;
+    request.headers['Accept-Language'] = Someline.locale;
 
     next();
 });
