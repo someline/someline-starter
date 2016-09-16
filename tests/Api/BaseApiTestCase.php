@@ -254,6 +254,11 @@ class BaseApiTestCase extends TestCase implements Httpstatuscodes
         $this->assertResponseStatus(self::HTTP_NO_CONTENT);
     }
 
+    public function assertResponseCreated()
+    {
+        $this->assertResponseStatus(self::HTTP_CREATED);
+    }
+
     public function assertResponseUnprocessableEntity()
     {
         $this->assertResponseStatus(self::HTTP_UNPROCESSABLE_ENTITY);
