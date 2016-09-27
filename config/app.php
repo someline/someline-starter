@@ -179,6 +179,7 @@ return [
         Someline\Repository\Providers\RepositoryServiceProvider::class,
         Monarobase\CountryList\CountryListServiceProvider::class,
         Torann\GeoIP\GeoIPServiceProvider::class,
+        Someline\Image\SomelineImageServiceProvider::class,
 
         /*
          * Application Service Providers...

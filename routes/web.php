@@ -26,6 +26,10 @@ Route::group(['prefix' => 'locales'], function () {
 // Basic Routes
 Route::get('/home', 'HomeController@index');
 
+// Image Routes
+Route::get('/image/{name}', 'ImageController@showOriginalImage');
+Route::post('/image', 'ImageController@postImage');
+
 // Protected Routes
 Route::group(['middleware' => 'auth'], function () {
 

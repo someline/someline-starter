@@ -67,6 +67,7 @@ It is fully utilised Repository Design pattern.
 - Intervention Image Cache [intervention/imagecache](https://github.com/Intervention/imagecache)
 - Image Validator [cviebrock/image-validator](https://github.com/cviebrock/image-validator)
 - Rest API Client [someline/rest-api-client](https://github.com/someline/rest-api-client)
+- Someline Image Service [someline/someline-image](https://github.com/someline/someline-image)
 
 *Authentication*
 - Laravel Passport [laravel/passport](https://laravel.com/docs/5.3/passport)
