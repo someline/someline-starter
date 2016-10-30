@@ -30,6 +30,6 @@
         <p class="text-center">
             <small>Do not have an account?</small>
         </p>
-        <a ui-sref="access.signup" class="btn btn-lg btn-default btn-block">Create an account</a>
+        <a href="{{ url('/register') }}" class="btn btn-lg btn-default btn-block">Create an account</a>
     </form>
 @endsection
