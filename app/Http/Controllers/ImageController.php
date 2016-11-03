@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers;
+<?php namespace Someline\Http\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
