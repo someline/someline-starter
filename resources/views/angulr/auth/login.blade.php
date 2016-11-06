@@ -25,11 +25,11 @@
         <button type="submit" class="btn btn-lg btn-primary btn-block">
             Log in
         </button>
-        <div class="text-center m-t m-b"><a ui-sref="access.forgotpwd">Forgot password?</a></div>
+        <div class="text-center m-t m-b"><a href="{{ url('/password/reset') }}">Forgot password?</a></div>
         <div class="line line-dashed"></div>
         <p class="text-center">
             <small>Do not have an account?</small>
         </p>
-        <a ui-sref="access.signup" class="btn btn-lg btn-default btn-block">Create an account</a>
+        <a href="{{ url('/register') }}" class="btn btn-lg btn-default btn-block">Create an account</a>
     </form>
 @endsection
