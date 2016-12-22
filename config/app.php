@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Someline Starter',
 
     /*
     |--------------------------------------------------------------------------
@@ -166,8 +166,20 @@ return [
         /*
          * Package Service Providers...
          */
-
-        //
+        Dingo\Api\Provider\LaravelServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+        Cviebrock\ImageValidator\ImageValidatorServiceProvider::class,
+        Clockwork\Support\Laravel\ClockworkServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        Someline\Rest\RestClientServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        Someline\Repository\Providers\RepositoryServiceProvider::class,
+        Monarobase\CountryList\CountryListServiceProvider::class,
+        Torann\GeoIP\GeoIPServiceProvider::class,
+        Someline\Image\SomelineImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -225,6 +237,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'Image' => Intervention\Image\Facades\Image::class,
+        'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+        'Countries' => Monarobase\CountryList\CountryListFacade::class,
+        'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
 
     ],
 
