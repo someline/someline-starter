@@ -3,11 +3,11 @@
 namespace Someline\Http\Controllers\Auth;
 
 use Someline\Models\Foundation\User;
-use Someline\Http\Controllers\Controller;
+use Someline\Http\Controllers\BaseController;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
-class RegisterController extends Controller
+class RegisterController extends BaseController
 {
     /*
     |--------------------------------------------------------------------------
