@@ -3,11 +3,12 @@
 namespace Someline\Models\Foundation;
 
 use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
 use Someline\Model\Foundation\User as BaseUser;
 
 class User extends BaseUser
 {
-    use Notifiable;
+    use HasApiTokens, Notifiable;
 
     /**
      * The attributes that are mass assignable.

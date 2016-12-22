@@ -68,10 +68,15 @@ return array(
 
             'local' => [
 
-                'base_uri' => 'http://someline-starter.app/',
+                'base_uri' => env('API_TEST_LOCAL_URL'),
 
                 'headers' => [
                     'Accept' => 'application/x.someline.v1+json',
+                ],
+
+                'oauth2_credentials' => [
+                    'client_id' => env('API_TEST_CLIENT_ID'),
+                    'client_secret' => env('API_TEST_CLIENT_SECRET'),
                 ],
 
             ],
