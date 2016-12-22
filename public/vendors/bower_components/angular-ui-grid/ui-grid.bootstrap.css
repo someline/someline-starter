@@ -1,0 +1,35 @@
+.ui-grid,
+.ui-grid-header,
+.ui-grid-footer-panel,
+.ui-grid-cell,
+input[type="text"].ui-grid-filter-input{
+  border-color: #dee5e7;
+}
+
+.ui-grid-row:nth-child(even) .ui-grid-cell {
+  background-color: #fafbfc;
+  border-bottom: 1px solid #edf1f2;
+  border-top: 1px solid #edf1f2;
+}
+
+.ui-grid-header-cell:not(:last-child) .ui-grid-vertical-bar{
+	background-color: #dee5e7;
+}
+
+.ui-grid-top-panel,
+.ui-grid-footer-panel{
+  background: #f6f8f8;
+}
+
+.ui-grid-cell,
+.ui-grid-row{
+  min-height: 36px;
+}
+
+.ui-grid-cell-contents{
+  padding: 8px 15px;
+}
+
+.ui-grid-column-menu-button{
+  top: 5px;
+}

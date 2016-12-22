@@ -1,0 +1,32 @@
+{
+  "name": "footable",
+  "version": "2.0.3",
+  "description": "jQuery plugin to make HTML tables responsive",
+  "keywords": [
+    "table",
+    "responsive"
+  ],
+  "main": [
+    "js/footable.js",
+    "css/footable.core.css",
+    "css/fonts/footable.eot",
+    "css/fonts/footable.svg",
+    "css/fonts/footable.ttf",
+    "css/fonts/footable.woff"
+  ],
+  "dependencies": {
+    "jquery": ">=1.4.4"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/bradvin/FooTable",
+  "_release": "2.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.3",
+    "commit": "531e97698092014d7472dd60a63fd7ea48823d92"
+  },
+  "_source": "git://github.com/bradvin/FooTable.git",
+  "_target": "~2.0.3",
+  "_originalSource": "footable",
+  "_direct": true
+}

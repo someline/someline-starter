@@ -1,0 +1,18 @@
+{
+  "name": "angular-translate-storage-local",
+  "description": "A plugin for Angular Translate",
+  "version": "2.5.2",
+  "main": "./angular-translate-storage-local.js",
+  "dependencies": {
+    "angular-translate": "~2.5.2",
+    "angular-translate-storage-cookie": "~2.5.2"
+  },
+  "ignore": [],
+  "author": "Pascal Precht",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ]
+}
