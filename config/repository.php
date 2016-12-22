@@ -166,10 +166,13 @@ return [
         | $query->where('foo','=','bar')
         | $query->where('foo','like','bar')
         |
+        |
+        | 'like_raw': requires manually add '%' in the value
         */
         'acceptedConditions' => [
             '=',
-            'like'
+            'like',
+            'like_raw',     // use this with: \Someline\Repositories\Criteria\RequestCriteria class, will convert to 'like'
         ],
         /*
         |--------------------------------------------------------------------------
@@ -220,18 +223,16 @@ return [
     */
     'generator'  => [
         'basePath'      => app_path(),
-        'rootNamespace' => 'App\\',
+        'rootNamespace' => 'Someline\\',
         'paths'         => [
-            'models'       => 'Entities',
-            'repositories' => 'Repositories',
-            'interfaces'   => 'Repositories',
+            'models'       => 'Models',
+            'repositories' => 'Repositories\Eloquent',
+            'interfaces'   => 'Repositories\Interfaces',
             'transformers' => 'Transformers',
             'presenters'   => 'Presenters',
             'validators'   => 'Validators',
-            'controllers'  => 'Http/Controllers',
+            'controllers'  => 'Api/Controllers',
             'provider'     => 'RepositoryServiceProvider',
-            'criteria'     => 'Criteria',
-            'stubsOverridePath' => app_path()
         ]
     ]
 ];
