@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Dingo\Api\Routing\Router;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,31 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+// v1
+$api->version('v1', [
+    'namespace' => 'Someline\Api\Controllers',
+    'middleware' => ['api']
+], function (Router $api) {
+
+    $api->group(['middleware' => ['auth:api']], function (Router $api) {
+
+        // Rate: 100 requests per 5 minutes
+        $api->group(['middleware' => ['api.throttle'], 'limit' => 100, 'expires' => 5], function (Router $api) {
+
+            $api->get('users', 'UsersController@index');
+
+            $api->post('users', 'UsersController@store');
+
+            $api->get('users/me', 'UsersController@me');
+
+            $api->get('users/{id}', 'UsersController@show');
+
+            $api->put('users/{id}', 'UsersController@update');
+
+            $api->delete('users/{id}', 'UsersController@destroy');
+
+        });
+
+    });
+
+});

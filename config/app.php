@@ -189,6 +189,9 @@ return [
         // Someline\Providers\BroadcastServiceProvider::class,
         Someline\Providers\EventServiceProvider::class,
         Someline\Providers\RouteServiceProvider::class,
+        Someline\Providers\ApiServiceProvider::class,
+        Someline\Providers\RepositoryServiceProvider::class,
+        Someline\Providers\PolymorphicServiceProvider::class,
 
     ],
 
