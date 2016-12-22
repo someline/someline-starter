@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "prod": "gulp --production",
+    "theme": "gulp --gulpfile gulpfile_theme.js",
     "dev": "gulp watch"
   },
   "devDependencies": {
