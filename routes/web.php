@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 // Auth Routes
 Auth::routes();
 
@@ -55,3 +51,6 @@ Route::group(['prefix' => 'console'], function () {
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
