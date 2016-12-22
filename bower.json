@@ -1,0 +1,21 @@
+{
+  "name": "someline-starter",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Libern <libernlin@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "toastr": "^2.1.2"
+  }
+}
