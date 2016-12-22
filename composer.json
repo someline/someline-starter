@@ -21,6 +21,9 @@
         "classmap": [
             "database"
         ],
+        "files": [
+            "app/Helpers/Helpers.php"
+        ],
         "psr-4": {
             "Someline\\": "app/"
         }
