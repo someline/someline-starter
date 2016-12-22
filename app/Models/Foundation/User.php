@@ -27,4 +27,15 @@ class User extends BaseUser
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Called when model is created
+     * Other events available are in BaseModelEvents
+     */
+    public function onCreated()
+    {
+        parent::onCreated();
+
+    }
+
 }
