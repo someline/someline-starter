@@ -1,6 +1,6 @@
 <?php
 
-namespace Someline;
+namespace Someline\Models\Foundation;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
