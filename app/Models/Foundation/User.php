@@ -26,7 +26,7 @@ class User extends BaseUser
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'remember_token',
     ];
 
     /**
