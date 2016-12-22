@@ -3,9 +3,9 @@
 namespace Someline\Models\Foundation;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Someline\Model\Foundation\User as BaseUser;
 
-class User extends Authenticatable
+class User extends BaseUser
 {
     use Notifiable;
 
@@ -16,6 +16,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name', 'email', 'password',
+        'gender', 'birthday', 'country', 'timezone', 'locale', 'username', 'phone_number', 'status',
     ];
 
     /**
