@@ -7,12 +7,13 @@
 namespace Someline\Api\Controllers;
 
 use Someline\Base\Api\Controllers\Controller;
+use Someline\Models\Foundation\User;
 
 abstract class BaseController extends Controller
 {
 
     /**
-     * @return \Someline\Models\Foundation\User
+     * @return User
      */
     public function getAuthUser()
     {
