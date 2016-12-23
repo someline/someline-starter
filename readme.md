@@ -5,7 +5,7 @@
 
 [Someline Starter](https://starter.someline.com/) is a PHP framework for quick building Web Apps and Restful APIs, with modern design pattern foundation.
  
-It is built on top of popular `Laravel 5 framework`, `Vue.js`, `Restful API`, `Repository Design`, `OAuth2`, `JWT`, `Unit Tests`, isolated front-end and back-end layer.
+It is built on top of popular `Laravel 5.3 framework`, `Vue.js 2.0`, `Restful API`, `Repository Design`, `OAuth2`, `JWT`, `Unit Tests`, isolated front-end and back-end layer.
 
 ## Someline Starter is born for two reasons:
 
@@ -159,9 +159,11 @@ Install composer dependencies
 composer install
 ```
 
-Install npm dependencies
+Install npm dependencies using [Yarn](https://yarnpkg.com/) dependency management (suggested)
+
+Note: This command should be **outside** homestead environment. Also, you can still use `npm install` if you want.
 ```
-npm install
+yarn install
 ```
 
 Install bower dependencies
