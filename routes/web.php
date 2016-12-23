@@ -26,8 +26,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('users', 'UserController@getUserList');
 
-    Route::get('users/{id}', 'UserController@getUserDetail');
-
 });
 
 // Mobile Routes
