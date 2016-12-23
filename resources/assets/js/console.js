@@ -47,12 +47,7 @@ Vue.component(
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-oauth', require('./components/console/OAuth.vue'));
 
-// Vue Router
-import RouterConfig from './router'
-const router = new VueRouter(RouterConfig);
-
 const app = new Vue({
-    router,
     el: '#app',
     data: {
         msg: "hello",
