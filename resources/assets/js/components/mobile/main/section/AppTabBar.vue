@@ -3,7 +3,7 @@
 
 <template>
 
-    <footer v-show="ShowAppTabBar" class="app-footer navbar navbar-fixed-bottom bg-light lt b-t animated slideInUp">
+    <footer v-show="ShowAppTabBar" class="app-footer navbar navbar-fixed-bottom bg-light lt b-t">
         <div class="row">
             <div class="col-sm-2 hidden-xs">
 
