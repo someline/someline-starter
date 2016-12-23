@@ -30,11 +30,9 @@ Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue')
  */
 
 Vue.component('example', require('./components/Example.vue'));
-Vue.component('sl-user-list', require('./components/user/UserList.vue'));
-Vue.component('sl-user-detail', require('./components/user/UserDetail.vue'));
 
 // Vue Router
-import RouterConfig from './router'
+import RouterConfig from './mobile_router'
 const router = new VueRouter(RouterConfig);
 
 const app = new Vue({

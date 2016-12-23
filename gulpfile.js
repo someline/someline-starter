@@ -20,9 +20,9 @@ elixir((mix) => {
         .webpack('mobile.js');
 
     // less
-    mix.less('app.less', 'resources/assets/less/css/app/');
-    mix.less('console.less', 'resources/assets/less/css/console/');
-    mix.less('mobile.less', 'resources/assets/less/css/mobile/');
+    mix.less('app.less', 'resources/assets/less/css/app/')
+        .less('console.less', 'resources/assets/less/css/console/')
+        .less('mobile.less', 'resources/assets/less/css/mobile/');
 
     // app styles
     mix.styles([
@@ -31,7 +31,15 @@ elixir((mix) => {
 
         // main styles
         'resources/assets/less/css/app/*.css',
-    ], 'public/css/app.src.css', './');
+    ], 'public/css/app.src.css', './')
+        .styles([
+            // main styles
+            'resources/assets/less/css/console/*.css',
+        ], 'public/css/console.src.css', './')
+        .styles([
+            // main styles
+            'resources/assets/less/css/mobile/*.css',
+        ], 'public/css/mobile.src.css', './');
 
     // app scripts
     mix.scripts([
@@ -40,31 +48,15 @@ elixir((mix) => {
 
         // main vue js
         'public/js/app.js',
-    ], 'public/js/app.src.js', './');
-
-    // console styles
-    mix.styles([
-        // main styles
-        'resources/assets/less/css/console/*.css',
-    ], 'public/css/console.src.css', './');
-
-    // console scripts
-    mix.scripts([
-        // main vue js
-        'public/js/console.js',
-    ], 'public/js/console.src.js', './');
-
-    // mobile styles
-    mix.styles([
-        // main styles
-        'resources/assets/less/css/mobile/*.css',
-    ], 'public/css/mobile.src.css', './');
-
-    // mobile scripts
-    mix.scripts([
-        // main vue js
-        'public/js/mobile.js',
-    ], 'public/js/mobile.src.js', './');
+    ], 'public/js/app.src.js', './')
+        .scripts([
+            // main vue js
+            'public/js/console.js',
+        ], 'public/js/console.src.js', './')
+        .scripts([
+            // main vue js
+            'public/js/mobile.js',
+        ], 'public/js/mobile.src.js', './');
 
     // versions
     mix.version([

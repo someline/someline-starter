@@ -12,4 +12,9 @@ class MobileController extends BaseController
         return view('mobile.mobile_main');
     }
 
+    public function getApp()
+    {
+        return view('mobile.mobile_app');
+    }
+
 }

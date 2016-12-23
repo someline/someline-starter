@@ -5,22 +5,9 @@
 
     <div class="wrapper-md">
 
-        <h2>User {{ routeId }}</h2>
-
-        <div class="panel panel-default">
-
-            <ul class="nav nav-tabs nav-justified">
-                <li>
-                    <router-link :to="routeProfile">Profile</router-link>
-                </li>
-                <li>
-                    <router-link :to="routePosts">Posts</router-link>
-                </li>
-            </ul>
-
-            <router-view></router-view>
-
-        </div>
+        <a href="javascript:;"
+           @click="onClickButtonUserDetail"
+           class="btn btn-primary btn-block btn-lg r-2x">Show User Detail</a>
 
     </div>
 
@@ -82,7 +69,10 @@
                     this.items = response.data.data;
                 });
 
-            }
+            },
+            onClickButtonUserDetail(){
+                this.redirectToUrl('/m/app#/user/1/profile');
+            },
         },
     }
 </script>

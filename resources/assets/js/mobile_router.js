@@ -1,19 +1,12 @@
-/**
- * Created by libern on 2016/12/23.
- */
 export default {
     routes: [
         {
-            path: '/foo',
-            component: {template: '<div>foo</div>'}
-        },
-        {
-            path: '/bar',
-            component: {template: '<div>bar</div>'}
+            path: '/',
+            component: require('./components/mobile/main/App.vue'),
         },
         {
             path: '/user/:id',
-            component: require('./components/user/UserDetail.vue'),
+            component: require('./components/mobile/user/UserDetail.vue'),
             children: [
                 {
                     // default path will redirect to list
@@ -24,11 +17,11 @@ export default {
                 },
                 {
                     path: 'profile',
-                    component: require('./components/user/detail/Profile.vue'),
+                    component: require('./components/mobile/user/detail/Profile.vue'),
                 },
                 {
                     path: 'posts',
-                    component: require('./components/user/detail/Posts.vue'),
+                    component: require('./components/mobile/user/detail/Posts.vue'),
                 }
             ]
         }
