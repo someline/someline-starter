@@ -9,7 +9,7 @@ class MobileController extends BaseController
 
     public function getIndex()
     {
-        return view('mobile.mobile_index');
+        return view('mobile.mobile_main');
     }
 
 }
