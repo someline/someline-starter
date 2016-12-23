@@ -906,7 +906,7 @@ defined@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/defined/-/defined-1.0.0.tgz#c98d9bcef75674188e110969151199e39b1fa693"
 
-del@^2.2.0:
+del@^2.0.2, del@^2.2.0:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/del/-/del-2.2.2.tgz#c12c981d067846c84bcaf862cff930d907ffd1a8"
   dependencies:
@@ -2061,6 +2061,12 @@ kind-of@^3.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.1.0.tgz#475d698a5e49ff5e53d14e3e732429dc8bf4cf47"
   dependencies:
     is-buffer "^1.0.2"
+
+laravel-elixir-remove@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/laravel-elixir-remove/-/laravel-elixir-remove-0.2.1.tgz#0666d3c3f24548b715d4315d8cb150f5e8c43642"
+  dependencies:
+    del "^2.0.2"
 
 laravel-elixir-vue-2@^0.2.0:
   version "0.2.0"

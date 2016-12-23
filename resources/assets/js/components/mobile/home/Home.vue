@@ -1,0 +1,154 @@
+<style scoped>
+</style>
+
+<template>
+
+    <div class="wrapper">
+        <p>
+            <a href="javascript:;"
+               @click="onClickDemoButton1"
+               class="btn btn-primary btn-block btn-lg r-2x">
+                Alert
+            </a>
+        </p>
+        <p>
+            <a href="javascript:;"
+               @click="onClickDemoButton2"
+               class="btn btn-success btn-block btn-lg r-2x">
+                Action Sheet
+            </a>
+        </p>
+        <p>
+            <a href="javascript:;"
+               @click="onClickDemoButton3"
+               class="btn btn-warning btn-block btn-lg r-2x">
+                Toptip
+            </a>
+        </p>
+        <p>
+            <a href="javascript:;"
+               @click="onClickDemoButton4"
+               class="btn btn-danger btn-block btn-lg r-2x">
+                Cancel
+            </a>
+        </p>
+    </div>
+
+</template>
+
+<script>
+    export default{
+        props: [
+            'user_id',
+        ],
+        data(){
+            return {
+//                msg: 'hello vue',
+                items: [],
+            }
+        },
+        computed: {
+            routeId(){
+                if (this.$route.params.id) {
+                    return this.$route.params.id;
+                } else {
+                    return this.user_id;
+                }
+            },
+            currentRoute(){
+                return "/user/" + this.routeId;
+            },
+            routeProfile(){
+                return this.currentRoute + "/profile";
+            },
+            routePosts(){
+                return this.currentRoute + "/posts";
+            },
+        },
+        components: {},
+        http: {
+            root: '/api',
+            headers: {
+                Accept: 'application/x.someline.v1+json'
+            }
+        },
+        mounted(){
+            console.log('Component Ready.');
+
+//            this.fetchData();
+
+            this.listenBus();
+        },
+        watch: {},
+        events: {},
+        methods: {
+            listenBus(){
+                this.eventOn("AppHeader_onClickNavButtonLeft", this.onClickNavButtonLeft);
+                this.eventOn("AppHeader_onClickNavButtonRight", this.onClickNavButtonRight);
+            },
+            onClickNavButtonLeft(){
+                console.log('onClickNavButtonLeft');
+                $.toast("耶", "success");
+            },
+            onClickNavButtonRight(){
+                console.log('onClickNavButtonRight');
+                $.actions({
+                    actions: [{
+                        text: "新文章",
+                        onClick: function () {
+                            //do something
+                            $.toast("新文章");
+                        }
+                    }, {
+                        text: "上传图片",
+                        onClick: function () {
+                            //do something
+                            $.toast("上传图片");
+                        }
+                    }]
+                });
+            },
+            fetchData(){
+
+                var resource = this.$resource('users', {
+//                    include: ''
+                });
+
+                // get item
+                resource.get({}).then((response) => {
+                    console.log(response);
+                    this.items = response.data.data;
+                });
+
+            },
+            onClickDemoButton1(){
+                // show alert
+                $.alert("我是一个对话框");
+            },
+            onClickDemoButton2(){
+                // show actionsheet
+                $.actions({
+                    actions: [{
+                        text: "编辑",
+                        onClick: function () {
+                            //do something
+                        }
+                    }, {
+                        text: "删除",
+                        onClick: function () {
+                            //do something
+                        }
+                    }]
+                });
+            },
+            onClickDemoButton3(){
+                // show toast
+                $.toptip('警告', 'warning');
+            },
+            onClickDemoButton4(){
+                // show toast
+                $.toast("取消操作", "cancel");
+            },
+        },
+    }
+</script>

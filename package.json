@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "gulp": "gulp default",
-    "prod": "gulp --production",
+    "prod": "gulp --gulpfile gulpfile_prod.js --production",
     "theme": "gulp --gulpfile gulpfile_theme.js --production",
     "dev": "gulp watch"
   },
@@ -11,6 +11,7 @@
     "gulp": "^3.9.1",
     "jquery": "^3.1.0",
     "laravel-elixir": "^6.0.0-14",
+    "laravel-elixir-remove": "^0.2.1",
     "laravel-elixir-vue-2": "^0.2.0",
     "laravel-elixir-webpack-official": "^1.0.2",
     "lodash": "^4.16.2",

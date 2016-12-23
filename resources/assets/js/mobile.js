@@ -32,12 +32,18 @@ Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue')
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('sl-app-home', require('./components/mobile/home/Home.vue'));
+Vue.component('sl-app-header', require('./components/mobile/main/section/AppHeader.vue'));
 
 // Vue Router
 import RouterConfig from './mobile_router'
 const router = new VueRouter(RouterConfig);
 
-const bus = new Vue();
+const bus = new Vue({
+    data: {
+        title: "Someline",
+    }
+});
 window.bus = bus;
 
 const app = new Vue({

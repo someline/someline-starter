@@ -1,6 +1,7 @@
 const elixir = require('laravel-elixir');
 
 require('laravel-elixir-vue-2');
+require('laravel-elixir-remove');
 
 /*
  |--------------------------------------------------------------------------
@@ -14,6 +15,11 @@ require('laravel-elixir-vue-2');
  */
 
 elixir((mix) => {
+
+    // remove build files
+    mix.remove('public/build/*');
+
+    // compile
     mix.sass('app.scss')
         .webpack('app.js')
         .webpack('console.js')
@@ -57,24 +63,5 @@ elixir((mix) => {
             // main vue js
             'public/js/mobile.js',
         ], 'public/js/mobile.src.js', './');
-
-    // versions
-    mix.version([
-        // theme
-        "public/css/theme.src.css",
-        "public/js/theme.src.js",
-
-        // app
-        "public/css/app.src.css",
-        "public/js/app.src.js",
-
-        // console
-        "public/css/console.src.css",
-        "public/js/console.src.js",
-
-        // mobile
-        "public/css/mobile.src.css",
-        "public/js/mobile.src.js",
-    ]);
 
 });
