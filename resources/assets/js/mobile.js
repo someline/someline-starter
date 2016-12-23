@@ -16,9 +16,11 @@ Vue.filter('nl2br', require('./filters/nl2br'));
 import MixInUser from './mixins/user'
 import MixInJQuery from './mixins/jquery'
 import MixInTools from './mixins/tools'
+import MixInBus from './mixins/bus'
 Vue.mixin(MixInUser);
 Vue.mixin(MixInJQuery);
 Vue.mixin(MixInTools);
+Vue.mixin(MixInBus);
 
 // Vue Components
 Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue'));
@@ -34,6 +36,9 @@ Vue.component('example', require('./components/Example.vue'));
 // Vue Router
 import RouterConfig from './mobile_router'
 const router = new VueRouter(RouterConfig);
+
+const bus = new Vue();
+window.bus = bus;
 
 const app = new Vue({
     router,
