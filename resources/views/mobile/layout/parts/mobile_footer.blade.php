@@ -1,4 +1,4 @@
-<div class="app-footer navbar navbar-fixed-bottom bg-light lt b-t ng-scope" ng-class="{'m-n': app.hideAside, 'hide': app.hideFooter}" ui-view="footer"><div class="row ng-scope">
+<div class="app-footer navbar navbar-fixed-bottom bg-light lt b-t"><div class="row">
         <div class="col-sm-2 hidden-xs">
 
         </div>
