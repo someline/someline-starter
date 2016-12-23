@@ -8,8 +8,11 @@ window.moment = require('moment');
  * code may be modified to fit the specific needs of your application.
  */
 
-window.$ = window.jQuery = require('jquery');
-require('bootstrap-sass');
+/**
+ * @WARNING: These two libraries are included in theme.js, so no need to include again.
+ */
+// window.$ = window.jQuery = require('jquery');
+// require('bootstrap-sass');
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
@@ -26,6 +29,8 @@ require('vue-i18n');
  * the outgoing requests issued by this application. The CSRF middleware
  * included with Laravel will automatically verify the header's value.
  */
+
+// Vue.http.headers.common['Accept'] = 'application/x.someline.v1+json';
 
 Vue.http.interceptors.push((request, next) => {
     request.headers.set('X-CSRF-TOKEN', Laravel.csrfToken);
