@@ -9,14 +9,16 @@
 
         <div class="panel panel-default">
 
-            <ul class="nav nav-tabs nav-justified">
-                <li>
-                    <router-link :to="routeProfile">Profile</router-link>
-                </li>
-                <li>
-                    <router-link :to="routePosts">Posts</router-link>
-                </li>
-            </ul>
+            <div class="panel-header wrapper">
+                <ul class="nav nav-pills nav-justified">
+                    <li :class="{'active':isSelectedMenuItem('profile')}">
+                        <router-link :to="routeProfile" @click.native="selectMenuItem('profile')">Profile</router-link>
+                    </li>
+                    <li :class="{'active':isSelectedMenuItem('posts')}">
+                        <router-link :to="routePosts"  @click.native="selectMenuItem('posts')">Posts</router-link>
+                    </li>
+                </ul>
+            </div>
 
             <router-view></router-view>
 
@@ -35,6 +37,7 @@
             return {
 //                msg: 'hello vue',
                 items: [],
+                selected_menu_item: 'profile',
             }
         },
         computed: {
@@ -62,27 +65,20 @@
                 Accept: 'application/x.someline.v1+json'
             }
         },
+        watch: {},
+        events: {},
         mounted(){
             console.log('Component Ready.');
 
-            this.fetchData();
         },
-        watch: {},
-        events: {},
         methods: {
-            fetchData(){
-
-                var resource = this.$resource('users', {
-//                    include: ''
-                });
-
-                // get item
-                resource.get({}).then((response) => {
-                    console.log(response);
-                    this.items = response.data.data;
-                });
-
-            }
+            isSelectedMenuItem(item){
+                return this.selected_menu_item == item;
+            },
+            selectMenuItem(item){
+                console.log('selectMenuItem');
+                this.selected_menu_item = item;
+            },
         },
     }
 </script>
