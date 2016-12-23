@@ -14,6 +14,7 @@
 @endsection
 
 @push('stylesheets')
+<link rel="stylesheet" href="{{url(elixir("css/mobile.src.css"))}}" type="text/css"/>
 {{--<link rel="stylesheet" href="//res.wx.qq.com/open/libs/weui/1.1.0/weui.min.css"/>--}}
 <link rel="stylesheet" href="//cdn.bootcss.com/weui/0.4.3/style/weui.min.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/jquery-weui/0.8.0/css/jquery-weui.min.css">
@@ -29,7 +30,7 @@
 @endpush
 
 @push('scripts')
-<script src="{{url(elixir("js/app.src.js"))}}"></script>
+<script src="{{url(elixir("js/mobile.src.js"))}}"></script>
 <script src="//cdn.bootcss.com/jquery-weui/0.8.0/js/jquery-weui.min.js"></script>
 <script type="text/javascript">
 

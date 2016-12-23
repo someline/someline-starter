@@ -16,10 +16,13 @@ require('laravel-elixir-vue-2');
 elixir((mix) => {
     mix.sass('app.scss')
         .webpack('app.js')
-        .webpack('console.js');
+        .webpack('console.js')
+        .webpack('mobile.js');
 
     // less
-    mix.less('app.less', 'resources/assets/less/css/');
+    mix.less('app.less', 'resources/assets/less/css/app/');
+    mix.less('console.less', 'resources/assets/less/css/console/');
+    mix.less('mobile.less', 'resources/assets/less/css/mobile/');
 
     // app styles
     mix.styles([
@@ -27,7 +30,7 @@ elixir((mix) => {
         'public/bower_components/toastr/toastr.css',
 
         // main styles
-        'resources/assets/less/css/*.css',
+        'resources/assets/less/css/app/*.css',
     ], 'public/css/app.src.css', './');
 
     // app scripts
@@ -42,7 +45,7 @@ elixir((mix) => {
     // console styles
     mix.styles([
         // main styles
-        'resources/assets/less/css/*.css',
+        'resources/assets/less/css/console/*.css',
     ], 'public/css/console.src.css', './');
 
     // console scripts
@@ -50,6 +53,18 @@ elixir((mix) => {
         // main vue js
         'public/js/console.js',
     ], 'public/js/console.src.js', './');
+
+    // mobile styles
+    mix.styles([
+        // main styles
+        'resources/assets/less/css/mobile/*.css',
+    ], 'public/css/mobile.src.css', './');
+
+    // mobile scripts
+    mix.scripts([
+        // main vue js
+        'public/js/mobile.js',
+    ], 'public/js/mobile.src.js', './');
 
     // versions
     mix.version([
@@ -64,6 +79,10 @@ elixir((mix) => {
         // console
         "public/css/console.src.css",
         "public/js/console.src.js",
+
+        // mobile
+        "public/css/mobile.src.css",
+        "public/js/mobile.src.js",
     ]);
 
 });

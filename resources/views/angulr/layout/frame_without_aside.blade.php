@@ -12,6 +12,10 @@
 
 @endsection
 
+@push('stylesheets')
+<link rel="stylesheet" href="{{url(elixir("css/app.src.css"))}}" type="text/css"/>
+@endpush
+
 @push('scripts')
 <script src="{{url(elixir("js/app.src.js"))}}"></script>
 @endpush

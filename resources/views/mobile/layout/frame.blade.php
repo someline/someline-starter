@@ -14,6 +14,10 @@
 
 @endsection
 
+@push('stylesheets')
+<link rel="stylesheet" href="{{url(elixir("css/mobile.src.css"))}}" type="text/css"/>
+@endpush
+
 @push('scripts')
-<script src="{{url(elixir("js/app.src.js"))}}"></script>
+<script src="{{url(elixir("js/mobile.src.js"))}}"></script>
 @endpush
