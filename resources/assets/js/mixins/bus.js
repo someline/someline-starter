@@ -11,6 +11,9 @@ export default{
         eventOn(name, callback){
             window.bus.$on(name, callback);
         },
+        AppTabBarSetShowAppTabBar(isShow){
+            this.eventEmit("AppTabBar_setShowAppTabBar", isShow);
+        },
         AppTabBarSelectTabBarItem(index){
             this.eventEmit("AppTabBar_selectTabBarItem", index);
         },

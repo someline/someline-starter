@@ -3,7 +3,7 @@
 
 <template>
 
-    <footer class="app-footer navbar navbar-fixed-bottom bg-light lt b-t">
+    <footer v-show="ShowAppTabBar" class="app-footer navbar navbar-fixed-bottom bg-light lt b-t animated slideInUp">
         <div class="row">
             <div class="col-sm-2 hidden-xs">
 
@@ -81,6 +81,7 @@
             return {
 //                msg: 'hello vue',
                 items: [],
+                ShowAppTabBar: true,
                 selected_tab_bar_item_index: 0,
             }
         },
@@ -104,6 +105,14 @@
         methods: {
             listenBus(){
                 this.eventOn("AppTabBar_selectTabBarItem", this.selectTabBarItem);
+                this.eventOn("AppTabBar_setShowAppTabBar", this.setShowAppTabBar);
+            },
+            setShowAppTabBar(isShow){
+                if (isShow == undefined) {
+                    isShow = true;
+                }
+                console.log('AppTabBar - setShowAppTabBar: ' + isShow);
+                this.ShowAppTabBar = isShow;
             },
             selectTabBarItem(index){
                 this.selected_tab_bar_item_index = index;

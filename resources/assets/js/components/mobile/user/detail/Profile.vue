@@ -41,6 +41,10 @@
 
             this.fetchData();
         },
+        destroyed(){
+            console.log('Component Destroyed.');
+            this.AppTabBarSetShowAppTabBar(true);
+        },
         methods: {
             listenBus(){
                 this.eventOn("AppReady", this.onAppReady);
@@ -51,6 +55,7 @@
                 console.log('onAppReady');
 
                 this.AppHeaderSetNavButtonLeft('back');
+                this.AppTabBarSetShowAppTabBar(false);
                 this.AppTabBarSelectTabBarItem(null);
             },
             onClickNavButtonLeft(){

@@ -55,7 +55,10 @@
             console.log('Component Ready.');
 
             this.listenBus();
+            this.onAppReady();
+
 //            this.fetchData();
+
         },
         methods: {
             listenBus(){
