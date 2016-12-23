@@ -21,6 +21,7 @@ window.moment = require('moment');
  */
 
 window.Vue = require('vue');
+require('vue-router');
 require('vue-resource');
 require('vue-i18n');
 
