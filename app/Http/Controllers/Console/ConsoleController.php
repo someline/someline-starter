@@ -1,7 +1,8 @@
 <?php
 
-namespace Someline\Http\Controllers;
+namespace Someline\Http\Controllers\Console;
 
+use Someline\Http\Controllers\BaseController;
 
 class ConsoleController extends BaseController
 {

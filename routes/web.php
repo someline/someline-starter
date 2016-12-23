@@ -30,8 +30,22 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
+// Mobile Routes
+Route::group(['prefix' => 'm', 'namespace' => 'Mobile'], function () {
+
+    // Protected Routes
+    Route::group(['middleware' => 'auth'], function () {
+
+        Route::get('users', 'UserController@getUserList');
+
+        Route::get('users/{id}', 'UserController@getUserDetail');
+
+    });
+
+});
+
 // Console Routes
-Route::group(['prefix' => 'console', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'console', 'middleware' => 'auth', 'namespace' => 'Console'], function () {
 
     Route::get('/', 'ConsoleController@getConsoleHome');
 
