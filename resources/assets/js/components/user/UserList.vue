@@ -59,8 +59,7 @@
                 // get item
                 resource.get({}).then((response) => {
                     console.log(response);
-                    console.log(response.data.data);
-                    this.$set('items', response.data.data)
+                    this.items = response.data.data;
                 });
 
             }
