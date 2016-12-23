@@ -14,21 +14,8 @@
 // Auth Routes
 Auth::routes();
 
-// Locale Routes
-Route::group(['prefix' => 'locales'], function () {
-
-    Route::get('/{locale}.js', '\Someline\Support\Controllers\LocaleController@getLocaleJs');
-
-    Route::get('/switch/{locale}', '\Someline\Support\Controllers\LocaleController@getSwitchLocale');
-
-});
-
 // Basic Routes
 Route::get('/home', 'HomeController@index');
-
-// Image Routes
-Route::get('/image/{name}', 'ImageController@showOriginalImage');
-Route::post('/image', 'ImageController@postImage');
 
 // Protected Routes
 Route::group(['middleware' => 'auth'], function () {
@@ -39,18 +26,33 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('users', 'UserController@getUserList');
 
+    Route::get('users/{id}', 'UserController@getUserDetail');
+
 });
 
 // Console Routes
-Route::group(['prefix' => 'console'], function () {
+Route::group(['prefix' => 'console', 'middleware' => 'auth'], function () {
 
-    Route::get('oauth', function () {
-        return view('console.oauth');
-    });
+    Route::get('oauth', 'ConsoleController@getOauth');
 
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
 });
-Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+// Image Routes
+Route::group(['prefix' => 'images'], function () {
+
+    Route::post('/', 'ImageController@postImage');
+
+    Route::get('/{name}', 'ImageController@showOriginalImage');
+
+});
+
+// Locale Routes
+Route::group(['prefix' => 'locales'], function () {
+
+    Route::get('/{locale}.js', '\Someline\Support\Controllers\LocaleController@getLocaleJs');
+
+    Route::get('/switch/{locale}', '\Someline\Support\Controllers\LocaleController@getSwitchLocale');
+
+});

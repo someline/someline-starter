@@ -33,6 +33,7 @@
                 items: [],
             }
         },
+        computed: {},
         components: {
             'sl-user-list-item': require('./UserListGroupItem.vue'),
         },
@@ -43,7 +44,7 @@
             }
         },
         mounted(){
-            console.log('User List Ready.');
+            console.log('Component Ready.');
 
             this.fetchData();
         },

@@ -5,7 +5,7 @@
                      alt="...">
                   {{--<i class="on md b-white bottom"></i>--}}
               </span>
-        <span class="hidden-sm hidden-md">{{auth_user()->name}}</span> <b class="caret"></b>
+        <span class="">{{auth_user()->name}}</span> <b class="caret"></b>
     </a>
     <!-- dropdown -->
     <ul class="dropdown-menu animated fadeInRight w">

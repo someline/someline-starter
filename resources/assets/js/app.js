@@ -30,14 +30,21 @@ Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue')
  */
 
 Vue.component('example', require('./components/Example.vue'));
-Vue.component('sl-user-list', require('./components/user/UserList.vue'));
 Vue.component('sl-oauth', require('./components/console/OAuth.vue'));
+Vue.component('sl-user-list', require('./components/user/UserList.vue'));
+Vue.component('sl-user-detail', require('./components/user/UserDetail.vue'));
+
+// Vue Router
+import RouterConfig from './router'
+const router = new VueRouter(RouterConfig);
 
 const app = new Vue({
+    router,
     el: '#app',
     data: {
         msg: "hello",
     },
+    computed: {},
     watch: {},
     events: {},
     created(){
