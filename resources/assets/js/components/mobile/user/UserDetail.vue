@@ -52,6 +52,10 @@
             console.log('Component Ready.');
 
         },
+        destroyed(){
+            console.log('Component Destroyed.');
+
+        },
         methods: {
             isSelectedMenuItem(item){
                 return this.selected_menu_item == item;
