@@ -48,22 +48,6 @@
             }
         },
         computed: {
-            routeId(){
-                if (this.$route.params.id) {
-                    return this.$route.params.id;
-                } else {
-                    return this.user_id;
-                }
-            },
-            currentRoute(){
-                return "/user/" + this.routeId;
-            },
-            routeProfile(){
-                return this.currentRoute + "/profile";
-            },
-            routePosts(){
-                return this.currentRoute + "/posts";
-            },
         },
         components: {},
         http: {
@@ -72,16 +56,17 @@
                 Accept: 'application/x.someline.v1+json'
             }
         },
+        watch: {},
+        events: {},
         mounted(){
             console.log('Component Ready.');
 
             this.listenBus();
+            this.onAppReady();
 
 //            this.fetchData();
 
         },
-        watch: {},
-        events: {},
         methods: {
             listenBus(){
                 this.eventOn("AppReady", this.onAppReady);

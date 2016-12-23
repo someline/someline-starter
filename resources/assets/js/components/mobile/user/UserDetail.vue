@@ -5,8 +5,6 @@
 
     <div class="wrapper-md">
 
-        <!--<h2>User {{ routeId }}</h2>-->
-
         <div class="panel panel-default">
 
             <div class="panel-header wrapper">
@@ -15,7 +13,7 @@
                         <router-link :to="routeProfile" @click.native="selectMenuItem('profile')">Profile</router-link>
                     </li>
                     <li :class="{'active':isSelectedMenuItem('posts')}">
-                        <router-link :to="routePosts"  @click.native="selectMenuItem('posts')">Posts</router-link>
+                        <router-link :to="routePosts" @click.native="selectMenuItem('posts')">Posts</router-link>
                     </li>
                 </ul>
             </div>
@@ -40,24 +38,7 @@
                 selected_menu_item: 'profile',
             }
         },
-        computed: {
-            routeId(){
-                if (this.$route.params.id) {
-                    return this.$route.params.id;
-                } else {
-                    return this.user_id;
-                }
-            },
-            currentRoute(){
-                return "/user/" + this.routeId;
-            },
-            routeProfile(){
-                return this.currentRoute + "/profile";
-            },
-            routePosts(){
-                return this.currentRoute + "/posts";
-            },
-        },
+        computed: {},
         components: {},
         http: {
             root: '/api',
