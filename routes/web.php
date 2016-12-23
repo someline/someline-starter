@@ -33,6 +33,9 @@ Route::group(['middleware' => 'auth'], function () {
 // Mobile Routes
 Route::group(['prefix' => 'm', 'namespace' => 'Mobile'], function () {
 
+    // Mobile App
+    Route::get('/', 'MobileController@getIndex');
+
     // Protected Routes
     Route::group(['middleware' => 'auth'], function () {
 
