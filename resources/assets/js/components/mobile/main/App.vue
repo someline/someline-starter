@@ -49,15 +49,14 @@
                 Accept: 'application/x.someline.v1+json'
             }
         },
+        watch: {},
+        events: {},
         mounted(){
             console.log('Component Ready.');
 
-
             this.listenBus();
-            this.fetchData();
+//            this.fetchData();
         },
-        watch: {},
-        events: {},
         methods: {
             listenBus(){
                 this.eventOn("AppReady", this.onAppReady);
@@ -65,6 +64,7 @@
             onAppReady(){
                 console.log('onAppReady');
 
+                this.AppHeaderSetNavButtonLeft(null);
                 this.AppTabBarSelectTabBarItem(1);
             },
             fetchData(){

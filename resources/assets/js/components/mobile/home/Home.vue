@@ -75,16 +75,24 @@
         mounted(){
             console.log('Component Ready.');
 
+            this.listenBus();
+
 //            this.fetchData();
 
-            this.listenBus();
         },
         watch: {},
         events: {},
         methods: {
             listenBus(){
+                this.eventOn("AppReady", this.onAppReady);
                 this.eventOn("AppHeader_onClickNavButtonLeft", this.onClickNavButtonLeft);
                 this.eventOn("AppHeader_onClickNavButtonRight", this.onClickNavButtonRight);
+            },
+            onAppReady(){
+                console.log('onAppReady');
+
+                this.AppHeaderSetNavButtonLeft('fa fa-smile-o');
+                this.AppTabBarSelectTabBarItem(0);
             },
             onClickNavButtonLeft(){
                 console.log('onClickNavButtonLeft');

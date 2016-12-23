@@ -10,11 +10,11 @@
             <!-- / navbar header -->
             <button @click="onClickNavButtonRight"
                     class="pull-right dk">
-                <i class="fa fa-plus"></i>
+                <i :class="navButtonRightClass"></i>
             </button>
             <button @click="onClickNavButtonLeft"
                     class="pull-left dk">
-                <i class="fa fa-chevron-left"></i>
+                <i :class="navButtonLeftClass"></i>
             </button>
             <!-- title -->
             <div class="navbar-brand text-lt font-normal">
@@ -33,6 +33,8 @@
             return {
 //                msg: 'hello vue',
                 items: [],
+                navButtonLeftClass: 'fa fa-chevron-left',
+                navButtonRightClass: 'fa fa-plus',
             }
         },
         computed: {},
@@ -43,13 +45,32 @@
                 Accept: 'application/x.someline.v1+json'
             }
         },
+        watch: {},
+        events: {},
         mounted(){
             console.log('Component Ready.');
 
+            this.listenBus();
         },
-        watch: {},
-        events: {},
         methods: {
+            listenBus(){
+                this.eventOn("AppHeader_setNavButtonLeft", this.setNavButtonLeft);
+                this.eventOn("AppHeader_setNavButtonRight", this.setNavButtonRight);
+            },
+            setNavButtonLeft(className){
+                console.log('AppHeader - setNavButtonLeft: ' + className);
+                if (className == 'back') {
+                    className = 'fa fa-chevron-left';
+                }
+                this.navButtonLeftClass = className;
+            },
+            setNavButtonRight(className){
+                console.log('AppHeader - setNavButtonRight: ' + className);
+                if (className == 'new' || className == 'plus') {
+                    className = 'fa fa-plus';
+                }
+                this.navButtonRightClass = className;
+            },
             onClickNavButtonLeft(){
                 console.log('AppHeader - onClickNavButtonLeft');
                 this.eventEmit("AppHeader_onClickNavButtonLeft");

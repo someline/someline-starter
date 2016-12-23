@@ -94,13 +94,13 @@
                 Accept: 'application/x.someline.v1+json'
             }
         },
+        watch: {},
+        events: {},
         mounted(){
             console.log('Component Ready.');
 
             this.listenBus();
         },
-        watch: {},
-        events: {},
         methods: {
             listenBus(){
                 this.eventOn("AppTabBar_selectTabBarItem", this.selectTabBarItem);

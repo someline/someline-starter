@@ -14,5 +14,11 @@ export default{
         AppTabBarSelectTabBarItem(index){
             this.eventEmit("AppTabBar_selectTabBarItem", index);
         },
+        AppHeaderSetNavButtonLeft(className){
+            this.eventEmit("AppHeader_setNavButtonLeft", className);
+        },
+        AppHeaderSetNavButtonRight(className){
+            this.eventEmit("AppHeader_setNavButtonRight", className);
+        },
     }
 }
