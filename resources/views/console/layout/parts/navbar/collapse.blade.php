@@ -1,5 +1,5 @@
 <!-- navbar collapse -->
-<div class="collapse pos-rlt navbar-collapse bg-primary">
+<div class="collapse pos-rlt navbar-collapse bg-white-only">
     {{--<!-- buttons -->--}}
     {{--<div class="nav navbar-nav hidden-xs">--}}
         {{--<a href="#" class="btn no-shadow navbar-btn" ui-toggle-class="app-aside-folded" target=".app">--}}
