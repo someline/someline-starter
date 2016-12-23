@@ -31,14 +31,42 @@
                 Accept: 'application/x.someline.v1+json'
             }
         },
+        watch: {},
+        events: {},
         mounted(){
             console.log('Component Ready.');
 
+            this.listenBus();
+            this.onAppReady();
+
             this.fetchData();
         },
-        watch: {},
-        events: {},
+        destroyed(){
+            console.log('Component Destroyed.');
+            this.AppTabBarSetShowAppTabBar(true);
+        },
         methods: {
+            listenBus(){
+                this.eventOn("AppReady", this.onAppReady);
+                this.eventOn("AppHeader_onClickNavButtonLeft", this.onClickNavButtonLeft);
+                this.eventOn("AppHeader_onClickNavButtonRight", this.onClickNavButtonRight);
+            },
+            onAppReady(){
+                console.log('onAppReady');
+
+                this.AppHeaderSetTitle('Posts');
+                this.AppHeaderSetNavButtonLeft('back');
+                this.AppTabBarSetShowAppTabBar(false);
+                this.AppHeaderSetNavButtonRight(null);
+                this.AppTabBarSelectTabBarItem(null);
+            },
+            onClickNavButtonLeft(){
+                console.log('onClickNavButtonLeft');
+                this.$router.go(-1);
+            },
+            onClickNavButtonRight(){
+                console.log('onClickNavButtonRight');
+            },
             fetchData(){
 
                 var resource = this.$resource('users{/id}', {

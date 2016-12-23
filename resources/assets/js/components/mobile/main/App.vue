@@ -67,6 +67,7 @@
             onAppReady(){
                 console.log('onAppReady');
 
+                this.AppHeaderSetTitle('Someline App');
                 this.AppHeaderSetNavButtonLeft(null);
                 this.AppTabBarSelectTabBarItem(1);
             },

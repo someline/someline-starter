@@ -54,8 +54,10 @@
             onAppReady(){
                 console.log('onAppReady');
 
+                this.AppHeaderSetTitle('Profile');
                 this.AppHeaderSetNavButtonLeft('back');
                 this.AppTabBarSetShowAppTabBar(false);
+                this.AppHeaderSetNavButtonRight(null);
                 this.AppTabBarSelectTabBarItem(null);
             },
             onClickNavButtonLeft(){

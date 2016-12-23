@@ -11,6 +11,9 @@ export default{
         eventOn(name, callback){
             window.bus.$on(name, callback);
         },
+        AppHeaderSetTitle(title){
+            this.bus.title = title;
+        },
         AppTabBarSetShowAppTabBar(isShow){
             this.eventEmit("AppTabBar_setShowAppTabBar", isShow);
         },
