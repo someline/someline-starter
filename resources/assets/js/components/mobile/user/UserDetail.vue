@@ -38,7 +38,24 @@
                 selected_menu_item: 'profile',
             }
         },
-        computed: {},
+        computed: {
+            routeId(){
+                if (this.$route.params.id) {
+                    return this.$route.params.id;
+                } else {
+                    return this.user_id;
+                }
+            },
+            currentRoute(){
+                return "/user/" + this.routeId;
+            },
+            routeProfile(){
+                return this.currentRoute + "/profile";
+            },
+            routePosts(){
+                return this.currentRoute + "/posts";
+            },
+        },
         components: {},
         http: {
             root: '/api',
