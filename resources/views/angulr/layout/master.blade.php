@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Someline Starter</title>
+    <title>{{ config('app.name', 'Someline Starter') }}</title>
     <meta name="keywords" content="laravel,restful,api,vue.js,vuejs"/>
     <meta name="description"
           content="Someline Starter is a framework for quick building Web Apps or APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer."/>
