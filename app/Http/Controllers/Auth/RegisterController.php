@@ -3,8 +3,8 @@
 namespace Someline\Http\Controllers\Auth;
 
 use Someline\Models\Foundation\User;
+use Validator;
 use Someline\Http\Controllers\BaseController;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends BaseController
@@ -68,4 +68,15 @@ class RegisterController extends BaseController
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm()
+    {
+        return view('auth.register');
+    }
+
 }
