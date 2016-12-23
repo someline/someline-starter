@@ -3,7 +3,7 @@
   "scripts": {
     "gulp": "gulp default",
     "prod": "gulp --production",
-    "theme": "gulp --gulpfile gulpfile_theme.js",
+    "theme": "gulp --gulpfile gulpfile_theme.js --production",
     "dev": "gulp watch"
   },
   "devDependencies": {

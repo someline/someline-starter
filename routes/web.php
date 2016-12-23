@@ -33,6 +33,8 @@ Route::group(['middleware' => 'auth'], function () {
 // Console Routes
 Route::group(['prefix' => 'console', 'middleware' => 'auth'], function () {
 
+    Route::get('/', 'ConsoleController@getConsoleHome');
+
     Route::get('oauth', 'ConsoleController@getOauth');
 
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

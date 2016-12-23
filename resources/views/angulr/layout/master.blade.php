@@ -8,6 +8,7 @@
     <meta name="description"
           content="Someline Starter is a framework for quick building Web Apps or APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer."/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="{{url(elixir("css/theme.src.css"))}}" type="text/css"/>
     <link rel="stylesheet" href="{{url(elixir("css/app.src.css"))}}" type="text/css"/>
     @stack('stylesheets')
     <script type="text/javascript">
@@ -49,6 +50,7 @@
 </div>
 
 <script src="{{url('locales/'.app_locale().'.js?'.substr(md5(json_encode(trans('app'))), -10))}}"></script>
+<script src="{{url(elixir("js/theme.src.js"))}}"></script>
 <script src="{{url(elixir("js/app.src.js"))}}"></script>
 @stack('scripts')
 </body>

@@ -1,4 +1,8 @@
 {
-  "css/app.src.css": "css/app-1614907bf8.src.css",
-  "js/app.src.js": "js/app-cbe9eb4813.src.js"
+  "css/app.src.css": "css/app-0e14208d7f.src.css",
+  "css/console.src.css": "css/console-ef807d7b0f.src.css",
+  "css/theme.src.css": "css/theme-d5d8eec424.src.css",
+  "js/app.src.js": "js/app-405abea757.src.js",
+  "js/console.src.js": "js/console-e8b26f5edc.src.js",
+  "js/theme.src.js": "js/theme-2e77aa8825.src.js"
 }

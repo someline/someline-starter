@@ -36,4 +36,5 @@ elixir((mix) => {
     // copy necessary fonts
     gulp.src('public/fonts/**')
         .pipe(gulp.dest('public/build/fonts'));
+
 });

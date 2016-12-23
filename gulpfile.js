@@ -15,16 +15,14 @@ require('laravel-elixir-vue-2');
 
 elixir((mix) => {
     mix.sass('app.scss')
-       .webpack('app.js');
+        .webpack('app.js')
+        .webpack('console.js');
 
     // less
     mix.less('app.less', 'resources/assets/less/css/');
 
-    // styles
+    // app styles
     mix.styles([
-        // theme style
-        "public/css/theme.src.css",
-
         // dependencies
         'public/bower_components/toastr/toastr.css',
 
@@ -32,11 +30,8 @@ elixir((mix) => {
         'resources/assets/less/css/*.css',
     ], 'public/css/app.src.css', './');
 
-    // scripts
+    // app scripts
     mix.scripts([
-        // theme script
-        'public/js/theme.src.js',
-
         // dependencies
         'public/bower_components/toastr/toastr.js',
 
@@ -44,10 +39,31 @@ elixir((mix) => {
         'public/js/app.js',
     ], 'public/js/app.src.js', './');
 
+    // console styles
+    mix.styles([
+        // main styles
+        'resources/assets/less/css/*.css',
+    ], 'public/css/console.src.css', './');
+
+    // console scripts
+    mix.scripts([
+        // main vue js
+        'public/js/console.js',
+    ], 'public/js/console.src.js', './');
+
     // versions
     mix.version([
+        // theme
+        "public/css/theme.src.css",
+        "public/js/theme.src.js",
+
+        // app
         "public/css/app.src.css",
         "public/js/app.src.js",
+
+        // console
+        "public/css/console.src.css",
+        "public/js/console.src.js",
     ]);
 
 });
