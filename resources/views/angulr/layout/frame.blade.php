@@ -13,3 +13,7 @@
     @include('angulr.layout.parts.footer')
 
 @endsection
+
+@push('scripts')
+<script src="{{url(elixir("js/app.src.js"))}}"></script>
+@endpush

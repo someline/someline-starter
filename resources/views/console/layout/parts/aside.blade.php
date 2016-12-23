@@ -6,7 +6,7 @@
 
             @include('console.layout.parts.aside.nav')
 
-            @include('console.layout.parts.aside.footer')
+            {{--@include('console.layout.parts.aside.footer')--}}
         </div>
     </div>
 </aside>

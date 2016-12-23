@@ -1,13 +1,13 @@
-@extends('angulr.layout.frame_without_aside')
+@extends('console.layout.frame')
 
 @section('content')
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
 
-            <sl-oauth></sl-oauth>
-
-        </div>
-        <div class="col-md-1"></div>
+    <div class="bg-light lter b-b wrapper-md">
+        <h1 class="m-n font-thin h3">OAuth</h1>
     </div>
+
+    <div class="wrapper-md">
+        <sl-oauth></sl-oauth>
+    </div>
+
 @endsection

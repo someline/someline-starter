@@ -11,3 +11,7 @@
     @include('console.layout.parts.footer')
 
 @endsection
+
+@push('scripts')
+<script src="{{url(elixir("js/console.src.js"))}}"></script>
+@endpush
