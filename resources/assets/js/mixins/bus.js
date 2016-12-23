@@ -11,5 +11,8 @@ export default{
         eventOn(name, callback){
             window.bus.$on(name, callback);
         },
+        AppTabBarSelectTabBarItem(index){
+            this.eventEmit("AppTabBar_selectTabBarItem", index);
+        },
     }
 }

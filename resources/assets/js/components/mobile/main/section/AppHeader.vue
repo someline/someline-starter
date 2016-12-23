@@ -28,33 +28,14 @@
 
 <script>
     export default{
-        props: [
-            'user_id',
-        ],
+        props: [],
         data(){
             return {
 //                msg: 'hello vue',
                 items: [],
             }
         },
-        computed: {
-            routeId(){
-                if (this.$route.params.id) {
-                    return this.$route.params.id;
-                } else {
-                    return this.user_id;
-                }
-            },
-            currentRoute(){
-                return "/user/" + this.routeId;
-            },
-            routeProfile(){
-                return this.currentRoute + "/profile";
-            },
-            routePosts(){
-                return this.currentRoute + "/posts";
-            },
-        },
+        computed: {},
         components: {},
         http: {
             root: '/api',
@@ -65,27 +46,10 @@
         mounted(){
             console.log('Component Ready.');
 
-            this.fetchData();
         },
         watch: {},
         events: {},
         methods: {
-            fetchData(){
-
-                var resource = this.$resource('users', {
-//                    include: ''
-                });
-
-                // get item
-                resource.get({}).then((response) => {
-                    console.log(response);
-                    this.items = response.data.data;
-                });
-
-            },
-            onClickButtonUserDetail(){
-                this.redirectToUrl('/m/app#/user/1/profile');
-            },
             onClickNavButtonLeft(){
                 console.log('AppHeader - onClickNavButtonLeft');
                 this.eventEmit("AppHeader_onClickNavButtonLeft");

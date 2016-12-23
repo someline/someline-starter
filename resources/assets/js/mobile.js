@@ -31,9 +31,11 @@ Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue')
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.component('sl-app-header', require('./components/mobile/main/section/AppHeader.vue'));
+Vue.component('sl-app-tab-bar', require('./components/mobile/main/section/AppTabBar.vue'));
+
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-app-home', require('./components/mobile/home/Home.vue'));
-Vue.component('sl-app-header', require('./components/mobile/main/section/AppHeader.vue'));
 
 // Vue Router
 import RouterConfig from './mobile_router'
@@ -61,6 +63,7 @@ const app = new Vue({
     },
     mounted(){
         console.log('Ready.');
+        this.eventEmit('AppReady');
     },
     methods: {
         initLocale(){

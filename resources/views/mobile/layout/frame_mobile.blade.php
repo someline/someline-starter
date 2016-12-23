@@ -10,7 +10,8 @@
 
     @include('mobile.layout.parts.content')
 
-    @include('mobile.layout.parts.mobile_footer')
+    {{--@include('mobile.layout.parts.mobile_footer')--}}
+    <sl-app-tab-bar></sl-app-tab-bar>
 
 @endsection
 

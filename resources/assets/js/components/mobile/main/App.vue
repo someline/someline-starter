@@ -52,11 +52,21 @@
         mounted(){
             console.log('Component Ready.');
 
+
+            this.listenBus();
             this.fetchData();
         },
         watch: {},
         events: {},
         methods: {
+            listenBus(){
+                this.eventOn("AppReady", this.onAppReady);
+            },
+            onAppReady(){
+                console.log('onAppReady');
+
+                this.AppTabBarSelectTabBarItem(1);
+            },
             fetchData(){
 
                 var resource = this.$resource('users', {
