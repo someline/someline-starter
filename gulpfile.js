@@ -64,4 +64,9 @@ elixir((mix) => {
             'public/js/mobile.js',
         ], 'public/js/mobile.src.js', './');
 
+    // BrowserSync
+    mix.browserSync({
+        proxy: 'someline-starter.app'   // change proxy domain to your dev host
+    });
+
 });
