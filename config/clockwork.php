@@ -47,7 +47,7 @@ return array(
 	|
 	*/
 
-	'storage' => 'files',
+	'storage' => 'sql',
 
 	'storage_files_path' => storage_path('clockwork'),
 
