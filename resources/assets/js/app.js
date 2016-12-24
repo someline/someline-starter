@@ -16,9 +16,11 @@ Vue.filter('nl2br', require('./filters/nl2br'));
 import MixInUser from './mixins/user'
 import MixInJQuery from './mixins/jquery'
 import MixInTools from './mixins/tools'
+import MixInStore from './mixins/store'
 Vue.mixin(MixInUser);
 Vue.mixin(MixInJQuery);
 Vue.mixin(MixInTools);
+Vue.mixin(MixInStore);
 
 // Vue Components
 Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue'));
@@ -31,6 +33,20 @@ Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue')
 
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-user-list', require('./components/user/UserList.vue'));
+
+// Vuex
+const store = new Vuex.Store({
+    state: {
+        platform: 'app',
+        count: 0
+    },
+    mutations: {
+        increment (state) {
+            state.count++
+        }
+    }
+});
+window.store = store;
 
 const app = new Vue({
     el: '#app',
