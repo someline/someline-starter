@@ -14,6 +14,37 @@ require('laravel-elixir-remove');
  |
  */
 
+Elixir.ready(function () {
+    Elixir.webpack.mergeConfig({
+        babel: {
+            presets: ['es2015'],
+            plugins: ['add-module-exports', 'transform-runtime', 'transform-object-rest-spread', 'transform-es2015-spread'],
+        },
+        module: {
+            loaders: [
+                {
+                    // use vue-loader for *.vue files
+                    test: /\.vue$/,
+                    loader: 'vue'
+                },
+                {
+                    // use babel-loader for *.js files
+                    test: /\.js$/,
+                    loader: 'babel',
+                    exclude: /node_modules/
+                },
+                {
+                    test: /\.css$/,
+                    loader: "style-loader!css-loader"
+                }, {
+                    test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
+                    loader: 'url-loader?limit=50000&name=[path][name].[ext]'
+                }
+            ]
+        }
+    });
+});
+
 elixir((mix) => {
 
     // remove build files
