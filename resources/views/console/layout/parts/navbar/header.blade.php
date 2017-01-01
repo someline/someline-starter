@@ -1,5 +1,5 @@
 <!-- navbar header -->
-<div class="navbar-header bg-primary">
+<div class="navbar-header bg-black">
     <button class="pull-right visible-xs dk" ui-toggle-class="show" target=".navbar-collapse">
         <i class="glyphicon glyphicon-cog"></i>
     </button>
