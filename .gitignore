@@ -29,3 +29,5 @@ crashlytics-build.properties
 fabric.properties
 /npm-debug.log
 /npm-debug.log*
+/.phpstorm.meta.php
+/_ide_helper.php
