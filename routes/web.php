@@ -59,7 +59,8 @@ Route::group(['prefix' => 'console', 'middleware' => 'auth', 'namespace' => 'Con
 });
 
 // Image Routes
-Route::group(['prefix' => 'images'], function () {
+// @WARNING: The 'image' prefix is reserved for SomelineImageService
+Route::group(['prefix' => 'image'], function () {
 
     Route::post('/', 'ImageController@postImage');
 
