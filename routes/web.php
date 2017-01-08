@@ -69,6 +69,7 @@ Route::group(['prefix' => 'image'], function () {
 });
 
 // Locale Routes
+// @WARNING: The 'locales' prefix is reserved for SomelineLocaleController
 Route::group(['prefix' => 'locales'], function () {
 
     Route::get('/{locale}.js', '\Someline\Support\Controllers\LocaleController@getLocaleJs');
