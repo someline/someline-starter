@@ -1,9 +1,1 @@
-.weui_mask,
-.weui_dialog,
-.weui_actionsheet,
-.weui_toptips,
-.weui_toast {
-  z-index: 10000;
-}
-
-/*# sourceMappingURL=mobile.css.map */
+.weui_actionsheet,.weui_dialog,.weui_mask,.weui_toast,.weui_toptips{z-index:10000}
