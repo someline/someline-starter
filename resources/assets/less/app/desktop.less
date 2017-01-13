@@ -1,5 +1,6 @@
 @desktopWidth: 980px;
-@desktopMinWidth: (@desktopWidth + 15 * 2);
+@desktopPadder: 15px;
+@desktopMinWidth: (@desktopWidth + @desktopPadder * 2);
 
 .app-desktop {
   min-width: @desktopWidth !important;
@@ -27,8 +28,7 @@
     width: auto !important;
     &.app-desktop-padder {
       .app-desktop-wrapper {
-        margin: 0px !important;
-        padding: 0px 20px;
+        margin: 0px @desktopPadder !important;
       }
     }
   }
