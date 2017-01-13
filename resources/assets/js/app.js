@@ -34,7 +34,7 @@ Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue')
  */
 
 Vue.component('example', require('./components/Example.vue'));
-Vue.component('sl-user-list', require('./components/user/UserList.vue'));
+Vue.component('sl-user-list', require('./components/app/users/UserList.vue'));
 
 // Bus
 const bus = new Vue({
