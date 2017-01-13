@@ -24,6 +24,8 @@ Route::group(['middleware' => 'auth'], function () {
         return redirect('users');
     });
 
+    Route::get('desktop-example', 'ExampleController@getDesktopExample');
+
     Route::get('users', 'UserController@getUserList');
 
 });
