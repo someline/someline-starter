@@ -66,7 +66,7 @@ elixir((mix) => {
 
     // BrowserSync
     mix.browserSync({
-        proxy: 'someline-starter.app'   // change proxy domain to your dev host
+        proxy: 'someline-starter-master.app'   // change proxy domain to your dev host
     });
 
 });
