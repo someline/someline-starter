@@ -20,10 +20,11 @@ Route::get('/home', 'HomeController@index');
 // Protected Routes
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('/', function () {
-        return redirect('users');
-    });
+//    Route::get('/', function () {
+//        return redirect('users');
+//    });
 
+    Route::get('/', 'ExampleController@getIndexExample');
     Route::get('blank-example', 'ExampleController@getBlankExample');
     Route::get('desktop-example', 'ExampleController@getDesktopExample');
 

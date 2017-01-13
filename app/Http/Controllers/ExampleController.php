@@ -6,9 +6,14 @@ namespace Someline\Http\Controllers;
 class ExampleController extends BaseController
 {
 
+    public function getIndexExample()
+    {
+        return view('app.example.index');
+    }
+
     public function getDesktopExample()
     {
-        return view('app.example.example');
+        return view('app.example.desktop');
     }
 
     public function getBlankExample()
