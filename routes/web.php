@@ -24,6 +24,7 @@ Route::group(['middleware' => 'auth'], function () {
         return redirect('users');
     });
 
+    Route::get('blank-example', 'ExampleController@getBlankExample');
     Route::get('desktop-example', 'ExampleController@getDesktopExample');
 
     Route::get('users', 'UserController@getUserList');

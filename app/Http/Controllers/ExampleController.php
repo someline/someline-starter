@@ -11,4 +11,9 @@ class ExampleController extends BaseController
         return view('app.example.example');
     }
 
+    public function getBlankExample()
+    {
+        return view('app.example.blank');
+    }
+
 }
