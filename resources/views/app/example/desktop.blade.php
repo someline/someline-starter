@@ -1,4 +1,4 @@
-@extends('angulr.layout.desktop_frame')
+@extends('app.layout.desktop_frame')
 
 @section('content')
     <div class="app-desktop-section m-t m-b">

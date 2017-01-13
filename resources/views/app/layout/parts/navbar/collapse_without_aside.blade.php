@@ -12,7 +12,7 @@
     {{--</div>--}}
     {{--<!-- / buttons -->--}}
 
-    @include('angulr.layout.parts.navbar.navbar_links')
+    @include('app.layout.parts.navbar.navbar_links')
 
     {{--<!-- search form -->--}}
     {{--<form class="navbar-form navbar-form-sm navbar-left shift" ui-shift="prependTo" data-target=".navbar-collapse"--}}
@@ -31,6 +31,6 @@
     {{--</form>--}}
     {{--<!-- / search form -->--}}
 
-    @include('angulr.layout.parts.navbar.navbar_right')
+    @include('app.layout.parts.navbar.navbar_right')
 </div>
 <!-- / navbar collapse -->

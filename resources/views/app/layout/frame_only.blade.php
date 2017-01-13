@@ -1,14 +1,10 @@
 @extends('angulr.layout.master')
 
-@section('div.app.class', 'app-header-fixed app-aside-fixed app-aside-hidden app-desktop app-desktop-padder')
+@section('div.app.class', 'app-aside-fixed app-aside-hidden bg-white')
 
 @section('app')
 
-    @include('angulr.layout.parts.header_desktop')
-
-    @include('angulr.layout.parts.content')
-
-    @include('angulr.layout.parts.footer_desktop')
+    @include('app.layout.parts.content')
 
 @endsection
 

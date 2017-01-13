@@ -1,4 +1,4 @@
-@extends('angulr.layout.frame_only')
+@extends('app.layout.frame_only')
 
 @section('content')
     <div class="wrapper">

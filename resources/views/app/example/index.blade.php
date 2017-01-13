@@ -1,4 +1,4 @@
-@extends('angulr.layout.frame_without_aside')
+@extends('app.layout.frame_without_aside')
 
 @section('content')
 
@@ -32,7 +32,7 @@
     </div>
 
     <div class="wrapper text-center m-t">
-        <div class="h3 m-b">Pages</div>
+        <div class="h3 m-b">App Example Pages</div>
         <span class="padder">
             <a target="_blank" href="{{ url('users') }}" class="btn btn-lg btn-default">Users Example (with Vue.js usage)</a>
         </span>
