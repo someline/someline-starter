@@ -1,0 +1,60 @@
+.md-navbar{
+	min-height: 60px !important;
+	position: relative;
+	z-index: 50;
+	.navbar-header{
+		width: auto;
+		> button{
+			padding: 15px 18px;
+		}
+	}
+	.navbar-collapse{
+		margin-left: 0;
+	}
+	.navbar-brand{
+		line-height: 60px;
+	}
+	.navbar-nav > li > a{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.navbar-btn{
+		margin-top: 13px;
+		margin-bottom: 13px;
+	}
+	.navbar-form-sm{
+		margin-top: 15px !important;
+		margin-bottom: 15px !important;
+	}
+}
+
+.md-aside{
+	width: 240px;
+	max-width: 240px;
+	position: relative;
+	z-index: 40;
+}
+
+.md-content{
+	display: block;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767px){
+	.off-screen {
+		&.md-content{
+			top: 60px;
+			z-index: 45;
+			max-width: 75%;
+			+ *{
+				padding-top: 60px;
+				z-index: 30;
+				> .md-content{
+					overflow: hidden;
+				}
+			}
+		}
+
+	}
+}

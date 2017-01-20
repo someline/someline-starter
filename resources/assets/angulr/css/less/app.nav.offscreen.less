@@ -1,4 +1,8 @@
 @media (max-width: 767px) {
+	html,
+    body{
+	   	overflow-x: hidden !important;
+    }
 	.app{
 		overflow-x: hidden;
 	}
@@ -6,7 +10,7 @@
 		.transition-transform(0.2s ease);
 	}
 	.off-screen{
-			position: absolute;
+			position: fixed;
 			top: 50px;
 			bottom: 0;
 			width: @off-screen-width;
@@ -22,7 +26,7 @@
 				.backface-visibility(hidden);
 				.translate3d(@off-screen-width, 0px, 0px);
 				overflow: hidden;
-				position: absolute;
+				position: fixed;
 				width: 100%;
 				top: 0;
 				bottom: 0;

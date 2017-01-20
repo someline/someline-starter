@@ -1,0 +1,138 @@
+.md-btn {
+  color: currentColor;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  outline: none;
+  border: 0;
+  border-radius: 3px;
+  padding: 6px;
+  display: inline-block;
+  background: transparent;
+  white-space: nowrap;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: inherit;
+  font-variant: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+
+.md-btn.md-flat:not([disabled]):hover,
+.md-btn.md-flat:not([disabled]):focus{
+  background-color: rgba(158, 158, 158, 0.2);
+}
+
+.md-btn-circle{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.md-btn[disabled], .md-btn.md-raised[disabled], .md-btn.md-fab[disabled]{
+  color: rgba(0,0,0,0.26);
+  background-color: transparent;
+  cursor: not-allowed;
+}
+
+.md-fab{
+	line-height: 44px;
+}
+.md-fab-offset{
+  margin-top: -28px;
+  margin-bottom: -28px;
+}
+  .md-btn:focus {
+    outline: none;
+   }
+  .md-btn:hover {
+    text-decoration: none;
+   }
+  .md-btn.md-cornered {
+    border-radius: 0; }
+  .md-btn.md-icon {
+    padding: 0;
+    background: none; }
+  .md-btn.md-raised {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  .md-btn.md-fab {
+    z-index: 20;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    transition: 0.2s linear;
+    transition-property: -webkit-transform, box-shadow;
+    transition-property: transform, box-shadow; }
+
+    .md-btn.md-raised:not([disabled]), 
+    .md-btn.md-fab {
+	  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); 
+	}
+
+	.md-btn.md-raised:not([disabled]):focus, 
+	.md-btn.md-raised:not([disabled]):hover, 
+	.md-btn.md-fab:not([disabled]):focus, 
+	.md-btn.md-fab:not([disabled]):hover {
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); 
+	}
+
+    .md-btn.md-fab.md-fab-bottom-right {
+      top: auto;
+      right: 20px;
+      bottom: 20px;
+      left: auto;
+      position: absolute; }
+    .md-btn.md-fab.md-fab-bottom-left {
+      top: auto;
+      right: auto;
+      bottom: 20px;
+      left: 20px;
+      position: absolute; }
+    .md-btn.md-fab.md-fab-top-right {
+      top: 20px;
+      right: 20px;
+      bottom: auto;
+      left: auto;
+      position: absolute; }
+    .md-btn.md-fab.md-fab-top-left {
+      top: 20px;
+      right: auto;
+      bottom: auto;
+      left: 20px;
+      position: absolute; }
+    .md-btn.md-fab md-icon {
+      margin-top: 0; }
+    .md-btn.md-fab.md-mini {
+      width: 40px;
+      height: 40px; }
+  .md-btn:not([disabled]).md-raised:focus, .md-btn:not([disabled]).md-raised:hover, .md-btn:not([disabled]).md-fab:focus, .md-btn:not([disabled]).md-fab:hover {
+    -webkit-transform: translate3d(0, -1px, 0);
+            transform: translate3d(0, -1px, 0); }
+
+.md-toast-open-top .md-btn.md-fab-top-left, .md-toast-open-top .md-btn.md-fab-top-right {
+  -webkit-transform: translate3d(0, 42px, 0);
+          transform: translate3d(0, 42px, 0); }
+  .md-toast-open-top .md-btn.md-fab-top-left:not([disabled]):focus, .md-toast-open-top .md-btn.md-fab-top-left:not([disabled]):hover, .md-toast-open-top .md-btn.md-fab-top-right:not([disabled]):focus, .md-toast-open-top .md-btn.md-fab-top-right:not([disabled]):hover {
+    -webkit-transform: translate3d(0, 41px, 0);
+            transform: translate3d(0, 41px, 0); }
+
+.md-toast-open-bottom .md-btn.md-fab-bottom-left, .md-toast-open-bottom .md-btn.md-fab-bottom-right {
+  -webkit-transform: translate3d(0, -42px, 0);
+          transform: translate3d(0, -42px, 0); }
+  .md-toast-open-bottom .md-btn.md-fab-bottom-left:not([disabled]):focus, .md-toast-open-bottom .md-btn.md-fab-bottom-left:not([disabled]):hover, .md-toast-open-bottom .md-btn.md-fab-bottom-right:not([disabled]):focus, .md-toast-open-bottom .md-btn.md-fab-bottom-right:not([disabled]):hover {
+    -webkit-transform: translate3d(0, -43px, 0);
+            transform: translate3d(0, -43px, 0); }
