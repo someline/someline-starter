@@ -34,6 +34,13 @@ body{
 	}
 }
 
+.app-header-hidden{
+	padding-top: 0px;
+	.app-header{
+		display: none;
+	}
+}
+
 .app-header{
 	z-index: 1025;
 	border-radius: 0;
@@ -246,6 +253,25 @@ body{
 	}
 
 	.visible-folded{display: none;}
+
+	.app-aside-hidden{
+		.app-aside {
+			display: none;
+		}
+		.app-content,
+		.app-footer{
+			margin-left: 0px;
+		}
+	}
+	.app-aside-hidden.app-aside-folded{
+		.app-aside {
+			display: none;
+		}
+		.app-content,
+		.app-footer{
+			margin-left: 0px;
+		}
+	}
 
 	.app-aside-folded{
 		.hidden-folded{
