@@ -3,8 +3,6 @@
 @section('div.app.class', 'app-header-fixed app-aside-hidden')
 {{--@section('div.app.class', 'app-header-hidden app-aside-hidden')--}}
 
-@section('div.app-content-padding-bottom', '0px')
-
 @section('div.app-content-body-style', 'bottom: 0px')
 
 @section('app')
