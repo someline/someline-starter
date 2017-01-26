@@ -25,17 +25,15 @@ $api->version('v1', [
         // Rate: 100 requests per 5 minutes
         $api->group(['middleware' => ['api.throttle'], 'limit' => 100, 'expires' => 5], function (Router $api) {
 
-            $api->get('users', 'UsersController@index');
-
-            $api->post('users', 'UsersController@store');
-
-            $api->get('users/me', 'UsersController@me');
-
-            $api->get('users/{id}', 'UsersController@show');
-
-            $api->put('users/{id}', 'UsersController@update');
-
-            $api->delete('users/{id}', 'UsersController@destroy');
+            // /users
+            $api->group(['prefix' => 'users'], function (Router $api) {
+                $api->get('/', 'UsersController@index');
+                $api->post('/', 'UsersController@store');
+                $api->get('/me', 'UsersController@me');
+                $api->get('/{id}', 'UsersController@show');
+                $api->put('/{id}', 'UsersController@update');
+                $api->delete('/{id}', 'UsersController@destroy');
+            });
 
         });
 
