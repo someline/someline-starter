@@ -17,7 +17,7 @@ $factory->define(\Someline\Models\Foundation\User::class, function (Faker\Genera
 
     return [
         'name' => $faker->name,
-        'email' => $faker->safeEmail,
+        'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
         'gender' => $faker->randomElement(['M', 'F']),
