@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
+    "name": "someline/someline-starter",
+    "description": "Someline Starter is a PHP framework for quick building Web Apps and Restful APIs, with modern design pattern foundation.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
