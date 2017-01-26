@@ -1,6 +1,9 @@
 <?php
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
+namespace Tests\Unit;
+
+use Someline\Models\Foundation\User;
+use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
@@ -13,6 +16,6 @@ class ModelTest extends TestCase
      */
     public function testBasicExample()
     {
-        factory(\Someline\Models\Foundation\User::class)->create();
+        factory(User::class)->create();
     }
 }

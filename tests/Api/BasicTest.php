@@ -1,6 +1,6 @@
 <?php
 
-include_once 'BaseApiTestCase.php';
+namespace Tests\Api;
 
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
