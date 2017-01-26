@@ -8,7 +8,6 @@ use Someline\Model\Foundation\User as BaseUser;
 
 class User extends BaseUser
 {
-    use HasApiTokens, Notifiable;
 
     /**
      * The attributes that are mass assignable.

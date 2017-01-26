@@ -171,10 +171,6 @@ blockquote{
   margin-top: -7px;
 }
 
-.input-lg{
-  height: 45px;
-}
-
 .input-group-addon{
   border-color: @input-border;
   background-color: @brand-light;
@@ -294,7 +290,7 @@ blockquote{
     > a{
       &:hover,
       &:focus{
-        background-color: @nav-bg;
+        background-color: rgba(0,0,0,0.05);
       }
     }
   }
@@ -333,7 +329,7 @@ blockquote{
       &,
       &:hover,
       &:focus{
-        background-color: @nav-bg;
+        background-color: rgba(0,0,0,0.05);
       }
     }
   }
@@ -460,6 +456,7 @@ blockquote{
   > tbody,
   > tfoot {
     > tr {
+      > th,
       > td {
         padding:8px 15px;
         border-top: 1px solid @table-border-color;
@@ -534,7 +531,7 @@ blockquote{
     background-image: none;
     filter:none;
     background-color: @brand-light !important;
-    color: @link-hover-color;
+    color: @text-color;
   }
 }
 

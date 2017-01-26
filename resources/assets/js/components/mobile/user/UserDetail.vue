@@ -5,8 +5,6 @@
 
     <div class="wrapper-md">
 
-        <!--<h2>User {{ routeId }}</h2>-->
-
         <div class="panel panel-default">
 
             <div class="panel-header wrapper">
@@ -15,7 +13,7 @@
                         <router-link :to="routeProfile" @click.native="selectMenuItem('profile')">Profile</router-link>
                     </li>
                     <li :class="{'active':isSelectedMenuItem('posts')}">
-                        <router-link :to="routePosts"  @click.native="selectMenuItem('posts')">Posts</router-link>
+                        <router-link :to="routePosts" @click.native="selectMenuItem('posts')">Posts</router-link>
                     </li>
                 </ul>
             </div>
@@ -69,6 +67,10 @@
         events: {},
         mounted(){
             console.log('Component Ready.');
+
+        },
+        destroyed(){
+            console.log('Component Destroyed.');
 
         },
         methods: {

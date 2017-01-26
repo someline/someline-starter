@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "gulp": "gulp default",
-    "prod": "gulp --gulpfile gulpfile_prod.js --production",
+    "prod": "gulp --production",
+    "version": "gulp --gulpfile gulpfile_version.js",
     "theme": "gulp --gulpfile gulpfile_theme.js --production",
     "dev": "gulp watch"
   },
@@ -11,6 +12,7 @@
     "gulp": "^3.9.1",
     "jquery": "^3.1.0",
     "laravel-elixir": "^6.0.0-14",
+    "laravel-elixir-browsersync-official": "^1.0.0",
     "laravel-elixir-remove": "^0.2.1",
     "laravel-elixir-vue-2": "^0.2.0",
     "laravel-elixir-webpack-official": "^1.0.2",
@@ -22,6 +24,7 @@
     "autosize": "^3.0.20",
     "moment": "^2.17.1",
     "vue-i18n": "^4.9.0",
-    "vue-router": "^2.1.1"
+    "vue-router": "^2.1.1",
+    "vuex": "^2.1.1"
   }
 }

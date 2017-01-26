@@ -1,8 +1,8 @@
 /node_modules
 /public/storage
 /storage/*.key
+/storage/clockwork.sqlite
 /vendor
-/.idea
 Homestead.json
 Homestead.yaml
 .env
@@ -18,6 +18,7 @@ Homestead.yaml
 .idea/gradle.xml
 .idea/libraries
 .idea/mongoSettings.xml
+/.idea/vcs.xml
 *.iws
 /out/
 .idea_modules/
@@ -28,3 +29,5 @@ crashlytics-build.properties
 fabric.properties
 /npm-debug.log
 /npm-debug.log*
+/.phpstorm.meta.php
+/_ide_helper.php

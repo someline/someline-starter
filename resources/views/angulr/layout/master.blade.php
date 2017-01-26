@@ -50,6 +50,7 @@
 
 <script src="{{url('locales/'.app_locale().'.js?'.substr(md5(json_encode(trans('app'))), -10))}}"></script>
 <script src="{{url(elixir("js/theme.src.js"))}}"></script>
+@stack('pre_scripts')
 @stack('scripts')
 </body>
 </html>

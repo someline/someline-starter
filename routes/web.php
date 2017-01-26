@@ -20,9 +20,13 @@ Route::get('/home', 'HomeController@index');
 // Protected Routes
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('/', function () {
-        return redirect('users');
-    });
+//    Route::get('/', function () {
+//        return redirect('users');
+//    });
+
+    Route::get('/', 'ExampleController@getIndexExample');
+    Route::get('blank-example', 'ExampleController@getBlankExample');
+    Route::get('desktop-example', 'ExampleController@getDesktopExample');
 
     Route::get('users', 'UserController@getUserList');
 
@@ -51,15 +55,18 @@ Route::group(['prefix' => 'm', 'namespace' => 'Mobile'], function () {
 Route::group(['prefix' => 'console', 'middleware' => 'auth', 'namespace' => 'Console'], function () {
 
     Route::get('/', 'ConsoleController@getConsoleHome');
-
     Route::get('oauth', 'ConsoleController@getOauth');
-
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+
+    Route::group(['prefix' => 'users'], function () {
+        Route::get('/', 'UserController@getUserList');
+    });
 
 });
 
 // Image Routes
-Route::group(['prefix' => 'images'], function () {
+// @WARNING: The 'image' prefix is reserved for SomelineImageService
+Route::group(['prefix' => 'image'], function () {
 
     Route::post('/', 'ImageController@postImage');
 
@@ -68,6 +75,7 @@ Route::group(['prefix' => 'images'], function () {
 });
 
 // Locale Routes
+// @WARNING: The 'locales' prefix is reserved for SomelineLocaleController
 Route::group(['prefix' => 'locales'], function () {
 
     Route::get('/{locale}.js', '\Someline\Support\Controllers\LocaleController@getLocaleJs');

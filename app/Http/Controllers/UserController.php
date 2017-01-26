@@ -8,7 +8,7 @@ class UserController extends BaseController
 
     public function getUserList()
     {
-        return view('users.user_list');
+        return view('app.users.user_list');
     }
 
     public function getUserDetail($id)

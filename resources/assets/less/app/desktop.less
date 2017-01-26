@@ -1,0 +1,35 @@
+@desktopWidth: 980px;
+@desktopPadder: 15px;
+@desktopMinWidth: (@desktopWidth + @desktopPadder * 2);
+
+.app-desktop {
+  min-width: @desktopWidth !important;
+  &.app-desktop-padder {
+    min-width: @desktopMinWidth !important;
+  }
+  .app-desktop-wrapper {
+    width: @desktopWidth;
+    min-width: @desktopWidth;
+    margin: 0px auto;
+    .navbar-brand {
+      padding: 0px;
+    }
+  }
+  .app-footer {
+    > .wrapper {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}
+
+@media (max-width: (@desktopMinWidth - 1) ) {
+  .app-desktop {
+    width: auto !important;
+    &.app-desktop-padder {
+      .app-desktop-wrapper {
+        margin: 0px @desktopPadder !important;
+      }
+    }
+  }
+}

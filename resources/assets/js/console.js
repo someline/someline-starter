@@ -16,9 +16,13 @@ Vue.filter('nl2br', require('./filters/nl2br'));
 import MixInUser from './mixins/user'
 import MixInJQuery from './mixins/jquery'
 import MixInTools from './mixins/tools'
+import MixInBus from './mixins/bus'
+import MixInStore from './mixins/store'
 Vue.mixin(MixInUser);
 Vue.mixin(MixInJQuery);
 Vue.mixin(MixInTools);
+Vue.mixin(MixInBus);
+Vue.mixin(MixInStore);
 
 // Vue Components
 Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue'));
@@ -46,6 +50,28 @@ Vue.component(
 
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-oauth', require('./components/console/OAuth.vue'));
+
+// Bus
+const bus = new Vue({
+    data: {
+        title: "Someline",
+    }
+});
+window.bus = bus;
+
+// Vuex
+const vuexStore = new Vuex.Store({
+    state: {
+        platform: 'console',
+        count: 0
+    },
+    mutations: {
+        increment (state) {
+            state.count++
+        }
+    }
+});
+window.vuexStore = vuexStore;
 
 const app = new Vue({
     el: '#app',

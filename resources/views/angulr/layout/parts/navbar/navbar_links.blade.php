@@ -1,5 +1,5 @@
 <!-- link and dropdown -->
-<ul class="nav navbar-nav hidden-sm">
+<ul class="nav navbar-nav">
     @include('angulr.layout.parts.navbar.items.mega')
     @include('angulr.layout.parts.navbar.items.notifications')
     @include('angulr.layout.parts.navbar.items.profile')

@@ -17,10 +17,14 @@ import MixInUser from './mixins/user'
 import MixInJQuery from './mixins/jquery'
 import MixInTools from './mixins/tools'
 import MixInBus from './mixins/bus'
+import MixInStore from './mixins/store'
+import MixInMobileApp from './mixins/mobile_app'
 Vue.mixin(MixInUser);
 Vue.mixin(MixInJQuery);
 Vue.mixin(MixInTools);
 Vue.mixin(MixInBus);
+Vue.mixin(MixInStore);
+Vue.mixin(MixInMobileApp);
 
 // Vue Components
 Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue'));
@@ -41,12 +45,27 @@ Vue.component('sl-app-home', require('./components/mobile/home/Home.vue'));
 import RouterConfig from './mobile_router'
 const router = new VueRouter(RouterConfig);
 
+// Bus
 const bus = new Vue({
     data: {
         title: "Someline",
     }
 });
 window.bus = bus;
+
+// Vuex
+const vuexStore = new Vuex.Store({
+    state: {
+        platform: 'mobile',
+        count: 0
+    },
+    mutations: {
+        increment (state) {
+            state.count++
+        }
+    }
+});
+window.vuexStore = vuexStore;
 
 const app = new Vue({
     router,

@@ -21,9 +21,11 @@ window.moment = require('moment');
  */
 
 window.Vue = require('vue');
+window.Vuex = require('vuex');
 window.VueRouter = require('vue-router');
 require('vue-resource');
 require('vue-i18n');
+require('./filters/helpers');
 
 /**
  * We'll register a HTTP interceptor to attach the "CSRF" header to each of

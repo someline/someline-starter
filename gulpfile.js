@@ -26,9 +26,9 @@ elixir((mix) => {
         .webpack('mobile.js');
 
     // less
-    mix.less('app.less', 'resources/assets/less/css/app/')
-        .less('console.less', 'resources/assets/less/css/console/')
-        .less('mobile.less', 'resources/assets/less/css/mobile/');
+    mix.less('app.less', 'public/assets/css/app/')
+        .less('console.less', 'public/assets/css/console/')
+        .less('mobile.less', 'public/assets/css/mobile/');
 
     // app styles
     mix.styles([
@@ -36,15 +36,15 @@ elixir((mix) => {
         'public/bower_components/toastr/toastr.css',
 
         // main styles
-        'resources/assets/less/css/app/*.css',
+        'public/assets/css/app/*.css',
     ], 'public/css/app.src.css', './')
         .styles([
             // main styles
-            'resources/assets/less/css/console/*.css',
+            'public/assets/css/console/*.css',
         ], 'public/css/console.src.css', './')
         .styles([
             // main styles
-            'resources/assets/less/css/mobile/*.css',
+            'public/assets/css/mobile/*.css',
         ], 'public/css/mobile.src.css', './');
 
     // app scripts
@@ -63,5 +63,10 @@ elixir((mix) => {
             // main vue js
             'public/js/mobile.js',
         ], 'public/js/mobile.src.js', './');
+
+    // BrowserSync
+    mix.browserSync({
+        proxy: 'someline-starter-master.app'   // change proxy domain to your dev host
+    });
 
 });

@@ -1,0 +1,40 @@
+.md-list{
+	border-radius: @border-radius-base;
+}
+
+.md-list-item{
+	display: block;
+	position: relative;
+	padding: 16px;
+	&:after{
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+	}
+	&:last-child&:after{
+		border: none;
+	}
+	&.inset&:after{
+		left: 72px;
+	}
+}
+
+.md-list-item-left{
+	width: 40px;
+	height: 40px;
+	margin-right: 16px;
+	float: left;
+	text-align: center;
+	line-height: 40px;
+}
+
+.md-list-item-content{
+	overflow: hidden;
+	h3{
+		margin: 0 0 3px 0;
+		font-weight: normal;
+	}
+}

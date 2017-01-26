@@ -1,0 +1,80 @@
+.md-form-group{
+	padding: 18px 0 24px 0;
+	position: relative;
+}
+.md-input{
+	background: transparent;
+	position: relative;
+	z-index: 5;
+	border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+    width: 100%;
+    height: 34px;
+    padding: 2px;
+    color: inherit;
+    &:focus,
+    &.focus{
+    	border-color: @brand-primary;
+    	border-bottom-width: 2px;
+    	padding-bottom: 1px;
+    	~ label{
+    		color: @brand-primary;
+    		opacity: 1;
+            top: 0 !important;
+            font-size: 0.85em !important;
+    	}
+    }
+    .float-label &{
+        ~ label{
+            top: 20px;
+            font-size: 1em;
+        }
+        &.ng-dirty,
+        &.has-value{
+            ~ label{
+                top: 0;
+                font-size: 0.85em;
+            }
+        }
+    }
+    ~ label{
+    	.transition(all 0.2s);
+    	font-size: 0.85em;
+    	position: absolute;
+    	z-index: 0;
+    	opacity: 0.5;
+    	display: inline-block;
+    	top: 0px;
+        left: 0;
+    }
+    &.disabled,
+    &[disabled]{
+        opacity: 0.5;
+    }
+}
+
+textarea.md-input{
+    height: auto;
+}
+
+.md-input-white{
+    &:focus,
+    &.focus{
+        border-color: #fff;
+        ~ label{
+            color: #fff;
+        }
+    }
+}
+
+.md-input-msg{
+    position: absolute;
+    bottom: 0;
+    line-height: 24px;
+    font-size: 0.85em;
+}
+.md-input-msg.right{
+    right: 0;
+}

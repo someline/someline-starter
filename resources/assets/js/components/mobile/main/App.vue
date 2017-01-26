@@ -24,24 +24,7 @@
                 items: [],
             }
         },
-        computed: {
-            routeId(){
-                if (this.$route.params.id) {
-                    return this.$route.params.id;
-                } else {
-                    return this.user_id;
-                }
-            },
-            currentRoute(){
-                return "/user/" + this.routeId;
-            },
-            routeProfile(){
-                return this.currentRoute + "/profile";
-            },
-            routePosts(){
-                return this.currentRoute + "/posts";
-            },
-        },
+        computed: {},
         components: {},
         http: {
             root: '/api',
@@ -63,6 +46,8 @@
         methods: {
             listenBus(){
                 this.eventOn("AppReady", this.onAppReady);
+                this.eventOn("AppHeader_onClickNavButtonLeft", this.onClickNavButtonLeft);
+                this.eventOn("AppHeader_onClickNavButtonRight", this.onClickNavButtonRight);
             },
             onAppReady(){
                 console.log('onAppReady');
@@ -70,6 +55,12 @@
                 this.AppHeaderSetTitle('Someline App');
                 this.AppHeaderSetNavButtonLeft(null);
                 this.AppTabBarSelectTabBarItem(1);
+            },
+            onClickNavButtonLeft(){
+                console.log('onClickNavButtonLeft');
+            },
+            onClickNavButtonRight(){
+                console.log('onClickNavButtonRight');
             },
             fetchData(){
 
