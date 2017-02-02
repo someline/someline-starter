@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ebe83d4e4c6fd66320462a642d3a82a",
+    "content-hash": "2a4dc1824f9735805c72ce37c7d98d84",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -123,22 +123,30 @@
         },
         {
             "name": "cviebrock/image-validator",
-            "version": "dev-bugfix",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/libern/image-validator.git",
-                "reference": "9478a2fa044997855f2c630938b4648e6e756e01"
+                "url": "https://github.com/cviebrock/image-validator.git",
+                "reference": "a8272d1e2e30f996daaa0e35b6c7177508338da6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cviebrock/image-validator/zipball/a8272d1e2e30f996daaa0e35b6c7177508338da6",
+                "reference": "a8272d1e2e30f996daaa0e35b6c7177508338da6",
+                "shasum": ""
             },
             "require": {
-                "illuminate/support": "5.*",
-                "illuminate/translation": "5.*",
-                "illuminate/validation": "5.*",
-                "php": ">=5.4.0"
+                "illuminate/config": "^5.4",
+                "illuminate/database": "^5.4",
+                "illuminate/support": "^5.4",
+                "php": ">=5.6.4"
             },
             "require-dev": {
-                "mockery/mockery": "dev-master",
-                "orchestra/testbench": "3.0.*",
-                "phpunit/phpunit": "4.*"
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "mockery/mockery": "^0.9.4",
+                "orchestra/testbench": "^3.4",
+                "phpunit/phpunit": "~5.7",
+                "scrutinizer/ocular": "^1.3"
             },
             "type": "library",
             "autoload": {
@@ -146,6 +154,7 @@
                     "Cviebrock\\ImageValidator\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -162,7 +171,7 @@
                 "laravel",
                 "validator"
             ],
-            "time": "2017-02-02 14:09:07"
+            "time": "2017-02-02 17:11:05"
         },
         {
             "name": "dingo/api",
@@ -5993,7 +6002,7 @@
         {
             "alias": "2.1.4",
             "alias_normalized": "2.1.4.0",
-            "version": "dev-bugfix",
+            "version": "9999999-dev",
             "package": "cviebrock/image-validator"
         }
     ],

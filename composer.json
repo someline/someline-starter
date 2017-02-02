@@ -10,10 +10,6 @@
             "url": "https://github.com/libern/country-list.git"
         },
         {
-            "type": "git",
-            "url": "https://github.com/libern/image-validator.git"
-        },
-        {
             "type": "vcs",
             "url": "https://github.com/rhwilrForks/api"
         },
@@ -27,7 +23,7 @@
         "dingo/api": "dev-master",
         "rap2hpoutre/laravel-log-viewer": "^0.7.0",
         "monarobase/country-list": "dev-bugfix as 1.2.3",
-        "cviebrock/image-validator": "dev-bugfix as 2.1.4",
+        "cviebrock/image-validator": "dev-master as 2.1.4",
         "someline/starter-framework": "1.4.*"
     },
     "require-dev": {
