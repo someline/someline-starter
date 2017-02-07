@@ -1,0 +1,26 @@
+.app-desktop {
+  min-width: 980px !important;
+}
+.app-desktop.app-desktop-padder {
+  min-width: 1010px !important;
+}
+.app-desktop .app-desktop-wrapper {
+  width: 980px;
+  min-width: 980px;
+  margin: 0px auto;
+}
+.app-desktop .app-desktop-wrapper .navbar-brand {
+  padding: 0px;
+}
+.app-desktop .app-footer > .wrapper {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+@media (max-width: 1009px) {
+  .app-desktop {
+    width: auto !important;
+  }
+  .app-desktop.app-desktop-padder .app-desktop-wrapper {
+    margin: 0px 15px !important;
+  }
+}

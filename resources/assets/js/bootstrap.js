@@ -23,7 +23,6 @@ window.moment = require('moment');
 window.Vue = require('vue');
 window.Vuex = require('vuex');
 window.VueRouter = require('vue-router');
-require('vue-resource');
 require('vue-i18n');
 require('./filters/helpers');
 
@@ -36,6 +35,7 @@ require('./filters/helpers');
 window.axios = require('axios');
 
 window.axios.defaults.headers.common = {
+    'X-CSRF-TOKEN': window.Laravel.csrfToken,
     'X-Requested-With': 'XMLHttpRequest',
     // 'Accept': 'application/x.someline.v1+json',
     'Accept-Language': Someline.locale

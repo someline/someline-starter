@@ -1,0 +1,7 @@
+.weui-mask,
+.weui-dialog,
+.weui-actionsheet,
+.weui-toptips,
+.weui-toast {
+  z-index: 10000;
+}

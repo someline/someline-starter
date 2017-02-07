@@ -1,4 +1,4 @@
-const { mix } = require('laravel-mix');
+const {mix} = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,27 +11,55 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+// mix.js('resources/assets/js/app.js', 'public/js')
+//     .sass('resources/assets/sass/app.scss', 'public/css');
+
+
+// remove build files
+// mix.remove('public/build/*');
 
 // less
-mix.less('resources/assets/angulr/css/less/app.less', 'resources/assets/angulr/css/');
+mix.less('resources/assets/less/app.less', 'public/assets/css/app.main.css')
+    .less('resources/assets/less/console.less', 'public/assets/css/console.main.css')
+    .less('resources/assets/less/mobile.less', 'public/assets/css/mobile.main.css');
 
-// // styles
-// mix.combine([
-//     'public/bower_components/bootstrap/dist/css/bootstrap.css',
-//     'public/vendors/bower_components/animate.css/animate.css',
-//     'public/bower_components/font-awesome-4.7.0/css/font-awesome.css',
-//     'public/vendors/bower_components/simple-line-icons/css/simple-line-icons.css',
-//     'resources/assets/angulr/css/*.css'
-// ], 'public/css/theme.src.css');
-//
-// // scripts
-// mix.combine([
-//     'public/vendors/bower_components/jquery/dist/jquery.min.js',
-//     'public/bower_components/bootstrap/dist/js/bootstrap.min.js',
-//     'resources/assets/angulr/js/support/ui-*.js',
-// ], 'public/js/theme.src.js');
-//
-// // copy necessary fonts
-// mix.copy('public/fonts/**', 'public/build/fonts');
+// js
+mix.js('resources/assets/js/app.js', 'public/assets/js')
+    .js('resources/assets/js/console.js', 'public/assets/js')
+    .js('resources/assets/js/mobile.js', 'public/assets/js')
+    .extract([
+        'jquery', 'lodash', 'moment', 'axios',
+        'vue', 'vuex', 'vue-i18n', 'vue-router',
+        'autosize'
+    ], 'public/assets/js/vendor');
+
+// app styles
+mix.combine([
+    // app vendor styles
+    'public/bower_components/toastr/toastr.css',
+], 'public/assets/css/app.vendor.css')
+    .combine([
+        // console vendor styles
+        'public/bower_components/toastr/toastr.css',
+    ], 'public/assets/css/console.vendor.css')
+    .combine([
+        // mobile vendor styles
+        'public/bower_components/toastr/toastr.css',
+    ], 'public/assets/css/mobile.vendor.css');
+
+// app scripts
+mix.combine([
+    // app vendor js
+    'public/bower_components/toastr/toastr.js',
+], 'public/assets/js/app.vendor.js')
+    .combine([
+        // console vendor js
+        'public/bower_components/toastr/toastr.js',
+    ], 'public/assets/js/console.vendor.js')
+    .combine([
+        // mobile vendor js
+        'public/bower_components/toastr/toastr.js',
+    ], 'public/assets/js/mobile.vendor.js');
+
+// versions
+mix.version();

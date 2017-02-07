@@ -1,3 +1,16 @@
 {
-  "/js/app.js": "/js/app.js"
+  "/assets/js/vendor.js": "/assets/js/vendor.acc7e3522008dcec84b4.js",
+  "/assets/js/mobile.js": "/assets/js/mobile.24228fa1299d7ae225c9.js",
+  "/assets/js/console.js": "/assets/js/console.4559d04dda1f8ffa6b0e.js",
+  "/assets/js/app.js": "/assets/js/app.a3b7e890ad589fcaa2f9.js",
+  "/assets/css/app.main.css": "/assets/css/app.main.204fe1556a19ef145851.css",
+  "/assets/css/console.main.css": "/assets/css/console.main.204fe1556a19ef145851.css",
+  "/assets/css/mobile.main.css": "/assets/css/mobile.main.204fe1556a19ef145851.css",
+  "/assets/js/manifest.js": "/assets/js/manifest.d41d8cd98f00b204e980.js",
+  "/assets/css/app.vendor.css": "/assets/css/app.vendor.css",
+  "/assets/css/console.vendor.css": "/assets/css/console.vendor.css",
+  "/assets/css/mobile.vendor.css": "/assets/css/mobile.vendor.css",
+  "/assets/js/app.vendor.js": "/assets/js/app.vendor.js",
+  "/assets/js/console.vendor.js": "/assets/js/console.vendor.js",
+  "/assets/js/mobile.vendor.js": "/assets/js/mobile.vendor.js"
 }
