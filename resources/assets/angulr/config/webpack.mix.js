@@ -41,3 +41,5 @@ mix.combine([
 
 // // copy necessary fonts
 mix.copy('public/fonts/**', 'public/build/fonts');
+mix.copy('../../../../public/css/theme.src.css', '../../../../public/assets/css');
+mix.copy('../../../../public/js/theme.src.js', '../../../../public/assets/js');
