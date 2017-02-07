@@ -13,3 +13,25 @@ const { mix } = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
+
+// less
+mix.less('resources/assets/angulr/css/less/app.less', 'resources/assets/angulr/css/');
+
+// // styles
+// mix.combine([
+//     'public/bower_components/bootstrap/dist/css/bootstrap.css',
+//     'public/vendors/bower_components/animate.css/animate.css',
+//     'public/bower_components/font-awesome-4.7.0/css/font-awesome.css',
+//     'public/vendors/bower_components/simple-line-icons/css/simple-line-icons.css',
+//     'resources/assets/angulr/css/*.css'
+// ], 'public/css/theme.src.css');
+//
+// // scripts
+// mix.combine([
+//     'public/vendors/bower_components/jquery/dist/jquery.min.js',
+//     'public/bower_components/bootstrap/dist/js/bootstrap.min.js',
+//     'resources/assets/angulr/js/support/ui-*.js',
+// ], 'public/js/theme.src.js');
+//
+// // copy necessary fonts
+// mix.copy('public/fonts/**', 'public/build/fonts');
