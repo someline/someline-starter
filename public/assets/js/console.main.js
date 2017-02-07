@@ -514,7 +514,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         getTokens: function getTokens() {
             var _this = this;
 
-            this.$http.get('/oauth/tokens').then(function (response) {
+            axios.get('/oauth/tokens').then(function (response) {
                 _this.tokens = response.data;
             });
         },
@@ -526,7 +526,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         revoke: function revoke(token) {
             var _this2 = this;
 
-            this.$http.delete('/oauth/tokens/' + token.id).then(function (response) {
+            axios.delete('/oauth/tokens/' + token.id).then(function (response) {
                 _this2.getTokens();
             });
         }
@@ -821,7 +821,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         getClients: function getClients() {
             var _this = this;
 
-            this.$http.get('/oauth/clients').then(function (response) {
+            axios.get('/oauth/clients').then(function (response) {
                 _this.clients = response.data;
             });
         },
@@ -871,7 +871,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
             form.errors = [];
 
-            this.$http[method](uri, form).then(function (response) {
+            axios[method](uri, form).then(function (response) {
                 _this2.getClients();
 
                 form.name = '';
@@ -895,7 +895,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         destroy: function destroy(client) {
             var _this3 = this;
 
-            this.$http.delete('/oauth/clients/' + client.id).then(function (response) {
+            axios.delete('/oauth/clients/' + client.id).then(function (response) {
                 _this3.getClients();
             });
         }
@@ -1128,7 +1128,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         getTokens: function getTokens() {
             var _this = this;
 
-            this.$http.get('/oauth/personal-access-tokens').then(function (response) {
+            axios.get('/oauth/personal-access-tokens').then(function (response) {
                 _this.tokens = response.data;
             });
         },
@@ -1140,7 +1140,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         getScopes: function getScopes() {
             var _this2 = this;
 
-            this.$http.get('/oauth/scopes').then(function (response) {
+            axios.get('/oauth/scopes').then(function (response) {
                 _this2.scopes = response.data;
             });
         },
@@ -1164,7 +1164,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
             this.form.errors = [];
 
-            this.$http.post('/oauth/personal-access-tokens', this.form).then(function (response) {
+            axios.post('/oauth/personal-access-tokens', this.form).then(function (response) {
                 _this3.form.name = '';
                 _this3.form.scopes = [];
                 _this3.form.errors = [];
@@ -1222,7 +1222,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         revoke: function revoke(token) {
             var _this4 = this;
 
-            this.$http.delete('/oauth/personal-access-tokens/' + token.id).then(function (response) {
+            axios.delete('/oauth/personal-access-tokens/' + token.id).then(function (response) {
                 _this4.getTokens();
             });
         }
