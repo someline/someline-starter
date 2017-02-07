@@ -1,8 +1,8 @@
 {
   "/assets/js/vendor.js": "/assets/js/vendor.js",
-  "/assets/js/mobile.js": "/assets/js/mobile.js",
-  "/assets/js/console.js": "/assets/js/console.js",
-  "/assets/js/app.js": "/assets/js/app.js",
+  "/assets/js/mobile.main.js": "/assets/js/mobile.main.js",
+  "/assets/js/console.main.js": "/assets/js/console.main.js",
+  "/assets/js/app.main.js": "/assets/js/app.main.js",
   "/assets/css/app.main.css": "/assets/css/app.main.css",
   "/assets/css/console.main.css": "/assets/css/console.main.css",
   "/assets/css/mobile.main.css": "/assets/css/mobile.main.css",

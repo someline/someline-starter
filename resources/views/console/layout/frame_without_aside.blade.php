@@ -1,4 +1,4 @@
-@extends('angulr.layout.master')
+@extends('console.layout.master')
 
 @section('div.app.class', 'app-header-fixed app-aside-fixed app-aside-hidden')
 
@@ -11,11 +11,3 @@
     @include('console.layout.parts.footer')
 
 @endsection
-
-@push('stylesheets')
-<link rel="stylesheet" href="{{url(elixir("css/console.src.css"))}}" type="text/css"/>
-@endpush
-
-@push('scripts')
-<script src="{{url(elixir("js/console.src.js"))}}"></script>
-@endpush

@@ -24,9 +24,9 @@ mix.less('resources/assets/less/app.less', 'public/assets/css/app.main.css')
     .less('resources/assets/less/mobile.less', 'public/assets/css/mobile.main.css');
 
 // js
-mix.js('resources/assets/js/app.js', 'public/assets/js')
-    .js('resources/assets/js/console.js', 'public/assets/js')
-    .js('resources/assets/js/mobile.js', 'public/assets/js')
+mix.js('resources/assets/js/app.js', 'public/assets/js/app.main.js')
+    .js('resources/assets/js/console.js', 'public/assets/js/console.main.js')
+    .js('resources/assets/js/mobile.js', 'public/assets/js/mobile.main.js')
     .extract([
         'jquery', 'lodash', 'moment', 'axios',
         'vue', 'vuex', 'vue-i18n', 'vue-router',

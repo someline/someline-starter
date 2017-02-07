@@ -2791,8 +2791,12 @@ window.moment = __webpack_require__(0);
 window.Vue = __webpack_require__(30);
 window.Vuex = __webpack_require__(31);
 window.VueRouter = __webpack_require__(29);
-__webpack_require__(28);
+window.VueI18n = __webpack_require__(28);
 __webpack_require__(10);
+
+Vue.use(Vuex);
+Vue.use(VueRouter);
+Vue.use(VueI18n);
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

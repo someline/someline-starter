@@ -1,4 +1,4 @@
-@extends('mobile.layout.master')
+@extends('mobile.layout.master_mobile')
 
 @section('div.app.class', 'app-header-hidden app-aside-hidden')
 

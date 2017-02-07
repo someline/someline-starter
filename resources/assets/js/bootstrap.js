@@ -23,8 +23,12 @@ window.moment = require('moment');
 window.Vue = require('vue');
 window.Vuex = require('vuex');
 window.VueRouter = require('vue-router');
-require('vue-i18n');
+window.VueI18n = require('vue-i18n');
 require('./filters/helpers');
+
+Vue.use(Vuex);
+Vue.use(VueRouter);
+Vue.use(VueI18n);
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
