@@ -1,30 +1,25 @@
 {
   "private": true,
   "scripts": {
-    "gulp": "gulp default",
-    "prod": "gulp --production",
-    "version": "gulp --gulpfile gulpfile_version.js",
-    "theme": "gulp --gulpfile gulpfile_theme.js --production",
-    "dev": "gulp watch"
+    "dev": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules",
+    "watch": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules",
+    "hot": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
+    "production": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules",
+    "theme": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/angulr/config/webpack.config.js --progress --hide-modules"
   },
   "devDependencies": {
+    "axios": "^0.15.2",
     "bootstrap-sass": "^3.3.7",
-    "gulp": "^3.9.1",
     "jquery": "^3.1.0",
-    "laravel-elixir": "^6.0.0-14",
-    "laravel-elixir-browsersync-official": "^1.0.0",
-    "laravel-elixir-remove": "^0.2.1",
-    "laravel-elixir-vue-2": "^0.2.0",
-    "laravel-elixir-webpack-official": "^1.0.2",
+    "laravel-mix": "^0.6.0",
     "lodash": "^4.16.2",
-    "vue": "^2.0.1",
-    "vue-resource": "^1.0.3"
+    "vue": "^2.1.10"
   },
   "dependencies": {
     "autosize": "^3.0.20",
     "moment": "^2.17.1",
-    "vue-i18n": "^4.9.0",
-    "vue-router": "^2.1.1",
-    "vuex": "^2.1.1"
+    "vue-i18n": "^5.0.0",
+    "vue-router": "^2.2.0",
+    "vuex": "^2.1.2"
   }
 }

@@ -31,3 +31,4 @@ fabric.properties
 /npm-debug.log*
 /.phpstorm.meta.php
 /_ide_helper.php
+/public/hot

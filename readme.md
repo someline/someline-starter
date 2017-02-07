@@ -5,7 +5,7 @@
 
 [Someline Starter](https://starter.someline.com/) is a PHP framework for quick building Web Apps and Restful APIs, with modern design pattern foundation.
  
-It is built on top of popular `Laravel 5.3 framework`, `Vue.js 2.0`, `Restful API`, `Repository Design`, `OAuth2`, `JWT`, `Unit Tests`, isolated front-end and back-end layer.
+It is built on top of popular `Laravel 5.4 framework`, `Vue.js 2.0`, `Restful API`, `Repository Design`, `OAuth2`, `JWT`, `Unit Tests`, isolated front-end and back-end layer.
 
 ## Someline Starter is born for two reasons:
 
@@ -48,7 +48,7 @@ It is fully utilised Repository Design pattern.
 ##### If you are not familiar with any of these packages, you are recommended to get to know them as they are really helpful when you needed. 
 
 *Framework*
-- Laravel 5.3 [laravel/framework](https://github.com/laravel/framework)
+- Laravel 5.4 [laravel/framework](https://github.com/laravel/framework)
 - Laravel IDE Helper [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
 - Clockwork [itsgoingd/clockwork](https://github.com/itsgoingd/clockwork)
 - Laravel 5 log viewer [rap2hpoutre/laravel-log-viewer](https://github.com/rap2hpoutre/laravel-log-viewer)

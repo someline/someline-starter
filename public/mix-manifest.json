@@ -1,0 +1,16 @@
+{
+  "/assets/js/vendor.js": "/assets/js/vendor.js",
+  "/assets/js/mobile.main.js": "/assets/js/mobile.main.js",
+  "/assets/js/console.main.js": "/assets/js/console.main.js",
+  "/assets/js/app.main.js": "/assets/js/app.main.js",
+  "/assets/css/app.main.css": "/assets/css/app.main.css",
+  "/assets/css/console.main.css": "/assets/css/console.main.css",
+  "/assets/css/mobile.main.css": "/assets/css/mobile.main.css",
+  "/assets/js/manifest.js": "/assets/js/manifest.js",
+  "/assets/css/app.vendor.css": "/assets/css/app.vendor.css",
+  "/assets/css/console.vendor.css": "/assets/css/console.vendor.css",
+  "/assets/css/mobile.vendor.css": "/assets/css/mobile.vendor.css",
+  "/assets/js/app.vendor.js": "/assets/js/app.vendor.js",
+  "/assets/js/console.vendor.js": "/assets/js/console.vendor.js",
+  "/assets/js/mobile.vendor.js": "/assets/js/mobile.vendor.js"
+}

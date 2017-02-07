@@ -1,5 +1,8 @@
 <?php
 
+namespace Tests\Api;
+
+use Tests\TestCase;
 use Lukasoppermann\Httpstatus\Httpstatuscodes;
 use Psr\Http\Message\ResponseInterface;
 use Someline\Rest\RestClient;

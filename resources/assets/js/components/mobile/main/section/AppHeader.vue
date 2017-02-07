@@ -39,12 +39,6 @@
         },
         computed: {},
         components: {},
-        http: {
-            root: '/api',
-            headers: {
-                Accept: 'application/x.someline.v1+json'
-            }
-        },
         watch: {},
         events: {},
         mounted(){

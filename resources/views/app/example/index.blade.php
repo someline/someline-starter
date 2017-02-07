@@ -34,7 +34,7 @@
     <div class="wrapper text-center m-t">
         <div class="h3 m-b">App Example Pages</div>
         <span class="padder">
-            <a target="_blank" href="{{ url('users') }}" class="btn btn-lg btn-default">Users Example (with Vue.js usage)</a>
+            <a target="_blank" href="{{ url('users') }}" class="btn btn-lg btn-default">Users Example (with Vue.js and Locales usage)</a>
         </span>
         <span class="padder">
             <a target="_blank" href="{{ url('desktop-example') }}" class="btn btn-lg btn-default">Desktop Example</a>

@@ -25,12 +25,6 @@
             },
         },
         components: {},
-        http: {
-            root: '/api',
-            headers: {
-                Accept: 'application/x.someline.v1+json'
-            }
-        },
         watch: {},
         events: {},
         mounted(){
@@ -69,17 +63,18 @@
             },
             fetchData(){
 
-                var resource = this.$resource('users{/id}', {
-//                    include: ''
-                });
-
-                // get item
-                resource.get({
-                    id: this.routeId,
-                }).then((response) => {
-                    console.log(response);
-                    this.item = response.data.data;
-                });
+                this.$api.get('/users/' + this.routeId, {
+                    params: {
+//                        include: ''
+                    }
+                })
+                    .then((response => {
+                            console.log(response);
+                        this.item = response.data.data;
+                    }).bind(this))
+                    .catch((error => {
+                                console.error(error);
+                    }).bind(this));
 
             }
         },
