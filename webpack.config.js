@@ -257,12 +257,12 @@ module.exports.devServer = {
  */
 
 module.exports.plugins = (module.exports.plugins || []).concat([
-    new webpack.ProvidePlugin(Mix.autoload || {
-        jQuery: 'jquery',
-        $: 'jquery',
-        jquery: 'jquery',
-        'window.jQuery': 'jquery'
-    }),
+    // new webpack.ProvidePlugin(Mix.autoload || {
+    //     jQuery: 'jquery',
+    //     $: 'jquery',
+    //     jquery: 'jquery',
+    //     'window.jQuery': 'jquery'
+    // }),
 
     new plugins.FriendlyErrorsWebpackPlugin(),
 

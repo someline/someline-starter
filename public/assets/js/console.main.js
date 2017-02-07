@@ -55,172 +55,6 @@ module.exports = function normalizeComponent (
 /***/ }),
 
 /***/ 10:
-/***/ (function(module, exports) {
-
-/**
- * Changes value to past tense.
- * Simple filter does not support irregular verbs such as eat-ate, fly-flew, etc.
- * http://jsfiddle.net/bryan_k/0xczme2r/
- *
- * @param {String} value The value string.
- */
-Vue.filter('past-tense', function (value) {
-    // Slightly follows http://www.oxforddictionaries.com/us/words/verb-tenses-adding-ed-and-ing
-    var vowels = ['a', 'e', 'i', 'o', 'u'];
-    if (!value) {
-        return;
-    }
-
-    var last = value.toLowerCase().substr(value.length - 1),
-        secondLast = value.toLowerCase().substr(value.length - 2, 1),
-        thirdLast = value.toLowerCase().substr(value.length - 3, 1),
-        lastTwo = value.toLowerCase().substr(value.length - 2),
-        lastThree = value.toLowerCase().substr(value.length - 3),
-        inArray = function inArray(ar, value) {
-        return ar.indexOf(value) != -1;
-    };
-
-    // participle or already past tense, don't want
-    if (lastThree === 'ing' || lastTwo === 'ed') {
-        return value;
-    }
-
-    // Ends in 'e', simply add the 'd'
-    if (last === 'e') {
-        return value + 'd';
-    }
-
-    // Ends in 'c', add the 'ked'
-    if (last === 'c') {
-        return value + 'ked';
-    }
-
-    // Ends with consonant, vowel, consonant. I'm simple, double consonant and add 'ed'
-    if (!inArray(vowels, thirdLast) && inArray(vowels, secondLast) && !inArray(vowels, last)) {
-        return value + last + 'ed';
-    }
-
-    return value + 'ed';
-});
-
-/**
- * Vue filter to convert a slug to a more human friendly form.
- *
- * @param {String} value The value string.
- */
-Vue.filter('humanable', function (value) {
-    var words = value.split(/[-_]+/g);
-    var results = [];
-    for (var i = 0; i < words.length; i++) {
-        var letter = words[i].charAt(0).toUpperCase();
-        results.push(letter + words[i].slice(1));
-    }
-    return results.join(' ');
-});
-
-/**
- * Vue filter to convert the given value to percent.
- * http://jsfiddle.net/bryan_k/qauf3qyh/
- *
- * @param {String} value    The value string.
- * @param {Number} decimals The number of decimal places.
- */
-Vue.filter('percentage', function (value, decimals) {
-    if (!value) {
-        value = 0;
-    }
-
-    if (!decimals) {
-        decimals = 0;
-    }
-
-    value = value * 100;
-    value = Math.round(value * Math.pow(10, decimals)) / Math.pow(10, decimals);
-    value = value + '%';
-    return value;
-});
-
-/**
- * Vue filter to round the decimal to the given place.
- * http://jsfiddle.net/bryan_k/3ova17y9/
- *
- * @param {String} value    The value string.
- * @param {Number} decimals The number of decimal places.
- */
-Vue.filter('round', function (value, decimals) {
-    if (!value) {
-        value = 0;
-    }
-
-    if (!decimals) {
-        decimals = 0;
-    }
-
-    value = Math.round(value * Math.pow(10, decimals)) / Math.pow(10, decimals);
-    return value;
-});
-
-/**
- * Vue filter to convert the given value to whole dollars, no change.
- * http://jsfiddle.net/bryan_k/2t6bqqfc/
- *
- * @param {String} value The value string.
- */
-Vue.filter('no-change', function (value, symbol) {
-    if (!value) {
-        value = 0;
-    }
-
-    if (!symbol) {
-        symbol = '$';
-    }
-
-    value = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',').split('.')[0];
-    return symbol + value;
-});
-
-/**
- * Vue filter to make a simple timestamp for an ISO date.
- * http://jsfiddle.net/bryan_k/44kqtpeg/
- *
- * @param {String} value The value string.
- */
-Vue.filter('timestamp', function (value) {
-    var parts = value.split(' ');
-    var date = parts[0];
-    var time = parts[1];
-
-    date = date.split('-');
-    time = time.split(':');
-
-    if (parseInt(time[0], 10) > 12) {
-        var hour = parseInt(time[0], 10) % 12;
-    } else {
-        var hour = parseInt(time[0], 10);
-    }
-
-    hour = hour < 10 ? '0' + hour : hour;
-
-    return '[' + date[1] + '/' + date[2] + ' ' + hour + ':' + time[1] + ']';
-});
-
-/**
- * Vue filter to truncate a string to the specified length.
- * @param {String} value The value string.
- */
-Vue.filter('truncate', function (value, length) {
-    if (value.length < length) {
-        return value;
-    }
-
-    length = length - 3;
-
-    return value.substring(0, length) + '...';
-});
-
-/***/ }),
-
-/***/ 11:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -236,7 +70,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 12:
+/***/ 11:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -276,11 +110,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 13:
+/***/ 12:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony default export */ __webpack_exports__["a"] = {
+/* harmony default export */ __webpack_exports__["a"] = {
     methods: {
         scrollToBottom: function scrollToBottom(selector, animated, animateTime) {
             var $element = $(selector);
@@ -296,11 +130,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }
     }
 };
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5)))
 
 /***/ }),
 
-/***/ 14:
+/***/ 13:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -322,29 +155,82 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 149:
+/***/ 14:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = {
+    computed: {},
+    methods: {
+        nowTimestamp: function nowTimestamp() {
+            return moment().unix();
+        },
+        momentFromDateTime: function momentFromDateTime(dateTime) {
+            return moment(dateTime, 'YYYY-MM-DD HH:mm:ss');
+        },
+        dateTimeToTimestamp: function dateTimeToTimestamp(dateTime) {
+            return this.momentFromDateTime(dateTime).unix();
+        },
+        url: function url(path) {
+            if (path && path.substring(0, 1) != '/') {
+                path = '/' + path;
+            }
+            return this.baseUrl + path;
+        },
+        redirectToUrl: function redirectToUrl(url) {
+            window.location.href = url;
+        },
+        redirectToUrlFromBaseUrl: function redirectToUrlFromBaseUrl(url) {
+            window.location.href = this.url(url);
+        },
+        reloadPage: function reloadPage() {
+            this.redirectToUrl(window.location);
+        },
+        objectToFormData: function objectToFormData(item) {
+            var form_data = new FormData();
+
+            for (var key in item) {
+                form_data.append(key, item[key]);
+            }
+
+            return form_data;
+        },
+        isEmptyObject: function isEmptyObject(object) {
+            return Object.keys(object).length === 0;
+        },
+        isMobile: function isMobile() {
+            var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+
+            return isMobile.matches;
+        }
+    }
+};
+
+/***/ }),
+
+/***/ 148:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_user__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixins_jquery__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mixins_tools__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mixins_bus__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mixins_store__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_user__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixins_jquery__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mixins_tools__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mixins_bus__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mixins_store__ = __webpack_require__(13);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * include Vue and Vue Resource. This gives a great starting point for
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(8);
+__webpack_require__(7);
 
 // Vue Directives
-Vue.directive('focus', __webpack_require__(9));
+Vue.directive('focus', __webpack_require__(8));
 
 // Vue Filters
-Vue.filter('nl2br', __webpack_require__(11));
+Vue.filter('nl2br', __webpack_require__(10));
 
 // Vue Mixins
 
@@ -359,7 +245,7 @@ Vue.mixin(__WEBPACK_IMPORTED_MODULE_3__mixins_bus__["a" /* default */]);
 Vue.mixin(__WEBPACK_IMPORTED_MODULE_4__mixins_store__["a" /* default */]);
 
 // Vue Components
-Vue.component('autosize-textarea', __webpack_require__(20));
+Vue.component('autosize-textarea', __webpack_require__(19));
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -373,7 +259,7 @@ Vue.component('passport-authorized-clients', __webpack_require__(212));
 
 Vue.component('passport-personal-access-tokens', __webpack_require__(214));
 
-Vue.component('example', __webpack_require__(19));
+Vue.component('example', __webpack_require__(18));
 Vue.component('sl-oauth', __webpack_require__(203));
 
 // Bus
@@ -434,59 +320,6 @@ var app = new Vue({
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = {
-    computed: {},
-    methods: {
-        nowTimestamp: function nowTimestamp() {
-            return moment().unix();
-        },
-        momentFromDateTime: function momentFromDateTime(dateTime) {
-            return moment(dateTime, 'YYYY-MM-DD HH:mm:ss');
-        },
-        dateTimeToTimestamp: function dateTimeToTimestamp(dateTime) {
-            return this.momentFromDateTime(dateTime).unix();
-        },
-        url: function url(path) {
-            if (path && path.substring(0, 1) != '/') {
-                path = '/' + path;
-            }
-            return this.baseUrl + path;
-        },
-        redirectToUrl: function redirectToUrl(url) {
-            window.location.href = url;
-        },
-        redirectToUrlFromBaseUrl: function redirectToUrlFromBaseUrl(url) {
-            window.location.href = this.url(url);
-        },
-        reloadPage: function reloadPage() {
-            this.redirectToUrl(window.location);
-        },
-        objectToFormData: function objectToFormData(item) {
-            var form_data = new FormData();
-
-            for (var key in item) {
-                form_data.append(key, item[key]);
-            }
-
-            return form_data;
-        },
-        isEmptyObject: function isEmptyObject(object) {
-            return Object.keys(object).length === 0;
-        },
-        isMobile: function isMobile() {
-            var isMobile = window.matchMedia("only screen and (max-width: 760px)");
-
-            return isMobile.matches;
-        }
-    }
-};
-
-/***/ }),
-
-/***/ 16:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = {
     computed: {
         baseUrl: function baseUrl() {
             return Someline.baseUrl;
@@ -503,7 +336,7 @@ var app = new Vue({
 
 /***/ }),
 
-/***/ 17:
+/***/ 16:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
@@ -539,6 +372,41 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         console.log('Component ready.');
     }
 };
+
+/***/ }),
+
+/***/ 18:
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(5),
+  /* template */
+  __webpack_require__(20),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/libern/Code/someline-starter-master/resources/assets/js/components/Example.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Example.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-a47b3826", Component.options)
+  } else {
+    hotAPI.reload("data-v-a47b3826", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
 
 /***/ }),
 
@@ -671,7 +539,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //
@@ -1033,7 +901,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         }
     }
 };
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5)))
 
 /***/ }),
 
@@ -1041,7 +908,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //
@@ -1361,7 +1228,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         }
     }
 };
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5)))
 
 /***/ }),
 
@@ -1398,19 +1264,23 @@ exports.push([module.i, "\n.action-link[data-v-31728d50] {\n    cursor: pointer;
 /***/ 19:
 /***/ (function(module, exports, __webpack_require__) {
 
+
+/* styles */
+__webpack_require__(22)
+
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(6),
   /* template */
   __webpack_require__(21),
   /* scopeId */
-  null,
+  "data-v-db7829ae",
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/libern/Code/someline-starter-master/resources/assets/js/components/Example.vue"
+Component.options.__file = "/Users/libern/Code/someline-starter-master/resources/assets/js/essentials/autosize-textarea.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Example.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] autosize-textarea.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -1419,9 +1289,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-a47b3826", Component.options)
+    hotAPI.createRecord("data-v-db7829ae", Component.options)
   } else {
-    hotAPI.reload("data-v-a47b3826", Component.options)
+    hotAPI.reload("data-v-db7829ae", Component.options)
   }
 })()}
 
@@ -1505,39 +1375,30 @@ module.exports = function() {
 /***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
-
-/* styles */
-__webpack_require__(23)
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(7),
-  /* template */
-  __webpack_require__(22),
-  /* scopeId */
-  "data-v-db7829ae",
-  /* cssModules */
-  null
-)
-Component.options.__file = "/Users/libern/Code/someline-starter-master/resources/assets/js/essentials/autosize-textarea.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] autosize-textarea.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-8 col-md-offset-2"
+  }, [_c('div', {
+    staticClass: "panel panel-default"
+  }, [_c('div', {
+    staticClass: "panel-heading"
+  }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
+    staticClass: "panel-body"
+  }, [_vm._v("\n                    I'm an example component!\n                ")])])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
   module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-db7829ae", Component.options)
-  } else {
-    hotAPI.reload("data-v-db7829ae", Component.options)
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-a47b3826", module.exports)
   }
-})()}
-
-module.exports = Component.exports
-
+}
 
 /***/ }),
 
@@ -1580,27 +1441,13 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "container"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
-  }, [_c('div', {
-    staticClass: "panel panel-default"
-  }, [_c('div', {
-    staticClass: "panel-heading"
-  }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
-    staticClass: "panel-body"
-  }, [_vm._v("\n                    I'm an example component!\n                ")])])])])])
-}]}
+  return _c('textarea')
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-a47b3826", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-db7829ae", module.exports)
   }
 }
 
@@ -2086,15 +1933,26 @@ if (false) {
 /***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('textarea')
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-db7829ae", module.exports)
-  }
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(16);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("41ac8694", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-db7829ae&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./autosize-textarea.vue", function() {
+     var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-db7829ae&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./autosize-textarea.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
 }
 
 /***/ }),
@@ -2344,29 +2202,36 @@ if(false) {
 /***/ }),
 
 /***/ 23:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(17);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(3)("41ac8694", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-db7829ae&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./autosize-textarea.vue", function() {
-     var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-db7829ae&scoped=true!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./autosize-textarea.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
+/**
+ * Translates the list format produced by css-loader into something
+ * easier to manipulate.
+ */
+module.exports = function listToStyles (parentId, list) {
+  var styles = []
+  var newStyles = {}
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i]
+    var id = item[0]
+    var css = item[1]
+    var media = item[2]
+    var sourceMap = item[3]
+    var part = {
+      id: parentId + ':' + i,
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    }
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = { id: id, parts: [part] })
+    } else {
+      newStyles[id].parts.push(part)
+    }
+  }
+  return styles
 }
+
 
 /***/ }),
 
@@ -2424,44 +2289,10 @@ if(false) {
 
 /***/ }),
 
-/***/ 24:
-/***/ (function(module, exports) {
-
-/**
- * Translates the list format produced by css-loader into something
- * easier to manipulate.
- */
-module.exports = function listToStyles (parentId, list) {
-  var styles = []
-  var newStyles = {}
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i]
-    var id = item[0]
-    var css = item[1]
-    var media = item[2]
-    var sourceMap = item[3]
-    var part = {
-      id: parentId + ':' + i,
-      css: css,
-      media: media,
-      sourceMap: sourceMap
-    }
-    if (!newStyles[id]) {
-      styles.push(newStyles[id] = { id: id, parts: [part] })
-    } else {
-      newStyles[id].parts.push(part)
-    }
-  }
-  return styles
-}
-
-
-/***/ }),
-
 /***/ 243:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(149);
+module.exports = __webpack_require__(148);
 
 
 /***/ }),
@@ -2485,7 +2316,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(24)
+var listToStyles = __webpack_require__(23)
 
 /*
 type StyleObject = {
@@ -2703,7 +2534,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ 6:
+/***/ 5:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2733,12 +2564,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 7:
+/***/ 6:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_autosize__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_autosize__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_autosize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_autosize__);
 //
 //
@@ -2763,10 +2594,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 8:
+/***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
 
-window._ = __webpack_require__(27);
+window._ = __webpack_require__(26);
 window.moment = __webpack_require__(0);
 
 /**
@@ -2787,11 +2618,11 @@ window.moment = __webpack_require__(0);
  * and simple, leaving you to focus on building your next great project.
  */
 
-window.Vue = __webpack_require__(30);
-window.Vuex = __webpack_require__(31);
-window.VueRouter = __webpack_require__(29);
-window.VueI18n = __webpack_require__(28);
-__webpack_require__(10);
+window.Vue = __webpack_require__(29);
+window.Vuex = __webpack_require__(30);
+window.VueRouter = __webpack_require__(28);
+window.VueI18n = __webpack_require__(27);
+__webpack_require__(9);
 
 Vue.use(Vuex);
 Vue.use(VueRouter);
@@ -2803,7 +2634,7 @@ Vue.use(VueI18n);
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(26);
+window.axios = __webpack_require__(25);
 
 window.axios.defaults.headers.common = {
   'X-CSRF-TOKEN': window.Laravel.csrfToken,
@@ -2837,7 +2668,7 @@ Vue.prototype.$api = apiAxios;
 
 /***/ }),
 
-/***/ 9:
+/***/ 8:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2850,6 +2681,172 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.el.focus();
     }
 };
+
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, exports) {
+
+/**
+ * Changes value to past tense.
+ * Simple filter does not support irregular verbs such as eat-ate, fly-flew, etc.
+ * http://jsfiddle.net/bryan_k/0xczme2r/
+ *
+ * @param {String} value The value string.
+ */
+Vue.filter('past-tense', function (value) {
+    // Slightly follows http://www.oxforddictionaries.com/us/words/verb-tenses-adding-ed-and-ing
+    var vowels = ['a', 'e', 'i', 'o', 'u'];
+    if (!value) {
+        return;
+    }
+
+    var last = value.toLowerCase().substr(value.length - 1),
+        secondLast = value.toLowerCase().substr(value.length - 2, 1),
+        thirdLast = value.toLowerCase().substr(value.length - 3, 1),
+        lastTwo = value.toLowerCase().substr(value.length - 2),
+        lastThree = value.toLowerCase().substr(value.length - 3),
+        inArray = function inArray(ar, value) {
+        return ar.indexOf(value) != -1;
+    };
+
+    // participle or already past tense, don't want
+    if (lastThree === 'ing' || lastTwo === 'ed') {
+        return value;
+    }
+
+    // Ends in 'e', simply add the 'd'
+    if (last === 'e') {
+        return value + 'd';
+    }
+
+    // Ends in 'c', add the 'ked'
+    if (last === 'c') {
+        return value + 'ked';
+    }
+
+    // Ends with consonant, vowel, consonant. I'm simple, double consonant and add 'ed'
+    if (!inArray(vowels, thirdLast) && inArray(vowels, secondLast) && !inArray(vowels, last)) {
+        return value + last + 'ed';
+    }
+
+    return value + 'ed';
+});
+
+/**
+ * Vue filter to convert a slug to a more human friendly form.
+ *
+ * @param {String} value The value string.
+ */
+Vue.filter('humanable', function (value) {
+    var words = value.split(/[-_]+/g);
+    var results = [];
+    for (var i = 0; i < words.length; i++) {
+        var letter = words[i].charAt(0).toUpperCase();
+        results.push(letter + words[i].slice(1));
+    }
+    return results.join(' ');
+});
+
+/**
+ * Vue filter to convert the given value to percent.
+ * http://jsfiddle.net/bryan_k/qauf3qyh/
+ *
+ * @param {String} value    The value string.
+ * @param {Number} decimals The number of decimal places.
+ */
+Vue.filter('percentage', function (value, decimals) {
+    if (!value) {
+        value = 0;
+    }
+
+    if (!decimals) {
+        decimals = 0;
+    }
+
+    value = value * 100;
+    value = Math.round(value * Math.pow(10, decimals)) / Math.pow(10, decimals);
+    value = value + '%';
+    return value;
+});
+
+/**
+ * Vue filter to round the decimal to the given place.
+ * http://jsfiddle.net/bryan_k/3ova17y9/
+ *
+ * @param {String} value    The value string.
+ * @param {Number} decimals The number of decimal places.
+ */
+Vue.filter('round', function (value, decimals) {
+    if (!value) {
+        value = 0;
+    }
+
+    if (!decimals) {
+        decimals = 0;
+    }
+
+    value = Math.round(value * Math.pow(10, decimals)) / Math.pow(10, decimals);
+    return value;
+});
+
+/**
+ * Vue filter to convert the given value to whole dollars, no change.
+ * http://jsfiddle.net/bryan_k/2t6bqqfc/
+ *
+ * @param {String} value The value string.
+ */
+Vue.filter('no-change', function (value, symbol) {
+    if (!value) {
+        value = 0;
+    }
+
+    if (!symbol) {
+        symbol = '$';
+    }
+
+    value = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',').split('.')[0];
+    return symbol + value;
+});
+
+/**
+ * Vue filter to make a simple timestamp for an ISO date.
+ * http://jsfiddle.net/bryan_k/44kqtpeg/
+ *
+ * @param {String} value The value string.
+ */
+Vue.filter('timestamp', function (value) {
+    var parts = value.split(' ');
+    var date = parts[0];
+    var time = parts[1];
+
+    date = date.split('-');
+    time = time.split(':');
+
+    if (parseInt(time[0], 10) > 12) {
+        var hour = parseInt(time[0], 10) % 12;
+    } else {
+        var hour = parseInt(time[0], 10);
+    }
+
+    hour = hour < 10 ? '0' + hour : hour;
+
+    return '[' + date[1] + '/' + date[2] + ' ' + hour + ':' + time[1] + ']';
+});
+
+/**
+ * Vue filter to truncate a string to the specified length.
+ * @param {String} value The value string.
+ */
+Vue.filter('truncate', function (value, length) {
+    if (value.length < length) {
+        return value;
+    }
+
+    length = length - 3;
+
+    return value.substring(0, length) + '...';
+});
 
 /***/ })
 
