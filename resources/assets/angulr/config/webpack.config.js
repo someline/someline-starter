@@ -15,7 +15,7 @@ var plugins = require('laravel-mix').plugins;
  |
  */
 
-Mix.initialize();
+Mix.initialize('resources/assets/angulr/config');
 
 
 /*
