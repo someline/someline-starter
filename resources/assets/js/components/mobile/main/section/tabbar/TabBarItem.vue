@@ -24,12 +24,6 @@
         },
         computed: {},
         components: {},
-        http: {
-            root: '/api',
-            headers: {
-                Accept: 'application/x.someline.v1+json'
-            }
-        },
         mounted(){
             console.log('Component Ready.');
 

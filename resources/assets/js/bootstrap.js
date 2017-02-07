@@ -1,4 +1,3 @@
-
 window._ = require('lodash');
 window.moment = require('moment');
 
@@ -41,11 +40,19 @@ window.axios = require('axios');
 window.axios.defaults.headers.common = {
     'X-CSRF-TOKEN': window.Laravel.csrfToken,
     'X-Requested-With': 'XMLHttpRequest',
-    // 'Accept': 'application/x.someline.v1+json',
     'Accept-Language': Someline.locale
 };
 
 Vue.prototype.$http = window.axios;
+
+var apiAxios = axios.create({
+    baseURL: '/api/',
+    timeout: 10000,
+    headers: {
+        'Accept': 'application/x.someline.v1+json',
+    }
+});
+Vue.prototype.$api = apiAxios;
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

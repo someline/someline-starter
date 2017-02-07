@@ -26,12 +26,6 @@
         },
         computed: {},
         components: {},
-        http: {
-            root: '/api',
-            headers: {
-                Accept: 'application/x.someline.v1+json'
-            }
-        },
         watch: {},
         events: {},
         mounted(){
@@ -64,15 +58,18 @@
             },
             fetchData(){
 
-                var resource = this.$resource('users', {
-//                    include: ''
-                });
-
-                // get item
-                resource.get({}).then((response) => {
-                    console.log(response);
-                    this.items = response.data.data;
-                });
+                this.$api.get('/users', {
+                    params: {
+//                        include: ''
+                    }
+                })
+                    .then((response => {
+                                    console.log(response);
+                        this.items = response.data.data;
+                    }).bind(this))
+                    .catch((error => {
+                                console.error(error);
+                    }).bind(this));
 
             },
             onClickButtonUserDetail(){

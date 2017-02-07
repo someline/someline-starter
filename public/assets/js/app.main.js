@@ -579,12 +579,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     components: {
         'sl-user-list-item': __webpack_require__(202)
     },
-    http: {
-        root: '/api',
-        headers: {
-            Accept: 'application/x.someline.v1+json'
-        }
-    },
     mounted: function mounted() {
         console.log('Component Ready.');
 
@@ -597,15 +591,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetchData: function fetchData() {
             var _this = this;
 
-            var resource = this.$resource('users', {
-                //                    include: ''
-            });
-
-            // get item
-            resource.get({}).then(function (response) {
+            this.$api.get('/users', {
+                params: {
+                    //                        include: ''
+                }
+            }).then(function (response) {
                 console.log(response);
                 _this.items = response.data.data;
-            });
+            }.bind(this)).catch(function (error) {
+                console.error(error);
+            }.bind(this));
         }
     }
 };
@@ -1430,7 +1425,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
-
 window._ = __webpack_require__(27);
 window.moment = __webpack_require__(0);
 
@@ -1473,11 +1467,19 @@ window.axios = __webpack_require__(26);
 window.axios.defaults.headers.common = {
   'X-CSRF-TOKEN': window.Laravel.csrfToken,
   'X-Requested-With': 'XMLHttpRequest',
-  // 'Accept': 'application/x.someline.v1+json',
   'Accept-Language': Someline.locale
 };
 
 Vue.prototype.$http = window.axios;
+
+var apiAxios = axios.create({
+  baseURL: '/api/',
+  timeout: 10000,
+  headers: {
+    'Accept': 'application/x.someline.v1+json'
+  }
+});
+Vue.prototype.$api = apiAxios;
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

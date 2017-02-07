@@ -89,12 +89,6 @@
         components: {
             'sl-tab-bar-item': require('./tabbar/TabBarItem.vue'),
         },
-        http: {
-            root: '/api',
-            headers: {
-                Accept: 'application/x.someline.v1+json'
-            }
-        },
         watch: {},
         events: {},
         mounted(){
