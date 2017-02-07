@@ -324,17 +324,22 @@ When made changes in scripts, styles, you will need to run the command.
 
 In development, run:
 ```
-npm run-script dev
+npm run dev
+```
+
+In development and watching assets for changes, run:
+```
+npm run watch
 ```
 
 In production, run:
 ```
-npm run-script prod
+npm run production
 ```
 
 When you changed theme files, run:
 ```
-npm run-script theme
+npm run theme
 ```
 
 #### API and Unit Tests
