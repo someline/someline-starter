@@ -62,4 +62,5 @@ mix.combine([
     ], 'public/assets/js/mobile.vendor.js');
 
 // versions
-mix.version();
+// @WANRING: DISABLED due to conflict with HMR as of v0.6.0
+// mix.version();
