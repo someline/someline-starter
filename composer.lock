@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b55441e257758d0d72ce5b30ca389c42",
+    "content-hash": "bed3fd78c5d3abd0d9b92294e6ba832b",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -123,16 +123,16 @@
         },
         {
             "name": "cviebrock/image-validator",
-            "version": "dev-master",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cviebrock/image-validator.git",
-                "reference": "a8272d1e2e30f996daaa0e35b6c7177508338da6"
+                "reference": "907d3e506cb60816fd3ee1f5c6797daa60992c7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cviebrock/image-validator/zipball/a8272d1e2e30f996daaa0e35b6c7177508338da6",
-                "reference": "a8272d1e2e30f996daaa0e35b6c7177508338da6",
+                "url": "https://api.github.com/repos/cviebrock/image-validator/zipball/907d3e506cb60816fd3ee1f5c6797daa60992c7c",
+                "reference": "907d3e506cb60816fd3ee1f5c6797daa60992c7c",
                 "shasum": ""
             },
             "require": {
@@ -171,7 +171,7 @@
                 "laravel",
                 "validator"
             ],
-            "time": "2017-02-02 17:11:05"
+            "time": "2017-02-08T15:23:40+00:00"
         },
         {
             "name": "dingo/api",
@@ -630,16 +630,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.5.11",
+            "version": "v2.5.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "1b1effbddbdc0f40d1c8f849f44bcddac4f52a48"
+                "reference": "7b9e911f9d8b30d43b96853dab26898c710d8f44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/1b1effbddbdc0f40d1c8f849f44bcddac4f52a48",
-                "reference": "1b1effbddbdc0f40d1c8f849f44bcddac4f52a48",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/7b9e911f9d8b30d43b96853dab26898c710d8f44",
+                "reference": "7b9e911f9d8b30d43b96853dab26898c710d8f44",
                 "shasum": ""
             },
             "require": {
@@ -697,7 +697,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2017-02-04T21:20:13+00:00"
+            "time": "2017-02-08T12:53:47+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1494,16 +1494,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.9",
+            "version": "v5.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "600330ae1d218919b3b307e0578461a2df248663"
+                "reference": "4c8837046c998925972c8010bfac435c4be5facc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/600330ae1d218919b3b307e0578461a2df248663",
-                "reference": "600330ae1d218919b3b307e0578461a2df248663",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/4c8837046c998925972c8010bfac435c4be5facc",
+                "reference": "4c8837046c998925972c8010bfac435c4be5facc",
                 "shasum": ""
             },
             "require": {
@@ -1619,20 +1619,20 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-02-03T19:47:35+00:00"
+            "time": "2017-02-08T15:01:52+00:00"
         },
         {
             "name": "laravel/passport",
-            "version": "v2.0.2",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/passport.git",
-                "reference": "2f834e286ca51d1ffbb5c3e657131451b04a577d"
+                "reference": "72f3c0e4ae6b283bd71c8050eb0d438e3880e4c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/passport/zipball/2f834e286ca51d1ffbb5c3e657131451b04a577d",
-                "reference": "2f834e286ca51d1ffbb5c3e657131451b04a577d",
+                "url": "https://api.github.com/repos/laravel/passport/zipball/72f3c0e4ae6b283bd71c8050eb0d438e3880e4c7",
+                "reference": "72f3c0e4ae6b283bd71c8050eb0d438e3880e4c7",
                 "shasum": ""
             },
             "require": {
@@ -1659,7 +1659,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -1683,7 +1683,7 @@
                 "oauth",
                 "passport"
             ],
-            "time": "2017-02-05T15:14:24+00:00"
+            "time": "2017-02-08T22:33:21+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -3268,16 +3268,16 @@
         },
         {
             "name": "someline/someline-image",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/someline/someline-image.git",
-                "reference": "9d1821a87f011275733e8100509400073bd6c732"
+                "reference": "a4df8976ef78cbedf531d8da282f6746abf0377d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/someline/someline-image/zipball/9d1821a87f011275733e8100509400073bd6c732",
-                "reference": "9d1821a87f011275733e8100509400073bd6c732",
+                "url": "https://api.github.com/repos/someline/someline-image/zipball/a4df8976ef78cbedf531d8da282f6746abf0377d",
+                "reference": "a4df8976ef78cbedf531d8da282f6746abf0377d",
                 "shasum": ""
             },
             "require": {
@@ -3324,25 +3324,25 @@
                 "someline-starter",
                 "starter-framework"
             ],
-            "time": "2017-01-26T09:55:20+00:00"
+            "time": "2017-02-08T09:42:10+00:00"
         },
         {
             "name": "someline/starter-framework",
-            "version": "v1.4.5",
+            "version": "v1.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/someline/starter-framework.git",
-                "reference": "25924332fea886f5623b740272d9d9231d066fd6"
+                "reference": "c70acd116d75d0d7ace8ce0a24e6d1f0b6f8eff5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/someline/starter-framework/zipball/25924332fea886f5623b740272d9d9231d066fd6",
-                "reference": "25924332fea886f5623b740272d9d9231d066fd6",
+                "url": "https://api.github.com/repos/someline/starter-framework/zipball/c70acd116d75d0d7ace8ce0a24e6d1f0b6f8eff5",
+                "reference": "c70acd116d75d0d7ace8ce0a24e6d1f0b6f8eff5",
                 "shasum": ""
             },
             "require": {
                 "barryvdh/laravel-ide-helper": "^2.2",
-                "cviebrock/image-validator": "^2.1",
+                "cviebrock/image-validator": "^2.2",
                 "doctrine/dbal": "~2.3",
                 "ext-pdo_sqlite": "*",
                 "giggsey/libphonenumber-for-php": "~8.0",
@@ -3402,7 +3402,7 @@
                 "someline",
                 "starter-framework"
             ],
-            "time": "2017-02-07T08:14:16+00:00"
+            "time": "2017-02-09T02:48:44+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -5284,16 +5284,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.11",
+            "version": "5.7.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "a6ad2472daba76b0689042b7709f86d4f06bcaab"
+                "reference": "944600e244f80a5252679878553b95c63dbf978b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a6ad2472daba76b0689042b7709f86d4f06bcaab",
-                "reference": "a6ad2472daba76b0689042b7709f86d4f06bcaab",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/944600e244f80a5252679878553b95c63dbf978b",
+                "reference": "944600e244f80a5252679878553b95c63dbf978b",
                 "shasum": ""
             },
             "require": {
@@ -5362,7 +5362,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-02-05T15:31:31+00:00"
+            "time": "2017-02-08T05:54:05+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -5998,19 +5998,12 @@
             "alias_normalized": "1.2.3.0",
             "version": "dev-bugfix",
             "package": "monarobase/country-list"
-        },
-        {
-            "alias": "2.1.4",
-            "alias_normalized": "2.1.4.0",
-            "version": "9999999-dev",
-            "package": "cviebrock/image-validator"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
         "dingo/api": 20,
-        "monarobase/country-list": 20,
-        "cviebrock/image-validator": 20
+        "monarobase/country-list": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -5,6 +5,18 @@ use Someline\Image\ImageTemplate;
 return array(
 
     /**
+     * Default image store quality
+     * default: 75
+     */
+    'default_quality' => 75,
+
+    /**
+     * Store quality for large images, which are 2000kb or larger,
+     * default: 65
+     */
+    'large_image_quality' => 65,
+
+    /**
      * Storage Path for all images
      */
     'storage_path' => storage_path('app/images/original/'),
