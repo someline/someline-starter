@@ -26,6 +26,9 @@ mix.js('resources/assets/js/app.js', 'public/assets/js/app.main.js')
         'autosize'
     ], 'public/assets/js/vendor');
 
+// enable source maps
+mix.sourceMaps();
+
 // app styles
 mix.combine([
     // app vendor styles
