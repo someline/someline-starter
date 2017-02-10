@@ -10,13 +10,14 @@
 
         <div class="row">
 
-            <div class="list-group list-group-lg list-group-sp">
-                <template v-for="item of items">
-                    <div class="col-md-4 m-b-sm">
-                        <sl-user-list-item :item="item"></sl-user-list-item>
-                    </div>
-                </template>
-            </div>
+            <datasource
+                    :table-data="items"
+                    language="en"
+                    :columns="columns"
+                    :pagination="pagination"
+                    v-on:change="changePage"
+                    v-on:searching="onSearch"
+            ></datasource>
 
         </div>
 
@@ -25,17 +26,28 @@
 </template>
 
 <script>
+    import Datasource from 'vue-datasource';
     export default{
         props: [],
         data(){
             return {
-//                msg: 'hello vue',
+                pagination: {},
                 items: [],
+                columns: [
+                    {name: 'email', key: 'email'},
+                    {name: 'name', key: 'name'},
+                ],
+                options: {
+                    page: 1,
+                    perpage: 15,
+                    query: '',
+                },
             }
         },
         computed: {},
         components: {
             'sl-user-list-item': require('./UserListGroupItem.vue'),
+            Datasource,
         },
         mounted(){
             console.log('Component Ready.');
@@ -45,16 +57,54 @@
         watch: {},
         events: {},
         methods: {
-            fetchData(){
+            buildPaginator(pagination) {
+                // TODO: Make build paginator global
+                let pager = {
+                    total: pagination.total,
+                    per_page: pagination.per_page,
+                    current_page: pagination.current_page,
+                    last_page: pagination.total_pages,
+                    from: 1,
+                    to: pagination.per_page
+                };
+                return pager;
+            },
+            changePage(values) {
+                this.fetchData(values);
+            },
+            onSearch(query) {
 
-                this.$api.get('/users', {
+                let options = {
+                    'query': query,
+                    'page': 1
+                };
+
+                this.fetchData(options);
+            },
+            fetchData(options){
+
+                if (typeof(options) == 'undefined') {
+                    options = {};
+                }
+
+                options.page = options.page || this.options.page;
+                options.perpage = options.perpage || this.options.perpage;
+
+                if (typeof(options.query) == 'undefined') {
+                    options.query = this.options.query;
+                }
+
+                this.options = options;
+
+                //@TODO: Build the query parameter in a proper way
+                this.$api.get(`/users?page=${options.page}&per_page=${options.perpage}&search=${options.query}&searchFields=name:like`, {
                     params: {
 //                        include: ''
                     }
                 })
                     .then((response => {
-                        console.log(response);
                         this.items = response.data.data;
+                        this.pagination = this.buildPaginator(response.data.meta.pagination);
                     }).bind(this))
                     .catch((error => {
                         console.error(error);
