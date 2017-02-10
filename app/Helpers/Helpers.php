@@ -12,6 +12,22 @@ if (!function_exists('auth_user')) {
 
 }
 
+if (!function_exists('smart_mix')) {
+
+    function smart_mix($path, $manifestDirectory = '', $supportHot = true)
+    {
+        $path = mix($path, $manifestDirectory);
+        if (!$supportHot) {
+            $hotUrl = 'http://localhost:8080';
+            if (starts_with($path, $hotUrl)) {
+                $path = str_replace($hotUrl, '', $path);
+            }
+        }
+        return $path;
+    }
+
+}
+
 if (!function_exists('rest_client')) {
 
     /**

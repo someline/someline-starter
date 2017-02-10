@@ -11,13 +11,6 @@ const {mix} = require('laravel-mix');
  |
  */
 
-// mix.js('resources/assets/js/app.js', 'public/js')
-//     .sass('resources/assets/sass/app.scss', 'public/css');
-
-
-// remove build files
-// mix.remove('public/build/*');
-
 // less
 mix.less('resources/assets/less/app.less', 'public/assets/css/app.main.css')
     .less('resources/assets/less/console.less', 'public/assets/css/console.main.css')
