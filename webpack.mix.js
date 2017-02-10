@@ -61,6 +61,17 @@ mix.combine([
         'public/bower_components/toastr/toastr.js',
     ], 'public/assets/js/mobile.vendor.js');
 
-// versions
-// @WANRING: DISABLED due to conflict with HMR as of v0.6.0
-// mix.version();
+// theme
+mix.combine([
+    'public/assets/theme/app.theme.css',
+], 'public/assets/css/app.theme.css')
+    .combine([
+        'public/assets/theme/app.theme.js',
+    ], 'public/assets/js/app.theme.js');
+
+// BrowserSync
+mix.browserSync({
+    proxy: 'someline-starter.app',
+    port: 3000,
+    open: true
+})

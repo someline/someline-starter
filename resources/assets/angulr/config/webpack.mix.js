@@ -39,7 +39,10 @@ mix.combine([
     'resources/assets/angulr/js/support/ui-toggle.js',
 ], 'public/js/theme.src.js');
 
-// // copy necessary fonts
+// copy necessary fonts
 mix.copy('public/fonts/**', 'public/build/fonts');
-mix.copy('../../../../public/css/theme.src.css', '../../../../public/assets/css');
-mix.copy('../../../../public/js/theme.src.js', '../../../../public/assets/js');
+
+// @side effect: copy is aync, so it copy last complied files,
+// @SOLUTION: run `npm run theme` twice, as of mix@v0.7.0
+mix.copy('../../../../public/css/theme.src.css', '../../../../public/assets/theme/app.theme.css');
+mix.copy('../../../../public/js/theme.src.js', '../../../../public/assets/theme/app.theme.js');
