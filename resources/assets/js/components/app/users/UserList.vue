@@ -46,7 +46,6 @@
         },
         computed: {},
         components: {
-            'sl-user-list-item': require('./UserListGroupItem.vue'),
             Datasource,
         },
         mounted(){
