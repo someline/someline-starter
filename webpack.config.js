@@ -153,7 +153,7 @@ if (Mix.preprocessors) {
             use: extractPlugin.extract({
                 fallback: 'style-loader',
                 use: [
-                    { loader: 'css-loader' + sourceMap },
+                    { loader: 'css-loader' + sourceMap, options: { url: false } },
                     { loader: 'postcss-loader' + sourceMap }
                 ].concat(
                     toCompile.type == 'sass' ? [

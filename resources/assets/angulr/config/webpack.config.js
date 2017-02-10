@@ -1,7 +1,7 @@
-var path = require('path');
-var webpack = require('webpack');
-var Mix = require('laravel-mix').config;
-var plugins = require('laravel-mix').plugins;
+let path = require('path');
+let webpack = require('webpack');
+let Mix = require('laravel-mix').config;
+let plugins = require('laravel-mix').plugins;
 
 
 /*
@@ -77,11 +77,25 @@ module.exports.module = {
             test: /\.vue$/,
             loader: 'vue-loader',
             options: {
-                loaders: {
-                    js: 'babel-loader' + Mix.babelConfig(),
-                    scss: 'vue-style-loader!css-loader!sass-loader',
-                    sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-                },
+                loaders: Mix.options.extractVueStyles ? {
+                        js: 'babel-loader' + Mix.babelConfig(),
+                        scss: plugins.ExtractTextPlugin.extract({
+                            use: 'css-loader!sass-loader',
+                            fallback: 'vue-style-loader'
+                        }),
+                        sass: plugins.ExtractTextPlugin.extract({
+                            use: 'css-loader!sass-loader?indentedSyntax',
+                            fallback: 'vue-style-loader'
+                        }),
+                        css: plugins.ExtractTextPlugin.extract({
+                            use: 'css-loader',
+                            fallback: 'vue-style-loader'
+                        })
+                    }: {
+                        js: 'babel-loader' + Mix.babelConfig(),
+                        scss: 'vue-style-loader!css-loader!sass-loader',
+                        sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+                    },
 
                 postcss: [
                     require('autoprefixer')
@@ -98,6 +112,11 @@ module.exports.module = {
         {
             test: /\.css$/,
             loaders: ['style-loader', 'css-loader']
+        },
+
+        {
+            test: /\.html$/,
+            loaders: ['html-loader']
         },
 
         {
@@ -131,38 +150,37 @@ if (Mix.preprocessors) {
 
         module.exports.module.rules.push({
             test: new RegExp(toCompile.src.path.replace(/\\/g, '\\\\') + '$'),
-            loader: extractPlugin.extract({
-                fallbackLoader: 'style-loader',
-                loader: [
-                    {
-                        loader: 'css-loader' + sourceMap,
-                        options: {
-                            url: false
-                        }
-                    },
+            use: extractPlugin.extract({
+                fallback: 'style-loader',
+                use: [
+                    { loader: 'css-loader' + sourceMap, options: { url: false } },
                     { loader: 'postcss-loader' + sourceMap }
                 ].concat(
                     toCompile.type == 'sass' ? [
-                        { loader: 'resolve-url-loader' + sourceMap },
-                        {
-                            loader: 'sass-loader?sourceMap',
-                            options: Object.assign({
-                                precision: 8,
-                                outputStyle: 'expanded'
-                            }, toCompile.pluginOptions)
-                        }
-                    ] : [
-                        {
-                            loader: 'less-loader' + sourceMap,
-                            options: toCompile.pluginOptions
-                        }
-                    ]
+                            { loader: 'resolve-url-loader' + sourceMap },
+                            {
+                                loader: 'sass-loader',
+                                options: Object.assign({
+                                    precision: 8,
+                                    outputStyle: 'expanded'
+                                }, toCompile.pluginOptions, { sourceMap: true })
+                            }
+                        ] : [
+                            {
+                                loader: 'less-loader' + sourceMap,
+                                options: toCompile.pluginOptions
+                            }
+                        ]
                 )
             })
         });
 
         module.exports.plugins = (module.exports.plugins || []).concat(extractPlugin);
     });
+} else if (Mix.options.extractVueStyles) {
+    module.exports.plugins = (module.exports.plugins || []).concat(
+        new plugins.ExtractTextPlugin(path.join(Mix.js.base, 'vue-styles.css'))
+    );
 }
 
 
@@ -286,13 +304,20 @@ module.exports.plugins = (module.exports.plugins || []).concat([
 ]);
 
 
-if (Mix.notifications) {
+if (Mix.browserSync) {
     module.exports.plugins.push(
-        new plugins.WebpackNotifierPlugin({
-            title: 'Laravel Mix',
-            alwaysNotify: true,
-            contentImage: Mix.Paths.root('node_modules/laravel-mix/icons/laravel.png')
-        })
+        new plugins.BrowserSyncPlugin(Object.assign({
+            host: 'localhost',
+            port: 3000,
+            proxy: 'app.dev',
+            files: [
+                'app/**/*.php',
+                'resources/views/**/*.php',
+                'public/mix-manifest.json',
+                'public/css/**/*.css',
+                'public/js/**/*.js'
+            ]
+        }, Mix.browserSync))
     );
 }
 
@@ -302,6 +327,17 @@ module.exports.plugins.push(
         stats => Mix.events.fire('build', stats)
     )
 );
+
+
+if (Mix.notifications) {
+    module.exports.plugins.push(
+        new plugins.WebpackNotifierPlugin({
+            title: 'Laravel Mix',
+            alwaysNotify: true,
+            contentImage: Mix.Paths.root('node_modules/laravel-mix/icons/laravel.png')
+        })
+    );
+}
 
 
 if (Mix.copy) {
@@ -317,7 +353,7 @@ if (Mix.extract) {
     module.exports.plugins.push(
         new webpack.optimize.CommonsChunkPlugin({
             names: Mix.entryBuilder.extractions.concat([
-                path.join(Mix.js.base, 'manifest')
+                path.join(Mix.js.base, 'manifest').replace(/\\/g, '/')
             ]),
             minChunks: Infinity
         })
