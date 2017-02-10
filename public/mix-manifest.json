@@ -12,5 +12,7 @@
   "/assets/css/mobile.vendor.css": "/assets/css/mobile.vendor.css",
   "/assets/js/app.vendor.js": "/assets/js/app.vendor.js",
   "/assets/js/console.vendor.js": "/assets/js/console.vendor.js",
-  "/assets/js/mobile.vendor.js": "/assets/js/mobile.vendor.js"
+  "/assets/js/mobile.vendor.js": "/assets/js/mobile.vendor.js",
+  "/assets/css/app.theme.css": "/assets/css/app.theme.css",
+  "/assets/js/app.theme.js": "/assets/js/app.theme.js"
 }

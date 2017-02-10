@@ -3268,16 +3268,16 @@
         },
         {
             "name": "someline/someline-image",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/someline/someline-image.git",
-                "reference": "a4df8976ef78cbedf531d8da282f6746abf0377d"
+                "reference": "01f3faae3c8e5e865c67ff217d330974237f7d14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/someline/someline-image/zipball/a4df8976ef78cbedf531d8da282f6746abf0377d",
-                "reference": "a4df8976ef78cbedf531d8da282f6746abf0377d",
+                "url": "https://api.github.com/repos/someline/someline-image/zipball/01f3faae3c8e5e865c67ff217d330974237f7d14",
+                "reference": "01f3faae3c8e5e865c67ff217d330974237f7d14",
                 "shasum": ""
             },
             "require": {
@@ -3324,7 +3324,7 @@
                 "someline-starter",
                 "starter-framework"
             ],
-            "time": "2017-02-08T09:42:10+00:00"
+            "time": "2017-02-09T03:10:28+00:00"
         },
         {
             "name": "someline/starter-framework",

@@ -1,17 +1,24 @@
 {
   "private": true,
   "scripts": {
+    "theme": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/angulr/config/webpack.config.js --progress --hide-modules",
     "dev": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules",
     "watch": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules",
-    "hot": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
+    "hot (FOR LOCAL DEVELOPMENT)": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
     "production": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules",
-    "theme": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/angulr/config/webpack.config.js --progress --hide-modules"
+    "version": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/config/webpack.config.js --progress --hide-modules",
+    "production+version (FOR DEPLOYMENT IN PRODUCTION)": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules && node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/config/webpack.config.js --progress --hide-modules",
+    "artisan migrate": "php artisan migrate",
+    "artisan db:seed": "php artisan db:seed",
+    "artisan passport:install": "php artisan passport:install",
+    "artisan migrate:refresh": "php artisan migrate:refresh",
+    "artisan migrate:refresh+seed": "php artisan migrate:refresh --seed"
   },
   "devDependencies": {
     "axios": "^0.15.2",
     "bootstrap-sass": "^3.3.7",
     "jquery": "^3.1.0",
-    "laravel-mix": "^0.6.0",
+    "laravel-mix": "^0.7.4",
     "lodash": "^4.16.2",
     "vue": "^2.1.10"
   },

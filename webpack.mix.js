@@ -11,13 +11,6 @@ const {mix} = require('laravel-mix');
  |
  */
 
-// mix.js('resources/assets/js/app.js', 'public/js')
-//     .sass('resources/assets/sass/app.scss', 'public/css');
-
-
-// remove build files
-// mix.remove('public/build/*');
-
 // less
 mix.less('resources/assets/less/app.less', 'public/assets/css/app.main.css')
     .less('resources/assets/less/console.less', 'public/assets/css/console.main.css')
@@ -32,6 +25,9 @@ mix.js('resources/assets/js/app.js', 'public/assets/js/app.main.js')
         'vue', 'vuex', 'vue-i18n', 'vue-router',
         'autosize'
     ], 'public/assets/js/vendor');
+
+// enable source maps
+mix.sourceMaps();
 
 // app styles
 mix.combine([
@@ -61,6 +57,17 @@ mix.combine([
         'public/bower_components/toastr/toastr.js',
     ], 'public/assets/js/mobile.vendor.js');
 
-// versions
-// @WANRING: DISABLED due to conflict with HMR as of v0.6.0
-// mix.version();
+// theme
+mix.combine([
+    'public/assets/theme/app.theme.css',
+], 'public/assets/css/app.theme.css')
+    .combine([
+        'public/assets/theme/app.theme.js',
+    ], 'public/assets/js/app.theme.js');
+
+// BrowserSync
+mix.browserSync({
+    proxy: 'someline-starter.app',
+    port: 3000,
+    open: true
+})
