@@ -43,7 +43,7 @@ window.axios.defaults.headers.common = {
     'Accept-Language': Someline.locale
 };
 
-Vue.prototype.$http = window.axios;
+Vue.prototype.$http = window.$http = window.axios;
 
 var apiAxios = axios.create({
     baseURL: '/api/',
@@ -52,7 +52,7 @@ var apiAxios = axios.create({
         'Accept': 'application/x.someline.v1+json',
     }
 });
-Vue.prototype.$api = apiAxios;
+Vue.prototype.$api = window.$api = apiAxios;
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
