@@ -52,7 +52,7 @@ var apiAxios = axios.create({
         'Accept': 'application/x.someline.v1+json',
     }
 });
-Vue.prototype.$api = apiAxios;
+Vue.prototype.$api = window.$api = apiAxios;
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
