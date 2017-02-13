@@ -25,6 +25,8 @@ Vue.mixin(MixInTools);
 Vue.mixin(MixInBus);
 Vue.mixin(MixInStore);
 
+
+
 // Vue Components
 Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue'));
 

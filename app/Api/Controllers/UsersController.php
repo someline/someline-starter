@@ -8,8 +8,10 @@ use Dingo\Api\Exception\UpdateResourceFailedException;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Someline\Http\Requests\UserCreateRequest;
 use Someline\Http\Requests\UserUpdateRequest;
+use Someline\Models\Foundation\User;
 use Someline\Repositories\Interfaces\UserRepository;
 use Someline\Validators\UserValidator;
+use Illuminate\Http\Request;
 
 class UsersController extends BaseController
 {
@@ -37,9 +39,11 @@ class UsersController extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return $this->repository->all();
+        $per_page = $request->input('per_page', config('repository.pagination.limit', 15));
+
+        return $this->repository->paginate($per_page);
     }
 
     /**
