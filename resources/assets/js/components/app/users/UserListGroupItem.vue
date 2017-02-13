@@ -9,7 +9,7 @@
         </span>
         <span class="clear">
             <span>{{ item.name }}</span>
-            <!--<pre>{{ item | json }}</pre>-->
+            <!--<pre>{{ item }}</pre>-->
         </span>
     </a>
 </template>
