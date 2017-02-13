@@ -43,7 +43,7 @@ window.axios.defaults.headers.common = {
     'Accept-Language': Someline.locale
 };
 
-Vue.prototype.$http = window.axios;
+Vue.prototype.$http = window.$http = window.axios;
 
 var apiAxios = axios.create({
     baseURL: '/api/',
