@@ -8,19 +8,11 @@
         {
             "type": "git",
             "url": "https://github.com/libern/country-list.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/rhwilrForks/api"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/rhwilrForks/blueprint"
         }
     ],
     "require": {
         "php": ">=5.6.4",
-        "dingo/api": "dev-master",
+        "dingo/api": "1.0.*@dev",
         "rap2hpoutre/laravel-log-viewer": "^0.7.0",
         "monarobase/country-list": "dev-bugfix as 1.2.3",
         "someline/starter-framework": "1.4.*"
