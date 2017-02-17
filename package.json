@@ -7,6 +7,7 @@
     "hot (FOR LOCAL DEVELOPMENT)": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
     "production": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules",
     "version": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/config/webpack.config.js --progress --hide-modules",
+    "dev+version": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules && node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/config/webpack.config.js --progress --hide-modules",
     "production+version (FOR DEPLOYMENT IN PRODUCTION)": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules && node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/config/webpack.config.js --progress --hide-modules",
     "artisan migrate": "php artisan migrate",
     "artisan db:seed": "php artisan db:seed",
