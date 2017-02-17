@@ -36,6 +36,7 @@ Vue.use(VueI18n);
  */
 
 window.axios = require('axios');
+require('promise.prototype.finally');
 
 window.axios.defaults.headers.common = {
     'X-CSRF-TOKEN': window.Laravel.csrfToken,
