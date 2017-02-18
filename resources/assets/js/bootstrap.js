@@ -1,9 +1,9 @@
 window._ = require('lodash');
 window.moment = require('moment');
 
-// Use bluebird as full featured Promise
-var Promise = require("bluebird");
-window.Promise = Promise;
+require("babel-polyfill");
+require('es6-shim');
+require('promise.prototype.finally').shim();
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
