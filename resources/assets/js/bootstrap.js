@@ -1,6 +1,10 @@
 window._ = require('lodash');
 window.moment = require('moment');
 
+// Use bluebird as full featured Promise
+var Promise = require("bluebird");
+window.Promise = Promise;
+
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
@@ -36,7 +40,6 @@ Vue.use(VueI18n);
  */
 
 window.axios = require('axios');
-require('promise.prototype.finally');
 
 window.axios.defaults.headers.common = {
     'X-CSRF-TOKEN': window.Laravel.csrfToken,
