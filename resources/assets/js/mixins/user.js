@@ -12,5 +12,10 @@ export default{
         csrfToken(){
             return window.Laravel.csrfToken;
         },
-    }
+    },
+    methods: {
+        isCurrentUser(user_id){
+            return this.currentUserId == user_id;
+        },
+    },
 }
