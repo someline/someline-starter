@@ -7,8 +7,10 @@ export default{
             return Someline.locale;
         },
         currentUserId(){
-            console.log(Someline.state);
             return Someline.state.user.user_id;
+        },
+        csrfToken(){
+            return window.Laravel.csrfToken;
         },
     }
 }
