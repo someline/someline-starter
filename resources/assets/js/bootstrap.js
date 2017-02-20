@@ -1,6 +1,10 @@
 window._ = require('lodash');
 window.moment = require('moment');
 
+require("babel-polyfill");
+require('es6-shim');
+require('promise.prototype.finally').shim();
+
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This

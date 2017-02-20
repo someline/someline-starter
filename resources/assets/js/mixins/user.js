@@ -1,14 +1,21 @@
 export default{
     computed: {
         baseUrl(){
-            return Someline.baseUrl;
+            return window.Someline.baseUrl;
         },
         locale(){
-            return Someline.locale;
+            return window.Someline.locale;
         },
         currentUserId(){
-            console.log(Someline.state);
-            return Someline.state.user.user_id;
+            return window.Someline.state.user.user_id;
         },
-    }
+        csrfToken(){
+            return window.Laravel.csrfToken;
+        },
+    },
+    methods: {
+        isCurrentUser(user_id){
+            return this.currentUserId == user_id;
+        },
+    },
 }

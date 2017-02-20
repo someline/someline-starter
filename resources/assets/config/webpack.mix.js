@@ -11,6 +11,8 @@ const {mix} = require('laravel-mix');
  |
  */
 
+mix.options({ processCssUrls: false });
+
 // versions
 mix.version([
     'public/assets/js/vendor.js',

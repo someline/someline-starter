@@ -11,6 +11,8 @@ const {mix} = require('laravel-mix');
  |
  */
 
+mix.options({ processCssUrls: false });
+
 // less
 mix.less('resources/assets/less/app.less', 'public/assets/css/app.main.css')
     .less('resources/assets/less/console.less', 'public/assets/css/console.main.css')
