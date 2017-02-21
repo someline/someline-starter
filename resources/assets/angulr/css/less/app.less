@@ -22,3 +22,12 @@
 @import "app.utilities.less";
 
 @import "app.butterbar.less";
+
+// Fix bootstrap inline margin left issues
+.checkbox-inline+.checkbox-inline, .radio-inline+.radio-inline {
+  margin-left: 0px;
+}
+
+.checkbox-inline.checkbox-inline, .radio-inline.radio-inline {
+  margin-right: 10px;
+}
