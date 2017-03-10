@@ -5,6 +5,10 @@ namespace Tests\Api;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Someline\Image\Models\SomelineImage;
+use Someline\Image\SomelineImageService;
+use Someline\Models\Foundation\User;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class UserTest extends BaseApiTestCase
 {
@@ -74,6 +78,28 @@ class UserTest extends BaseApiTestCase
         $this->deleteApi('users/3');
         $this->printResponseData();
         $this->assertResponseNoContent();
+    }
+
+    public function testUserImages()
+    {
+
+//        $file = new UploadedFile('/Users/libern/Downloads/qrcode_for_gh_921e9710eb08_344.jpg', '12745840728709.jpg', null, null, null, true);
+//
+//        $somelineImageService = new SomelineImageService();
+//        $somelineImage = $somelineImageService->handleUploadedFile($file);
+////        print_r($somelineImage->toArray());
+//
+        $somelineImage = SomelineImage::find(1);
+
+        /** @var User $user */
+        $user = User::find(1);
+//        $user->images()->save($somelineImage, ['is_main' => 1, 'type' => 'cover', 'data' => json_encode('a')]);
+        $user->setAsMainImage($somelineImage);
+//        print_r($user->getImages()->toArray());
+//        print_r($user->getMainImage()->toArray());
+//        print_r($user->getMainImages()->toArray());
+//        print_r($user->getTypeImages('cover')->toArray());
+//        print_r($user->getTypeMainImages('cover')->toArray());
     }
 
 }
