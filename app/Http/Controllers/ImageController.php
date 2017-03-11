@@ -4,8 +4,8 @@ use Exception;
 use Illuminate\Http\Request;
 use Someline\Http\Controllers\BaseController;
 use Someline\Image\Controllers\SomelineImageController;
-use Someline\Image\Models\SomelineImage;
 use Someline\Image\SomelineImageService;
+use Someline\Models\Image\SomelineImage;
 
 class ImageController extends BaseController
 {

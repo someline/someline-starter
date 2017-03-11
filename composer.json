@@ -4,18 +4,11 @@
     "keywords": ["framework", "laravel", "someline", "someline-starter"],
     "license": "MIT",
     "type": "project",
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/libern/country-list.git"
-        }
-    ],
     "require": {
         "php": ">=5.6.4",
         "dingo/api": "1.0.*@dev",
         "rap2hpoutre/laravel-log-viewer": "^0.7.0",
-        "monarobase/country-list": "dev-bugfix as 1.2.3",
-        "someline/starter-framework": "1.4.*"
+        "someline/starter-framework": "1.5.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
