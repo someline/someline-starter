@@ -15,7 +15,7 @@
 Auth::routes();
 
 // Basic Routes
-Route::get('/home', 'HomeController@index');
+//Route::get('/home', 'HomeController@index');
 
 // Protected Routes
 Route::group(['middleware' => 'auth'], function () {

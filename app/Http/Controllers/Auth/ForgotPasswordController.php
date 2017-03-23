@@ -29,4 +29,14 @@ class ForgotPasswordController extends BaseController
     {
         $this->middleware('guest');
     }
+
+    /**
+     * Display the form to request a password reset link.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showLinkRequestForm()
+    {
+        return view('angulr.auth.passwords.email');
+    }
 }

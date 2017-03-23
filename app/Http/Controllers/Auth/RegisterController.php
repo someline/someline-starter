@@ -27,7 +27,7 @@ class RegisterController extends BaseController
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -76,7 +76,7 @@ class RegisterController extends BaseController
      */
     public function showRegistrationForm()
     {
-        return view('auth.register');
+        return view('angulr.auth.register');
     }
 
 }
