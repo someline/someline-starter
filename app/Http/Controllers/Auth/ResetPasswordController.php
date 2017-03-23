@@ -2,6 +2,7 @@
 
 namespace Someline\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use Someline\Http\Controllers\BaseController;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
@@ -25,7 +26,7 @@ class ResetPasswordController extends BaseController
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -36,4 +37,21 @@ class ResetPasswordController extends BaseController
     {
         $this->middleware('guest');
     }
+
+    /**
+     * Display the password reset view for the given token.
+     *
+     * If no token is present, display the link request form.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  string|null  $token
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showResetForm(Request $request, $token = null)
+    {
+        return view('angulr.auth.passwords.reset')->with(
+            ['token' => $token, 'email' => $request->email]
+        );
+    }
+
 }

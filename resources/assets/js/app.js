@@ -7,27 +7,6 @@
 
 require('./bootstrap');
 
-// Vue Directives
-Vue.directive('focus', require('./directives/focus'));
-
-// Vue Filters
-Vue.filter('nl2br', require('./filters/nl2br'));
-
-// Vue Mixins
-import MixInUser from './mixins/user'
-import MixInJQuery from './mixins/jquery'
-import MixInTools from './mixins/tools'
-import MixInBus from './mixins/bus'
-import MixInStore from './mixins/store'
-Vue.mixin(MixInUser);
-Vue.mixin(MixInJQuery);
-Vue.mixin(MixInTools);
-Vue.mixin(MixInBus);
-Vue.mixin(MixInStore);
-
-// Vue Components
-Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue'));
-
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -37,15 +16,8 @@ Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue')
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-user-list', require('./components/app/users/UserList.vue'));
 
-// Bus
-const bus = new Vue({
-    data: {
-        title: "Someline",
-    }
-});
-window.bus = bus;
-
 // Vuex
+import Vuex from 'vuex'
 const vuexStore = new Vuex.Store({
     state: {
         platform: 'app',
