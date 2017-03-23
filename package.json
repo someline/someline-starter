@@ -16,21 +16,22 @@
     "artisan migrate:refresh+seed": "php artisan migrate:refresh --seed"
   },
   "devDependencies": {
-    "axios": "^0.15.2",
+    "axios": "^0.15.3",
     "bootstrap-sass": "^3.3.7",
+    "cross-env": "^3.2.3",
     "jquery": "^3.1.0",
-    "laravel-mix": "^0.8.0",
+    "laravel-mix": "^0.9.0",
     "lodash": "^4.16.2",
-    "vue": "^2.1.10"
+    "vue": "^2.2.4"
   },
   "dependencies": {
     "autosize": "^3.0.20",
     "babel-polyfill": "^6.23.0",
     "es6-shim": "^0.35.3",
-    "moment": "^2.17.1",
+    "moment": "^2.18.1",
     "promise.prototype.finally": "^2.0.1",
-    "vue-i18n": "^5.0.0",
-    "vue-router": "^2.2.0",
-    "vuex": "^2.1.2"
+    "vue-i18n": "^5.0.3",
+    "vue-router": "^2.3.0",
+    "vuex": "^2.2.1"
   }
 }

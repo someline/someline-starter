@@ -23,15 +23,55 @@ require('promise.prototype.finally').shim();
  * and simple, leaving you to focus on building your next great project.
  */
 
-window.Vue = require('vue');
-window.Vuex = require('vuex');
-window.VueRouter = require('vue-router');
-window.VueI18n = require('vue-i18n');
-require('./filters/helpers');
+import Vue from 'vue'
+import Vuex from 'vuex'
+import VueRouter from 'vue-router'
+import VueI18n from 'vue-i18n'
+window.Vue = Vue;
+window.Vuex = Vuex;
+window.VueRouter = VueRouter;
+window.VueI18n = VueI18n;
 
 Vue.use(Vuex);
 Vue.use(VueRouter);
 Vue.use(VueI18n);
+
+// @DEPRECATED
+// require('./filters/helpers');
+
+/**
+ * Additional Setup
+ *
+ */
+
+// Vue Directives
+Vue.directive('focus', require('./directives/focus'));
+
+// Vue Mixins
+import MixInUser from './mixins/user'
+import MixInJQuery from './mixins/jquery'
+import MixInTools from './mixins/tools'
+import MixInBus from './mixins/bus'
+import MixInStore from './mixins/store'
+import MixInNl2br from './mixins/nl2br'
+Vue.mixin(MixInUser);
+Vue.mixin(MixInJQuery);
+Vue.mixin(MixInTools);
+Vue.mixin(MixInBus);
+Vue.mixin(MixInStore);
+Vue.mixin(MixInNl2br);
+
+// Vue Components
+Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue'));
+
+// Bus
+const bus = new Vue({
+    data: {
+        title: "Someline",
+    }
+});
+window.bus = bus;
+
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -44,7 +84,7 @@ window.axios = require('axios');
 window.axios.defaults.headers.common = {
     'X-CSRF-TOKEN': window.Laravel.csrfToken,
     'X-Requested-With': 'XMLHttpRequest',
-    'Accept-Language': Someline.locale
+    'Accept-Language': window.Someline.locale
 };
 
 Vue.prototype.$http = window.$http = window.axios;
