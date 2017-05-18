@@ -3,11 +3,12 @@
 if (!function_exists('auth_user')) {
 
     /**
-     * @return \Someline\Model\Foundation\User|\Someline\Models\Foundation\User
+     * @param bool $throwException
+     * @return null|\Someline\Model\Foundation\User|\Someline\Models\Foundation\User
      */
-    function auth_user()
+    function auth_user($throwException = true)
     {
-        return current_auth_user();
+        return current_auth_user($throwException);
     }
 
 }
@@ -18,7 +19,7 @@ if (!function_exists('smart_mix')) {
     {
         $path = mix($path, $manifestDirectory);
         if (!$supportHot) {
-            $hotUrl = 'http://localhost:8080';
+            $hotUrl = '//localhost:8080';
             if (starts_with($path, $hotUrl)) {
                 $path = str_replace($hotUrl, '', $path);
             }
