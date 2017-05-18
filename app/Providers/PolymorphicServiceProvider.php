@@ -16,7 +16,7 @@ class PolymorphicServiceProvider extends ServiceProvider
     public function boot()
     {
         Relation::morphMap([
-            'User' => User::class,
+            User::MORPH_NAME => User::class,
 //            'Comment' => Comment::class,
 //            'Friend' => Friend::class,
         ]);
