@@ -21,7 +21,10 @@ class BaseTransformer extends Transformer
     public function includeUser(BaseModel $model)
     {
         $user = $model->user;
-        return $this->item($user, new UserTransformer(), 'user');
+        if ($user) {
+            return $this->item($user, new UserTransformer(), 'user');
+        }
+        return null;
     }
 
     /**
@@ -32,7 +35,10 @@ class BaseTransformer extends Transformer
     public function includeAuthUser(BaseModel $model)
     {
         $user = auth_user();
-        return $this->item($user, new UserTransformer());
+        if ($user) {
+            return $this->item($user, new UserTransformer());
+        }
+        return null;
     }
 
 }
