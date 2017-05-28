@@ -4,8 +4,8 @@ use Exception;
 use Illuminate\Http\Request;
 use Someline\Http\Controllers\BaseController;
 use Someline\Image\Controllers\SomelineImageController;
-use Someline\Image\SomelineImageService;
 use Someline\Models\Image\SomelineImage;
+use Someline\Image\SomelineImageService;
 
 class ImageController extends BaseController
 {
@@ -20,20 +20,31 @@ class ImageController extends BaseController
             /** @var SomelineImage $somelineImage */
             $somelineImage = $somelineImageService->handleUploadedFile($file);
         } catch (Exception $e) {
-            return 'Failed to save: ' . $e->getMessage();
+            return response('Failed to save: ' . $e->getMessage(), 422);
         }
 
         if (!$somelineImage) {
-            return 'Failed to save uploaded image.';
+            return response('Failed to save uploaded image.', 422);
         }
 
         $somelineImageId = $somelineImage->getSomelineImageId();
-        return 'Saved: ' . $somelineImage->getImageUrl();
+        return response([
+            'data' => [
+                'someline_image_id' => $somelineImage->getSomelineImageId(),
+                'someline_image_url' => $somelineImage->getImageUrl(),
+                'thumbnail_image_url' => $somelineImage->getTypeImageUrl('thumbnail'),
+            ]
+        ]);
     }
 
     public function showOriginalImage($image_name)
     {
         return SomelineImageController::showImage('original', $image_name);
+    }
+
+    public function showTypeImage($type, $image_name)
+    {
+        return SomelineImageController::showImage($type, $image_name);
     }
 
 }
