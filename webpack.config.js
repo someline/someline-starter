@@ -251,7 +251,10 @@ module.exports.devServer = {
     historyApiFallback: true,
     noInfo: true,
     compress: true,
-    quiet: true
+    quiet: true,
+    headers: {
+        "Access-Control-Allow-Origin": "*"
+    },
 };
 
 
