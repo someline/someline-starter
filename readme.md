@@ -5,7 +5,7 @@
 
 [Someline Starter](https://starter.someline.com/) is a PHP framework for quick building Web Apps and Restful APIs, with modern design pattern foundation.
  
-It is built on top of popular `Laravel 5.4 framework`, `Vue.js 2.0`, `Restful API`, `Repository Design`, `OAuth2`, `JWT`, `Unit Tests`, isolated front-end and back-end layer.
+It is built on top of popular `Laravel 5.5 framework`, `Vue.js 2.4`, `Restful API`, `Repository Design`, `OAuth2`, `JWT`, `Unit Tests`, isolated front-end and back-end layer.
 
 ## Someline Starter is born for two reasons:
 
@@ -48,7 +48,7 @@ It is fully utilised Repository Design pattern.
 ##### If you are not familiar with any of these packages, you are recommended to get to know them as they are really helpful when you needed. 
 
 *Framework*
-- Laravel 5.4 [laravel/framework](https://github.com/laravel/framework)
+- Laravel 5.5 [laravel/framework](https://github.com/laravel/framework)
 - Laravel IDE Helper [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
 - Clockwork [itsgoingd/clockwork](https://github.com/itsgoingd/clockwork)
 - Laravel 5 log viewer [rap2hpoutre/laravel-log-viewer](https://github.com/rap2hpoutre/laravel-log-viewer)
@@ -70,7 +70,7 @@ It is fully utilised Repository Design pattern.
 - Someline Image Service [someline/someline-image](https://github.com/someline/someline-image)
 
 *Authentication*
-- Laravel Passport [laravel/passport](https://laravel.com/docs/5.3/passport)
+- Laravel Passport [laravel/passport](https://laravel.com/docs/5.5/passport)
 
 *Theme*
 - Angulr theme with Bootstrap and jQuery support. For Demo: [Angular version](http://flatfull.com/themes/angulr/angular/#/app/dashboard-v1) and [HTML version](http://flatfull.com/themes/angulr/html/).
@@ -82,7 +82,7 @@ It is fully utilised Repository Design pattern.
 
 ## Get Started
 
-*Make sure you have already installed PHP 7.0 and [composer](https://getcomposer.org/doc/00-intro.md).*
+*Make sure you have already installed PHP 7.1 and [composer](https://getcomposer.org/doc/00-intro.md).*
 
 You can get started either option A or B:
 
@@ -137,10 +137,11 @@ git push -u origin master
 
 ### Development Requirements
 
-- PHP: >=7.0
+- PHP: >=7.1
 - MySQL: >=5.7
 - SQLite extension
-- Laravel 5: https://laravel.com/docs/5.3/installation
+- Laravel 5: https://laravel.com/docs/5.5/installation
+- Yarn: https://yarnpkg.com/
 - NodeJS: https://nodejs.org/
 - Bower: https://bower.io/
 
@@ -174,8 +175,7 @@ bower install
 Set-up Laravel, after these commands, please change `.env` file for your own environment settings
 ```
 sudo cp .env.example .env
-sudo chmod -R 777 storage
-sudo chmod -R 777 bootstrap/cache
+sudo chmod -R 777 storage bootstrap/cache
 php artisan key:generate
 ```
 
@@ -203,6 +203,13 @@ Install Laravel Passport with encryption keys to generate secure access tokens.
 
 ```
 php artisan passport:install
+```
+
+When deploy in server:
+
+```
+sudo chown www-data:www-data storage/oauth-*.key
+sudo chmod 600 storage/oauth-*.key
 ```
 
 ### Ready to go
