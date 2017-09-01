@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\User::class, function (Faker $faker) {
+$factory->define(\Someline\Models\Foundation\User::class, function (Faker $faker) {
     static $password;
 
     return [
