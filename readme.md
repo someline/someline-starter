@@ -11,11 +11,13 @@ It is built on top of popular `Laravel 5.5 framework`, `Vue.js 2.4`, `Restful AP
 
 *Note: You may notice that `.idea` folder is included. No worries, any conflict files in `.idea` folder has been ignored as in `.gitignore` file.*
 
-## Someline Starter is born for two reasons:
+## Someline Starter is born for 3 reasons:
 
-1. Quick application or Restful API starter without the need to build from scratch using Laravel.
+1. Quick web application starter without the need to build from scratch using Laravel.
 
-2. Introduce modern design pattern, which have a better foundation when starting, for PHP projects.
+2. Isolated front-end and back-end layer using Restful API.
+
+3. Introducing modern design pattern, which have a better foundation when starting, for PHP projects.
 
 ## See In Action
 
