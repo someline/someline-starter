@@ -1,11 +1,15 @@
 # Someline Starter PHP Framework
 
+Fully tested and used in production by __Someline Inc__.
+
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 
 [Someline Starter](https://starter.someline.com/) is a PHP framework for quick building Web Apps and Restful APIs, with modern design pattern foundation.
  
 It is built on top of popular `Laravel 5.5 framework`, `Vue.js 2.4`, `Restful API`, `Repository Design`, `OAuth2`, `JWT`, `Unit Tests`, isolated front-end and back-end layer.
+
+*Note: You may notice that `.idea` folder is included. No worries, any conflict files in `.idea` folder has been ignored as in `.gitignore` file.*
 
 ## Someline Starter is born for two reasons:
 
