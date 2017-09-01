@@ -4,9 +4,9 @@
     <meta charset="utf-8"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <meta name="keywords" content="@yield('keywords', 'laravel,restful,api,vue.js,vuejs')"/>
-    <meta name="description" content="@yield('description', 'Someline Starter is a framework for quick building Web Apps or APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer.')"/>
-    <title>@yield('title', config('app.name', 'Someline Starter'))</title>
+    <meta name="keywords" content="@yield('keywords', config('app.keywords')))"/>
+    <meta name="description" content="@yield('description', config('app.description'))"/>
+    <title>@yield('title', config('app.title', 'Someline Starter'))</title>
     <link rel="stylesheet" href="{{url(smart_mix("assets/css/app.theme.css",'',false))}}" type="text/css"/>
     @stack('stylesheets')
     <script type="text/javascript">

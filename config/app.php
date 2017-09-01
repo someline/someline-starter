@@ -17,6 +17,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Title, Keywords, Description
+    |--------------------------------------------------------------------------
+    |
+    */
+
+    'title' => 'Someline Starter',
+
+    'keywords' => 'someline,starter,laravel,restful,api,vue.js,vuejs',
+
+    'description' => 'Someline Starter is a framework for quick building Web Apps or APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer.',
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
     |

@@ -13,6 +13,9 @@ let mix = require('laravel-mix');
 
 mix.options({processCssUrls: false});
 
+// enable source maps
+mix.sourceMaps(false);
+
 // less
 mix.less('resources/assets/less/app.less', 'public/assets/css/app.main.css')
     .less('resources/assets/less/console.less', 'public/assets/css/console.main.css')
@@ -27,9 +30,6 @@ mix.js('resources/assets/js/app.js', 'public/assets/js/app.main.js')
         'vue', 'vue-i18n', 'vuex', 'vue-router',
         'autosize'
     ], 'public/assets/js/vendor');
-
-// enable source maps
-mix.sourceMaps();
 
 // app styles
 mix.combine([
@@ -78,6 +78,26 @@ mix.combine([
     .combine([
         'public/assets/theme/app.theme.js',
     ], 'public/assets/js/app.theme.js');
+
+// versions
+mix.version([
+    'public/assets/js/vendor.js',
+    'public/assets/js/mobile.main.js',
+    'public/assets/js/console.main.js',
+    'public/assets/js/app.main.js',
+    'public/assets/css/app.main.css',
+    'public/assets/css/console.main.css',
+    'public/assets/css/mobile.main.css',
+    'public/assets/js/manifest.js',
+    'public/assets/css/app.vendor.css',
+    'public/assets/css/console.vendor.css',
+    'public/assets/css/mobile.vendor.css',
+    'public/assets/js/app.vendor.js',
+    'public/assets/js/console.vendor.js',
+    'public/assets/js/mobile.vendor.js',
+    'public/assets/css/app.theme.css',
+    'public/assets/js/app.theme.js',
+]);
 
 // BrowserSync
 mix.browserSync({

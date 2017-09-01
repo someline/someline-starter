@@ -14,7 +14,7 @@ const {mix} = require('laravel-mix');
 mix.options({ processCssUrls: false });
 
 // less
-mix.less('resources/assets/angulr/css/less/app.less', 'public/assets/theme/theme.css');
+mix.less('resources/assets/angulr/css/less/app.less', 'public/assets/theme/theme.style.css');
 
 // styles
 mix.combine([
@@ -22,7 +22,7 @@ mix.combine([
     'public/vendors/bower_components/animate.css/animate.css',
     'public/bower_components/font-awesome-4.7.0/css/font-awesome.css',
     'public/vendors/bower_components/simple-line-icons/css/simple-line-icons.css',
-    'public/assets/theme/theme.css',
+    'public/assets/theme/theme.style.css',
     'resources/assets/angulr/css/font.css'
 ], 'public/css/theme.src.css');
 
@@ -39,9 +39,8 @@ mix.combine([
 ], 'public/js/theme.src.js');
 
 // copy necessary fonts
-mix.copy('public/fonts/**', 'public/build/fonts');
+// mix.copy('public/fonts/**', 'public/assets/fonts');
 
-// @side effect: copy is async, so it copy last complied files,
-// @SOLUTION: run `npm run theme` twice, as of mix@v0.8.0
-mix.copy('../../../../public/css/theme.src.css', '../../../../public/assets/theme/app.theme.css');
-mix.copy('../../../../public/js/theme.src.js', '../../../../public/assets/theme/app.theme.js');
+// copy to assets folder
+mix.copy('public/css/theme.src.css', 'public/assets/theme/app.theme.css');
+mix.copy('public/js/theme.src.js', 'public/assets/theme/app.theme.js');
