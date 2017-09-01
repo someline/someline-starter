@@ -10,9 +10,23 @@ return [
     | This value is the name of your application. This value is used when the
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
+    |
     */
 
-    'name' => 'Someline Starter',
+    'name' => env('APP_NAME', 'Someline Starter'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Title, Keywords, Description
+    |--------------------------------------------------------------------------
+    |
+    */
+
+    'title' => 'Someline Starter',
+
+    'keywords' => 'someline,starter,laravel,restful,api,vue.js,vuejs',
+
+    'description' => 'Someline Starter is a framework for quick building Web Apps or APIs, with modern PHP design pattern foundation, which is built on top of popular Laravel 5 framework, Vue.js, Restful API, Repository Design, OAuth2, JWT, Unit Tests, isolated front-end and back-end layer.',
 
     /*
     |--------------------------------------------------------------------------
@@ -166,21 +180,21 @@ return [
         /*
          * Package Service Providers...
          */
-        Laravel\Tinker\TinkerServiceProvider::class,
+        // Laravel\Tinker\TinkerServiceProvider::class,
         Dingo\Api\Provider\LaravelServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
+        // Intervention\Image\ImageServiceProvider::class,
         Cviebrock\ImageValidator\ImageValidatorServiceProvider::class,
-        Clockwork\Support\Laravel\ClockworkServiceProvider::class,
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-        Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
-        Someline\Rest\RestClientServiceProvider::class,
-        Laravel\Passport\PassportServiceProvider::class,
-        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
-        Someline\Repository\Providers\RepositoryServiceProvider::class,
+        // Clockwork\Support\Laravel\ClockworkServiceProvider::class,
+        // Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        // Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        // Someline\Rest\RestClientServiceProvider::class,
+        // Laravel\Passport\PassportServiceProvider::class,
+        // Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        // Someline\Repository\Providers\RepositoryServiceProvider::class,
         Monarobase\CountryList\CountryListServiceProvider::class,
-        Torann\GeoIP\GeoIPServiceProvider::class,
-        Someline\Image\SomelineImageServiceProvider::class,
+        // Torann\GeoIP\GeoIPServiceProvider::class,
+        // Someline\Image\SomelineImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -243,10 +257,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        'Image' => Intervention\Image\Facades\Image::class,
-        'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+        // 'Image' => Intervention\Image\Facades\Image::class,
+        // 'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
         'Countries' => Monarobase\CountryList\CountryListFacade::class,
-        'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
+        // 'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
 
     ],
 

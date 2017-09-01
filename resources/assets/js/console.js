@@ -31,18 +31,18 @@ Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-oauth', require('./components/console/OAuth.vue'));
 
 // Vuex
-const vuexStore = new Vuex.Store({
-    state: {
-        platform: 'console',
-        count: 0
-    },
-    mutations: {
-        increment (state) {
-            state.count++
-        }
-    }
-});
-window.vuexStore = vuexStore;
+// const vuexStore = new Vuex.Store({
+//     state: {
+//         platform: 'console',
+//         count: 0
+//     },
+//     mutations: {
+//         increment (state) {
+//             state.count++
+//         }
+//     }
+// });
+// window.vuexStore = vuexStore;
 
 const app = new Vue({
     el: '#app',

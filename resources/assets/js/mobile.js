@@ -19,25 +19,25 @@ Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-app-home', require('./components/mobile/home/Home.vue'));
 
 // Vue Router
-import RouterConfig from './mobile_router'
-const router = new VueRouter(RouterConfig);
+// import RouterConfig from './mobile_router'
+// const router = new VueRouter(RouterConfig);
 
 // Vuex
-const vuexStore = new Vuex.Store({
-    state: {
-        platform: 'mobile',
-        count: 0
-    },
-    mutations: {
-        increment (state) {
-            state.count++
-        }
-    }
-});
-window.vuexStore = vuexStore;
+// const vuexStore = new Vuex.Store({
+//     state: {
+//         platform: 'mobile',
+//         count: 0
+//     },
+//     mutations: {
+//         increment (state) {
+//             state.count++
+//         }
+//     }
+// });
+// window.vuexStore = vuexStore;
 
 const app = new Vue({
-    router,
+    // router,
     el: '#app',
     data: {
         msg: "hello",

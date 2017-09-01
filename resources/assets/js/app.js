@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -17,19 +16,19 @@ Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-user-list', require('./components/app/users/UserList.vue'));
 
 // Vuex
-import Vuex from 'vuex'
-const vuexStore = new Vuex.Store({
-    state: {
-        platform: 'app',
-        count: 0
-    },
-    mutations: {
-        increment (state) {
-            state.count++
-        }
-    }
-});
-window.vuexStore = vuexStore;
+// import Vuex from 'vuex'
+// const vuexStore = new Vuex.Store({
+//     state: {
+//         platform: 'app',
+//         count: 0
+//     },
+//     mutations: {
+//         increment (state) {
+//             state.count++
+//         }
+//     }
+// });
+// window.vuexStore = vuexStore;
 
 const app = new Vue({
     el: '#app',
@@ -39,15 +38,15 @@ const app = new Vue({
     computed: {},
     watch: {},
     events: {},
-    created(){
+    created() {
         console.log('Bootstrap.');
         this.initLocale();
     },
-    mounted(){
+    mounted() {
         console.log('Ready.');
     },
     methods: {
-        initLocale(){
+        initLocale() {
             console.log('Init Locale.');
 
             var that = this;

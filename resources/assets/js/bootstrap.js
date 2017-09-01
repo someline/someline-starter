@@ -14,8 +14,11 @@ require('promise.prototype.finally').shim();
 /**
  * @WARNING: These two libraries are included in theme.js, so no need to include again.
  */
-// window.$ = window.jQuery = require('jquery');
-// require('bootstrap-sass');
+// try {
+//     window.$ = window.jQuery = require('jquery');
+//
+//     require('bootstrap-sass');
+// } catch (e) {}
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
@@ -23,17 +26,18 @@ require('promise.prototype.finally').shim();
  * and simple, leaving you to focus on building your next great project.
  */
 
-import Vue from 'vue'
-import Vuex from 'vuex'
-import VueRouter from 'vue-router'
-import VueI18n from 'vue-i18n'
-window.Vue = Vue;
-window.Vuex = Vuex;
-window.VueRouter = VueRouter;
-window.VueI18n = VueI18n;
+window.Vue = require('vue');
 
-Vue.use(Vuex);
-Vue.use(VueRouter);
+// import Vuex from 'vuex'
+// window.Vuex = Vuex;
+// Vue.use(Vuex);
+
+// import VueRouter from 'vue-router'
+// window.VueRouter = VueRouter;
+// Vue.use(VueRouter);
+
+import VueI18n from 'vue-i18n'
+window.VueI18n = VueI18n;
 Vue.use(VueI18n);
 
 // @DEPRECATED
@@ -45,24 +49,29 @@ Vue.use(VueI18n);
  */
 
 // Vue Directives
-Vue.directive('focus', require('./directives/focus'));
+// Vue.directive('focus', require('./directives/focus'));
 
 // Vue Mixins
 import MixInUser from './mixins/user'
-import MixInJQuery from './mixins/jquery'
-import MixInTools from './mixins/tools'
-import MixInBus from './mixins/bus'
-import MixInStore from './mixins/store'
-import MixInNl2br from './mixins/nl2br'
 Vue.mixin(MixInUser);
+
+import MixInJQuery from './mixins/jquery'
 Vue.mixin(MixInJQuery);
+
+import MixInTools from './mixins/tools'
 Vue.mixin(MixInTools);
+
+import MixInBus from './mixins/bus'
 Vue.mixin(MixInBus);
-Vue.mixin(MixInStore);
+
+import MixInNl2br from './mixins/nl2br'
 Vue.mixin(MixInNl2br);
 
+// import MixInStore from './mixins/store'
+// Vue.mixin(MixInStore);
+
 // Vue Components
-Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue'));
+// Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue'));
 
 // Bus
 const bus = new Vue({
@@ -72,7 +81,6 @@ const bus = new Vue({
 });
 window.bus = bus;
 
-
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
@@ -81,17 +89,15 @@ window.bus = bus;
 
 window.axios = require('axios');
 
-window.axios.defaults.headers.common = {
-    'X-CSRF-TOKEN': window.Laravel.csrfToken,
-    'X-Requested-With': 'XMLHttpRequest',
-    'Accept-Language': window.Someline.locale
-};
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common['Accept-Language'] = window.Someline.locale;
+// window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
 
 Vue.prototype.$http = window.$http = window.axios;
 
-var apiAxios = axios.create({
+var apiAxios = window.axios.create({
     baseURL: '/api/',
-    timeout: 10000,
+    timeout: 30000,
     headers: {
         'Accept': 'application/x.someline.v1+json',
     }
@@ -99,12 +105,28 @@ var apiAxios = axios.create({
 Vue.prototype.$api = window.$api = apiAxios;
 
 /**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
+
+let token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
+
+/**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
  * allows your team to easily build robust real-time web applications.
  */
 
-// import Echo from "laravel-echo"
+// import Echo from 'laravel-echo'
+
+// window.Pusher = require('pusher-js');
 
 // window.Echo = new Echo({
 //     broadcaster: 'pusher',
