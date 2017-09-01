@@ -1,5 +1,7 @@
 # Someline Starter PHP Framework
 
+Tested and used in production by __Someline Inc__.
+
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 
@@ -7,11 +9,15 @@
  
 It is built on top of popular `Laravel 5.5 framework`, `Vue.js 2.4`, `Restful API`, `Repository Design`, `OAuth2`, `JWT`, `Unit Tests`, isolated front-end and back-end layer.
 
-## Someline Starter is born for two reasons:
+*Note: You may notice that `.idea` folder is included. No worries, any conflict files in `.idea` folder has been ignored as in `.gitignore` file.*
 
-1. Quick application or Restful API starter without the need to build from scratch using Laravel.
+## Someline Starter is born for 3 reasons:
 
-2. Introduce modern design pattern, which have a better foundation when starting, for PHP projects.
+1. Quick web application starter without the need to build from scratch using Laravel.
+
+2. Isolated front-end and back-end layer using Restful API.
+
+3. Introducing modern design pattern, which have a better foundation when starting, for PHP projects.
 
 ## See In Action
 
