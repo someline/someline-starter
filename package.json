@@ -1,14 +1,17 @@
 {
   "private": true,
   "scripts": {
-    "theme": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/angulr/config/webpack.config.js --progress --hide-modules",
-    "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules",
-    "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules",
-    "hot (FOR LOCAL DEVELOPMENT)": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
-    "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules",
-    "version": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/config/webpack.config.js --progress --hide-modules",
-    "dev+version": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules && node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/config/webpack.config.js --progress --hide-modules",
-    "production+version (FOR DEPLOYMENT IN PRODUCTION)": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules && node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/config/webpack.config.js --progress --hide-modules",
+    "theme": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/angulr/config/webpack.config.js --progress --hide-modules",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot (FOR LOCAL DEVELOPMENT)": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=webpack.config.js",
+    "version": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/config/webpack.config.js --progress --hide-modules",
+    "dev+version": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules && cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/config/webpack.config.js --progress --hide-modules",
+    "production+version (FOR DEPLOYMENT IN PRODUCTION)": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules && cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/config/webpack.config.js --progress --hide-modules",
     "artisan migrate": "php artisan migrate",
     "artisan db:seed": "php artisan db:seed",
     "artisan passport:install": "php artisan passport:install",
@@ -16,12 +19,12 @@
     "artisan migrate:refresh+seed": "php artisan migrate:refresh --seed"
   },
   "devDependencies": {
-    "axios": "^0.15.3",
+    "axios": "^0.16.2",
     "bootstrap-sass": "^3.3.7",
-    "cross-env": "^3.2.3",
-    "jquery": "^3.1.0",
-    "laravel-mix": "0.8.9",
-    "lodash": "^4.16.2",
+    "cross-env": "^5.0.1",
+    "jquery": "^3.1.1",
+    "laravel-mix": "^1.0",
+    "lodash": "^4.17.4",
     "vue": "^2.2.4"
   },
   "dependencies": {

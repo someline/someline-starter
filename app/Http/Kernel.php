@@ -18,6 +18,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \Someline\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        \Someline\Http\Middleware\TrustProxies::class,
         \Clockwork\Support\Laravel\ClockworkMiddleware::class,
     ];
 
@@ -35,7 +36,7 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \Someline\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
+            // \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
             \Someline\Support\Middleware\LocaleMiddleware::class,
         ],
 
