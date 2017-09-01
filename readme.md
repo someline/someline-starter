@@ -1,6 +1,6 @@
 # Someline Starter PHP Framework
 
-Fully tested and used in production by __Someline Inc__.
+Tested and used in production by __Someline Inc__.
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
