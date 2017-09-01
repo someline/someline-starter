@@ -37,7 +37,7 @@ Vue.component('sl-app-home', require('./components/mobile/home/Home.vue'));
 // window.vuexStore = vuexStore;
 
 const app = new Vue({
-    router,
+    // router,
     el: '#app',
     data: {
         msg: "hello",
