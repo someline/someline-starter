@@ -7,7 +7,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-ide-helper" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/cviebrock/image-validator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/defuse/php-encryption" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dingo/api" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dingo/blueprint" />
@@ -128,7 +127,6 @@
           <root url="file://$MODULE_DIR$/vendor/barryvdh/laravel-ide-helper" />
           <root url="file://$MODULE_DIR$/vendor/barryvdh/reflection-docblock" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
-          <root url="file://$MODULE_DIR$/vendor/cviebrock/image-validator" />
           <root url="file://$MODULE_DIR$/vendor/defuse/php-encryption" />
           <root url="file://$MODULE_DIR$/vendor/dingo/api" />
           <root url="file://$MODULE_DIR$/vendor/dingo/blueprint" />
@@ -245,7 +243,6 @@
           <root url="file://$MODULE_DIR$/vendor/barryvdh/laravel-ide-helper" />
           <root url="file://$MODULE_DIR$/vendor/barryvdh/reflection-docblock" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
-          <root url="file://$MODULE_DIR$/vendor/cviebrock/image-validator" />
           <root url="file://$MODULE_DIR$/vendor/defuse/php-encryption" />
           <root url="file://$MODULE_DIR$/vendor/dingo/api" />
           <root url="file://$MODULE_DIR$/vendor/dingo/blueprint" />
