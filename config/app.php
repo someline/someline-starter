@@ -183,18 +183,7 @@ return [
         // Laravel\Tinker\TinkerServiceProvider::class,
         Dingo\Api\Provider\LaravelServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
-        // Intervention\Image\ImageServiceProvider::class,
-        Cviebrock\ImageValidator\ImageValidatorServiceProvider::class,
-        // Clockwork\Support\Laravel\ClockworkServiceProvider::class,
-        // Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-        // Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
-        // Someline\Rest\RestClientServiceProvider::class,
-        // Laravel\Passport\PassportServiceProvider::class,
-        // Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
-        // Someline\Repository\Providers\RepositoryServiceProvider::class,
         Monarobase\CountryList\CountryListServiceProvider::class,
-        // Torann\GeoIP\GeoIPServiceProvider::class,
-        // Someline\Image\SomelineImageServiceProvider::class,
 
         /*
          * Application Service Providers...
