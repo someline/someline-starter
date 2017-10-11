@@ -226,7 +226,7 @@ return [
         'rootNamespace' => 'Someline\\',
         'paths'         => [
             'models'       => 'Models',
-            'criteria' => 'Repositories\Criteria',
+            'criteria'     => 'Repositories\Criteria',
             'repositories' => 'Repositories\Eloquent',
             'interfaces'   => 'Repositories\Interfaces',
             'transformers' => 'Transformers',
