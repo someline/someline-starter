@@ -1,4 +1,6 @@
+
 window._ = require('lodash');
+window.Popper = require('popper.js').default;
 window.moment = require('moment');
 
 require("babel-polyfill");
@@ -130,5 +132,7 @@ if (token) {
 
 // window.Echo = new Echo({
 //     broadcaster: 'pusher',
-//     key: 'your-pusher-key'
+//     key: process.env.MIX_PUSHER_APP_KEY,
+//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+//     encrypted: true
 // });
