@@ -27,7 +27,6 @@ Vue.component(
     require('./components/passport/PersonalAccessTokens.vue')
 );
 
-Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-oauth', require('./components/console/OAuth.vue'));
 
 // Vuex
