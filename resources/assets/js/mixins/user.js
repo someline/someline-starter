@@ -1,35 +1,38 @@
-export default{
+export default {
     computed: {
-        baseUrl(){
+        baseUrl() {
             return window.Someline.baseUrl;
         },
-        locale(){
+        locale() {
             return window.Someline.locale;
         },
-        csrfToken(){
+        csrfToken() {
             return window.Laravel.csrfToken;
         },
-        currentUserId(){
+        currentUserId() {
             return window.Someline.state.user.user_id;
         },
-        currentUserName(){
+        currentUserName() {
             return window.Someline.state.user.name;
         },
-        authUser(){
+        isAuth() {
+            return this.authUserId != null;
+        },
+        authUser() {
             return window.Someline.state.user;
         },
-        authUserId(){
+        authUserId() {
             return window.Someline.state.user.user_id;
         },
-        authUserName(){
+        authUserName() {
             return window.Someline.state.user.name;
         },
     },
     methods: {
-        isAuthUser(user_id){
+        isAuthUser(user_id) {
             return this.authUserId == user_id;
         },
-        isCurrentUser(user_id){
+        isCurrentUser(user_id) {
             return this.currentUserId == user_id;
         },
     },

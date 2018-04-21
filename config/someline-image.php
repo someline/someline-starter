@@ -27,6 +27,7 @@ return array(
     'image_templates' => [
 
         'original' => (new ImageTemplate(0, 0)),
+        'thumbnail' => (new ImageTemplate(120, 120)),
 
         'avatar_small' => (new ImageTemplate(80, 80)),
         'avatar_large' => (new ImageTemplate(120, 120)),

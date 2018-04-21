@@ -228,10 +228,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        // 'Image' => Intervention\Image\Facades\Image::class,
-        // 'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
         'Countries' => Monarobase\CountryList\CountryListFacade::class,
-        // 'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
 
     ],
 
