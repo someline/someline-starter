@@ -26,4 +26,18 @@ class SomelineImage extends SomelineImageBase
         return $this->getTypeImageUrl('cover');
     }
 
+    /**
+     * @param $images
+     * @return array
+     */
+    public static function toImagesData($images)
+    {
+        $data = [];
+        /** @var SomelineImage $image */
+        foreach ($images as $image) {
+            $data[] = $image->toSimpleArray();
+        }
+        return $data;
+    }
+
 }
