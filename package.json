@@ -1,41 +1,42 @@
 {
-  "private": true,
-  "scripts": {
-    "theme": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config resources/assets/angulr/config/webpack.config.js --progress --hide-modules",
-    "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot (FOR LOCAL DEVELOPMENT)": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch-poll": "npm run watch -- --watch-poll",
-    "prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production (FOR DEPLOYMENT IN PRODUCTION)": "npm run prod",
-    "artisan migrate": "php artisan migrate",
-    "artisan db:seed": "php artisan db:seed",
-    "artisan passport:install": "php artisan passport:install",
-    "artisan migrate:refresh": "php artisan migrate:refresh",
-    "artisan migrate:refresh+seed": "php artisan migrate:refresh --seed"
-  },
-  "devDependencies": {
-    "axios": "^0.16.2",
-    "bootstrap-sass": "^3.3.7",
-    "cross-env": "^5.0.1",
-    "jquery": "^3.1.1",
-    "laravel-mix": "^1.0",
-    "lodash": "^4.17.4",
-    "vue": "^2.2.4"
-  },
-  "dependencies": {
-    "autosize": "^3.0.20",
-    "babel-polyfill": "^6.23.0",
-    "browser-sync": "^2.18.13",
-    "browser-sync-webpack-plugin": "^1.2.0",
-    "es6-shim": "^0.35.3",
-    "less": "^2.7.2",
-    "less-loader": "^4.0.5",
-    "moment": "^2.18.1",
-    "promise.prototype.finally": "^2.0.1",
-    "vue-i18n": "^5.0.3",
-    "vue-router": "^2.3.0",
-    "vuex": "^2.2.1"
-  }
+    "private": true,
+    "scripts": {
+        "theme": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --env.mixfile=resources/assets/angulr/config/webpack.mix",
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "artisan migrate": "php artisan migrate",
+        "artisan db:seed": "php artisan db:seed",
+        "artisan passport:install": "php artisan passport:install",
+        "artisan migrate:refresh": "php artisan migrate:refresh",
+        "artisan migrate:refresh+seed": "php artisan migrate:refresh --seed"
+    },
+    "devDependencies": {
+        "axios": "^0.18",
+        "bootstrap": "^4.0.0",
+        "browser-sync": "^2.23.7",
+        "browser-sync-webpack-plugin": "2.0.1",
+        "cross-env": "^5.1",
+        "jquery": "^3.2",
+        "laravel-mix": "^2.0",
+        "less": "^3.0.1",
+        "less-loader": "^4.1.0",
+        "lodash": "^4.17.4",
+        "popper.js": "^1.12",
+        "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "autosize": "^3.0.20",
+        "babel-polyfill": "^6.23.0",
+        "es6-shim": "^0.35.3",
+        "moment": "^2.18.1",
+        "promise.prototype.finally": "^2.0.1",
+        "vue-i18n": "^5.0.3",
+        "vue-router": "^2.3.0",
+        "vuex": "^2.2.1"
+    }
 }

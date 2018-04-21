@@ -15,7 +15,6 @@ require('./bootstrap');
 Vue.component('sl-app-header', require('./components/mobile/main/section/AppHeader.vue'));
 Vue.component('sl-app-tab-bar', require('./components/mobile/main/section/AppTabBar.vue'));
 
-Vue.component('example', require('./components/Example.vue'));
 Vue.component('sl-app-home', require('./components/mobile/home/Home.vue'));
 
 // Vue Router
