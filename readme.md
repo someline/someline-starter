@@ -75,7 +75,7 @@ It is fully utilised Repository Design pattern.
 - Someline Image Service [someline/someline-image](https://github.com/someline/someline-image)
 
 *Authentication*
-- Laravel Passport [laravel/passport](https://laravel.com/docs/5.5/passport)
+- Laravel Passport [laravel/passport](https://laravel.com/docs/5.6/passport)
 
 *Theme*
 - Angulr theme with Bootstrap and jQuery support. For Demo: [Angular version](http://flatfull.com/themes/angulr/angular/#/app/dashboard-v1) and [HTML version](http://flatfull.com/themes/angulr/html/).
@@ -145,7 +145,7 @@ git push -u origin master
 - PHP: >=7.1
 - MySQL: >=5.7
 - SQLite extension
-- Laravel 5: https://laravel.com/docs/5.5/installation
+- Laravel 5: https://laravel.com/docs/5.6/installation
 - Yarn: https://yarnpkg.com/
 - NodeJS: https://nodejs.org/
 - Bower: https://bower.io/
@@ -221,9 +221,9 @@ sudo chmod 600 storage/oauth-*.key
 
 Until this point, you should be able to visit the home page. 
 
-For example, if you have set the domain: `http://someline-starter.app/`.
+For example, if you have set the domain: `http://someline-starter.sl/`.
 
-Just visit: http://someline-starter.app/
+Just visit: http://someline-starter.sl/
 
 It should prompt you for login, use:
 
@@ -372,11 +372,11 @@ View all requests and request information from file `storage/clockwork.sqlite`
 
 #### OAuth Web Support
 
-OAuth HTTP URL: `http://someline-starter.app/console/oauth`
+OAuth HTTP URL: `http://someline-starter.sl/console/oauth`
 
 #### Web Log Viewer
 
-Log Viewer HTTP URL: `http://someline-starter.app/console/logs`
+Log Viewer HTTP URL: `http://someline-starter.sl/console/logs`
 
 #### Database
 
