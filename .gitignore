@@ -23,6 +23,7 @@ yarn-error.log
 .idea/gradle.xml
 .idea/libraries
 .idea/mongoSettings.xml
+.idea/php-test-framework.xml
 /.idea/vcs.xml
 *.iws
 /out/
