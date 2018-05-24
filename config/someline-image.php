@@ -19,7 +19,7 @@ return array(
     /**
      * Storage Path for all images
      */
-    'storage_path' => storage_path('app/images/original/'),
+    'storage_path' => '/images/original/',
 
     /**
      * Templates that will be used when showing image
