@@ -9,8 +9,6 @@ Tested and used in production by __Someline Inc__.
  
 It is built on top of popular `Laravel 5.6 framework`, `Vue.js 2.5`, `Restful API`, `Repository Design`, `OAuth2`, `JWT`, `Unit Tests`, isolated front-end and back-end layer.
 
-*Note: You may notice that `.idea` folder is included. No worries, any conflict files in `.idea` folder has been ignored as in `.gitignore` file.*
-
 ## Someline Starter is born for 3 reasons:
 
 1. Quick web application starter without the need to build from scratch using Laravel.
