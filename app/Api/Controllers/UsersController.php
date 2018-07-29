@@ -5,6 +5,7 @@ namespace Someline\Api\Controllers;
 use Dingo\Api\Exception\DeleteResourceFailedException;
 use Dingo\Api\Exception\StoreResourceFailedException;
 use Dingo\Api\Exception\UpdateResourceFailedException;
+use Illuminate\Http\Request;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Someline\Http\Requests\UserCreateRequest;
 use Someline\Http\Requests\UserUpdateRequest;
@@ -35,9 +36,21 @@ class UsersController extends BaseController
     /**
      * Display a listing of the resource.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
+    {
+        return $this->repository->paginate();
+    }
+
+    /**
+     * Display all resources.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function all(Request $request)
     {
         return $this->repository->all();
     }
