@@ -83,7 +83,7 @@ return array(
 
             'someline-starter' => [
 
-                'base_uri' => 'http://dev.someline-starter.app/',
+                'base_uri' => 'http://dev.someline-starter.sl/',
 
                 'headers' => [
                     'Accept' => 'application/x.someline.v1+json',
@@ -98,7 +98,7 @@ return array(
 
             'someline-starter' => [
 
-                'base_uri' => 'http://someline-starter.app/',
+                'base_uri' => 'http://someline-starter.sl/',
 
                 'headers' => [
                     'Accept' => 'application/x.someline.v1+json',

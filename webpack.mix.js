@@ -101,7 +101,7 @@ mix.version([
 
 // BrowserSync
 mix.browserSync({
-    proxy: 'someline-starter.app',
+    proxy: 'someline-starter.sl',
     port: 3000,
     open: true
 })
