@@ -11,6 +11,20 @@ let mix = require('laravel-mix');
  |
  */
 
+if (mix.inProduction()) {
+    mix.options({
+        uglify: {
+            uglifyOptions: {
+                sourceMap: true,
+                compress: {
+                    warnings: false,
+                    drop_console: true
+                }
+            }
+        }
+    });
+}
+
 mix.options({processCssUrls: false});
 
 // enable source maps
@@ -98,6 +112,10 @@ mix.version([
     'public/assets/css/app.theme.css',
     'public/assets/js/app.theme.js',
 ]);
+
+if (mix.inProduction()) {
+    mix.version();
+}
 
 // BrowserSync
 mix.browserSync({
