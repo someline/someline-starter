@@ -19,10 +19,10 @@ class ApiServiceProvider extends ServiceProvider
     {
         $handler = app('Dingo\Api\Exception\Handler');
         $handler->register(function (AuthenticationException $exception) {
-            throw new AccessDeniedHttpException($exception->getMessage());
+            throw new UnauthorizedHttpException("", $exception->getMessage(), $exception);
         });
         $handler->register(function (AuthorizationException $exception) {
-            throw new AccessDeniedHttpException($exception->getMessage());
+            throw new AccessDeniedHttpException($exception->getMessage(), $exception);
         });
     }
 
