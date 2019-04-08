@@ -7,7 +7,7 @@ Tested and used in production by __Someline Inc__.
 
 [Someline Starter](https://starter.someline.com/) is a PHP framework for quick building Web Apps and Restful APIs, with modern design pattern foundation.
  
-It is built on top of popular `Laravel 5.6 framework`, `Vue.js 2.5`, `Restful API`, `Repository Design`, `OAuth2`, `JWT`, `Unit Tests`, isolated front-end and back-end layer.
+It is built on top of popular `Laravel 5.8 framework`, `Vue.js 2.6`, `Restful API`, `Repository Design`, `OAuth2`, `JWT`, `Unit Tests`, isolated front-end and back-end layer.
 
 ## Someline Starter is born for 3 reasons:
 
@@ -52,7 +52,7 @@ It is fully utilised Repository Design pattern.
 ##### If you are not familiar with any of these packages, you are recommended to get to know them as they are really helpful when you needed. 
 
 *Framework*
-- Laravel 5.6 [laravel/framework](https://github.com/laravel/framework)
+- Laravel 5.8 [laravel/framework](https://github.com/laravel/framework)
 - Laravel IDE Helper [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
 - Clockwork [itsgoingd/clockwork](https://github.com/itsgoingd/clockwork)
 - Laravel 5 log viewer [rap2hpoutre/laravel-log-viewer](https://github.com/rap2hpoutre/laravel-log-viewer)
@@ -73,7 +73,7 @@ It is fully utilised Repository Design pattern.
 - Someline Image Service [someline/someline-image](https://github.com/someline/someline-image)
 
 *Authentication*
-- Laravel Passport [laravel/passport](https://laravel.com/docs/5.6/passport)
+- Laravel Passport [laravel/passport](https://laravel.com/docs/5.8/passport)
 
 *Theme*
 - Angulr theme with Bootstrap and jQuery support. For Demo: [Angular version](http://flatfull.com/themes/angulr/angular/#/app/dashboard-v1) and [HTML version](http://flatfull.com/themes/angulr/html/).
@@ -140,10 +140,10 @@ git push -u origin master
 
 ### Development Requirements
 
-- PHP: >=7.1
+- PHP: >=7.1.8
 - MySQL: >=5.7
 - SQLite extension
-- Laravel 5: https://laravel.com/docs/5.6/installation
+- Laravel 5: https://laravel.com/docs/5.8/installation
 - Yarn: https://yarnpkg.com/
 - NodeJS: https://nodejs.org/
 - Bower: https://bower.io/
@@ -242,7 +242,7 @@ Explore and start to build on top of it.
 
 You will need to know, read and understand fowllowing before you can start build on top of these.
 
-- [ ] [Laravel Docs](https://laravel.com/docs/5.6/)
+- [ ] [Laravel Docs](https://laravel.com/docs/5.8/)
 - [ ] [Restful API Best Practise](http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
 - [ ] [dingo/api Guide](https://github.com/dingo/api/wiki)
 - [ ] [Repository Pattern](https://bosnadev.com/2015/03/07/using-repository-pattern-in-laravel-5/?utm_source=prettus-l5-repository&utm_medium=readme&utm_campaign=prettus-l5-repository)

@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -13,9 +13,10 @@ let mix = require('laravel-mix');
 
 if (mix.inProduction()) {
     mix.options({
-        uglify: {
-            uglifyOptions: {
-                sourceMap: true,
+        terser: {
+            terserOptions: {
+                warnings: true,
+                // sourceMap: true,
                 compress: {
                     warnings: false,
                     drop_console: true

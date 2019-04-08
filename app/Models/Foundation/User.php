@@ -3,6 +3,7 @@
 namespace Someline\Models\Foundation;
 
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Laravel\Passport\HasApiTokens;
 use Someline\Image\Models\Traits\SomelineHasImageablesTrait;
 use Someline\Model\Foundation\User as BaseUser;
@@ -39,5 +40,14 @@ class User extends BaseUser
         parent::onCreated();
 
     }
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 
 }

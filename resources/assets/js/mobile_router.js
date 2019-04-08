@@ -2,11 +2,11 @@ export default {
     routes: [
         {
             path: '/',
-            component: require('./components/mobile/main/App.vue'),
+            component: require('./components/mobile/main/App.vue').default,
         },
         {
             path: '/user/:id',
-            component: require('./components/mobile/user/UserDetail.vue'),
+            component: require('./components/mobile/user/UserDetail.vue').default,
             children: [
                 {
                     // default path will redirect to list
@@ -17,11 +17,11 @@ export default {
                 },
                 {
                     path: 'profile',
-                    component: require('./components/mobile/user/detail/Profile.vue'),
+                    component: require('./components/mobile/user/detail/Profile.vue').default,
                 },
                 {
                     path: 'posts',
-                    component: require('./components/mobile/user/detail/Posts.vue'),
+                    component: require('./components/mobile/user/detail/Posts.vue').default,
                 }
             ]
         }

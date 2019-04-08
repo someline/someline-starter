@@ -87,7 +87,7 @@
         },
         computed: {},
         components: {
-            'sl-tab-bar-item': require('./tabbar/TabBarItem.vue'),
+            'sl-tab-bar-item': require('./tabbar/TabBarItem.vue').default,
         },
         watch: {},
         events: {},

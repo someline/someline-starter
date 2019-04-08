@@ -51,7 +51,7 @@ Vue.use(VueI18n);
  */
 
 // Vue Directives
-// Vue.directive('focus', require('./directives/focus'));
+// Vue.directive('focus', require('./directives/focus').default);
 
 // Vue Mixins
 import MixInUser from './mixins/user'
@@ -73,7 +73,7 @@ Vue.mixin(MixInNl2br);
 // Vue.mixin(MixInStore);
 
 // Vue Components
-// Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue'));
+// Vue.component('autosize-textarea', require('./essentials/autosize-textarea.vue').default);
 
 // Bus
 const bus = new Vue({
