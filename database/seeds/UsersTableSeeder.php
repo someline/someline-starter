@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 use Someline\Models\Foundation\User;
 
 class UsersTableSeeder extends Seeder
@@ -21,8 +22,9 @@ class UsersTableSeeder extends Seeder
 //            'slid' => '1',
             'name' => "Libern Lin",
             'email' => 'libern@someline.com',
+            'email_verified_at' => now(),
             'password' => bcrypt('Abc12345'),
-            'remember_token' => str_random(10),
+            'remember_token' => Str::random(10),
             'gender' => 'M',
             'birthday' => '1994-07-08',
             'country' => 'CN',
