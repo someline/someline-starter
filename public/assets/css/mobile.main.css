@@ -1,1 +1,7 @@
-.weui-actionsheet,.weui-dialog,.weui-mask,.weui-toast,.weui-toptips{z-index:10000}
+.weui-mask,
+.weui-dialog,
+.weui-actionsheet,
+.weui-toptips,
+.weui-toast {
+  z-index: 10000;
+}
