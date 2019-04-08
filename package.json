@@ -18,25 +18,29 @@
     "devDependencies": {
         "axios": "^0.18",
         "bootstrap": "^4.0.0",
-        "browser-sync": "^2.23.7",
+        "browser-sync": "^2.26.3",
         "browser-sync-webpack-plugin": "2.0.1",
         "cross-env": "^5.1",
         "jquery": "^3.2",
-        "laravel-mix": "^2.0",
-        "less": "^3.0.1",
+        "laravel-mix": "^4.0.7",
+        "less": "^3.9.0",
         "less-loader": "^4.1.0",
-        "lodash": "^4.17.4",
+        "lodash": "^4.17.5",
         "popper.js": "^1.12",
-        "vue": "^2.5.7"
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.15.2",
+        "sass-loader": "^7.1.0",
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "autosize": "^3.0.20",
-        "babel-polyfill": "^6.23.0",
-        "es6-shim": "^0.35.3",
-        "moment": "^2.18.1",
+        "autosize": "^3.0.21",
+        "babel-polyfill": "^6.26.0",
+        "es6-shim": "^0.35.5",
+        "moment": "^2.24.0",
         "promise.prototype.finally": "^2.0.1",
         "vue-i18n": "^5.0.3",
-        "vue-router": "^2.3.0",
-        "vuex": "^2.2.1"
+        "vue-router": "^2.8.1",
+        "vuex": "^2.5.0"
     }
 }
