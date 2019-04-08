@@ -13,8 +13,8 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('sl-user-list', require('./components/app/users/UserList.vue'));
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('sl-user-list', require('./components/app/users/UserList.vue').default);
 
 // Vuex
 // import Vuex from 'vuex'

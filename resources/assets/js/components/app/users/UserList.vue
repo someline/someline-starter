@@ -35,7 +35,7 @@
         },
         computed: {},
         components: {
-            'sl-user-list-item': require('./UserListGroupItem.vue'),
+            'sl-user-list-item': require('./UserListGroupItem.vue').default,
         },
         mounted(){
             console.log('Component Ready.');
