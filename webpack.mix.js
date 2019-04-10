@@ -120,7 +120,7 @@ if (mix.inProduction()) {
 
 // BrowserSync
 mix.browserSync({
-    proxy: 'someline-starter.sl',
+    proxy: 'someline-starter-master.sl',
     port: 3000,
     open: true
 })
