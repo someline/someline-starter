@@ -243,7 +243,7 @@ Explore and start to build on top of it.
 You will need to know, read and understand fowllowing before you can start build on top of these.
 
 - [ ] [Laravel Docs](https://laravel.com/docs/5.8/)
-- [ ] [Restful API Best Practise](http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
+- [ ] [Restful API Best Practise](https://github.com/someline/someline-starter/wiki/10-Best-Practices-for-Better-RESTful-API)
 - [ ] [dingo/api Guide](https://github.com/dingo/api/wiki)
 - [ ] [Repository Pattern](https://bosnadev.com/2015/03/07/using-repository-pattern-in-laravel-5/?utm_source=prettus-l5-repository&utm_medium=readme&utm_campaign=prettus-l5-repository)
 - [ ] [Repository Usage](https://github.com/andersao/l5-repository#usage)
