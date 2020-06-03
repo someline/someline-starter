@@ -334,22 +334,22 @@ When made changes in scripts, styles, you will need to run the command.
 
 In development, run:
 ```
-npm run dev
+yarn run dev
 ```
 
 In development and watching assets for changes, run:
 ```
-npm run watch
+yarn run watch
 ```
 
 In production, run:
 ```
-npm run production
+yarn run production
 ```
 
 When you changed theme files, run:
 ```
-npm run theme
+yarn run theme
 ```
 
 #### API and Unit Tests
